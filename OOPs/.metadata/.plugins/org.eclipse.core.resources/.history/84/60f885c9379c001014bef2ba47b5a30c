@@ -1,0 +1,34 @@
+package arrayList;
+
+import java.util.ArrayList;
+
+public class Launch {
+
+	public static void main(String[] args) {
+		
+		
+		ArrayList al = new ArrayList(); // Non-Generic ArrayList
+		
+		al.add("Anuj");
+		al.add(123); // Autoboxing
+		al.add(false);
+		al.add('a');
+		
+		System.out.println(al);
+		
+		ArrayList<String> al2 = new ArrayList<String>(); // Generic ArrayList
+		al2.add("Laxmi");
+		System.out.println(al2);
+		
+//		Generic for any data Type
+		ArrayList<Object> al3 = new ArrayList<Object>();
+		al3.add("Anuj Gahra");
+		al3.add(123);
+		al3.add(false);
+		al3.add('a');
+		System.out.println(al3);
+		
+
+	}
+
+}

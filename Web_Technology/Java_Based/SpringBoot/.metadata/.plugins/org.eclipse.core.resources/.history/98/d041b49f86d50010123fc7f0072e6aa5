@@ -1,0 +1,21 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.dto.EmployeeDTO;
+import com.example.demo.entity.EmployeeEntity;
+import com.example.demo.repository.EmployeeRepository;
+
+
+@Service
+public class MyService {
+	
+	@Autowired
+	private EmployeeRepository employeeRepository;
+	
+	
+	public EmployeeRepository save(EmployeeDTO employeeDTO) {
+		return (EmployeeRepository) employeeRepository.save(new EmployeeEntity(employeeDTO.getId(), employeeDTO.getName(), employeeDTO.getAddress(), employeeDTO.getSalary()));
+	}
+}

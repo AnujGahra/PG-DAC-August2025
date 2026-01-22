@@ -1,0 +1,50 @@
+<TABLE BORDER=10 BORDERCOLORLIGHT=YELLOW BORDERCOLORDARK=BLUE> 
+
+
+
+
+<TABLE BORDER=10 BORDERCOLOR="#0000FF" BORDERCOLORLIGHT="#33CCFF" BORDERCOLORDARK="#0000CC">
+*****************************************************
+
+HTML lets you specify metadata - additional important information about a document in a variety of ways. The META elements can be used to include name/value pairs describing properties of the HTML document, such as author, expiry date, a list of keywords, document author etc.
+
+The <meta> tag is used to provide such additional information. This tag is an empty element and so does not have a closing tag but it carries information within its attributes.
+
+You can include one or more meta tags in your document based on what information you want to keep in your document but in general, meta tags do not impact physical appearance of the document so from appearance point of view, it does not matter if you include them or not.
+
+****************************************************
+
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Meta Tags Example</title>
+      <meta name = "keywords" content = "HTML, Meta Tags, Metadata" />
+    
+      <meta http-equiv = "refresh" content = "5" />
+   </head>
+	
+   <body>
+      <p>Hello HTML5!</p>
+   </body>
+	
+</html>
+
+
+*************************************************************
+
+
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Meta Tags Example</title>
+           <meta http-equiv = "refresh" content = "5; url = http://www.tutorialspoint.com" />
+   </head>
+	
+   <body>
+      <p>Hello HTML5!</p>
+   </body>
+	
+</html>
+

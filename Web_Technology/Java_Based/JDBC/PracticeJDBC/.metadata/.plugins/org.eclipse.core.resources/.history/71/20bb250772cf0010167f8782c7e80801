@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module ConnectionStablish {
+	requires jdk.jdi;
+}

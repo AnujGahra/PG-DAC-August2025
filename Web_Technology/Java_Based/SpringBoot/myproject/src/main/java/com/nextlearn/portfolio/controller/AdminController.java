@@ -1,0 +1,102 @@
+package com.nextlearn.portfolio.controller;
+
+import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.nextlearn.portfolio.dto.ServiceDto;
+import com.nextlearn.portfolio.services.ContactService;
+
+@Controller
+@RequestMapping("/admin")
+public class AdminController {
+
+	@Autowired
+	private ContactService contactService;
+
+	@GetMapping("/home")
+	public String home() {
+		return "admin/adminHome";
+	}
+
+	@GetMapping("/readAllContacts")
+	public String readAllContacts(Model model) {
+
+		model.addAttribute("contactData", contactService.readAllContacts());
+		return "admin/readAllContacts";
+	}  
+	
+	
+	@GetMapping("/deleteContactById")
+	public String deleteContactById(@RequestParam int id) {
+			
+		
+		contactService.deleteContactById(id);
+		return "redirect:/admin/readAllContacts";
+	}  
+	
+	
+	@GetMapping("/addService")
+	public String addServiceView() {
+			
+		return "admin/addService";
+	}  
+	
+	
+	@PostMapping("/addService")
+	public String addService(@Valid @ModelAttribute ServiceDto serviceDto, BindingResult result, Model model, RedirectAttributes redirectAttributes, HttpServletRequest request) {
+			
+		
+		if(result.hasErrors()) {
+			model.addAttribute("result", "Invalid Input");
+			model.addAttribute("errors", result.getFieldErrors());
+			return "admin/addService";
+		}
+		
+		if(serviceDto.getServiceFile() == null || serviceDto.getServiceFile().isEmpty()) {
+			model.addAttribute("result", "File must be uploaded");
+			return "admin/addService";
+		}
+		
+		MultipartFile multipartFile = serviceDto.getServiceFile();
+		long size = multipartFile.getSize();
+		
+		if(size > (1*1024*1024)) {
+			model.addAttribute("fileError", "File size must not Exceed 2MB");
+		}
+		
+		String realPath = request.getServletContext().getRealPath("img/services");	
+		String originalFileName = UUID.randomUUID().toString()+LocalDateTime.now().toString()+file.getOriginalFilename();
+		
+		
+		Path path = Paths.get(realPath, originalFileName);
+		File file = path.toFile();
+		
+		multipartFile.transferTo(file);
+		
+		
+		
+		
+		
+		return "admin/addService";
+	}  
+	
+
+}

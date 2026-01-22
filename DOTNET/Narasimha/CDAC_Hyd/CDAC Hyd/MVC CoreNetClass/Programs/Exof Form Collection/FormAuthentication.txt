@@ -1,0 +1,106 @@
+Ex of Form Authentication With Mini Project
+
+Step 1
+-----------
+Add Following Code To Program.cs File Just above var app = builder.Build();
+********************
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Account/Login"; // Redirect unauthenticated users here
+        options.AccessDeniedPath = "/Account/AccessDenied"; // Redirect unauthorized users here
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Cookie expiration time
+        options.SlidingExpiration = true; // Renew cookie on activity
+    });
+--------------------------------------------------
+Step 2
+--------
+Create AccountController And Add Following Code
+*********************************************
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Security.Claims;
+using System.Threading.Tasks;
+
+ public IActionResult Login()
+ {
+     return View();
+ }
+
+ [HttpPost]
+ public async Task<IActionResult> Login(string username, string password)
+ {
+     // In a real application, you would validate credentials against a database
+     if (username == "test" && password == "pass")
+     {
+         var claims = new List<Claim>
+     {
+         new Claim(ClaimTypes.Name, username),
+         new Claim(ClaimTypes.Role, "User") // Example role
+     };
+
+         var claimsIdentity = new ClaimsIdentity(
+             claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+         await HttpContext.SignInAsync(
+             CookieAuthenticationDefaults.AuthenticationScheme,
+             new ClaimsPrincipal(claimsIdentity));
+
+        
+         return RedirectToAction("Index", "Student");
+     }
+
+     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+     return View();
+ }
+
+ public async Task<IActionResult> Logout()
+ {
+     await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+     return RedirectToAction("Index", "Home");
+ }
+
+ public IActionResult AccessDenied()
+ {
+     return View();
+ }
+--------------------------------------------------------------
+Step 3
+--------
+Add Login View(Login.cshtml)File With This code
+******************************************
+<h2>Login</h2>
+<form asp-controller="Account" asp-action="Login" method="post">
+   
+    <div>
+        <label>Username:</label>
+        <input type="text" name="username" />
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="password" name="password" />
+    </div>
+    <button type="submit">Log In</button>
+    <div asp-validation-summary="All" class="text-danger"></div>
+</form>
+-----------------------------------------------
+Step 4
+---------
+Create one Student Controller Add Following Code 
+********************************************
+ [Authorize]
+ public IActionResult Index()
+ {
+     return View();
+ }
+
+------------------------------------
+Step 5 
+----------
+Create Index View for Student Controller With This Code
+***********************************************
+<h1>You Are  On Student Controller</h1>
+
+
+
+

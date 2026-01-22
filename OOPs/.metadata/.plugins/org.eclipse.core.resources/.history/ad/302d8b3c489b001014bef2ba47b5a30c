@@ -1,0 +1,21 @@
+package transfile.Data;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class Launch {
+
+	public static void main(String[] args) throws Exception {
+		
+		
+		FileInputStream fis = new FileInputStream("/Users/anujgahra/Developer/PG-DAC/Java_module/Resources/f1/abc.txt");
+		
+		int temp = 0;
+		while(true) {
+			temp = fis.read();
+			System.out.println((char)temp);
+		}
+
+	}
+
+}

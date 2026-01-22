@@ -1,0 +1,8 @@
+Asynchronous actions in ASP.NET Core MVC allow you to handle long-running, I/O-bound operations without blocking the server's thread pool. This significantly improves the scalability and responsiveness of your application, especially under heavy load.
+
+Key Concepts:
+--------------------
+async and await keywords: These C# keywords are fundamental to asynchronous programming.
+The async keyword marks a method as asynchronous, indicating that it can contain await expressions.
+
+The await keyword pauses the execution of an async method until the awaited asynchronous operation completes, without blocking the calling thread.

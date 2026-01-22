@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExofNulltype">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExofNulltype\ExofNulltype.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExofNulltype\ExofNulltype.suo">
+</Property><Property Name="Date" Value="15 January 2015">
+</Property><Property Name="Time" Value="12:50">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExofNulltype.sln" Description="File successfully backed up as D:\LangBasics\ExofNulltype\Backup\ExofNulltype.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExofNulltype.suo" Description="File successfully backed up as D:\LangBasics\ExofNulltype\Backup\ExofNulltype.suo">
+</Event><Event ErrorLevel="0" Project="ExofNulltype" Source="ExofNulltype\ExofNulltype.csproj" Description="Project file successfully backed up as D:\LangBasics\ExofNulltype\Backup\ExofNulltype\ExofNulltype.csproj">
+</Event><Event ErrorLevel="0" Project="ExofNulltype" Source="ExofNulltype\Program.cs" Description="File successfully backed up as D:\LangBasics\ExofNulltype\Backup\ExofNulltype\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExofNulltype" Source="ExofNulltype\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExofNulltype\Backup\ExofNulltype\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExofNulltype" Source="ExofNulltype\ExofNulltype.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExofNulltype" Source="ExofNulltype\ExofNulltype.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExofNulltype.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExofNulltype.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExofNulltype" Source="ExofNulltype\ExofNulltype.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

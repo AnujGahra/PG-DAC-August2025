@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExofOverrides">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExofOverrides\ExofOverrides.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExofOverrides\ExofOverrides.suo">
+</Property><Property Name="Date" Value="09 January 2015">
+</Property><Property Name="Time" Value="12:19">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExofOverrides.sln" Description="File successfully backed up as D:\LangBasics\ExofOverrides\Backup\ExofOverrides.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExofOverrides.suo" Description="File successfully backed up as D:\LangBasics\ExofOverrides\Backup\ExofOverrides.suo">
+</Event><Event ErrorLevel="0" Project="ExofOverrides" Source="ExofOverrides\ExofOverrides.csproj" Description="Project file successfully backed up as D:\LangBasics\ExofOverrides\Backup\ExofOverrides\ExofOverrides.csproj">
+</Event><Event ErrorLevel="0" Project="ExofOverrides" Source="ExofOverrides\Program.cs" Description="File successfully backed up as D:\LangBasics\ExofOverrides\Backup\ExofOverrides\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExofOverrides" Source="ExofOverrides\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExofOverrides\Backup\ExofOverrides\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExofOverrides" Source="ExofOverrides\ExofOverrides.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExofOverrides" Source="ExofOverrides\ExofOverrides.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExofOverrides.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExofOverrides.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExofOverrides" Source="ExofOverrides\ExofOverrides.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

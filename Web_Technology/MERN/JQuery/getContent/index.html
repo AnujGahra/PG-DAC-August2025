@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Content</title>
+
+    <!-- jQuery CDN link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+
+        // ---------------------------
+        //  text() → get plain text
+        // ---------------------------
+        $("#getTextBtn").click(function () {
+          var textContent = $("#para").text();
+          $("#output").text("text() Output: " + textContent);
+        });
+
+
+        // ---------------------------
+        //  html() → get HTML content
+        // ---------------------------
+        $("#getHtmlBtn").click(function () {
+          var htmlContent = $("#para").html();
+          $("#output").text("html() Output: " + htmlContent);
+        });
+
+
+        // ---------------------------
+        //  val() → get value from input
+        // ---------------------------
+        $("#getValBtn").click(function () {
+          var inputValue = $("#nameField").val();
+          $("#output").text("val() Output: " + inputValue);
+        });
+
+
+        // ---------------------------
+        //  attr() → get attribute value
+        // ---------------------------
+        $("#getAttrBtn").click(function () {
+          var linkValue = $("#myLink").attr("href");
+          $("#output").text("attr() Output (href): " + linkValue);
+        });
+
+      });
+    </script>
+
+  </head>
+
+  <body>
+    <h1>TechLeeyo - Get Content Using jQuery</h1>
+
+    <!-- text() & html() target -->
+    <p id="para">
+      This is a <b>sample paragraph</b> for testing jQuery methods.
+    </p>
+
+    <!-- val() target -->
+    <input type="text" id="nameField" placeholder="Enter your name" />
+
+    <!-- attr() target -->
+    <br /><br />
+    <a id="myLink" href="https://www.google.com" target="_blank">
+      Visit Google
+    </a>
+
+    <br /><br />
+
+    <!-- Buttons -->
+    <button id="getTextBtn">Get text()</button>
+    <button id="getHtmlBtn">Get html()</button>
+    <button id="getValBtn">Get val()</button>
+    <button id="getAttrBtn">Get attr()</button>
+
+    <h2 id="output" style="color: blue; margin-top: 20px;"></h2>
+  </body>
+</html>

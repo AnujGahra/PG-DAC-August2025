@@ -1,0 +1,57 @@
+Step 1 Code In Home Controller
+-----------------------------
+
+    public IActionResult Index()
+    {
+        return View();
+    }
+    public IActionResult Details(IFormCollection fc)
+    {
+        ViewBag.no = fc["no"].ToString();
+        ViewBag.name = fc["nm"].ToString();
+        ViewBag.sal = fc["sl"].ToString();
+
+        return View();
+    }
+
+}
+
+Step 2 Code In Index View
+--------------------------
+
+<h1>Enter Employee Details</h1>
+<center>
+    <br /> <br /> <br />
+    <form method="post" action="/Home/Details">
+    Enter Employee No
+    <input type="text" name="no" />
+    <br /><br />
+    Enter Employee Name
+    <input type="text" name="nm" />
+    <br /><br />
+    Enter Employee Salary
+    <input type="text" name="sl" />
+    <br /><br />
+    <input type="submit" name="Submit" value="Submit" />
+
+
+</form>
+</center>
+
+
+Step 3 Code In Details View
+----------------------------
+
+   <center>
+    <br /> <br /> <br /> <br />
+
+    <h2 style="color:blue">Employees Data</h2>
+
+    <br /> <br />
+    Employee No is @ViewBag.no
+    <br /> <br />
+    Employee Name is @ViewBag.name
+
+    <br /> <br />
+    Employee Salary is @ViewBag.sal
+</center>

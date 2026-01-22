@@ -1,0 +1,4 @@
+D:\krishna sir\C#Practicals\ExofPassByRef\ExofPassByRef\bin\Debug\ExofPassByRef.exe
+D:\krishna sir\C#Practicals\ExofPassByRef\ExofPassByRef\bin\Debug\ExofPassByRef.pdb
+D:\krishna sir\C#Practicals\ExofPassByRef\ExofPassByRef\obj\x86\Debug\ExofPassByRef.exe
+D:\krishna sir\C#Practicals\ExofPassByRef\ExofPassByRef\obj\x86\Debug\ExofPassByRef.pdb

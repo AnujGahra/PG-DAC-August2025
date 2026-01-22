@@ -1,0 +1,82 @@
+As the name suggests, an anonymous method in C# is a method without a name. Or you can say a code block without having a name. The Anonymous Methods in C# are defined using the delegate keyword and can be assigned to a variable of the delegate type.Anonymous methods are used with delegate.
+
+Ex of Delegate With Named Method
+-----------------------------------------------
+using System;
+namespace DelegateDemo
+{
+    public class AnonymousMethods
+    {
+        public delegate string GreetingsDelegate(string name);
+        public static string Greetings(string name)
+        {
+            return "Hello " + name + " Welcome to Dotnet Tutorials";
+        }
+
+        static void Main(string[] args)
+        {
+            GreetingsDelegate gd = new GreetingsDelegate(AnonymousMethods.Greetings);
+            string GreetingsMessage = gd.Invoke("Krishna");
+            Console.WriteLine(GreetingsMessage);
+            Console.ReadKey();
+        }
+    }
+}
+
+-------------------------------------------------------------
+Ex of Delegate With Anonymous Method
+
+
+using System;
+namespace DelegateDemo
+{
+    public class AnonymousMethods
+    {
+        public delegate string GreetingsDelegate(string name);
+
+        static void Main(string[] args)
+        {
+            GreetingsDelegate gd = delegate (string name)
+            {
+                return "Hello " + name + " Welcome to Dotnet Tutorials";
+            };
+            string GreetingsMessage = gd.Invoke("Krishna");
+            Console.WriteLine(GreetingsMessage);
+            Console.ReadKey();
+        }
+    }
+}
+
+----------------------------------------------------------
+
+What are the Advantages of Using Anonymous Methods in C#?
+--------------------------------------------------------------------------------
+Lesser typing words. Generally, anonymous methods are suggested when the code volume is very less and if it is one-time use only. Now, let us proceed and try to understand the anonymous method with different examples by taking different scenarios.
+
+Anonymous Method Accessing Variables Defined Outside
+-----------------------------------------------------------------------
+
+we  can access the variable within an anonymous method that is defined outside the anonymous method
+
+using System;
+namespace DelegateDemo
+{
+    public class AnonymousMethods
+    {
+        public delegate string GreetingsDelegate(string name);
+
+        static void Main(string[] args)
+        {
+            string Message = "Welcome to Dotnet Tutorials";
+
+            GreetingsDelegate gd = delegate (string name)
+            {
+                return "Hello " + name + " " + Message;
+            };
+
+            string GreetingsMessage = gd.Invoke("Krishna");
+            Console.WriteLine(GreetingsMessage);
+            Console.ReadKey();
+        }
+    }
+}

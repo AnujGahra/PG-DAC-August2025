@@ -1,0 +1,20 @@
+D:\LangBasics\ExofStudentProp\ExofStudentProp\bin\Debug\ExofStudentProp.exe
+D:\LangBasics\ExofStudentProp\ExofStudentProp\bin\Debug\ExofStudentProp.pdb
+D:\LangBasics\ExofStudentProp\ExofStudentProp\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofStudentProp\ExofStudentProp\obj\Debug\ExofStudentProp.exe
+D:\LangBasics\ExofStudentProp\ExofStudentProp\obj\Debug\ExofStudentProp.pdb
+C:\LangBasics\ExofStudentProp\ExofStudentProp\obj\Debug\ExofStudentProp.exe
+C:\LangBasics\ExofStudentProp\ExofStudentProp\obj\Debug\ExofStudentProp.pdb
+C:\LangBasics\ExofStudentProp\ExofStudentProp\bin\Debug\ExofStudentProp.exe
+C:\LangBasics\ExofStudentProp\ExofStudentProp\bin\Debug\ExofStudentProp.pdb
+C:\LangBasics\ExofStudentProp\ExofStudentProp\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofStudentProp\ExofStudentProp\obj\Debug\ExofStudentProp.exe
+C:\SouceEdge Session 1\LangBasics\ExofStudentProp\ExofStudentProp\obj\Debug\ExofStudentProp.pdb
+E:\krishna sir\C#Practicals\ExofStudentProp\ExofStudentProp\obj\Debug\ExofStudentProp.exe
+E:\krishna sir\C#Practicals\ExofStudentProp\ExofStudentProp\obj\Debug\ExofStudentProp.pdb
+D:\krishna sir\C#Practicals\ExofStudentProp\ExofStudentProp\bin\Debug\ExofStudentProp.exe.config
+D:\krishna sir\C#Practicals\ExofStudentProp\ExofStudentProp\obj\Debug\ExofStudentProp.exe
+D:\krishna sir\C#Practicals\ExofStudentProp\ExofStudentProp\obj\Debug\ExofStudentProp.pdb
+D:\krishna sir\C#Practicals\ExofStudentProp\ExofStudentProp\bin\Debug\ExofStudentProp.exe
+D:\krishna sir\C#Practicals\ExofStudentProp\ExofStudentProp\bin\Debug\ExofStudentProp.pdb
+D:\krishna sir\C#Practicals\ExofStudentProp\ExofStudentProp\obj\Debug\ExofStudentProp.csprojResolveAssemblyReference.cache

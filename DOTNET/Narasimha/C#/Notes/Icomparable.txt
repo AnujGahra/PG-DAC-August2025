@@ -1,0 +1,76 @@
+C# provides an IComparable interface. This interface provides different types of type-specific comparison methods which means a value type or a class can implement this interface to sort its instances because we cannot sort the instances of a class directly because the compiler does not know on which basis to sort. Similarly comparing directly two instances will throw compiler error as the compiler gets confused about what to compare.
+
+Example 
+
+using System;
+using System.Collections.Generic;
+
+class GFG{
+
+// Driver code
+static public void Main()
+{
+    
+    // Create an array of employees 
+    // using collection initializer
+    Employee[] employees = new Employee[]
+    {
+        new Employee(1, "Susmita"),
+        new Employee(5, "Soniya"),
+        new Employee(3, "Rohit"),
+        new Employee(2, "Mohit"),
+        new Employee(4, "Pihu")
+    };
+    
+    // Displaying the employee's array before sorting
+    Console.WriteLine("Before sorting employees array");
+    foreach(var emp in employees)
+    {
+          Console.WriteLine("ID - {0}, Employee Name - {1}", 
+                            emp.ID, emp.EmployeeName);
+    }
+    
+    // Sorts the employees array in ascending 
+    // order on basis of id of the employee
+    Array.Sort(employees);   
+      
+    Console.WriteLine();
+      
+    // Printing the employee's array after sorting
+    Console.WriteLine("After sorting employees array");
+    foreach(var emp in employees)
+    {
+          Console.WriteLine("ID - {0}, Employee Name - {1}",  
+                            emp.ID, emp.EmployeeName);
+    }
+}
+}
+
+// Implementing IComparable interface
+public class Employee : IComparable
+{
+    
+public int ID;
+public string EmployeeName;
+
+// Employee constructor
+public Employee(int id, string employeename)
+{
+    this.ID = id;
+    this.EmployeeName = employeename;
+}
+
+// Implementation of the CompareTo() method which takes
+// an object as an input and return integer value depending on
+// the comparison between current object and incoming object,
+public int CompareTo(object incomingobject)
+{
+    
+      // Storing incoming object in temp variable of 
+      // current class type
+      Employee incomingemployee = incomingobject as Employee;
+  
+      return this.ID.CompareTo(incomingemployee.ID);
+}
+
+}

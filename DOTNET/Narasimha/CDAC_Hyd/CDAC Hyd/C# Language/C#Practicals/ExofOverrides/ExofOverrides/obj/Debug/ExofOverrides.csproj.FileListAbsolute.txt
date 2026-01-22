@@ -1,0 +1,23 @@
+C:\LangBasics\ExofOverrides\ExofOverrides\bin\Debug\ExofOverrides.exe
+C:\LangBasics\ExofOverrides\ExofOverrides\bin\Debug\ExofOverrides.pdb
+C:\LangBasics\ExofOverrides\ExofOverrides\obj\Debug\ResolveAssemblyReference.cache
+C:\LangBasics\ExofOverrides\ExofOverrides\obj\Debug\ExofOverrides.exe
+C:\LangBasics\ExofOverrides\ExofOverrides\obj\Debug\ExofOverrides.pdb
+D:\LangBasics\ExofOverrides\ExofOverrides\obj\Debug\ExofOverrides.exe
+D:\LangBasics\ExofOverrides\ExofOverrides\obj\Debug\ExofOverrides.pdb
+D:\LangBasics\ExofOverrides\ExofOverrides\bin\Debug\ExofOverrides.exe
+D:\LangBasics\ExofOverrides\ExofOverrides\bin\Debug\ExofOverrides.pdb
+D:\LangBasics\ExofOverrides\ExofOverrides\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofOverrides\ExofOverrides\obj\Debug\ExofOverrides.exe
+C:\SouceEdge Session 1\LangBasics\ExofOverrides\ExofOverrides\obj\Debug\ExofOverrides.pdb
+E:\krishna sir\C#Practicals\ExofOverrides\ExofOverrides\obj\Debug\ExofOverrides.exe
+E:\krishna sir\C#Practicals\ExofOverrides\ExofOverrides\obj\Debug\ExofOverrides.pdb
+E:\krishna sir\C#Practicals\ExofOverrides\ExofOverrides\bin\Debug\ExofOverrides.exe
+E:\krishna sir\C#Practicals\ExofOverrides\ExofOverrides\bin\Debug\ExofOverrides.pdb
+E:\krishna sir\C#Practicals\ExofOverrides\ExofOverrides\obj\Debug\ExofOverrides.csprojResolveAssemblyReference.cache
+D:\krishna sir\C#Practicals\ExofOverrides\ExofOverrides\bin\Debug\ExofOverrides.exe.config
+D:\krishna sir\C#Practicals\ExofOverrides\ExofOverrides\obj\Debug\ExofOverrides.exe
+D:\krishna sir\C#Practicals\ExofOverrides\ExofOverrides\obj\Debug\ExofOverrides.pdb
+D:\krishna sir\C#Practicals\ExofOverrides\ExofOverrides\bin\Debug\ExofOverrides.exe
+D:\krishna sir\C#Practicals\ExofOverrides\ExofOverrides\bin\Debug\ExofOverrides.pdb
+D:\krishna sir\C#Practicals\ExofOverrides\ExofOverrides\obj\Debug\ExofOverrides.csprojResolveAssemblyReference.cache

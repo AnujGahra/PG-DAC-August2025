@@ -1,0 +1,23 @@
+
+package com.example.order.entity;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "orders")
+public class Order {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String customerName;
+    private Long itemId;
+    private int quantity;
+	public String getItemId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+    // getters & setters
+}

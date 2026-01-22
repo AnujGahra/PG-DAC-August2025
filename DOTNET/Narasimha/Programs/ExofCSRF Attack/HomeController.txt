@@ -1,0 +1,14 @@
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        [ValidateAntiForgeryToken]
+        public ActionResult SaveRecord()
+        {
+            return View();
+        }
+    }
+}

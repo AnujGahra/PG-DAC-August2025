@@ -1,0 +1,5 @@
+C:\SouceEdge Session 1\LangBasics\ExofWrapperClass\ExofWrapperClass\bin\Debug\ExofWrapperClass.exe
+C:\SouceEdge Session 1\LangBasics\ExofWrapperClass\ExofWrapperClass\bin\Debug\ExofWrapperClass.pdb
+C:\SouceEdge Session 1\LangBasics\ExofWrapperClass\ExofWrapperClass\obj\Debug\ExofWrapperClass.csprojResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofWrapperClass\ExofWrapperClass\obj\Debug\ExofWrapperClass.exe
+C:\SouceEdge Session 1\LangBasics\ExofWrapperClass\ExofWrapperClass\obj\Debug\ExofWrapperClass.pdb

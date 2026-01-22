@@ -1,0 +1,32 @@
+package com.gahra;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class message extends HttpServlet {
+	
+	public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		int n1 = Integer.parseInt(req.getParameter("first"));
+		int n2 = Integer.parseInt(req.getParameter("second"));
+		
+		int sum = n1+ n2;
+		req.setAttribute("k", sum);
+		RequestDispatcher requestDispatcher = req.getRequestDispatcher("add");
+		requestDispatcher.include(req, res);
+		
+//		PrintWriter out;
+//		try {
+//			out = res.getWriter();
+//			out.print(n1 + " + " + n2 + " " + " = " + sum);
+//		} catch (IOException e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+	}
+}

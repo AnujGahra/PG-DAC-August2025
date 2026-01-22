@@ -1,0 +1,35 @@
+Example of Session From Control To Control
+-------------------------------------------
+Step 1 
+
+Code In Program.cs File
+----------------------------
+builder.Services.AddSession();
+
+app.UseSession();
+
+Step 2
+-------
+Code In Home Controller
+
+
+public IActionResult ShowName()
+{
+    HttpContext.Session.SetString("name", "Krishna");
+    return RedirectToAction("Index", "Student");
+}
+
+
+Step 3
+-------
+
+Code In Student Controller
+-------------------------
+
+public IActionResult Index()
+{
+
+    string myname = HttpContext.Session.GetString("name");
+    return Content(myname);
+}
+

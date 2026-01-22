@@ -1,0 +1,15 @@
+What is bundling and minification
+-----------------------------------------------
+Bundling and minification are two distinct performance optimizations you can apply in a web app. Used together, bundling and minification improve performance by reducing the number of server requests and reducing the size of the requested static assets.
+
+
+Bundling and minification primarily improve the first page request load time. Once a web page has been requested, the browser caches the static assets (JavaScript, CSS, and images). 
+
+Bundling
+---------------
+Bundling combines multiple files into a single file. Bundling reduces the number of server requests necessary to render a web asset, such as a web page. You can create any number of individual bundles specifically for CSS, JavaScript, etc. Fewer files mean fewer HTTP requests from the browser to the server or from the service providing your application. 
+
+
+Minification
+-----------------
+ It removes unnecessary characters from code without altering functionality. The result is a significant size reduction in requested assets (such as CSS, images, and JavaScript files). Common effects of minification include shortening variable names to one character and removing comments and unnecessary whitespace.

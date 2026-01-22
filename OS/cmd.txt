@@ -1,0 +1,182 @@
+ 9196  mkdir demodacos
+ 9197  cd demodacos
+ 9200  git init
+ 9202  mkdir program
+ 9203  cd program
+ 9204  code .
+ 9205  cpp main.c
+ 9208  gcc -o main main.c
+ 9210  ./main
+ 9211  pwd
+ 9212  ps -el 
+ 9214  man getpid
+ 9217  man man
+ 9218  man -h
+ 9221  apropos getpid
+ 9222  gcc -o main main.c
+ 9224  gcc -o main main.c
+ 9226  ./main
+ 9233  git log
+ 9234  git add .
+ 9235  git commit -m "Program demo"
+ 9236  git log
+ 9237  mkdir libdemo
+ 9238  cd libdemo
+ 9240  touch main.c
+ 9241  touch add.c sub.c
+ 9244  code .
+ 9245  bat main.c
+ 9246  bat add.c sub.c
+ 9248  cat main.c
+ 9249  gcc -o main main.c
+ 9250  touch arith.h
+ 9251  gcc -o main main.c
+ 9252  gcc -o main main.c add.c sub.c
+ 9253  ./main
+ 9256  touch Makefile
+ 9259  rm -rf main
+ 9261  make
+ 9265  ld
+ 9266  objdump -S add.o
+ 9267  file **
+ 9268  file *
+ 9269  objdump -S add.o
+ 9270  objdump -S sub.o
+ 9271  objdump -S main.O
+ 9272  objdump -S main.o
+ 9273  objdump -S main
+ 9275  objdump -S main
+ 9279  c d..
+ 9284  git add .
+ 9285  git commit -m "Arith demo"
+ 9286  git log
+ 9288  cd libdemo
+ 9294  objdump -S main | more
+ 9341  man getpif
+ 9342  man getpid
+ 9343  sudo apt install manpages
+ 9344  sudo apt install man-db
+ 9349  manly
+ 9350  sudo apt install manpages-posix manpages-dev manpages-posix-dev 
+ 9351  manly
+ 9352  man 
+ 9353  man getpid
+ 9354  man mf
+ 9504  cd /mahi
+ 9506  cd demo
+ 9508  cd is
+ 9509  cd demodacos
+ 9513  git log
+ 9514  mkdir syscall
+ 9515  cd syscall
+ 9517  code .
+ 9518  gcc -o syscalldemo syscalldemo.c
+ 9521  ./syscalldemo
+ 9522  strace ./syscalldemo
+ 9523  man getpid
+ 9524  man write
+ 9525  man -k write
+ 9526  source ~/.zshrc
+ 9527  man 2 write
+ 9528  man 2 open
+ 9529  strace ./syscalldemo
+ 9533  l
+ 9534  mkdir fileio
+ 9535  cd fileio
+ 9537  code .
+ 9540  man 2 open
+ 9541  man 2 write
+ 9542  man 2 close
+ 9546  l
+ 9548  gcc -o fileio fileio.c
+ 9549  man 2 write
+ 9550  gcc -o fileio fileio.c
+ 9553  ./fileio
+ 9555  strace ./fileio
+ 9556  man EXIT_STATUS
+ 9557  gcc -o fileio fileio.c
+ 9560  ./fileio
+ 9561  man 2 open
+ 9562  gcc -o fileio fileio.c
+ 9564  ./fileio
+ 9566  cat dac.txt
+ 9568  rm -rf dac.txt
+ 9570  man 2 open
+ 9571  gcc -o fileio fileio.c
+ 9573  ./fileio
+ 9575  cat dac.txt
+ 9576  strace ./fileio
+ 9578  gcc -o fileior fileior.c
+ 9579  ./fileior
+ 9580  strace ./fileior
+ 9608  code .
+ 9610  cd /tmp
+ 9613  mkdir libdemo
+ 9615  cd libdemo
+ 9619  find /usr/lib -name libc.a
+ 9620  find /usr/lib -name libc
+ 9621  find /usr/lib -name libc*
+ 9622  find /usr/lib -name "libc*"
+ 9623  find /usr/lib -name "libc*" | grep arm
+ 9624  find /usr/lib -name "libc.a"
+ 9625  cp /usr/lib/x86_64-linux-gnu/libc.a .
+ 9627  pwd
+ 9629  ar x libc.a
+ 9635  objdump -S strcpy.o
+ 9636  ar -crv libarith.a add.o sub.o 
+ 9638  aexit
+ 9639  exit
+ 9645  mkdir libbang
+ 9646  cd libbang
+ 9647  lc
+ 9650  cp ../libdemo/libarith.a .
+ 9652  cp ../libdemo/arith.h .
+ 9653  cat arith.h
+ 9654  neovim main.c
+ 9655  nvim main.c
+ 9656  celar
+ 9660  bat main.c
+ 9661  celar
+ 9664  gcc -o main main.c
+ 9666  gcc -o main main.c -larith
+ 9667  gcc -o main main.c -larith -L.
+ 9669  ./main
+ 9671  ar x libarith.a
+ 9673  rm -rf add.o sub.o
+ 9676  objdump -S main
+ 9678  slc
+ 9679  lear
+ 9683  mkdir libsodemo
+ 9684  cd libsodemo
+ 9685  cp ../libdemo/*.c .
+ 9688  rm -rf main.c
+ 9691  gcc -c -o add.o add.c
+ 9692  vim add.c
+ 9693  nim add.c
+ 9694  nvim add.c
+ 9695  gcc -c -o add.o add.c
+ 9697  gcc -c -o sub.o sub.c
+ 9699  gcc -o libarith.so -fPIC -shared add.o sub.o
+ 9701  file libarith.so
+ 9704  cp ../libdemo/arith.h .
+ 9710  l
+ 9711  cd libbang
+ 9718  mkdir libbangso
+ 9719  cd libbangso
+ 9724  cp ../libsodemo/libarith.so .
+ 9725  cp ../libsodemo/arith.h .
+ 9728  cp ../libbang/main.c .
+ 9731  cat libarith.so
+ 9732  cat main.c 
+ 9733  bat main.c 
+ 9736  gcc -o main main.c -larith -L.
+ 9738  ./main
+ 9741  objdump -S main
+ 9742  export LD_LIBRARY_PATH=.
+ 9743  ./main
+ 9744  export LD_LIBRARY_PATH=
+ 9745  ./main
+ 9746  export LD_LIBRARY_PATH=.
+ 9747  ./main
+ 9750  cd libdemo
+ 9754  ranlib libarith.a

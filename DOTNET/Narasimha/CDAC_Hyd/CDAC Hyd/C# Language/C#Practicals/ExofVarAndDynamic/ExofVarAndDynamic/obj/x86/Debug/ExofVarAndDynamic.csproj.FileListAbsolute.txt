@@ -1,0 +1,5 @@
+D:\krishna sir\C#Practicals\ExofVarAndDynamic\ExofVarAndDynamic\bin\Debug\ExofVarAndDynamic.exe
+D:\krishna sir\C#Practicals\ExofVarAndDynamic\ExofVarAndDynamic\bin\Debug\ExofVarAndDynamic.pdb
+D:\krishna sir\C#Practicals\ExofVarAndDynamic\ExofVarAndDynamic\obj\x86\Debug\ExofVarAndDynamic.exe
+D:\krishna sir\C#Practicals\ExofVarAndDynamic\ExofVarAndDynamic\obj\x86\Debug\ExofVarAndDynamic.pdb
+D:\krishna sir\C#Practicals\ExofVarAndDynamic\ExofVarAndDynamic\obj\x86\Debug\ExofVarAndDynamic.csprojResolveAssemblyReference.cache

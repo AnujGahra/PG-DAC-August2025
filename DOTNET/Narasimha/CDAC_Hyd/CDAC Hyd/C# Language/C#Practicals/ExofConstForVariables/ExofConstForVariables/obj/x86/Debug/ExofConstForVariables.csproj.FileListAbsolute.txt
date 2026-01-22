@@ -1,0 +1,4 @@
+D:\krishna sir\C#Practicals\ExofConstForVariables\ExofConstForVariables\bin\Debug\ExofConstForVariables.exe
+D:\krishna sir\C#Practicals\ExofConstForVariables\ExofConstForVariables\bin\Debug\ExofConstForVariables.pdb
+D:\krishna sir\C#Practicals\ExofConstForVariables\ExofConstForVariables\obj\x86\Debug\ExofConstForVariables.exe
+D:\krishna sir\C#Practicals\ExofConstForVariables\ExofConstForVariables\obj\x86\Debug\ExofConstForVariables.pdb

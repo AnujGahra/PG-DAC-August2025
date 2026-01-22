@@ -1,0 +1,32 @@
+package raceConditions;
+
+public class Account extends Thread {
+	
+//	private int bal = 500000;
+	private String xyz = "pqr";
+	
+	
+//	public synchronized void deduct(int bal, String cardName) {
+//		this.bal = this.bal-bal;
+//		System.out.println("DEBIT SUCCESSFULLY!");
+//	}
+//	
+	public  void change() {
+		xyz = xyz+"a";
+	}
+	
+	
+	
+	public void get() {
+//		System.out.println(bal);
+		
+		int count = 0;
+		for(char c : xyz.toCharArray()) {
+			if(c=='a') {
+				count++;
+			}
+		}
+		System.out.println(count);
+	}
+
+}

@@ -1,0 +1,7 @@
+C:\LangBasics\TestRashmiDll\TestRashmiDll\bin\Debug\TestRashmiDll.exe
+C:\LangBasics\TestRashmiDll\TestRashmiDll\bin\Debug\TestRashmiDll.pdb
+C:\LangBasics\TestRashmiDll\TestRashmiDll\bin\Debug\RahmiLibrary.dll
+C:\LangBasics\TestRashmiDll\TestRashmiDll\bin\Debug\RahmiLibrary.pdb
+C:\LangBasics\TestRashmiDll\TestRashmiDll\obj\Debug\ResolveAssemblyReference.cache
+C:\LangBasics\TestRashmiDll\TestRashmiDll\obj\Debug\TestRashmiDll.exe
+C:\LangBasics\TestRashmiDll\TestRashmiDll\obj\Debug\TestRashmiDll.pdb

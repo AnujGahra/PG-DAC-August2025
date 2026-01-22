@@ -1,0 +1,214 @@
+import React, { useState } from 'react';
+
+// --- CONFIGURATION ---
+// IMPORTANT: This URL MUST match the address of your running .NET Web API.
+const API_BASE_URL = 'https://localhost:7001/students';
+
+// Icon utility components (using inline SVG for portability)
+const PlusCircleIcon = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>;
+const CheckCircleIcon = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M9 11l3 3L22 4"/></svg>;
+const AlertTriangleIcon = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10.29 3.86L1.87 18a2 2 0 0 0 1.74 3h16.78a2 2 0 0 0 1.74-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>;
+
+// Helper function to get today's date in YYYY-MM-DD format for default value
+const getTodayDate = () => {
+    return new Date().toISOString().split('T')[0];
+};
+
+// Default state for a new student entry
+const initialFormData = {
+    stno: '',
+    stname: '',
+    doa: getTodayDate(),
+    fees: '',
+};
+
+// --- MAIN APPLICATION COMPONENT ---
+export default function App() {
+    const [formData, setFormData] = useState(initialFormData);
+    const [status, setStatus] = useState(null); // { type: 'success'|'error', message: string }
+    const [loading, setLoading] = useState(false);
+
+    // Handles changes in the input fields
+    const handleChange = (e) => {
+        const { name, value, type } = e.target;
+        // Handle number types specifically for Stno and Fees
+        setFormData(prev => ({
+            ...prev,
+            [name]: type === 'number' ? parseInt(value) || (value === '0' ? 0 : '') : value
+        }));
+    };
+
+    // Handles form submission and POST request
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus(null); // Clear previous status
+        setLoading(true);
+
+        // Basic validation
+        if (!formData.stno || !formData.stname || !formData.doa || formData.fees === '' || formData.fees < 0) {
+            setStatus({ type: 'error', message: 'Please fill in all fields correctly (Student No and Fees must be positive numbers).' });
+            setLoading(false);
+            return;
+        }
+
+        // Prepare payload (fields must match API model)
+        const payload = JSON.stringify({ 
+            stno: formData.stno,
+            stname: formData.stname,
+            doa: formData.doa, // Date is sent as YYYY-MM-DD string
+            fees: formData.fees,
+        });
+
+        try {
+            const response = await fetch(API_BASE_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: payload,
+            });
+
+            setLoading(false);
+
+            if (response.ok) {
+                // Success case
+                setStatus({ 
+                    type: 'success', 
+                    message: `Student ${formData.stname} added successfully (Stno: ${formData.stno}).`
+                });
+                setFormData(initialFormData); // Clear form on success
+            } else {
+                // API returned an error status (e.g., 400 Bad Request)
+                const errorText = await response.text();
+                setStatus({ 
+                    type: 'error', 
+                    message: `API Error (${response.status}): ${errorText || 'Failed to add student. Check server logs for details.'}` 
+                });
+            }
+        } catch (err) {
+            setLoading(false);
+            console.error("Fetch Error:", err);
+            // Network/CORS failure case
+            setStatus({ 
+                type: 'error', 
+                message: `**Network Error:** Failed to connect to API on ${API_BASE_URL}. Ensure your API is running and **CORS is enabled** for POST requests from this client's origin.` 
+            });
+        }
+    };
+
+    // Style utility for status messages
+    const statusClasses = status
+        ? status.type === 'success'
+            ? 'bg-green-100 border-green-400 text-green-700'
+            : 'bg-red-100 border-red-400 text-red-700'
+        : 'hidden';
+    
+    const StatusIcon = status
+        ? status.type === 'success' ? CheckCircleIcon : AlertTriangleIcon
+        : null;
+
+
+    return (
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 p-4 sm:p-8 font-sans">
+            <div className="max-w-md mx-auto">
+                <header className="py-6 mb-8 text-center">
+                    <h1 className="text-3xl font-extrabold text-indigo-700 dark:text-indigo-400 flex items-center justify-center">
+                        <PlusCircleIcon className="w-7 h-7 mr-2"/> Add New Student Record
+                    </h1>
+                    <p className="text-gray-500 dark:text-gray-400 mt-2">Submit data to the API endpoint: **{API_BASE_URL}**</p>
+                </header>
+
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6 sm:p-8">
+                    
+                    {/* Status Message Area */}
+                    <div className={`p-4 mb-6 border rounded-lg flex items-start space-x-3 ${statusClasses}`} role="alert">
+                        {status && StatusIcon && <StatusIcon className="w-6 h-6 flex-shrink-0 mt-0.5" />}
+                        {status && <p className="text-sm font-medium" dangerouslySetInnerHTML={{ __html: status.message }} />}
+                    </div>
+
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                        
+                        {/* 1. Student Number (Stno) */}
+                        <div>
+                            <label htmlFor="stno" className="block text-sm font-medium text-gray-700 dark:text-gray-300">1. Student Number</label>
+                            <input
+                                id="stno"
+                                name="stno"
+                                type="number"
+                                required
+                                min="1"
+                                placeholder="Unique Student ID (Stno)"
+                                value={formData.stno}
+                                onChange={handleChange}
+                                className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-3 bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white transition"
+                            />
+                        </div>
+
+                        {/* 2. Student Name (Stname) */}
+                        <div>
+                            <label htmlFor="stname" className="block text-sm font-medium text-gray-700 dark:text-gray-300">2. Student Name</label>
+                            <input
+                                id="stname"
+                                name="stname"
+                                type="text"
+                                required
+                                placeholder="Student Name"
+                                value={formData.stname}
+                                onChange={handleChange}
+                                className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-3 bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white transition"
+                            />
+                        </div>
+                        
+                        {/* 3. Date of Admission (Doa) */}
+                        <div>
+                            <label htmlFor="doa" className="block text-sm font-medium text-gray-700 dark:text-gray-300">3. Date of Admission</label>
+                            <input
+                                id="doa"
+                                name="doa"
+                                type="date"
+                                required
+                                value={formData.doa}
+                                onChange={handleChange}
+                                className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-3 bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white transition"
+                            />
+                        </div>
+
+                        {/* 4. Fees */}
+                        <div>
+                            <label htmlFor="fees" className="block text-sm font-medium text-gray-700 dark:text-gray-300">4. Fees</label>
+                            <input
+                                id="fees"
+                                name="fees"
+                                type="number"
+                                required
+                                min="0"
+                                placeholder="Fees amount"
+                                value={formData.fees}
+                                onChange={handleChange}
+                                className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-3 bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white transition"
+                            />
+                        </div>
+
+                        <div className="pt-4">
+                            <button
+                                type="submit"
+                                disabled={loading}
+                                className="w-full flex justify-center items-center space-x-2 px-4 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition transform active:scale-98 disabled:bg-indigo-400 disabled:cursor-not-allowed"
+                            >
+                                {loading ? (
+                                    <>
+                                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                                        Submitting...
+                                    </>
+                                ) : (
+                                    <>
+                                        <PlusCircleIcon className="w-5 h-5"/>
+                                        <span>Add Student Record</span>
+                                    </>
+                                )}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    );
+}

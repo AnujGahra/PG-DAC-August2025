@@ -1,0 +1,77 @@
+Named Parameter
+-----------------------
+Named Parameters allow developers to pass a method arguments with parameter names. Prior to these this feature, the method parameters were passed using a sequence only. Now, using named parameters in C#, we can put any parameter in any sequence as long as the name is there. The right parameter value based on their names will be mapped to the right variable. The parameters name must match with the method definition parameter names.
+
+public static int AddNumber(int firstNumber, int secondNumber)
+{
+    return firstNumber+ secondNumber;
+}
+
+Regular Way
+-----------------
+AddNumber(12, 13);
+
+ Using Named Parameters
+----------------------------------
+AddNumber(firstNumber: 12, secondNumber: 13);
+
+Different Options
+----------------------
+static void Main(string[] args)
+{
+  // The method can be called in the normal way, by using positional arguments.
+  Console.WriteLine(AddNumber(12, 13));
+
+  // Named arguments can be supplied for the parameters in either order.
+  Console.WriteLine(AddNumber(firstNumber: 12, secondNumber: 13));
+  Console.WriteLine(AddNumber(secondNumber: 13, firstNumber: 12));
+
+  // Positional arguments cannot follow named arguments. It throws compilation error.
+  Console.WriteLine(AddNumber(firstNumber: 12, 13);
+
+  // Named arguments can follow positional arguments.
+  Console.WriteLine(AddNumber(12, secondNumber: 13));
+}
+
+---------------------------------------------------------------------------
+
+Optional Parameters
+----------------------------
+By default, all parameters of a method are required. But in C# 4.0, the concept of optional parameters was introduced that allows developers to declare parameters as optional. That means, if these arguments are not passed, they will be ommitted from the execution. Optional parameters are not mandatory.
+
+For instance, there is a method called AddNumber(int firstNumber, int secondNumber) which takes two parameters and returns the sum of two parameters. By default, it is mandatory to pass both parameter values when we call the method. However Optional Parameters allow us not to pass these values.
+
+It can be implemented in the following ways:
+
+1)First Way
+---------------
+
+    public class MyDemo
+    {
+        public int AddNumber(int firstNumber, int secondNumber = 0)
+        {
+            return firstNumber + secondNumber;
+        }
+
+
+        public void MainMethod()
+        {
+            AddNumber(12);
+        }
+    }
+
+2)Second Way
+--------------------
+
+public class MyDemo
+    {
+        public int AddNumber(int firstNumber, [Optional] int secondNumber)
+        {
+            return firstNumber + secondNumber;
+        }
+
+        public void MainMethod()
+        {
+            AddNumber(12);
+        }
+    }

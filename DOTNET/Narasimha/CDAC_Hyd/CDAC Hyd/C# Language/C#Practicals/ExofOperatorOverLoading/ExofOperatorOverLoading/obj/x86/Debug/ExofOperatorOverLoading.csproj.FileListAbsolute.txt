@@ -1,0 +1,5 @@
+D:\LangBasics\ExofOperatorOverLoading\ExofOperatorOverLoading\bin\Debug\ExofOperatorOverLoading.exe
+D:\LangBasics\ExofOperatorOverLoading\ExofOperatorOverLoading\bin\Debug\ExofOperatorOverLoading.pdb
+D:\LangBasics\ExofOperatorOverLoading\ExofOperatorOverLoading\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofOperatorOverLoading\ExofOperatorOverLoading\obj\x86\Debug\ExofOperatorOverLoading.exe
+D:\LangBasics\ExofOperatorOverLoading\ExofOperatorOverLoading\obj\x86\Debug\ExofOperatorOverLoading.pdb

@@ -1,0 +1,174 @@
+CREATE TABLE [dbo].[Department](
+    [Id] [int] IDENTITY(1,1) NOT NULL,
+    [Name] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_Department] PRIMARY KEY CLUSTERED 
+
+CREATE TABLE [dbo].[Employee](
+    [Id] [int] IDENTITY(1,1) NOT NULL,
+    [DepartmentId] [int] NOT NULL,
+    [Name] [varchar](100) NOT NULL,
+    [Designation] [varchar](25) NOT NULL,
+
+
+ALTER TABLE [dbo].[Employee]  WITH CHECK ADD  CONSTRAINT [FK_Employee_Department] FOREIGN KEY([DepartmentId])
+REFERENCES [dbo].[Department] ([Id])
+GO
+ 
+ALTER TABLE [dbo].[Employee] CHECK CONSTRAINT [FK_Employee_Department]
+GO
+
+PM> dotnet ef dbcontext scaffold "Server=vaio;Database=Company;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models
+
+Code In Home Controller
+--------------------------------------
+
+
+using EFCoreExample.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+namespace EFCoreExample.Controllers
+{
+    public class HomeController : Controller
+    {
+        private CompanyContext context;
+        public HomeController(CompanyContext cc)
+        {
+            context = cc;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult CreateDepartment()
+        {
+            var dept = new Department()
+            {
+                Name = "Designing"
+            };
+            context.Entry(dept).State = EntityState.Added;
+            context.SaveChanges();
+
+            return View();
+        }
+
+        
+    }
+}
+
+----------------------------------------------------------
+Bulk Save
+
+var dept1 = new Department() { Name = "Development" };
+var dept2 = new Department() { Name = "HR" };
+var dept3 = new Department() { Name = "Marketing" };
+
+context.AddRange(dept1, dept2, dept3);
+await context.SaveChangesAsync();
+
+********************************************************
+Code With Screen Operations
+-----------------------------------------
+Code In Department Controller
+------------------------------------------
+public class DepartmentController : Controller
+    {
+        private CompanyContext context;
+        public DepartmentController(CompanyContext cc)
+        {
+            context = cc;
+        }
+ 
+        public IActionResult Create()
+        {
+            return View();
+        }
+ 
+        [HttpPost]
+        public async Task<IActionResult> Create(Department dept)
+        {
+            context.Add(dept);
+            await context.SaveChangesAsync();
+ 
+            return View();
+        }
+    }
+
+Code In Create View
+
+@model Department
+
+<h1 class="bg-info text-white">Create Department</h1>
+  
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+*******************************************************
+
+Create Record For Employee Table
+
+Code In Employee Controller 
+------------------------------------
+
+public class EmployeeController : Controller
+    {
+        private CompanyContext context;
+        public EmployeeController(CompanyContext cc)
+        {
+            context = cc;
+        }
+ 
+        public IActionResult Index()
+        {
+            return View();
+        }
+ 
+        public IActionResult Create()
+        {
+            List<SelectListItem> dept = new List<SelectListItem>();
+            dept = context.Department.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).ToList();
+            ViewBag.Department = dept;
+ 
+            return View();
+        }
+ 
+        [HttpPost]
+        public async Task<IActionResult> Create(Employee emp)
+        {
+            context.Add(emp);
+            await context.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
+    }
+
+-------------------------------------------------------------------
+
+Code In Create View Of Employee Controller
+
+@model Employee
+ 
+<h1 class="bg-info text-white">Create Employee</h1>
+<a asp-action="Index" class="btn btn-secondary">Back</a>
+ 
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Department"></label>
+        <select asp-for="DepartmentId" asp-items="ViewBag.Department" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Designation"></label>
+        <input asp-for="Designation" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+

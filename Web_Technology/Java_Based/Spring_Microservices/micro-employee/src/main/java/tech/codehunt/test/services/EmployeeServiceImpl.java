@@ -1,0 +1,89 @@
+package tech.codehunt.test.services;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.UUID;
+
+import javax.persistence.Entity;
+import javax.validation.Valid;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import tech.codehunt.test.MicroEmployeeApplication;
+import tech.codehunt.test.dto.EmployeeDto;
+import tech.codehunt.test.dto.external.AccountDto;
+import tech.codehunt.test.dto.hybrid.EmployeeFullDto;
+import tech.codehunt.test.entities.Employee;
+import tech.codehunt.test.exceptions.ResourceNotFoundException;
+import tech.codehunt.test.payload.ApiResponse;
+import tech.codehunt.test.repositories.EmployeeRepo;
+
+@Service
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+    private final MicroEmployeeApplication microEmployeeApplication;
+	
+	@Autowired
+	private EmployeeRepo employeeRepo;
+	
+	
+	@Autowired
+	private ModelMapper modelMapper;
+
+    EmployeeServiceImpl(MicroEmployeeApplication microEmployeeApplication) {
+        this.microEmployeeApplication = microEmployeeApplication;
+    }
+
+	@Override
+	public ApiResponse<Employee> saveEmployee(EmployeeDto employeeDto) {
+		
+		Employee employee = modelMapper.map(employeeDto, Employee.class);
+		employee.setId(UUID.randomUUID().toString());
+		employee.setDatetime(LocalDateTime.now().toString());
+		Employee savedEmployee = employeeRepo.save(employee);
+		
+		return new ApiResponse<>("SUCCESS", "EMPLOYEE DATA CREATED", savedEmployee);
+	}
+
+	@Override
+	public ApiResponse<List<Employee>> getAllEmployees() {
+		
+		List<Employee> allEmployees = employeeRepo.findAll();
+		
+		if(allEmployees.isEmpty()) {
+			return new ApiResponse<List<Employee>>("SUCCESS", "EMPLOYEE DATA NOT FOUND", allEmployees);
+		}
+		return new ApiResponse<List<Employee>>("SUCCESS", "EMPLOYEE DATA FOUND", allEmployees);
+
+	}
+
+	@Override
+	public ApiResponse<Employee> getSingleEmployee(String id) {
+		
+		
+		Employee singleEmployee = employeeRepo.findById(id).orElseThrow( () -> new ResourceNotFoundException("EMPLOYEE NOT FOUND WITH ID: "+ id));
+		
+		return new ApiResponse<>("SUCCESS", "SINGLE EMPLOYEE DATA FOUND", singleEmployee);
+	}
+
+	@Override
+	public ApiResponse<Employee> geFullEmployee(@Valid EmployeeFullDto employeeFullDto) {
+		
+		
+//		employee --> save
+		
+		EmployeeDto employeeDto = employeeFullDto.getEmployeeDto();
+		ApiResponse<Employee> saveEmployee = saveEmployee(employeeDto);
+		
+//		account --> account micro service
+		AccountDto accountDto = employeeFullDto.getAccountDto();
+		accountDto.setEmployeeId(saveEmployee.getData().getId());
+		
+//		plot --> plot microservice
+		
+		
+		return null;
+	}
+}

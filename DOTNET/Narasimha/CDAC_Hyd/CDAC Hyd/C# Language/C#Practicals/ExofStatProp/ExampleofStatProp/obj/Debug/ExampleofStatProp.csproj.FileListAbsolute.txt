@@ -1,0 +1,23 @@
+c:\LangBasics\ExampleofStatProp\ExampleofStatProp\obj\Debug\ResolveAssemblyReference.cache
+c:\LangBasics\ExampleofStatProp\ExampleofStatProp\bin\Debug\ExampleofStatProp.exe
+c:\LangBasics\ExampleofStatProp\ExampleofStatProp\bin\Debug\ExampleofStatProp.pdb
+c:\LangBasics\ExampleofStatProp\ExampleofStatProp\obj\Debug\ExampleofStatProp.exe
+c:\LangBasics\ExampleofStatProp\ExampleofStatProp\obj\Debug\ExampleofStatProp.pdb
+D:\LangBasics\ExampleofStatProp\ExampleofStatProp\obj\Debug\ExampleofStatProp.exe
+D:\LangBasics\ExampleofStatProp\ExampleofStatProp\obj\Debug\ExampleofStatProp.pdb
+D:\LangBasics\ExampleofStatProp\ExampleofStatProp\bin\Debug\ExampleofStatProp.exe
+D:\LangBasics\ExampleofStatProp\ExampleofStatProp\bin\Debug\ExampleofStatProp.pdb
+D:\LangBasics\ExampleofStatProp\ExampleofStatProp\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofStatProp\ExampleofStatProp\obj\Debug\ExampleofStatProp.exe
+C:\SouceEdge Session 1\LangBasics\ExofStatProp\ExampleofStatProp\obj\Debug\ExampleofStatProp.pdb
+C:\SouceEdge Session 1\LangBasics\ExofStatProp\ExampleofStatProp\bin\Debug\ExampleofStatProp.exe
+C:\SouceEdge Session 1\LangBasics\ExofStatProp\ExampleofStatProp\bin\Debug\ExampleofStatProp.pdb
+E:\krishna sir\C#Practicals\ExofStatProp\ExampleofStatProp\obj\Debug\ExampleofStatProp.exe
+E:\krishna sir\C#Practicals\ExofStatProp\ExampleofStatProp\obj\Debug\ExampleofStatProp.pdb
+E:\krishna sir\C#Practicals\ExofStatProp\ExampleofStatProp\bin\Debug\ExampleofStatProp.exe
+E:\krishna sir\C#Practicals\ExofStatProp\ExampleofStatProp\bin\Debug\ExampleofStatProp.pdb
+D:\krishna sir\C#Practicals\ExofStatProp\ExampleofStatProp\bin\Debug\ExampleofStatProp.exe.config
+D:\krishna sir\C#Practicals\ExofStatProp\ExampleofStatProp\obj\Debug\ExampleofStatProp.exe
+D:\krishna sir\C#Practicals\ExofStatProp\ExampleofStatProp\obj\Debug\ExampleofStatProp.pdb
+D:\krishna sir\C#Practicals\ExofStatProp\ExampleofStatProp\bin\Debug\ExampleofStatProp.exe
+D:\krishna sir\C#Practicals\ExofStatProp\ExampleofStatProp\bin\Debug\ExampleofStatProp.pdb

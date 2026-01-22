@@ -1,0 +1,5 @@
+C:\SouceEdge Session 1\LangBasics\ExofBoxingAndUnBoxing\ExofBoxingAndUnBoxing\bin\Debug\ExofBoxingAndUnBoxing.exe
+C:\SouceEdge Session 1\LangBasics\ExofBoxingAndUnBoxing\ExofBoxingAndUnBoxing\bin\Debug\ExofBoxingAndUnBoxing.pdb
+C:\SouceEdge Session 1\LangBasics\ExofBoxingAndUnBoxing\ExofBoxingAndUnBoxing\obj\Debug\ExofBoxingAndUnBoxing.csprojResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofBoxingAndUnBoxing\ExofBoxingAndUnBoxing\obj\Debug\ExofBoxingAndUnBoxing.exe
+C:\SouceEdge Session 1\LangBasics\ExofBoxingAndUnBoxing\ExofBoxingAndUnBoxing\obj\Debug\ExofBoxingAndUnBoxing.pdb

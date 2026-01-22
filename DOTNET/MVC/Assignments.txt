@@ -1,0 +1,41 @@
+1.Calculator application
+---------------------------------
+create a simple calculator application that can perform basic arithmetic operations (addition, subtraction, multiplication, and division). The application should take input from the user and display the result.
+
+2.Delegate Task
+------------------------------------
+ Implement multicast delegates Using Add and Sub two methods perform addition and subtraction. The Multicast delegate is a delegate which holds a reference to more than one method. Using the delegate object variable ‘del’ we have to call the methods by passing the value as argument.
+
+3.C# Program to check whether the entered number is even or odd.
+------------------------------------------------------------------------------------
+4.Problem Description
+Create C# Program With Generic Delegate to check whether the entered number is even or odd.
+------------------------------------------------------------------------------------
+5.Create Interface Based Program To Calculate
+Area of Circle Square And Triangle
+------------------------------------------------------
+6.Dependency Injection Task
+-------------------------------------
+using System.Collections.Generic;
+namespace DependencyInjectionDesignPattern
+{
+    
+    public class EmployeeDAL
+    {
+        public List<Employee> SelectAllEmployees()
+        {
+            List<Employee> ListEmployees = new List<Employee>
+            {
+                //Get the Employees from the Database
+                //for now we are hard coded the employees
+                new Employee() { ID = 1, Name = "Pranaya", Department = "IT" },
+                new Employee() { ID = 2, Name = "Kumar", Department = "HR" },
+                new Employee() { ID = 3, Name = "Rout", Department = "Payroll" }
+            };
+            return ListEmployees;
+        }
+    }
+}
+
+Create A Class And Method Using Dependency Injection 
+To Show All Employees Shown In Above Class

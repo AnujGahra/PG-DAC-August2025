@@ -1,0 +1,24 @@
+C:\LangBasics\ExofPropException\ExofPropException\bin\Release\ExofPropException.exe
+C:\LangBasics\ExofPropException\ExofPropException\bin\Release\ExofPropException.pdb
+C:\LangBasics\ExofPropException\ExofPropException\obj\Release\ResolveAssemblyReference.cache
+C:\LangBasics\ExofPropException\ExofPropException\obj\Release\ExofPropException.exe
+C:\LangBasics\ExofPropException\ExofPropException\obj\Release\ExofPropException.pdb
+D:\LangBasics\ExofPropException\ExofPropException\obj\Release\ExofPropException.exe
+D:\LangBasics\ExofPropException\ExofPropException\obj\Release\ExofPropException.pdb
+D:\LangBasics\ExofPropException\ExofPropException\bin\Release\ExofPropException.exe
+D:\LangBasics\ExofPropException\ExofPropException\bin\Release\ExofPropException.pdb
+D:\LangBasics\ExofPropException\ExofPropException\obj\Release\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofPropException\ExofPropException\obj\Release\ExofPropException.exe
+C:\SouceEdge Session 1\LangBasics\ExofPropException\ExofPropException\obj\Release\ExofPropException.pdb
+C:\SouceEdge Session 1\LangBasics\ExofPropException\ExofPropException\bin\Release\ExofPropException.exe
+C:\SouceEdge Session 1\LangBasics\ExofPropException\ExofPropException\bin\Release\ExofPropException.pdb
+C:\SouceEdge Session 1\LangBasics\ExofPropException\ExofPropException\obj\Release\ExofPropException.csprojResolveAssemblyReference.cache
+E:\krishna sir\C#Practicals\ExofPropException\ExofPropException\obj\Release\ExofPropException.exe
+E:\krishna sir\C#Practicals\ExofPropException\ExofPropException\obj\Release\ExofPropException.pdb
+E:\krishna sir\C#Practicals\ExofPropException\ExofPropException\bin\Release\ExofPropException.exe
+E:\krishna sir\C#Practicals\ExofPropException\ExofPropException\bin\Release\ExofPropException.pdb
+D:\krishna sir\C#Practicals\ExofPropException\ExofPropException\obj\Release\ExofPropException.exe
+D:\krishna sir\C#Practicals\ExofPropException\ExofPropException\obj\Release\ExofPropException.pdb
+D:\krishna sir\C#Practicals\ExofPropException\ExofPropException\bin\Release\ExofPropException.exe.config
+D:\krishna sir\C#Practicals\ExofPropException\ExofPropException\bin\Release\ExofPropException.exe
+D:\krishna sir\C#Practicals\ExofPropException\ExofPropException\bin\Release\ExofPropException.pdb

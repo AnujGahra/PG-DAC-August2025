@@ -1,0 +1,4 @@
+D:\krishna sir\C#Practicals\ExofDynamicAndVar\ExofDynamicAndVar\bin\Debug\ExofDynamicAndVar.exe
+D:\krishna sir\C#Practicals\ExofDynamicAndVar\ExofDynamicAndVar\bin\Debug\ExofDynamicAndVar.pdb
+D:\krishna sir\C#Practicals\ExofDynamicAndVar\ExofDynamicAndVar\obj\x86\Debug\ExofDynamicAndVar.exe
+D:\krishna sir\C#Practicals\ExofDynamicAndVar\ExofDynamicAndVar\obj\x86\Debug\ExofDynamicAndVar.pdb

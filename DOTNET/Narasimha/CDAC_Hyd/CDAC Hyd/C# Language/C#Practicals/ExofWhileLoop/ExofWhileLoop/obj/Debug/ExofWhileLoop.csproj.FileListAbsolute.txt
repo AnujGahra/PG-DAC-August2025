@@ -1,0 +1,23 @@
+D:\LangBasics\ExofWhileLoop\ExofWhileLoop\bin\Debug\ExofWhileLoop.exe
+D:\LangBasics\ExofWhileLoop\ExofWhileLoop\bin\Debug\ExofWhileLoop.pdb
+D:\LangBasics\ExofWhileLoop\ExofWhileLoop\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofWhileLoop\ExofWhileLoop\obj\Debug\ExofWhileLoop.exe
+D:\LangBasics\ExofWhileLoop\ExofWhileLoop\obj\Debug\ExofWhileLoop.pdb
+C:\LangBasics\ExofWhileLoop\ExofWhileLoop\obj\Debug\ExofWhileLoop.exe
+C:\LangBasics\ExofWhileLoop\ExofWhileLoop\obj\Debug\ExofWhileLoop.pdb
+C:\LangBasics\ExofWhileLoop\ExofWhileLoop\bin\Debug\ExofWhileLoop.exe
+C:\LangBasics\ExofWhileLoop\ExofWhileLoop\bin\Debug\ExofWhileLoop.pdb
+C:\LangBasics\ExofWhileLoop\ExofWhileLoop\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofWhileLoop\ExofWhileLoop\obj\Debug\ExofWhileLoop.exe
+C:\SouceEdge Session 1\LangBasics\ExofWhileLoop\ExofWhileLoop\obj\Debug\ExofWhileLoop.pdb
+C:\SouceEdge Session 1\LangBasics\ExofWhileLoop\ExofWhileLoop\bin\Debug\ExofWhileLoop.exe
+C:\SouceEdge Session 1\LangBasics\ExofWhileLoop\ExofWhileLoop\bin\Debug\ExofWhileLoop.pdb
+E:\krishna sir\C#Practicals\ExofWhileLoop\ExofWhileLoop\obj\Debug\ExofWhileLoop.exe
+E:\krishna sir\C#Practicals\ExofWhileLoop\ExofWhileLoop\obj\Debug\ExofWhileLoop.pdb
+E:\krishna sir\C#Practicals\ExofWhileLoop\ExofWhileLoop\bin\Debug\ExofWhileLoop.exe
+E:\krishna sir\C#Practicals\ExofWhileLoop\ExofWhileLoop\bin\Debug\ExofWhileLoop.pdb
+D:\krishna sir\C#Practicals\ExofWhileLoop\ExofWhileLoop\bin\Debug\ExofWhileLoop.exe.config
+D:\krishna sir\C#Practicals\ExofWhileLoop\ExofWhileLoop\obj\Debug\ExofWhileLoop.exe
+D:\krishna sir\C#Practicals\ExofWhileLoop\ExofWhileLoop\obj\Debug\ExofWhileLoop.pdb
+D:\krishna sir\C#Practicals\ExofWhileLoop\ExofWhileLoop\bin\Debug\ExofWhileLoop.exe
+D:\krishna sir\C#Practicals\ExofWhileLoop\ExofWhileLoop\bin\Debug\ExofWhileLoop.pdb

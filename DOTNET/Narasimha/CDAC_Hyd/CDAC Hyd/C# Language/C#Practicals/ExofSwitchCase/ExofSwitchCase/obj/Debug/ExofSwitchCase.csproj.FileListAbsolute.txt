@@ -1,0 +1,26 @@
+D:\LangBasics\ExofSwitchCase\ExofSwitchCase\bin\Debug\ExofSwitchCase.exe
+D:\LangBasics\ExofSwitchCase\ExofSwitchCase\bin\Debug\ExofSwitchCase.pdb
+D:\LangBasics\ExofSwitchCase\ExofSwitchCase\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofSwitchCase\ExofSwitchCase\obj\Debug\ExofSwitchCase.exe
+D:\LangBasics\ExofSwitchCase\ExofSwitchCase\obj\Debug\ExofSwitchCase.pdb
+C:\LangBasics\ExofSwitchCase\ExofSwitchCase\obj\Debug\ExofSwitchCase.exe
+C:\LangBasics\ExofSwitchCase\ExofSwitchCase\obj\Debug\ExofSwitchCase.pdb
+C:\LangBasics\ExofSwitchCase\ExofSwitchCase\bin\Debug\ExofSwitchCase.exe
+C:\LangBasics\ExofSwitchCase\ExofSwitchCase\bin\Debug\ExofSwitchCase.pdb
+C:\LangBasics\ExofSwitchCase\ExofSwitchCase\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofSwitchCase\ExofSwitchCase\obj\Debug\ExofSwitchCase.exe
+C:\SouceEdge Session 1\LangBasics\ExofSwitchCase\ExofSwitchCase\obj\Debug\ExofSwitchCase.pdb
+C:\SouceEdge Session 1\LangBasics\ExofSwitchCase\ExofSwitchCase\bin\Debug\ExofSwitchCase.exe
+C:\SouceEdge Session 1\LangBasics\ExofSwitchCase\ExofSwitchCase\bin\Debug\ExofSwitchCase.pdb
+C:\SouceEdge Session 1\LangBasics\ExofSwitchCase\ExofSwitchCase\obj\Debug\ExofSwitchCase.csprojResolveAssemblyReference.cache
+E:\krishna sir\C#Practicals\ExofSwitchCase\ExofSwitchCase\obj\Debug\ExofSwitchCase.exe
+E:\krishna sir\C#Practicals\ExofSwitchCase\ExofSwitchCase\obj\Debug\ExofSwitchCase.pdb
+E:\krishna sir\C#Practicals\ExofSwitchCase\ExofSwitchCase\bin\Debug\ExofSwitchCase.exe
+E:\krishna sir\C#Practicals\ExofSwitchCase\ExofSwitchCase\bin\Debug\ExofSwitchCase.pdb
+E:\krishna sir\C#Practicals\ExofSwitchCase\ExofSwitchCase\obj\Debug\ExofSwitchCase.csprojResolveAssemblyReference.cache
+D:\krishna sir\C#Practicals\ExofSwitchCase\ExofSwitchCase\bin\Debug\ExofSwitchCase.exe.config
+D:\krishna sir\C#Practicals\ExofSwitchCase\ExofSwitchCase\obj\Debug\ExofSwitchCase.exe
+D:\krishna sir\C#Practicals\ExofSwitchCase\ExofSwitchCase\obj\Debug\ExofSwitchCase.pdb
+D:\krishna sir\C#Practicals\ExofSwitchCase\ExofSwitchCase\bin\Debug\ExofSwitchCase.exe
+D:\krishna sir\C#Practicals\ExofSwitchCase\ExofSwitchCase\bin\Debug\ExofSwitchCase.pdb
+D:\krishna sir\C#Practicals\ExofSwitchCase\ExofSwitchCase\obj\Debug\ExofSwitchCase.csprojResolveAssemblyReference.cache

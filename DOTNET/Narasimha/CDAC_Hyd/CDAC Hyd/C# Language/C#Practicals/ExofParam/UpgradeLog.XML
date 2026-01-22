@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExCommandLineParam">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExCommandLineParam\ExCommandLineParam.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExCommandLineParam\ExCommandLineParam.suo">
+</Property><Property Name="Date" Value="21 April 2015">
+</Property><Property Name="Time" Value="10:48">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExCommandLineParam.sln" Description="File successfully backed up as D:\LangBasics\ExCommandLineParam\Backup\ExCommandLineParam.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExCommandLineParam.suo" Description="File successfully backed up as D:\LangBasics\ExCommandLineParam\Backup\ExCommandLineParam.suo">
+</Event><Event ErrorLevel="0" Project="ExCommandLineParam" Source="ExCommandLineParam\ExCommandLineParam.csproj" Description="Project file successfully backed up as D:\LangBasics\ExCommandLineParam\Backup\ExCommandLineParam\ExCommandLineParam.csproj">
+</Event><Event ErrorLevel="0" Project="ExCommandLineParam" Source="ExCommandLineParam\Program.cs" Description="File successfully backed up as D:\LangBasics\ExCommandLineParam\Backup\ExCommandLineParam\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExCommandLineParam" Source="ExCommandLineParam\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExCommandLineParam\Backup\ExCommandLineParam\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExCommandLineParam" Source="ExCommandLineParam\ExCommandLineParam.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExCommandLineParam" Source="ExCommandLineParam\ExCommandLineParam.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExCommandLineParam.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExCommandLineParam.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExCommandLineParam" Source="ExCommandLineParam\ExCommandLineParam.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

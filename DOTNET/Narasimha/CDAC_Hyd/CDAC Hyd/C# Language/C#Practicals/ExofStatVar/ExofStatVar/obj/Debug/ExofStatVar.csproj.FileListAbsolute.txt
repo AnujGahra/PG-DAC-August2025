@@ -1,0 +1,25 @@
+D:\LangBasics\ExofStatVar\ExofStatVar\bin\Debug\ExofStatVar.exe
+D:\LangBasics\ExofStatVar\ExofStatVar\bin\Debug\ExofStatVar.pdb
+D:\LangBasics\ExofStatVar\ExofStatVar\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofStatVar\ExofStatVar\obj\Debug\ExofStatVar.exe
+D:\LangBasics\ExofStatVar\ExofStatVar\obj\Debug\ExofStatVar.pdb
+C:\LangBasics\ExofStatVar\ExofStatVar\obj\Debug\ExofStatVar.exe
+C:\LangBasics\ExofStatVar\ExofStatVar\obj\Debug\ExofStatVar.pdb
+C:\LangBasics\ExofStatVar\ExofStatVar\bin\Debug\ExofStatVar.exe
+C:\LangBasics\ExofStatVar\ExofStatVar\bin\Debug\ExofStatVar.pdb
+C:\LangBasics\ExofStatVar\ExofStatVar\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofStatVar\ExofStatVar\obj\Debug\ExofStatVar.exe
+C:\SouceEdge Session 1\LangBasics\ExofStatVar\ExofStatVar\obj\Debug\ExofStatVar.pdb
+C:\SouceEdge Session 1\LangBasics\ExofStatVar\ExofStatVar\bin\Debug\ExofStatVar.exe
+C:\SouceEdge Session 1\LangBasics\ExofStatVar\ExofStatVar\bin\Debug\ExofStatVar.pdb
+C:\SouceEdge Session 1\LangBasics\ExofStatVar\ExofStatVar\obj\Debug\ExofStatVar.csprojResolveAssemblyReference.cache
+E:\krishna sir\C#Practicals\ExofStatVar\ExofStatVar\obj\Debug\ExofStatVar.exe
+E:\krishna sir\C#Practicals\ExofStatVar\ExofStatVar\obj\Debug\ExofStatVar.pdb
+E:\krishna sir\C#Practicals\ExofStatVar\ExofStatVar\bin\Debug\ExofStatVar.exe
+E:\krishna sir\C#Practicals\ExofStatVar\ExofStatVar\bin\Debug\ExofStatVar.pdb
+E:\krishna sir\C#Practicals\ExofStatVar\ExofStatVar\obj\Debug\ExofStatVar.csprojResolveAssemblyReference.cache
+D:\krishna sir\C#Practicals\ExofStatVar\ExofStatVar\bin\Debug\ExofStatVar.exe.config
+D:\krishna sir\C#Practicals\ExofStatVar\ExofStatVar\obj\Debug\ExofStatVar.exe
+D:\krishna sir\C#Practicals\ExofStatVar\ExofStatVar\obj\Debug\ExofStatVar.pdb
+D:\krishna sir\C#Practicals\ExofStatVar\ExofStatVar\bin\Debug\ExofStatVar.exe
+D:\krishna sir\C#Practicals\ExofStatVar\ExofStatVar\bin\Debug\ExofStatVar.pdb

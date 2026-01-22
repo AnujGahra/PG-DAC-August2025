@@ -1,0 +1,21 @@
+package com.gahra;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class add extends HttpServlet {
+	
+	public void doGet(HttpServletRequest req, HttpServletResponse res ) throws IOException {
+		
+		System.out.println("Second Servlet");
+		
+		
+//		int a = (int)req.getAttribute("k");
+//		PrintWriter writer = res.getWriter();
+//		writer.print("Second Servlet" + a);
+	}
+}

@@ -1,0 +1,25 @@
+c:\LangBasics\ExampleReadWriteProperty\ExampleReadWriteProperty\bin\Debug\ExampleReadWriteProperty.exe
+c:\LangBasics\ExampleReadWriteProperty\ExampleReadWriteProperty\bin\Debug\ExampleReadWriteProperty.pdb
+c:\LangBasics\ExampleReadWriteProperty\ExampleReadWriteProperty\obj\Debug\ResolveAssemblyReference.cache
+c:\LangBasics\ExampleReadWriteProperty\ExampleReadWriteProperty\obj\Debug\ExampleReadWriteProperty.exe
+c:\LangBasics\ExampleReadWriteProperty\ExampleReadWriteProperty\obj\Debug\ExampleReadWriteProperty.pdb
+D:\LangBasics\ExampleReadWriteProperty\ExampleReadWriteProperty\obj\Debug\ExampleReadWriteProperty.exe
+D:\LangBasics\ExampleReadWriteProperty\ExampleReadWriteProperty\obj\Debug\ExampleReadWriteProperty.pdb
+D:\LangBasics\ExampleReadWriteProperty\ExampleReadWriteProperty\bin\Debug\ExampleReadWriteProperty.exe
+D:\LangBasics\ExampleReadWriteProperty\ExampleReadWriteProperty\bin\Debug\ExampleReadWriteProperty.pdb
+D:\LangBasics\ExampleReadWriteProperty\ExampleReadWriteProperty\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofReadWriteProperty\ExampleReadWriteProperty\obj\Debug\ExampleReadWriteProperty.exe
+C:\SouceEdge Session 1\LangBasics\ExofReadWriteProperty\ExampleReadWriteProperty\obj\Debug\ExampleReadWriteProperty.pdb
+C:\SouceEdge Session 1\LangBasics\ExofReadWriteProperty\ExampleReadWriteProperty\bin\Debug\ExampleReadWriteProperty.exe
+C:\SouceEdge Session 1\LangBasics\ExofReadWriteProperty\ExampleReadWriteProperty\bin\Debug\ExampleReadWriteProperty.pdb
+C:\SouceEdge Session 1\LangBasics\ExofReadWriteProperty\ExampleReadWriteProperty\obj\Debug\ExampleReadWriteProperty.csprojResolveAssemblyReference.cache
+E:\krishna sir\C#Practicals\ExofReadWriteProperty\ExampleReadWriteProperty\obj\Debug\ExampleReadWriteProperty.exe
+E:\krishna sir\C#Practicals\ExofReadWriteProperty\ExampleReadWriteProperty\obj\Debug\ExampleReadWriteProperty.pdb
+E:\krishna sir\C#Practicals\ExofReadWriteProperty\ExampleReadWriteProperty\bin\Debug\ExampleReadWriteProperty.exe
+E:\krishna sir\C#Practicals\ExofReadWriteProperty\ExampleReadWriteProperty\bin\Debug\ExampleReadWriteProperty.pdb
+E:\krishna sir\C#Practicals\ExofReadWriteProperty\ExampleReadWriteProperty\obj\Debug\ExampleReadWriteProperty.csprojResolveAssemblyReference.cache
+D:\krishna sir\C#Practicals\ExofReadWriteProperty\ExampleReadWriteProperty\bin\Debug\ExampleReadWriteProperty.exe.config
+D:\krishna sir\C#Practicals\ExofReadWriteProperty\ExampleReadWriteProperty\obj\Debug\ExampleReadWriteProperty.exe
+D:\krishna sir\C#Practicals\ExofReadWriteProperty\ExampleReadWriteProperty\obj\Debug\ExampleReadWriteProperty.pdb
+D:\krishna sir\C#Practicals\ExofReadWriteProperty\ExampleReadWriteProperty\bin\Debug\ExampleReadWriteProperty.exe
+D:\krishna sir\C#Practicals\ExofReadWriteProperty\ExampleReadWriteProperty\bin\Debug\ExampleReadWriteProperty.pdb

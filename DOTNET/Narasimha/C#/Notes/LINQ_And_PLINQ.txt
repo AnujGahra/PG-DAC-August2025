@@ -1,0 +1,115 @@
+Microsoft introduced LINQ (Language Integrated Query) with .NET Framework 3.5 and C# 3.0, available in the System.Linq namespace. LINQ provides a common syntax that allows us to query the data from various data sources in a uniform manner. That means using a single LINQ query, we can get or set the data from various data sources such as SQL Server database, XML documents, ADO.NET Datasets, and any other in-memory objects such as Collections, Generics, etc.
+
+Ex 1 Linq To Collections
+---------------------------------
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Step1: Data Source
+            List<int> integerList = new List<int>()
+            {
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+            };
+
+            //Step2: Query
+            //LINQ Query using Query Syntax to fetch all numbers which are > 5
+            var QuerySyntax = from obj in integerList //Data Source
+                              where obj > 5 //Condition
+                              select obj; //Selection
+
+            //Step3: Execution
+            foreach (var item in QuerySyntax)
+            {
+                Console.Write(item + " ");
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
+
+Ex 2
+------
+
+using System.Linq;
+using System.Collections.Generic;
+
+class GFG {
+
+      static public void Main()
+    {
+
+        // Data source
+        List<string> my_list = new List<string>() 
+        {
+                "This is my Dog",
+                "Name of my Dog is Robin",
+                "This is my Cat",
+                "Name of the cat is Mewmew"
+        };
+
+        // Creating LINQ Query
+        var res = from l in my_list
+                  where l.Contains("my")
+                  select l;
+
+        // Executing LINQ Query
+        foreach(var q in res)
+        {
+            Console.WriteLine(q);
+        }
+    }
+}
+--------------------------------------------------------------------
+
+Ex of LINQ With Method
+
+SingleOrDefault(): It is used to return a single element from a data source, or you can say from a sequence.
+
+using System;
+using System.Linq;
+
+public class Program
+{
+	public static void Main()
+	{
+		int[] IntArray = { 10, 20, 30, 40, 50, 60 };
+
+		//Using Method Syntax
+        //Fetching the Only Element from the Sequenece using Method Syntax
+var MethodSyntax = IntArray.SingleOrDefault(x=> x == 20);
+
+		//Using Query Syntax
+		//Fetching the Only Element from the Sequenece using Query Syntax
+        var QuerySyntax = (from num in IntArray select num).SingleOrDefault(num => num == 10 );
+
+		Console.WriteLine(MethodSyntax);
+		Console.WriteLine(QuerySyntax);
+	}
+}
+
+
+Ex of PLINQ
+------------------
+using System.Linq;
+using System.Collections.Generic;
+public class Program
+{
+    public static void Main()
+    {
+        List<int> numbers = Enumerable.Range(1, 1000).ToList(); // Large dataset
+
+        // PLINQ query with method syntax to filter and select elements in parallel
+        var query = numbers
+                    .AsParallel()
+                    .Where(num => num % 2 == 0)
+                    .Select(num => num * 2);
+        // Execution of PLINQ query
+        foreach (var result in query)
+        {
+            Console.WriteLine(result);
+        }
+    }
+}

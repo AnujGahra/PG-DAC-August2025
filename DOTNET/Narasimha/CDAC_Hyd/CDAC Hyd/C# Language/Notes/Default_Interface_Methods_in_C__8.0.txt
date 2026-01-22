@@ -1,0 +1,50 @@
+Default Interface Methods in C# 8.0
+
+Before C# 8.0 interfaces only contain the declaration of the members(methods, properties, events)but from C# 8.0 it is allowed to add members as well as their implementation to the interface. Now you are allowed to add a method with their implementation to the interface without breaking the existing implementation of the interface, such type of methods is known as default interface methods(also known as the virtual extension methods). 
+
+
+
+// A simple interface
+interface I_interface {
+
+    // This method is only
+    // have its declaration
+    // not its definition
+    void display_1();
+
+    // Default method with both 
+    // declaration and definition
+    public void display_2()
+    {
+        Console.WriteLine("Hello!! Default Method");
+    }
+}
+
+// A class that implements
+// the I_interface interface.
+class Example_Class : I_interface {
+
+    // Providing the body
+    // part of the method
+    public void display_1()
+    {
+        Console.WriteLine("Hello!! Method");
+    }
+
+    // Main Method
+    public static void Main(String[] args)
+    {
+
+        // Creating an object
+        Example_Class t = new Example_Class();
+
+        // Calling method
+        t.display_1();
+
+        // Creating an object
+        I_interface obj = t;
+
+        // Calling default method
+        obj.display_2();
+    }
+}

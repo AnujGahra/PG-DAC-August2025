@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExofSwitchCase">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExofSwitchCase\ExofSwitchCase.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExofSwitchCase\ExofSwitchCase.suo">
+</Property><Property Name="Date" Value="29 December 2014">
+</Property><Property Name="Time" Value="12:31">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExofSwitchCase.sln" Description="File successfully backed up as D:\LangBasics\ExofSwitchCase\Backup\ExofSwitchCase.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExofSwitchCase.suo" Description="File successfully backed up as D:\LangBasics\ExofSwitchCase\Backup\ExofSwitchCase.suo">
+</Event><Event ErrorLevel="0" Project="ExofSwitchCase" Source="ExofSwitchCase\ExofSwitchCase.csproj" Description="Project file successfully backed up as D:\LangBasics\ExofSwitchCase\Backup\ExofSwitchCase\ExofSwitchCase.csproj">
+</Event><Event ErrorLevel="0" Project="ExofSwitchCase" Source="ExofSwitchCase\Program.cs" Description="File successfully backed up as D:\LangBasics\ExofSwitchCase\Backup\ExofSwitchCase\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExofSwitchCase" Source="ExofSwitchCase\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExofSwitchCase\Backup\ExofSwitchCase\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExofSwitchCase" Source="ExofSwitchCase\ExofSwitchCase.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExofSwitchCase" Source="ExofSwitchCase\ExofSwitchCase.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExofSwitchCase.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExofSwitchCase.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExofSwitchCase" Source="ExofSwitchCase\ExofSwitchCase.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

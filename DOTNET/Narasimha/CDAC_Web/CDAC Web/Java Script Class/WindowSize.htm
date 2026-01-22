@@ -1,0 +1,34 @@
+<html> 
+     <head> 
+          <title>Browser Inner width and height</title> 
+          <style> 
+            body{ 
+                text-align:center; 
+            } 
+            .test{ 
+                font-size:40px; 
+                font-weight:bold; 
+                color:green; 
+            } 
+          </style> 
+     </head> 
+     <body> 
+     <div class = "test">Liberty Computers</div> 
+     <h2>Vidyanagar Hubli</h2> 
+     <p id="demo"></p> 
+     <script> 
+          var Width, Height, result; 
+           Width = window.innerWidth || document.documentElement.clientWidth 
+                  || document.body.clientWidth; 
+  
+          Height = window.innerHeight || document.documentElement.clientHeight 
+                  || document.body.clientHeight; 
+          
+          result = document.getElementById("demo"); 
+          result.innerHTML = "Browser inner width: " + Width + 
+                              "<br>Browser inner height: " + Height; 
+  
+     </script> 
+</body> 
+</html> 
+

@@ -1,0 +1,5 @@
+package com.learn.apis.service;
+
+public interface StudentService {
+
+}

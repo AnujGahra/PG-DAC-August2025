@@ -1,0 +1,33 @@
+public IActionResult AssignName()
+{
+    TempData["myname"] = "CDAC Hyderabad";
+    return RedirectToAction("ShowName");
+}
+public IActionResult ShowName()
+{
+    return Content("My Name is " + TempData["myname"]);
+}
+
+----------------------------------------------
+Temp Data Controller To Controller
+
+Code In Home Controller
+
+public IActionResult AssignName()
+{
+    TempData["myname"] = "CDAC Hyderabad";
+    TempData.Keep();
+    return RedirectToAction("Index","Student");
+}
+
+
+Code In Student Controller
+
+public class StudentController : Controller
+{
+    public IActionResult Index()
+    {
+
+        return Content("My Name is " + TempData["myname"]);
+    }
+}

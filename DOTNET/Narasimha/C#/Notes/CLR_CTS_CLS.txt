@@ -1,0 +1,12 @@
+In .NET, CLR, CTS, and CLS are fundamental components that enable cross-language integration and type safety. CLR (Common Language Runtime) is the execution engine that manages .NET applications, handling tasks like memory management, security, and exception handling. 
+
+CLR (Common Language Runtime):
+The heart of .NET, the CLR is responsible for loading, executing, and managing .NET applications. It handles tasks like memory management (garbage collection), security (code access security), and thread management. The CLR also compiles Intermediate Language (IL) code into native machine code at runtime using a Just-In-Time (JIT) compiler. 
+
+------------------------------------------------------------------------------
+
+CTS (Common Type System) defines all data types and how they interact within the runtime, ensuring that different .NET languages can work with the same types.  The CTS defines a standard for how data types are represented and how they interact within the .NET environment. It ensures that types defined in different .NET languages are compatible and can be used together For Example int in C# and Integer of Vb.Net both
+are represented as  System.32.int in common language run time.
+---------------------------------------------------------------------------------------
+
+CLS (Common Language Specification) is a subset of CTS, providing a set of rules that ensure interoperability between different .NET languages, allowing code written in one language to be used by another. 

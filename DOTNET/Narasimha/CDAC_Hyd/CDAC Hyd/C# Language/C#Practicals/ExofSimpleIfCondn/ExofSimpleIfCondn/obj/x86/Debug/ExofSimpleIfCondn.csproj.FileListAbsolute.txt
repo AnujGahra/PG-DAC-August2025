@@ -1,0 +1,9 @@
+E:\krishna sir\C#Practicals\ExofSimpleIfCondn\ExofSimpleIfCondn\bin\Debug\ExofSimpleIfCondn.exe
+E:\krishna sir\C#Practicals\ExofSimpleIfCondn\ExofSimpleIfCondn\bin\Debug\ExofSimpleIfCondn.pdb
+E:\krishna sir\C#Practicals\ExofSimpleIfCondn\ExofSimpleIfCondn\obj\x86\Debug\ExofSimpleIfCondn.exe
+E:\krishna sir\C#Practicals\ExofSimpleIfCondn\ExofSimpleIfCondn\obj\x86\Debug\ExofSimpleIfCondn.pdb
+D:\krishna sir\C#Practicals\ExofSimpleIfCondn\ExofSimpleIfCondn\obj\x86\Debug\ExofSimpleIfCondn.exe
+D:\krishna sir\C#Practicals\ExofSimpleIfCondn\ExofSimpleIfCondn\obj\x86\Debug\ExofSimpleIfCondn.pdb
+D:\krishna sir\C#Practicals\ExofSimpleIfCondn\ExofSimpleIfCondn\bin\Debug\ExofSimpleIfCondn.exe
+D:\krishna sir\C#Practicals\ExofSimpleIfCondn\ExofSimpleIfCondn\bin\Debug\ExofSimpleIfCondn.pdb
+D:\krishna sir\C#Practicals\ExofSimpleIfCondn\ExofSimpleIfCondn\obj\x86\Debug\ResolveAssemblyReference.cache

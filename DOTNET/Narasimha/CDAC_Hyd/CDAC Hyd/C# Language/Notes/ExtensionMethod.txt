@@ -1,0 +1,67 @@
+What are Extension Methods in C#?
+It is a new feature that has been added in C# 3.0 which allows us to add new methods into a class without editing the source code of the class i.e. if a class consists of a set of members in it and in the future if you want to add new methods into the class, you can add those methods without making any changes to the source code of the class.
+
+Extension methods can be used as an approach to extending the functionality of a class in the future if the source code of the class is not available or we don’t have any permission in making changes to the class.
+
+
+using System;
+namespace ExtensionMethods
+{
+    public class OldClass
+    {
+        public int x = 100;
+        public void Test1()
+        {
+            Console.WriteLine("Method one: " + this.x);
+        }
+        public void Test2()
+        {
+            Console.WriteLine("Method two: " + this.x);
+        }
+    }
+}
+----------------------------------------------------------------------
+
+Now our requirement is to add three new methods to the class OldClass. For some reason, let us assume the source code is not available to us or we don’t have access to the source to edit. That means we cannot change the source code of OldClass. Then how we can extend the OldClass functionality i.e. how we can add three methods to the OldClass and how we can call those new methods using the OldClass object. This is where extension methods come into the picture.
+-----------------------------------------------------------------------------
+using System;
+namespace ExtensionMethods
+{
+    public static class NewClass
+    {
+        public static void Test3(this OldClass O)
+        {
+            Console.WriteLine("Method Three");
+        }
+        public static void Test4(this OldClass O, int x)
+        {
+            Console.WriteLine("Method Four: " + x);
+        }
+        public static void Test5(this OldClass O)
+        {
+            Console.WriteLine("Method Five:" + O.x);
+        }
+    }
+}
+-------------------------------------------------------
+
+Driver Code
+
+using System;
+namespace ExtensionMethods
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            OldClass obj = new OldClass();
+            obj.Test1();
+            obj.Test2();
+            //Calling Extension Methods
+            obj.Test3();
+            obj.Test4(10);
+            obj.Test5();
+            Console.ReadLine();
+        }
+    }
+}

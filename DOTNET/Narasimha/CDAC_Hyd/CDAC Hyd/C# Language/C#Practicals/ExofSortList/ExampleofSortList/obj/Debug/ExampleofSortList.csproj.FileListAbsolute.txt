@@ -1,0 +1,25 @@
+c:\LangBasics\ExampleofSortList\ExampleofSortList\bin\Debug\ExampleofSortList.exe
+c:\LangBasics\ExampleofSortList\ExampleofSortList\bin\Debug\ExampleofSortList.pdb
+c:\LangBasics\ExampleofSortList\ExampleofSortList\obj\Debug\ResolveAssemblyReference.cache
+c:\LangBasics\ExampleofSortList\ExampleofSortList\obj\Debug\ExampleofSortList.exe
+c:\LangBasics\ExampleofSortList\ExampleofSortList\obj\Debug\ExampleofSortList.pdb
+D:\LangBasics\ExampleofSortList\ExampleofSortList\obj\Debug\ExampleofSortList.exe
+D:\LangBasics\ExampleofSortList\ExampleofSortList\obj\Debug\ExampleofSortList.pdb
+D:\LangBasics\ExampleofSortList\ExampleofSortList\bin\Debug\ExampleofSortList.exe
+D:\LangBasics\ExampleofSortList\ExampleofSortList\bin\Debug\ExampleofSortList.pdb
+D:\LangBasics\ExampleofSortList\ExampleofSortList\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofSortList\ExampleofSortList\obj\Debug\ExampleofSortList.exe
+C:\SouceEdge Session 1\LangBasics\ExofSortList\ExampleofSortList\obj\Debug\ExampleofSortList.pdb
+C:\SouceEdge Session 1\LangBasics\ExofSortList\ExampleofSortList\bin\Debug\ExampleofSortList.exe
+C:\SouceEdge Session 1\LangBasics\ExofSortList\ExampleofSortList\bin\Debug\ExampleofSortList.pdb
+C:\SouceEdge Session 1\LangBasics\ExofSortList\ExampleofSortList\obj\Debug\ExampleofSortList.csprojResolveAssemblyReference.cache
+E:\krishna sir\C#Practicals\ExofSortList\ExampleofSortList\obj\Debug\ExampleofSortList.exe
+E:\krishna sir\C#Practicals\ExofSortList\ExampleofSortList\obj\Debug\ExampleofSortList.pdb
+E:\krishna sir\C#Practicals\ExofSortList\ExampleofSortList\bin\Debug\ExampleofSortList.exe
+E:\krishna sir\C#Practicals\ExofSortList\ExampleofSortList\bin\Debug\ExampleofSortList.pdb
+D:\krishna sir\C#Practicals\ExofSortList\ExampleofSortList\bin\Debug\ExampleofSortList.exe.config
+D:\krishna sir\C#Practicals\ExofSortList\ExampleofSortList\obj\Debug\ExampleofSortList.exe
+D:\krishna sir\C#Practicals\ExofSortList\ExampleofSortList\obj\Debug\ExampleofSortList.pdb
+D:\krishna sir\C#Practicals\ExofSortList\ExampleofSortList\bin\Debug\ExampleofSortList.exe
+D:\krishna sir\C#Practicals\ExofSortList\ExampleofSortList\bin\Debug\ExampleofSortList.pdb
+D:\krishna sir\C#Practicals\ExofSortList\ExampleofSortList\obj\Debug\ExampleofSortList.csprojResolveAssemblyReference.cache

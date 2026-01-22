@@ -1,0 +1,4 @@
+C:\SouceEdge Session 1\LangBasics\ExofPassingClassToList\ExofPassingClassToList\bin\Debug\ExofPassingClassToList.exe
+C:\SouceEdge Session 1\LangBasics\ExofPassingClassToList\ExofPassingClassToList\bin\Debug\ExofPassingClassToList.pdb
+C:\SouceEdge Session 1\LangBasics\ExofPassingClassToList\ExofPassingClassToList\obj\Debug\ExofPassingClassToList.exe
+C:\SouceEdge Session 1\LangBasics\ExofPassingClassToList\ExofPassingClassToList\obj\Debug\ExofPassingClassToList.pdb

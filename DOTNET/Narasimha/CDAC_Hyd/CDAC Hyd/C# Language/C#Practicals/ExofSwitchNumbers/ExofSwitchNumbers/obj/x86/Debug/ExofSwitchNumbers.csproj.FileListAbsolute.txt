@@ -1,0 +1,4 @@
+D:\krishna sir\C#Practicals\ExofSwitchNumbers\ExofSwitchNumbers\bin\Debug\ExofSwitchNumbers.exe
+D:\krishna sir\C#Practicals\ExofSwitchNumbers\ExofSwitchNumbers\bin\Debug\ExofSwitchNumbers.pdb
+D:\krishna sir\C#Practicals\ExofSwitchNumbers\ExofSwitchNumbers\obj\x86\Debug\ExofSwitchNumbers.exe
+D:\krishna sir\C#Practicals\ExofSwitchNumbers\ExofSwitchNumbers\obj\x86\Debug\ExofSwitchNumbers.pdb

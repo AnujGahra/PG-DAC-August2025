@@ -1,0 +1,41 @@
+<html>
+<body>
+<br>
+<center>
+Simple Calculator Using Java Script
+<br>
+<script type="text/javascript">
+var result;
+
+const number1 = parseFloat(prompt('Enter first number: '));
+const number2 = parseFloat(prompt('Enter second number: '));
+
+const operator = prompt('Enter operator ( either +, -, * or / ): ');
+
+switch(operator) 
+{
+    case '+':
+        result = number1 + number2;
+        alert('Result is '+result);
+        break;
+    case '-':
+        result = number1 - number2;
+        alert('Result is '+result);
+        break;
+    case '*':
+        result = number1 * number2;
+        alert('Result is '+result);
+        break;
+    case '/':
+        result = number1 / number2;
+        alert('Result is '+result);
+        break;
+
+    default:
+        alert('Invalid Operator Used');
+        console.log('Invalid operator');
+        break;
+}
+</script>
+</body>
+</html> 

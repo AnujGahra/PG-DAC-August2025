@@ -1,0 +1,26 @@
+D:\LangBasics\ExofDoLoop\ExofDoLoop\bin\Debug\ExofDoLoop.exe
+D:\LangBasics\ExofDoLoop\ExofDoLoop\bin\Debug\ExofDoLoop.pdb
+D:\LangBasics\ExofDoLoop\ExofDoLoop\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofDoLoop\ExofDoLoop\obj\Debug\ExofDoLoop.exe
+D:\LangBasics\ExofDoLoop\ExofDoLoop\obj\Debug\ExofDoLoop.pdb
+C:\LangBasics\ExofDoLoop\ExofDoLoop\obj\Debug\ExofDoLoop.exe
+C:\LangBasics\ExofDoLoop\ExofDoLoop\obj\Debug\ExofDoLoop.pdb
+C:\LangBasics\ExofDoLoop\ExofDoLoop\bin\Debug\ExofDoLoop.exe
+C:\LangBasics\ExofDoLoop\ExofDoLoop\bin\Debug\ExofDoLoop.pdb
+C:\LangBasics\ExofDoLoop\ExofDoLoop\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofDoLoop\ExofDoLoop\obj\Debug\ExofDoLoop.exe
+C:\SouceEdge Session 1\LangBasics\ExofDoLoop\ExofDoLoop\obj\Debug\ExofDoLoop.pdb
+C:\SouceEdge Session 1\LangBasics\ExofDoLoop\ExofDoLoop\bin\Debug\ExofDoLoop.exe
+C:\SouceEdge Session 1\LangBasics\ExofDoLoop\ExofDoLoop\bin\Debug\ExofDoLoop.pdb
+C:\SouceEdge Session 1\LangBasics\ExofDoLoop\ExofDoLoop\obj\Debug\ExofDoLoop.csprojResolveAssemblyReference.cache
+E:\krishna sir\C#Practicals\ExofDoLoop\ExofDoLoop\obj\Debug\ExofDoLoop.exe
+E:\krishna sir\C#Practicals\ExofDoLoop\ExofDoLoop\obj\Debug\ExofDoLoop.pdb
+E:\krishna sir\C#Practicals\ExofDoLoop\ExofDoLoop\bin\Debug\ExofDoLoop.exe
+E:\krishna sir\C#Practicals\ExofDoLoop\ExofDoLoop\bin\Debug\ExofDoLoop.pdb
+E:\krishna sir\C#Practicals\ExofDoLoop\ExofDoLoop\obj\Debug\ExofDoLoop.csprojResolveAssemblyReference.cache
+D:\krishna sir\C#Practicals\ExofDoLoop\ExofDoLoop\bin\Debug\ExofDoLoop.exe.config
+D:\krishna sir\C#Practicals\ExofDoLoop\ExofDoLoop\obj\Debug\ExofDoLoop.exe
+D:\krishna sir\C#Practicals\ExofDoLoop\ExofDoLoop\obj\Debug\ExofDoLoop.pdb
+D:\krishna sir\C#Practicals\ExofDoLoop\ExofDoLoop\bin\Debug\ExofDoLoop.exe
+D:\krishna sir\C#Practicals\ExofDoLoop\ExofDoLoop\bin\Debug\ExofDoLoop.pdb
+D:\krishna sir\C#Practicals\ExofDoLoop\ExofDoLoop\obj\Debug\ExofDoLoop.csprojResolveAssemblyReference.cache

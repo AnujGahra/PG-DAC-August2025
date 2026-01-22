@@ -1,0 +1,5 @@
+C:\SouceEdge Session 1\LangBasics\ExofIEnumerableInterface\ExofIEnumerableInterface\obj\Debug\ExofIEnumerableInterface.csprojResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofIEnumerableInterface\ExofIEnumerableInterface\bin\Debug\ExofIEnumerableInterface.exe
+C:\SouceEdge Session 1\LangBasics\ExofIEnumerableInterface\ExofIEnumerableInterface\bin\Debug\ExofIEnumerableInterface.pdb
+C:\SouceEdge Session 1\LangBasics\ExofIEnumerableInterface\ExofIEnumerableInterface\obj\Debug\ExofIEnumerableInterface.exe
+C:\SouceEdge Session 1\LangBasics\ExofIEnumerableInterface\ExofIEnumerableInterface\obj\Debug\ExofIEnumerableInterface.pdb

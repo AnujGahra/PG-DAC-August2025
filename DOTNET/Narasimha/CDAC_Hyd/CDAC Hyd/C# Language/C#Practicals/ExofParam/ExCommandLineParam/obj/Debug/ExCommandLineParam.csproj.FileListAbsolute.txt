@@ -1,0 +1,12 @@
+D:\LangBasics\ExCommandLineParam\ExCommandLineParam\bin\Debug\ExCommandLineParam.exe
+D:\LangBasics\ExCommandLineParam\ExCommandLineParam\bin\Debug\ExCommandLineParam.pdb
+D:\LangBasics\ExCommandLineParam\ExCommandLineParam\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExCommandLineParam\ExCommandLineParam\obj\Debug\ExCommandLineParam.exe
+D:\LangBasics\ExCommandLineParam\ExCommandLineParam\obj\Debug\ExCommandLineParam.pdb
+C:\LangBasics\ExCommandLineParam\ExCommandLineParam\obj\Debug\ExCommandLineParam.exe
+C:\LangBasics\ExCommandLineParam\ExCommandLineParam\obj\Debug\ExCommandLineParam.pdb
+C:\LangBasics\ExCommandLineParam\ExCommandLineParam\bin\Debug\ExCommandLineParam.exe
+C:\LangBasics\ExCommandLineParam\ExCommandLineParam\bin\Debug\ExCommandLineParam.pdb
+C:\LangBasics\ExCommandLineParam\ExCommandLineParam\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofParam\ExCommandLineParam\obj\Debug\ExCommandLineParam.exe
+C:\SouceEdge Session 1\LangBasics\ExofParam\ExCommandLineParam\obj\Debug\ExCommandLineParam.pdb

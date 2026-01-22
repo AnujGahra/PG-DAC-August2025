@@ -1,0 +1,56 @@
+package arrayList;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import com.sun.tools.javac.util.List;
+
+public class Launch {
+
+	public static void main(String[] args) {
+		
+		
+		ArrayList al = new ArrayList(); // Non-Generic ArrayList
+		
+		al.add("Anuj");
+		al.add(123); // Autoboxing
+		al.add(false);
+		al.add('a');
+		
+		System.out.println(al);
+		String s = (String) al.get(0); // must cast
+		System.out.println(s);
+		
+		Iterator<Object> itr = al.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+		
+//		List<Objcet> subList = al.subList(1, 3);
+//		System.out.println(subList);
+
+		
+		ArrayList<String> al2 = new ArrayList<String>(); // Generic ArrayList
+		al2.add("Laxmi");
+		System.out.println(al2);
+		
+//		Generic for any data Type: Type Safety
+		ArrayList<Object> al3 = new ArrayList<Object>();
+		
+		al3.add("Anuj Gahra");
+		al3.add(123);
+		al3.add(false);
+		al3.add('a');
+		System.out.println(al3);
+		Object o = al3.get(0); // no cast needed
+		System.out.println(o);
+		
+//		WildCard Generic : TypeSafety: Unknown Type
+		ArrayList<?> al4 = new ArrayList();
+		al4.add(null);
+		System.out.println(al4);
+		
+
+	}
+
+}

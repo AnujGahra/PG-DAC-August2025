@@ -1,0 +1,11 @@
+.user-list {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #aaa;
+  padding: 10px;
+}
+
+.user-list-head {
+  font-size: 20px;
+  font-weight: 700;
+}

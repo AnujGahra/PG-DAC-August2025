@@ -1,0 +1,28 @@
+package com.learn.apis.service;
+
+import java.util.List;
+import java.util.Map;
+
+import com.learn.apis.dto.AddStudentRequestDto;
+import com.learn.apis.dto.StudentDto;
+
+public interface StudentService {
+
+    // GET ALL
+    List<StudentDto> getAllStudents();
+
+    // GET BY ID
+    StudentDto getStudentById(Long id);
+
+    // CREATE
+    StudentDto createNewStudent(AddStudentRequestDto addStudentRequestDto);
+
+    // UPDATE (PUT) – full update
+    StudentDto updateStudent(Long id, AddStudentRequestDto addStudentRequestDto);
+
+    // PARTIAL UPDATE (PATCH)
+    StudentDto patchStudent(Long id, Map<String, Object> updates);
+
+    // DELETE
+    void deleteStudent(Long id);
+}

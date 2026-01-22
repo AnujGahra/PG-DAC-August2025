@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;runTime.polymorphism.Garnage.java&apos; to &apos;Garage.java&apos;&#x0A;- Original project: &apos;Polymorphism&apos;&#x0A;- Original element: &apos;runTime.polymorphism.Garnage.java&apos;&#x0A;- Renamed element: &apos;runTime.polymorphism.Garage.java&apos;" description="Rename compilation unit &apos;Garnage.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;runTime.polymorphism{Garnage.java" name="Garage.java" references="false" stamp="1758479138154" version="1.0"/>
+</session>

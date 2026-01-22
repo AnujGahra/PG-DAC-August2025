@@ -1,0 +1,5 @@
+D:\krishna sir\C#Practicals\ExofInterfaceHirarchy\ExofInterfaceHirarchy\obj\x86\Debug\ExofInterfaceHirarchy.exe
+D:\krishna sir\C#Practicals\ExofInterfaceHirarchy\ExofInterfaceHirarchy\obj\x86\Debug\ExofInterfaceHirarchy.pdb
+D:\krishna sir\C#Practicals\ExofInterfaceHirarchy\ExofInterfaceHirarchy\bin\Debug\ExofInterfaceHirarchy.exe
+D:\krishna sir\C#Practicals\ExofInterfaceHirarchy\ExofInterfaceHirarchy\bin\Debug\ExofInterfaceHirarchy.pdb
+D:\krishna sir\C#Practicals\ExofInterfaceHirarchy\ExofInterfaceHirarchy\obj\x86\Debug\ExofInterfaceHirarchy.csprojResolveAssemblyReference.cache

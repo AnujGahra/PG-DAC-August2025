@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExofInterFace">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExofInterFace\ExofInterFace.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExofInterFace\ExofInterFace.suo">
+</Property><Property Name="Date" Value="07 January 2015">
+</Property><Property Name="Time" Value="11:54">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExofInterFace.sln" Description="File successfully backed up as D:\LangBasics\ExofInterFace\Backup\ExofInterFace.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExofInterFace.suo" Description="File successfully backed up as D:\LangBasics\ExofInterFace\Backup\ExofInterFace.suo">
+</Event><Event ErrorLevel="0" Project="ExofInterFace" Source="ExofInterFace\ExofInterFace.csproj" Description="Project file successfully backed up as D:\LangBasics\ExofInterFace\Backup\ExofInterFace\ExofInterFace.csproj">
+</Event><Event ErrorLevel="0" Project="ExofInterFace" Source="ExofInterFace\Program.cs" Description="File successfully backed up as D:\LangBasics\ExofInterFace\Backup\ExofInterFace\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExofInterFace" Source="ExofInterFace\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExofInterFace\Backup\ExofInterFace\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExofInterFace" Source="ExofInterFace\ExofInterFace.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExofInterFace" Source="ExofInterFace\ExofInterFace.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExofInterFace.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExofInterFace.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExofInterFace" Source="ExofInterFace\ExofInterFace.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

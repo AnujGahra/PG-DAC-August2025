@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExofForEachLoop">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExofForEachLoop\ExofForEachLoop.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExofForEachLoop\ExofForEachLoop.suo">
+</Property><Property Name="Date" Value="31 December 2014">
+</Property><Property Name="Time" Value="12:12">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExofForEachLoop.sln" Description="File successfully backed up as D:\LangBasics\ExofForEachLoop\Backup\ExofForEachLoop.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExofForEachLoop.suo" Description="File successfully backed up as D:\LangBasics\ExofForEachLoop\Backup\ExofForEachLoop.suo">
+</Event><Event ErrorLevel="0" Project="ExofForEachLoop" Source="ExofForEachLoop\ExofForEachLoop.csproj" Description="Project file successfully backed up as D:\LangBasics\ExofForEachLoop\Backup\ExofForEachLoop\ExofForEachLoop.csproj">
+</Event><Event ErrorLevel="0" Project="ExofForEachLoop" Source="ExofForEachLoop\Program.cs" Description="File successfully backed up as D:\LangBasics\ExofForEachLoop\Backup\ExofForEachLoop\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExofForEachLoop" Source="ExofForEachLoop\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExofForEachLoop\Backup\ExofForEachLoop\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExofForEachLoop" Source="ExofForEachLoop\ExofForEachLoop.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExofForEachLoop" Source="ExofForEachLoop\ExofForEachLoop.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExofForEachLoop.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExofForEachLoop.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExofForEachLoop" Source="ExofForEachLoop\ExofForEachLoop.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

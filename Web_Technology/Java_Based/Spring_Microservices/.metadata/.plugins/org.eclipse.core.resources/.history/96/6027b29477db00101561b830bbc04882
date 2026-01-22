@@ -1,0 +1,13 @@
+package tech.codehunt.test;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MicroServiceRegisteryApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MicroServiceRegisteryApplication.class, args);
+	}
+
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<bean id="account" class="com.mainapp.Account"></bean>
+	<bean id="car" class="com.mainapp.Car"></bean>
+	
+	<util:list id="listOfBook">
+		<value>JavaByCodeHunt</value>
+		<value>SpringByCodeHunt</value>
+	</util:list>
+	<!-- ================================================= -->
+	<!-- ✅ Method 1: Inline <map> (Most common) -->
+	<!-- ================================================= -->
+
+	<bean id="emp1" class="com.mainapp.Employee">
+	<!-- 	<property name="eid" value="101" /> -->
+		<property name="account" ref="account"></property>
+		<property name="car" ref="car" ></property>
+		<property name="listOfBook" ref="listOfBook"></property>
+		
+	</bean>
+
+
+
+
+
+</beans>

@@ -1,0 +1,34 @@
+Why do we need Task Parallel Library in C#?
+We can’t expect our sequential program to run faster on the new processors as we know the processor technology advances means the focus is on Multicore-processors. Today’s desktop typically has 4 cores 
+
+we can say that the multicore processor machines are now becoming standard and the aim is to improve the performance by running a program on multiple processors in parallel. So by considering the above scenario, the .NET Framework 4 introduces Task Parallel Library (TPL) that makes it easier for developers to write parallel programs that target multi-core machines (automatically use multiple processors) which improves the performance.
+
+Example
+----------------
+using System;
+using System.Threading.Tasks;
+
+class TplExample
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Starting TPL Example...");
+
+        // Create and run multiple tasks concurrently
+        Task task1 = Task.Run(() => PerformTask("Task 1", 3));
+        Task task2 = Task.Run(() => PerformTask("Task 2", 2));
+        Task task3 = Task.Run(() => PerformTask("Task 3", 4));
+
+        // Wait for all tasks to complete
+        Task.WhenAll(task1, task2, task3).Wait();
+
+        Console.WriteLine("All tasks completed. Exiting TPL Example.");
+    }
+
+    static void PerformTask(string taskName, int durationSeconds)
+    {
+        Console.WriteLine($"{taskName} started. Simulating work for {durationSeconds} seconds...");
+        Task.Delay(durationSeconds * 1000).Wait(); // Simulate work
+        Console.WriteLine($"{taskName} finished.");
+    }
+}

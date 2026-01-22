@@ -1,0 +1,13 @@
+﻿@using System.Globalization
+@{
+    ViewData["Title"] = "Home Page";
+    var culture = CultureInfo.CurrentCulture;
+    var isHindi = culture.Name.StartsWith("hi", StringComparison.OrdinalIgnoreCase);
+}
+
+<div class="text-center">
+    <h1 class="display-4">@(isHindi ? "स्वागत" : "Welcome")</h1>
+    <p>@(isHindi ? "सीखना" : "Learn about") <a href="https://learn.microsoft.com/aspnet/core">@(isHindi ? "अपना पहला ASP.NET Core कोर वेब ऐप बनाएं" : "building Web apps with ASP.NET Core")</a>.</p>
+</div>
+
+

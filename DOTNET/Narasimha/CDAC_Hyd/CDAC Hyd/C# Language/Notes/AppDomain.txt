@@ -1,0 +1,44 @@
+Application Domain
+---------------------------
+Application Domain or AppDomain is one of the most powerful features of the .NET framework. AppDomain can be considered as a light-weight process. An application domain is a .NET concept whereas the process is an operating system concept. Both have many characteristics in common. A process can contain multiple app domains and each one provides a unit of isolation within that process. Most importantly, only those applications are written in .net, or in other words, only managed applications will have application domain.
+ 
+Application domain provides isolation between code running in different app domains. App Domain is a logical container for code and data just like process and has separate memory space and access to resources. App domain also serves as a boundary like a process that does avoid any accidental or illegal attempts to access the data of an object in one running application from another.
+ 
+System.AppDomain class provides you ways to deal with the application domain. It provides methods to create a new application domain, unload domain from memory, etc.
+
+
+The CLR can allow the multiple .Net applications to be run in a single AppDomain.
+
+The CLR isolates each application domain from all other application domains and prevents the configuration, security, or stability of a running .NET applications from affecting other applications.An AppDomain can be destroyed without effecting the other Appdomains in the process.
+ 
+How to create AppDomain
+----------------------------------
+AppDomains are generally created by Hosts for example Internet Explorer and Asp.net. The following is an example to create instance of an object inside it and then executes one of the objects methods. This is the explicit way of creating AppDomain by .Net Applications
+ 
+AppDomains are created using the CreateDomain method. AppDomain instances are used to load and execute assemblies (Assembly). When an AppDomain is no longer in use, it can be unloaded.
+-------------------------------------------------------------------------------
+public class MyAppDomain : MarshalByRefObject
+{
+    public string GetInfo()
+    {
+        return AppDomain.CurrentDomain.FriendlyName;
+    }
+} 
+
+public class MyApp
+
+{
+
+    public static void Main()
+
+    {
+
+        AppDomain apd = AppDomain.CreateDomain("Rajendrs Domain");
+
+        MyAppDomain apdinfo = (MyAppDomain)apd.CreateInstanceAndUnwrap (Assembly.GetCallingAssembly().GetName().Name, "MyAppDomain");
+
+        Console.WriteLine("Application Name = " + apdinfo.GetInfo());
+
+    }
+
+}

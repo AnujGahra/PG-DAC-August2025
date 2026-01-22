@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Content</title>
+
+    <!-- jQuery CDN link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+
+        // -------------------------------------
+        // text() → set plain text inside element
+        // -------------------------------------
+        $("#setTextBtn").click(function () {
+          $("#para").text("This text is updated using text() method!");
+        });
+
+
+        // -------------------------------------
+        // html() → set HTML content
+        // -------------------------------------
+        $("#setHtmlBtn").click(function () {
+          $("#para").html("This <b>HTML content</b> was set using html()!");
+        });
+
+
+        // -------------------------------------
+        // val() → set value inside input field
+        // -------------------------------------
+        $("#setValBtn").click(function () {
+          $("#nameField").val("TechLeeyo User");
+        });
+
+
+        // -------------------------------------
+        // attr() → set attribute value
+        // -------------------------------------
+        $("#setAttrBtn").click(function () {
+          $("#myLink").attr("href", "https://www.techleeyo.com");
+          $("#myLink").text("Visit TechLeeyo");
+        });
+
+      });
+    </script>
+
+  </head>
+
+  <body>
+    <h1>TechLeeyo - Set Content Using jQuery</h1>
+
+    <!-- Target for text() & html() -->
+    <p id="para">
+      This is the original paragraph.
+    </p>
+
+    <!-- Target for val() -->
+    <input type="text" id="nameField" placeholder="Enter your name" />
+
+    <br /><br />
+
+    <!-- Target for attr() -->
+    <a id="myLink" href="https://www.google.com" target="_blank">
+      Visit Google
+    </a>
+
+    <br /><br />
+
+    <!-- Buttons -->
+    <button id="setTextBtn">Set text()</button>
+    <button id="setHtmlBtn">Set html()</button>
+    <button id="setValBtn">Set val()</button>
+    <button id="setAttrBtn">Set attr()</button>
+
+  </body>
+</html>

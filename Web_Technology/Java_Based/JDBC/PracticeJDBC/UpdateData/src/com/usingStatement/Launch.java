@@ -1,0 +1,45 @@
+package com.usingStatement;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Launch {
+
+	public static void main(String[] args) {
+		
+		
+		
+		String url = "jdbc:mysql://localhost:3306/jdbctest";
+        String username = "root";
+        String password = "Hacker@anuj001";
+
+        // Example update values
+        int id = 1;
+        String name = "Rahul";
+        int age = 25;
+        String city = "Delhi";
+
+        // Building SQL query manually (NOT safe for user input)
+        String query = "UPDATE students SET "
+                + "name='" + name + "', "
+                + "age=" + age + ", "
+                + "city='" + city + "' "
+                + "WHERE id=" + id;
+
+        try (
+            Connection conn = DriverManager.getConnection(url, username, password);
+            Statement stmt = conn.createStatement();
+        ) {
+
+            int affected = stmt.executeUpdate(query);
+            System.out.println(affected + " rows updated using Statement.");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+	}
+
+}

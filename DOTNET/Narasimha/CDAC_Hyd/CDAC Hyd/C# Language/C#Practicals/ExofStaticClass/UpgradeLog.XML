@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExofStaticClass">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExofStaticClass\ExofStaticClass.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExofStaticClass\ExofStaticClass.suo">
+</Property><Property Name="Date" Value="06 January 2015">
+</Property><Property Name="Time" Value="11:38">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExofStaticClass.sln" Description="File successfully backed up as D:\LangBasics\ExofStaticClass\Backup\ExofStaticClass.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExofStaticClass.suo" Description="File successfully backed up as D:\LangBasics\ExofStaticClass\Backup\ExofStaticClass.suo">
+</Event><Event ErrorLevel="0" Project="ExofStaticClass" Source="ExofStaticClass\ExofStaticClass.csproj" Description="Project file successfully backed up as D:\LangBasics\ExofStaticClass\Backup\ExofStaticClass\ExofStaticClass.csproj">
+</Event><Event ErrorLevel="0" Project="ExofStaticClass" Source="ExofStaticClass\Program.cs" Description="File successfully backed up as D:\LangBasics\ExofStaticClass\Backup\ExofStaticClass\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExofStaticClass" Source="ExofStaticClass\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExofStaticClass\Backup\ExofStaticClass\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExofStaticClass" Source="ExofStaticClass\ExofStaticClass.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExofStaticClass" Source="ExofStaticClass\ExofStaticClass.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExofStaticClass.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExofStaticClass.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExofStaticClass" Source="ExofStaticClass\ExofStaticClass.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

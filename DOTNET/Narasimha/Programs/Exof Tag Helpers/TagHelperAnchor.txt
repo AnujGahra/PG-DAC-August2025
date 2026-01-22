@@ -1,0 +1,37 @@
+Code In ViewImports File
+
+@addTagHelper *,
+Microsoft.Aspnetcore.Mvc.TagHelpers
+
+Ex 1 Anchor TagHelper
+
+Code In Index View
+----------------------------
+
+<a href="/Home/Contact">Contact Us</a>
+
+@Html.ActionLink("Contact","Contact","Home")
+
+@<a href="@Url.Action("Contact","Home")>Contact Page</a>
+
+<a><asp-controller="Home" asp-action="contact">Contact Page</a>
+
+
+-----------------------------------------------
+Same Ex With Parameter
+
+<a href="/Home/Contact/1">Contact Us</a>
+
+@Html.ActionLink("Contact","Contact","Home",new{id=1})
+
+@<a href="@Url.Action("Contact","Home",new {id=1})>Contact Page</a>
+
+<a><asp-controller="Home" asp-action="contact" asp-route-id="1">
+Contact Page</a>
+
+Code Home Controller
+
+Public intContact(id)
+{
+	return id;
+}

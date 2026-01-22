@@ -1,0 +1,30 @@
+package join.method;
+
+public class Launch {
+
+	public static void main(String[] args) throws InterruptedException  {
+		Database1 database1 = new Database1();
+		Database2 database2 = new Database2();
+		
+		database1.start();
+		database2.start();
+		
+		
+		database1.join();
+		
+		
+		process(database1.collect, database2.collect);
+		
+
+	}
+	
+	
+	private static void process(String[] collect1, String[] collect2) {
+		for(String d: collect1)
+			System.out.println(d);
+		
+		for(String d: collect2)
+			System.out.println(d);
+	}
+
+}

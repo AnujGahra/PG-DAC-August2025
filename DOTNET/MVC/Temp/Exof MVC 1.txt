@@ -1,0 +1,89 @@
+Step 1 Code In Student Class(Model Folder)
+--------------------------------------------
+public class Student
+{
+    public int Stno { get; set; }
+    public string Stname { get; set; }
+    public DateTime Doa { get; set; }
+    public int Fees { get; set; }
+
+}
+
+Step 2 Code In Home Controller
+--------------------------------
+public class HomeController : Controller
+{
+    
+    public IActionResult Index()
+    {
+        return View();
+    }
+    public IActionResult Details(IFormCollection fc)
+    {
+        Student obj = new Student();
+        obj.Stno = int.Parse(fc["no"]);
+        obj.Stname = fc["nm"];
+        obj.Doa= DateTime.Parse(fc["da"]);
+        obj.Fees = int.Parse(fc["fe"]);
+        return View(obj);
+    }
+
+}
+
+Step 3 Code In Index View
+------------------------
+
+<h1>Enter Student Details</h1>
+<center>
+    <br /> <br /> <br />
+    <form method="post" action="/Home/Details">
+    Enter Student No
+    <input type="text" name="no" />
+    <br /><br />
+    Enter Student Name
+    <input type="text" name="nm" />
+    <br /><br />
+    Enter Student Date of Admn
+    <input type="text" name="da" />
+     <br /><br />
+    Enter Student Fees
+    <input type="text" name="fe" />
+    <br /><br />
+    <input type="submit" name="Submit" value="Submit" />
+
+</form>
+</center>
+
+---------------------------------------
+Step 4 Code In Details View 
+
+------------------------------
+
+@model FirstMVC.Models.Student
+
+
+<center>
+    <br /> <br /> <br /> <br />
+
+    <h2 style="color:blue">Student Data</h2>
+
+    <br /> <br />
+    Student No is @Model.Stno
+    <br /> <br />
+    Student Name is @Model.Stname
+
+    <br /> <br />
+    Date of Admn is @Model.Doa
+
+    <br /> <br />
+    Student Fees is @Model.Fees
+
+</center>
+
+or
+
+public IActionResult Details(Student obj)
+{
+   
+    return View(obj);
+}

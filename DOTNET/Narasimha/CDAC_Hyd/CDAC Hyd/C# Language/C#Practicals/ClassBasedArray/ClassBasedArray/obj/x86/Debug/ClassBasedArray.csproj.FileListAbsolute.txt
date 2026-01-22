@@ -1,0 +1,4 @@
+D:\krishna sir\C#Practicals\ClassBasedArray\ClassBasedArray\bin\Debug\ClassBasedArray.exe
+D:\krishna sir\C#Practicals\ClassBasedArray\ClassBasedArray\bin\Debug\ClassBasedArray.pdb
+D:\krishna sir\C#Practicals\ClassBasedArray\ClassBasedArray\obj\x86\Debug\ClassBasedArray.exe
+D:\krishna sir\C#Practicals\ClassBasedArray\ClassBasedArray\obj\x86\Debug\ClassBasedArray.pdb

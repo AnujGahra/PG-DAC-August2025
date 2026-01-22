@@ -1,0 +1,5 @@
+D:\krishna sir\C#Practicals\ExofQue1\ExofQue1\bin\Debug\ExofQue1.exe
+D:\krishna sir\C#Practicals\ExofQue1\ExofQue1\bin\Debug\ExofQue1.pdb
+D:\krishna sir\C#Practicals\ExofQue1\ExofQue1\obj\x86\Debug\ExofQue1.exe
+D:\krishna sir\C#Practicals\ExofQue1\ExofQue1\obj\x86\Debug\ExofQue1.pdb
+D:\krishna sir\C#Practicals\ExofQue1\ExofQue1\obj\x86\Debug\ExofQue1.csprojResolveAssemblyReference.cache

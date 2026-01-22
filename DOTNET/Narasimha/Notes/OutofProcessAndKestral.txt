@@ -1,0 +1,5 @@
+ ASP.NET Core is a Cross-Platform framework. It supports developing and running applications on operating systems such as Windows, Linux, or MacOS.
+
+Kestrel is a lightweight, cross-platform web server built specifically for ASP.NET Core applications. It is the Cross-Platform Web Server for the ASP.NET Core Application and supports all the platforms that ASP.NET Core Supports. By default, it is included as the Internal Web Server in the ASP.NET Core application. 
+
+But if you want, you can also use this as an Internet-facing Web Server, i.e., an External Web Server. In this case, the Kestrel Web Server is used as an Internet-facing Web Server, which will directly process the incoming HTTP request from the client. In the case of the Kestrel Web Server, the process name that is used to host and run the ASP.NET Core application is nothing but the project name.

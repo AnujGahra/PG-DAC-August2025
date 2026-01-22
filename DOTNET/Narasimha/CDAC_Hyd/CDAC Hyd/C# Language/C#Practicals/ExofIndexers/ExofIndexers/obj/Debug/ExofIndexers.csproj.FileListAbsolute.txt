@@ -1,0 +1,10 @@
+C:\LangBasics\ExofIndexers\ExofIndexers\obj\Debug\ResolveAssemblyReference.cache
+C:\LangBasics\ExofIndexers\ExofIndexers\bin\Debug\ExofIndexers.exe
+C:\LangBasics\ExofIndexers\ExofIndexers\bin\Debug\ExofIndexers.pdb
+C:\LangBasics\ExofIndexers\ExofIndexers\obj\Debug\ExofIndexers.exe
+C:\LangBasics\ExofIndexers\ExofIndexers\obj\Debug\ExofIndexers.pdb
+D:\LangBasics\ExofIndexers\ExofIndexers\obj\Debug\ExofIndexers.exe
+D:\LangBasics\ExofIndexers\ExofIndexers\obj\Debug\ExofIndexers.pdb
+D:\LangBasics\ExofIndexers\ExofIndexers\bin\Debug\ExofIndexers.exe
+D:\LangBasics\ExofIndexers\ExofIndexers\bin\Debug\ExofIndexers.pdb
+D:\LangBasics\ExofIndexers\ExofIndexers\obj\Debug\ResolveAssemblyReference.cache

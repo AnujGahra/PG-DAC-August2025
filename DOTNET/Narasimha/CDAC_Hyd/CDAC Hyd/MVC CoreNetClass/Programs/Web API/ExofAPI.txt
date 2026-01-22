@@ -1,0 +1,127 @@
+dotnet add package 
+---------------------------
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Design
+
+Step 1
+-----------
+Add Model
+
+namespace StudentApi.Models
+{
+    public class Student
+    {
+
+            
+        public int Stno { get; set; }
+
+        
+        public string Stname { get; set; } = string.Empty;
+
+     
+        public DateTime Doa { get; set; }
+
+     
+        public int Fees { get; set; }
+    }
+}
+
+-------------------------------
+Step 2 
+---------
+Create a Data folder and add a StudentDbContext.cs file.
+
+using Microsoft.EntityFrameworkCore;
+using StudentApi.Models;
+
+namespace StudentApi.Data
+{
+    public class StudentDbContext : DbContext
+    {
+        public StudentDbContext(DbContextOptions<StudentDbContext> options)
+            : base(options)
+        {
+        }
+
+        // Represents the Student table in the database
+        public DbSet<Student> Students { get; set; } = null!;
+        
+        
+    }
+}
+
+------------------------------------------------------------
+
+Step 3
+---------
+Update the appsettings.json File
+-------------------------------------------------------
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=YourServerName;Database=Test;Trusted_Connection=True;TrustServerCertificate=True"
+    // Alternative for SQL Login: "Server=YourServerName;Database=StudentDB;User Id=YourUser;Password=YourPassword;TrustServerCertificate=True"
+  }
+}
+
+--------------------------------------------------------------
+Step 4
+-----------
+Code In Program.cs File
+-----------------------------------
+using Microsoft.EntityFrameworkCore;
+using StudentApi.Data;
+using StudentApi.Models;
+using Microsoft.AspNetCore.Mvc;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Define a specific policy name for CORS
+var MyAllowSpecificOrigins = "AllowReactClientOrigin"; 
+
+// --- 1. Register the CORS Service ---
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      builder =>
+                      {
+                          // Allow access from any domain (for simplicity in development)
+                          // In production, you would replace this with .WithOrigins("https://yourreactdomain.com")
+                          builder.AllowAnyOrigin() 
+                                 .AllowAnyHeader()
+                                 .AllowAnyMethod();
+                      });
+});
+
+// Add services to the container.
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Configure the DbContext with SQL Server
+builder.Services.AddDbContext<StudentDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+// --- 2. Apply the CORS Middleware ---
+// IMPORTANT: This must be placed after UseRouting() and before Map... endpoints.
+app.UseCors(MyAllowSpecificOrigins);
+
+
+
+

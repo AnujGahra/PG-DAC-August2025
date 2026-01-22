@@ -1,0 +1,24 @@
+Code First Simple Program
+
+Steps 
+
+1. Add One Class Like Student To Model
+
+2.Create Properties Id,Stno,Stname,Doa,Fees
+
+3.Add 3 Entity Framework Packages(Entity Framework Core,
+Entity Framework Sql Server, Entity Framework Design)
+
+4.Create Student Controller Using Entity Framework
+Read Write Options
+
+5. add-migration codefirst(its Name)
+
+6.update-database
+
+7.Run The Application
+
+
+
+
+   

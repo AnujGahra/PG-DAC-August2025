@@ -1,0 +1,38 @@
+package com.learn.apis.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.learn.apis.dto.StudentDto;
+import com.learn.apis.entity.Student;
+import com.learn.apis.repository.StudentRepository;
+import com.learn.apis.service.StudentService;
+
+import lombok.RequiredArgsConstructor;
+
+@RestController
+@RequiredArgsConstructor
+public class StudentController {
+	
+	private final StudentService studentService;
+	
+	
+	
+
+
+
+	@GetMapping("/studenst")
+	public List<StudentDto> getAllStudent() {
+		return studentService.getAllStudents();
+	}  
+	
+	
+	@GetMapping("/students/{id}")
+	public String getStudentById(@PathVariable Long id) {
+		return "Path Variable "+id;
+	}  
+
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    float: right;
+    width: 120px;
+    margin: 0 0 15px 20px;
+    padding: 15px;
+    border: 1px solid black;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div>
+<img src="w3css.gif" width="100" height="140"><br>CSS is fun!
+</div>
+
+<p>
+Liberty Computers Vidyanagar Hubli Liberty Computers Vidyanagar Hubli 
+Liberty Computers Vidyanagar Hubli Liberty Computers Vidyanagar Hubli
+Liberty Computers Vidyanagar Hubli Liberty Computers Vidyanagar Hubli
+Liberty Computers Vidyanagar Hubli Liberty Computers Vidyanagar Hubli
+Liberty Computers Vidyanagar Hubli Liberty Computers Vidyanagar Hubli
+Liberty Computers Vidyanagar Hubli Liberty Computers Vidyanagar Hubli
+Liberty Computers Vidyanagar Hubli Liberty Computers Vidyanagar Hubli
+Liberty Computers Vidyanagar Hubli Liberty Computers Vidyanagar Hubli
+</p>
+</body>
+</html>
+************************************************
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.img-container {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+</style>
+</head>
+<body>
+
+<h2>Images Side by Side</h2>
+<p>Float images side by side:</p>
+
+<div class="clearfix">
+  <div class="img-container">
+    <img src="img_5terre.jpg" alt="Italy" style="width:100%">
+  </div>
+  <div class="img-container">
+    <img src="img_forest.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="img-container">
+    <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+
+<p>Note that we also use the clearfix hack to take care of the layout flow, and that add the box-sizing property to make sure that the image container doesn't break due to extra padding. Try to remove this code to see the effect.</p>
+
+</body>
+</html>
+******************************************************
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.nav {
+    background-color: yellow; 
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h1>Horizontal Navigation Links</h1>
+<p>By default, list items are displayed vertically. In this example we use display: inline-block to display them horizontally (side by side).</p>
+<p>Note: If you resize the browser window, the links will automatically break when it becomes too crowded.</p>
+
+<ul class="nav">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About Us</a></li>
+  <li><a href="#clients">Our Clients</a></li>    
+  <li><a href="#contact">Contact Us</a></li>
+</ul>
+
+</body>
+</html>
+

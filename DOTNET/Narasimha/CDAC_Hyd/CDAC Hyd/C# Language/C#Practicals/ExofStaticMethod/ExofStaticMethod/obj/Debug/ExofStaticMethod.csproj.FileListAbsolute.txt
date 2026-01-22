@@ -1,0 +1,22 @@
+D:\LangBasics\ExofStaticMethod\ExofStaticMethod\bin\Debug\ExofStaticMethod.exe
+D:\LangBasics\ExofStaticMethod\ExofStaticMethod\bin\Debug\ExofStaticMethod.pdb
+D:\LangBasics\ExofStaticMethod\ExofStaticMethod\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofStaticMethod\ExofStaticMethod\obj\Debug\ExofStaticMethod.exe
+D:\LangBasics\ExofStaticMethod\ExofStaticMethod\obj\Debug\ExofStaticMethod.pdb
+C:\LangBasics\ExofStaticMethod\ExofStaticMethod\obj\Debug\ExofStaticMethod.exe
+C:\LangBasics\ExofStaticMethod\ExofStaticMethod\obj\Debug\ExofStaticMethod.pdb
+C:\LangBasics\ExofStaticMethod\ExofStaticMethod\bin\Debug\ExofStaticMethod.exe
+C:\LangBasics\ExofStaticMethod\ExofStaticMethod\bin\Debug\ExofStaticMethod.pdb
+C:\LangBasics\ExofStaticMethod\ExofStaticMethod\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofStaticMethod\ExofStaticMethod\obj\Debug\ExofStaticMethod.exe
+C:\SouceEdge Session 1\LangBasics\ExofStaticMethod\ExofStaticMethod\obj\Debug\ExofStaticMethod.pdb
+E:\krishna sir\C#Practicals\ExofStaticMethod\ExofStaticMethod\obj\Debug\ExofStaticMethod.exe
+E:\krishna sir\C#Practicals\ExofStaticMethod\ExofStaticMethod\obj\Debug\ExofStaticMethod.pdb
+E:\krishna sir\C#Practicals\ExofStaticMethod\ExofStaticMethod\bin\Debug\ExofStaticMethod.exe
+E:\krishna sir\C#Practicals\ExofStaticMethod\ExofStaticMethod\bin\Debug\ExofStaticMethod.pdb
+D:\krishna sir\C#Practicals\ExofStaticMethod\ExofStaticMethod\bin\Debug\ExofStaticMethod.exe.config
+D:\krishna sir\C#Practicals\ExofStaticMethod\ExofStaticMethod\obj\Debug\ExofStaticMethod.exe
+D:\krishna sir\C#Practicals\ExofStaticMethod\ExofStaticMethod\obj\Debug\ExofStaticMethod.pdb
+D:\krishna sir\C#Practicals\ExofStaticMethod\ExofStaticMethod\bin\Debug\ExofStaticMethod.exe
+D:\krishna sir\C#Practicals\ExofStaticMethod\ExofStaticMethod\bin\Debug\ExofStaticMethod.pdb
+D:\krishna sir\C#Practicals\ExofStaticMethod\ExofStaticMethod\obj\Debug\ExofStaticMethod.csprojResolveAssemblyReference.cache

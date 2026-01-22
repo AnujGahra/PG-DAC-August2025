@@ -1,0 +1,52 @@
+<div class="form-group col-md-4">  
+        <label asp-for="Gender" >Gender</label>  
+        <select asp-for="Gender" >  
+            <option value="">Choose Gender</option>  
+            <option value="1">Male</option>  
+            <option value="2">Female</option>  
+        </select>  
+ </div>  
+
+
+Code In Model Class
+-----------------------
+public class WebUser        
+{        
+    [Phone]        
+    public string PhoneNumber { get; set; }        
+
+    [EmailAddress]        
+    public string MailAddress { get; set; }        
+
+    [DataType(DataType.Password)]        
+    public string Password { get; set; }        
+
+    [DataType(DataType.Date)]        
+    public DateTime Birthday { get; set; }        
+
+    public bool IsActive { get; set; }
+}
+
+Code In View
+
+@model HelloMVCWorld.Models.WebUser  
+<div>  
+    <label asp-for="MailAddress"></label>  
+    <input asp-for="MailAddress" />  
+</div>  
+<div>  
+    <label asp-for="PhoneNumber"></label>  
+    <input asp-for="PhoneNumber" />  
+</div>  
+<div>  
+    <label asp-for="Password"></label>  
+    <input asp-for="Password" />  
+</div>  
+<div>  
+    <label asp-for="Birthday"></label>  
+    <input asp-for="Birthday" />  
+</div>
+<div>
+    <label asp-for="IsActive"></label>
+    <input asp-for="IsActive" />
+</div>

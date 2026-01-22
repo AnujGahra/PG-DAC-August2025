@@ -1,0 +1,232 @@
+add package Newtonsoft.Json
+
+Step 1
+----------
+Create a Model
+
+namespace StudentMvcClient.Models
+{
+    public class Student
+    {
+        // Must match the API model properties exactly
+        public int Id { get; set; }
+        public int Stno { get; set; }
+        public string Stname { get; set; } = string.Empty;
+        public DateTime Doa { get; set; }
+        public int Fees { get; set; }
+    }
+}
+-----------------------------------------------------------
+Step 2
+-----------
+Create a StudentController
+----------------------------------
+
+using Microsoft.AspNetCore.Mvc;
+using StudentMvcClient.Models;
+using Newtonsoft.Json;
+using System.Text;
+
+namespace StudentMvcClient.Controllers
+{
+    public class StudentController : Controller
+    {
+        // Base address of the API (CHANGE THIS if your API runs on a different port)
+        private readonly string ApiBaseUrl = "https://localhost:7001/students";
+        private readonly HttpClient _client;
+
+        public StudentController()
+        {
+            _client = new HttpClient();
+        }
+
+        // GET: Student (READ ALL)
+        public async Task<IActionResult> Index()
+        {
+            List<Student>? studentList = new List<Student>();
+            try
+            {
+                HttpResponseMessage response = await _client.GetAsync(ApiBaseUrl);
+                if (response.IsSuccessStatusCode)
+                {
+                    string data = await response.Content.ReadAsStringAsync();
+                    studentList = JsonConvert.DeserializeObject<List<Student>>(data);
+                }
+            }
+            catch (HttpRequestException ex)
+            {
+                // Handle API connection errors
+                ModelState.AddModelError(string.Empty, $"API Connection Error: {ex.Message}");
+            }
+            
+            return View(studentList);
+        }
+
+        // ----------------- CREATE -----------------
+
+        // GET: Student/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Student/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Stno,Stname,Doa,Fees")] Student student)
+        {
+            if (ModelState.IsValid)
+            {
+                string data = JsonConvert.SerializeObject(student);
+                StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage response = await _client.PostAsync(ApiBaseUrl, content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    TempData["SuccessMessage"] = "Student created successfully!";
+                    return RedirectToAction(nameof(Index));
+                }
+                
+                // Handle API errors (e.g., duplicate Stno)
+                ModelState.AddModelError(string.Empty, $"API Error: Status Code {response.StatusCode}");
+            }
+            return View(student);
+        }
+
+        // ----------------- EDIT (UPDATE) -----------------
+
+        // GET: Student/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null) return NotFound();
+
+            HttpResponseMessage response = await _client.GetAsync($"{ApiBaseUrl}/{id}");
+            if (response.IsSuccessStatusCode)
+            {
+                string data = await response.Content.ReadAsStringAsync();
+                Student? student = JsonConvert.DeserializeObject<Student>(data);
+                if (student != null) return View(student);
+            }
+            return NotFound();
+        }
+
+        // POST: Student/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int Stno, [Bind("Stno,Stname,Doa,Fees")] Student student)
+        {
+            if (Stno != student.Stno) return NotFound();
+
+            if (ModelState.IsValid)
+            {
+                string data = JsonConvert.SerializeObject(student);
+                StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+                
+                // Use PUT method for update
+                HttpResponseMessage response = await _client.PutAsync($"{ApiBaseUrl}/{Stno}", content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    TempData["SuccessMessage"] = "Student updated successfully!";
+                    return RedirectToAction(nameof(Index));
+                }
+                ModelState.AddModelError(string.Empty, $"API Error: Status Code {response.StatusCode}");
+            }
+            return View(student);
+        }
+
+        // ----------------- DELETE -----------------
+
+        // GET: Student/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null) return NotFound();
+            
+            HttpResponseMessage response = await _client.GetAsync($"{ApiBaseUrl}/{id}");
+            if (response.IsSuccessStatusCode)
+            {
+                string data = await response.Content.ReadAsStringAsync();
+                Student? student = JsonConvert.DeserializeObject<Student>(data);
+                if (student != null) return View(student);
+            }
+            return NotFound();
+        }
+
+        // POST: Student/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            // Use DELETE method
+            HttpResponseMessage response = await _client.DeleteAsync($"{ApiBaseUrl}/{id}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                TempData["SuccessMessage"] = "Student deleted successfully!";
+                return RedirectToAction(nameof(Index));
+            }
+            ModelState.AddModelError(string.Empty, $"API Error: Status Code {response.StatusCode}");
+            return RedirectToAction(nameof(Index)); // or show an error view
+        }
+    }
+}
+
+-----------------------------------------------------------------------
+Step 3 Create Index View(Read All)
+-----------------------------------
+@model IEnumerable<StudentMvcClient.Models.Student>
+
+@{
+    ViewData["Title"] = "Student List";
+}
+
+<h1>Student List</h1>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (ViewData.ModelState.ContainsKey(string.Empty))
+{
+    <div class="alert alert-danger">
+        @Html.ValidationSummary(false)
+    </div>
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Student</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Stno)</th>
+            <th>@Html.DisplayNameFor(model => model.Stname)</th>
+            <th>@Html.DisplayNameFor(model => model.Doa)</th>
+            <th>@Html.DisplayNameFor(model => model.Fees)</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Stno)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Stname)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Doa)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Fees)</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Stno">Edit</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Stno">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+----------------------------------------------------------
+Step 4(Create Other Views for Add,Update,Delete)

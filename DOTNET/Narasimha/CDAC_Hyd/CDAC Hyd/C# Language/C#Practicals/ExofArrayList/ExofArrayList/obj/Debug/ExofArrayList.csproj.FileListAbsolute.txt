@@ -1,0 +1,10 @@
+C:\SouceEdge Session 1\LangBasics\ExofArrayList\ExofArrayList\bin\Debug\ExofArrayList.exe
+C:\SouceEdge Session 1\LangBasics\ExofArrayList\ExofArrayList\bin\Debug\ExofArrayList.pdb
+C:\SouceEdge Session 1\LangBasics\ExofArrayList\ExofArrayList\obj\Debug\ExofArrayList.csprojResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofArrayList\ExofArrayList\obj\Debug\ExofArrayList.exe
+C:\SouceEdge Session 1\LangBasics\ExofArrayList\ExofArrayList\obj\Debug\ExofArrayList.pdb
+E:\krishna sir\C#Practicals\ExofArrayList\ExofArrayList\obj\Debug\ExofArrayList.exe
+E:\krishna sir\C#Practicals\ExofArrayList\ExofArrayList\obj\Debug\ExofArrayList.pdb
+E:\krishna sir\C#Practicals\ExofArrayList\ExofArrayList\bin\Debug\ExofArrayList.exe
+E:\krishna sir\C#Practicals\ExofArrayList\ExofArrayList\bin\Debug\ExofArrayList.pdb
+E:\krishna sir\C#Practicals\ExofArrayList\ExofArrayList\obj\Debug\ExofArrayList.csprojResolveAssemblyReference.cache

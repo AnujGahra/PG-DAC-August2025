@@ -1,0 +1,32 @@
+ Essentially, IDisposable is an interface that helps manage system resources by disposing of them when they’re no longer needed. It makes certain there are no memory and resource leaks for your program to deal with long-term. It’s like your dedicated docent when you don’t need your used objects and resources.
+
+ It is used to ensure deterministic cleanup of resources that the garbage collector doesn't manage
+
+----------------------------------------------------
+IDisposable and Finalize are both used for resource management, but they differ in their purpose and how they are invoked. IDisposable is an interface that provides a way for explicit, deterministic resource cleanup through the Dispose() method, typically called by the user of a class. Finalize, on the other hand, is a method in the System.Object class that is automatically called by the garbage collector (GC) when an object is eligible for garbage collection, and it's used for releasing unmanaged resources. 
+
+
+
+
+--------------------------------------------------------
+
+public class TextFileWriter : IDisposable
+{
+    private StreamWriter _streamWriter;
+
+    public void WriteTextToFile(string text)
+    {
+        _streamWriter = new StreamWriter("textfile.txt", true);
+        _streamWriter.WriteLine(text);
+    }
+
+    public void Dispose()
+    {
+        if (_streamWriter != null)
+        {
+            _streamWriter.Close();
+            _streamWriter.Dispose();
+            _streamWriter = null;
+        }
+    }
+}

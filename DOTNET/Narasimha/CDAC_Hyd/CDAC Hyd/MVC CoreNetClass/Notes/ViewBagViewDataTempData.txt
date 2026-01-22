@@ -1,0 +1,19 @@
+What is State Management?
+----------------------------------------
+State management is the process of storing and managing an application's data, such as user inputs or information from a server, to ensure the application remains consistent and responsive across different interactions and user sessions. It's crucial because web applications are often "stateless," meaning they can lose information between requests, so state management provides a way to maintain this data over time. 
+
+ViewData vs ViewBag vs TempData vs Session: 
+In ASP.NET MVC there are three ways - ViewData, ViewBag, and TempData to pass data from the controller to view and in the next request. Like WebForm, you can also use Session to persist data during a user session.
+
+What is ViewData?
+------------------------
+ViewData is a dictionary object to pass the data from Controller to View, where data is passed in the form of a key-value pair. Typecasting is required to read the data in View if the data is complex, and we need to ensure a null check to avoid null exceptions. The scope of ViewData is similar to ViewBag, and it is restricted to the current request, and the value of ViewData will become null while redirecting.
+
+
+What is ViewBag?
+----------------------
+ViewBag is a dynamic object to passes the data from the Controller to View. This will pass the data as a property of the object ViewBag. And we have no need to typecast to read the data or for null checking. The scope of ViewBag is permitted to the current request, and the value of ViewBag will become null while redirecting.
+
+What is TempData?
+---------------------------
+TempData is a dictionary object to passes the data from one action to another action in the same Controller and with keep method controller to controller .Usually, the TempData object will be stored in a session object. Tempdata is also required to typecast and for null checking before reading data from it. TempData scope is limited to the next request, and if we want TempData to be available even further, we should use Keep and Peek.

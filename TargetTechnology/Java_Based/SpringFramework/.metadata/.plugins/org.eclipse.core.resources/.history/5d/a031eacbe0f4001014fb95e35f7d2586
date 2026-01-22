@@ -1,0 +1,31 @@
+package com.beans;
+
+public class Employee {
+	
+	
+//	Dependency
+	private String eid;
+	
+	
+	public void setEid(String eid) {
+		System.out.println("SETTER CALLED...");
+		this.eid = eid;
+	}
+	
+	
+	public Employee(String eid) {
+		super();
+		System.out.println("EMPLOYEE BEAN INSTANTIATION PC......");
+		this.eid = eid;
+	}
+
+	public Employee() {
+		System.out.println("EMPLOYEE BEAN INSTANTIATION...");
+	}
+	
+	public void test() {
+		
+		System.out.println("EMPLOYEE BEAN USING... " + eid );
+	}
+
+}

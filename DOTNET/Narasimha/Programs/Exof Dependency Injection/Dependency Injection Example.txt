@@ -1,0 +1,106 @@
+1)public class Product
+    {
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+    }
+
+2)
+public interface IRepository
+    {
+        IEnumerable<Product> Products { get; }
+  
+        Product this[string name] { get; }
+  
+        void AddProduct(Product product);
+  
+        void DeleteProduct(Product product);
+    }
+3)
+public class Repository : IRepository
+    {
+        private Dictionary<string, Product> products;
+        public Repository()
+        {
+            products = new Dictionary<string, Product>();
+            new List<Product> {
+                new Product { Name = "Women Shoes", Price = 99M },
+                new Product { Name = "Skirts", Price = 29.99M },
+                new Product { Name = "Pants", Price = 40.5M }
+            }.ForEach(p => AddProduct(p));
+        }
+  
+        public IEnumerable<Product> Products => products.Values;
+        public Product this[string name] => products[name];
+        public void AddProduct(Product product) => products[product.Name] = product;
+        public void DeleteProduct(Product product) => products.Remove(product.Name);
+    }
+4) Code Without Dependency Injectio
+
+ public class HomeController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View(new Repository().Products);
+        }
+    }
+5)Code In Index View
+
+@if (ViewData.Count > 0)
+{
+    <table class="table table-bordered table-sm table-striped">
+        @foreach (var kvp in ViewData)
+        {
+            <tr><td>@kvp.Key</td><td>@kvp.Value</td></tr>
+        }
+    </table>
+}
+<table class="table table-bordered table-sm table-striped">
+    <thead>
+        <tr><th>Name</th><th>Price</th></tr>
+    </thead>
+    <tbody>
+        @if (Model == null)
+        {
+            <tr><td colspan="3" class="text-center">No Model Data</td></tr>
+        }
+        else
+        {
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.Name</td>
+                    <td>@string.Format("{0:C2}", p.Price)</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+----------------------------------------------------------------
+Modified Home Controller Code With DI
+
+public class HomeController : Controller
+    {
+        private IRepository repository;
+        public HomeController(IRepository repo)
+        {
+            repository = repo;
+        }
+  
+        public IActionResult Index()
+        {
+            return View(repository.Products);
+        }
+}
+
+---------------------------------------------------------------
+
+6)
+Finally we have to tell ASP.NET Core how it should resolve the dependency of IRepository interface. So go the Program.cs file of the app and register a new service for the DI to resolve automatically. The work of this service will be to resolve the dependency.
+
+This is done by adding the code – 
+
+using DependencyInjection.Models;
+
+
+builder.Services.AddTransient<IRepository, Repository>(). 

@@ -1,0 +1,44 @@
+package com.example.order.controller;
+
+import java.util.Map;
+import org.springframework.web.bind.annotation.*;
+import com.example.order.entity.Order;
+import com.example.order.service.OrderService;
+
+@RestController
+@RequestMapping("/api/orders")
+public class OrderController {
+
+    private final OrderService service;
+
+    public OrderController(OrderService service) {
+        this.service = service;
+    }
+
+    @PostMapping
+    public Order create(@RequestBody Order order) {
+        return service.save(order);
+    }
+    
+    @GetMapping("/")
+    public Map<String, Object> getOrders(@PathVariable Long id) {
+        return service.getOrderWithItem(id);
+    }  
+
+    @GetMapping("/{id}")
+    public Map<String, Object> getOrder(@PathVariable Long id) {
+        return service.getOrderWithItem(id);
+    }  
+    
+    @PutMapping("/{id}")
+    public Map<String, Object> UpdateOrder(@PathVariable Long id) {
+        return service.getOrderWithItem(id);
+    } 
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        service.delete(id);
+    }
+}
+
+

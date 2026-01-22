@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Logic.java&apos; to &apos;JDBC_MINI_Project/src/tech.codehunt.logic&apos;&#x0A;- Original project: &apos;JDBC_MINI_Project&apos;&#x0A;- Destination element: &apos;JDBC_MINI_Project/src/tech.codehunt.logic&apos;&#x0A;- Original element: &apos;tech.codehunt.start.Logic.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;tech.codehunt.logic" element1="/src&lt;tech.codehunt.start{Logic.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1764139090091" units="1" version="1.0"/>
+</session>

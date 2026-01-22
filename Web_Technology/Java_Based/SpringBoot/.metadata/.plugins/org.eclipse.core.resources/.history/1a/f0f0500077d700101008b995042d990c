@@ -1,0 +1,36 @@
+package com.learn.apis.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.learn.apis.dto.StudentDto;
+import com.learn.apis.entity.Student;
+import com.learn.apis.repository.StudentRepository;
+
+@RestController
+public class StudentController {
+	
+	private final StudentRepository studentRepository;
+	
+	
+	
+	public StudentController(StudentRepository studentRepository) {
+		super();
+		this.studentRepository = studentRepository;
+	}  
+
+
+	@GetMapping("/student")
+	public List<Student> getStudent() {
+		return studentRepository.findAll();
+	}  
+	
+	
+	@GetMapping("/student/{id}")
+	public StudentDto getStudentById() {
+		return new StudentDto(4L, "Anuj", "anuj@gmail.com");
+	}  
+
+}

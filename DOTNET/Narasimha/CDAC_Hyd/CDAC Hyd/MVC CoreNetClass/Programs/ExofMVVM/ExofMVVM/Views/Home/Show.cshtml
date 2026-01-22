@@ -1,0 +1,29 @@
+﻿@model ExofMVVM.Models.StudentResult
+@{
+    ViewBag.Title = "Show";
+}
+
+<center>
+    <h2>Student Result</h2>
+    <br /><br />
+    <table border="1" bordercolor="red">
+        <tr>
+            <th>Student No</th>
+            <td>@Model.Stno</td>
+        </tr>
+
+        <tr>
+            <th>Student Name</th>
+            <td>@Model.FullName</td>
+        </tr>
+        <tr>
+            <th>Marks Taken</th>
+            <td style="color:@Model.MarksColor">@Model.MarksTaken</td>
+        </tr>
+
+        <tr>
+            <th>Have You Passed Exam</th>
+            <td style="color:@Model.ResultColor">@Model.Result</td>
+        </tr>
+    </table>
+</center>

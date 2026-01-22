@@ -1,0 +1,30 @@
+What is the Hosting Model in ASP.NET Core?
+In ASP.NET Core, the “Hosting Model” refers to how the application is hosted and executed. The hosting model defines how the application starts, how the requests are processed, and how the responses are returned to the clients. ASP.NET Core has two types of Hosting Models: InProcess and OutOfProcess.
+
+What is the InProcess Hosting Model in ASP.NET Core?
+In the case of the InProcess Hosting Model, the ASP.NET Core Web Application will be hosted inside the IIS Worker Process, i.e., w3wp.exe, and IIS is the only Web Server that will handle the Incoming HTTP Request.
+
+The In-Process Hosting Model provides better performance than the Out-of-Process model. With In-Process Hosting, the ASP.NET Core application runs as part of the IIS worker process. The application code and the IIS worker process share the same memory space, eliminating communication overhead between the web server and the application process.
+
+How Does the InProcess Hosting Model Work in ASP.NET Core?
+When a request comes to IIS, it is directly processed by the ASP.NET Core application in the same process. There’s no proxy or intermediary involved.  Here, we only use one server, IIS, to handle client requests.
+
+
+Code In Application Project File
+
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+</Project>
+
+Why does InProcess Hosting give better performance than the OutOfProcess Hosting model?
+In the case of OutOfProcess Hosting, there are 2 Web Servers
+
+An Internal Web Server (Kestrel) and
+One External Web Server (IIS, Nginx, or Apache).

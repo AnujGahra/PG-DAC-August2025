@@ -1,0 +1,21 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import com.example.demo.entities.EmployeeEntity;
+import com.example.demo.repositories.EmployeeCrud;
+
+@SpringBootApplication
+public class Sb2Application {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext ac = SpringApplication.run(Sb2Application.class, args);
+		EmployeeCrud bean = ac.getBean(EmployeeCrud.class);
+		
+		bean.save(new EmployeeEntity(11, "raju", "add1", 1100));
+		System.out.println("TEST...");
+	}
+
+}

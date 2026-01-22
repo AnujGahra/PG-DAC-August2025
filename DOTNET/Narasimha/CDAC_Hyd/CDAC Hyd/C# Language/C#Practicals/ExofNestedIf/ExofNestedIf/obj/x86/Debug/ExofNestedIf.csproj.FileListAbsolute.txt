@@ -1,0 +1,8 @@
+E:\krishna sir\C#Practicals\ExofNestedIf\ExofNestedIf\bin\Debug\ExofNestedIf.exe
+E:\krishna sir\C#Practicals\ExofNestedIf\ExofNestedIf\bin\Debug\ExofNestedIf.pdb
+E:\krishna sir\C#Practicals\ExofNestedIf\ExofNestedIf\obj\x86\Debug\ExofNestedIf.exe
+E:\krishna sir\C#Practicals\ExofNestedIf\ExofNestedIf\obj\x86\Debug\ExofNestedIf.pdb
+D:\krishna sir\C#Practicals\ExofNestedIf\ExofNestedIf\obj\x86\Debug\ExofNestedIf.exe
+D:\krishna sir\C#Practicals\ExofNestedIf\ExofNestedIf\obj\x86\Debug\ExofNestedIf.pdb
+D:\krishna sir\C#Practicals\ExofNestedIf\ExofNestedIf\bin\Debug\ExofNestedIf.exe
+D:\krishna sir\C#Practicals\ExofNestedIf\ExofNestedIf\bin\Debug\ExofNestedIf.pdb

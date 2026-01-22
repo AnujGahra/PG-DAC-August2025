@@ -1,0 +1,77 @@
+package com.insertData;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Launch {
+
+	public static void main(String[] args) {
+		
+		
+		
+		String url = "jdbc:mysql://localhost:3306/jdbctest";
+		String username = "root";
+		String password = "Hacker@anuj001";
+		
+		Connection connection = null;
+//		PreparedStatement preparedStatement = null;
+		Statement statement = null;
+		
+		
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+			connection = DriverManager.getConnection(url, username, password);
+			statement = connection.createStatement();
+			
+//			String sql = "INSERT INTO students (name, age, city) VALUES(?, ?, ?)";
+			String sql = "INSERT INTO students (name, age, city) VALUES('Anuj Gahra', 23, 'Moradabad')";
+			
+//			preparedStatement = connection.prepareStatement(sql);
+			int rowsAffected = statement.executeUpdate(sql);
+			
+			System.out.println(rowsAffected + "inserted successfully");
+			
+//			
+//			preparedStatement.setString(1, "John Doe");
+//			preparedStatement.setInt(2, 23);
+//			preparedStatement.setString(3, "Hyderabad");
+//			
+//			
+//			int rowInserted = preparedStatement.executeUpdate();
+			
+//			if(rowInserted > 0) {
+//				System.out.println("A new student was inserted successfully");
+//			}
+			
+//			if(connection != null) {
+//				System.out.println("Connected to the database successfully");
+//			}
+			
+		} catch(ClassNotFoundException e) {
+			System.out.println("Driver not found");
+			e.printStackTrace();
+		} catch (SQLException e) {
+			System.out.println("Database connection failed");
+			e.printStackTrace();
+		} finally {
+			try {
+				if(connection != null) {
+					connection.close();
+					System.out.println("Connection closed");
+				}
+//				if(preparedStatement != null) preparedStatement.close();
+				if(statement != null) statement.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			
+		}
+
+	}
+
+}

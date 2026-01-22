@@ -1,0 +1,27 @@
+package com.mainapp;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+//@Component("emp")
+@Component
+@Lazy
+@Scope("prototype")
+public class Employee {
+
+        public Employee() {
+        	System.out.println("Bean Instantiation...");
+        }
+        
+        
+        public void test() {
+        	System.out.println("Bean Tested...");
+        }
+    
+}

@@ -1,0 +1,12 @@
+C:\SouceEdge Session 1\LangBasics\ExofAccessSpecifiers\ExofAccessSpecifiers\bin\Debug\ExofAccessSpecifiers.exe
+C:\SouceEdge Session 1\LangBasics\ExofAccessSpecifiers\ExofAccessSpecifiers\bin\Debug\ExofAccessSpecifiers.pdb
+C:\SouceEdge Session 1\LangBasics\ExofAccessSpecifiers\ExofAccessSpecifiers\obj\Debug\ExofAccessSpecifiers.csprojResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofAccessSpecifiers\ExofAccessSpecifiers\obj\Debug\ExofAccessSpecifiers.exe
+C:\SouceEdge Session 1\LangBasics\ExofAccessSpecifiers\ExofAccessSpecifiers\obj\Debug\ExofAccessSpecifiers.pdb
+E:\krishna sir\C#Practicals\ExofAccessSpecifiers\ExofAccessSpecifiers\obj\Debug\ExofAccessSpecifiers.exe
+E:\krishna sir\C#Practicals\ExofAccessSpecifiers\ExofAccessSpecifiers\obj\Debug\ExofAccessSpecifiers.pdb
+E:\krishna sir\C#Practicals\ExofAccessSpecifiers\ExofAccessSpecifiers\bin\Debug\ExofAccessSpecifiers.exe
+E:\krishna sir\C#Practicals\ExofAccessSpecifiers\ExofAccessSpecifiers\bin\Debug\ExofAccessSpecifiers.pdb
+E:\krishna sir\C#Practicals\ExofAccessSpecifiers\ExofAccessSpecifiers\obj\Debug\ExofAccessSpecifiers.csprojResolveAssemblyReference.cache
+D:\krishna sir\C#Practicals\ExofAccessSpecifiers\ExofAccessSpecifiers\obj\Debug\ExofAccessSpecifiers.exe
+D:\krishna sir\C#Practicals\ExofAccessSpecifiers\ExofAccessSpecifiers\obj\Debug\ExofAccessSpecifiers.pdb

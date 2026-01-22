@@ -1,0 +1,9 @@
+E:\krishna sir\C#Practicals\ExofArrayInput\ExofArrayInput\bin\Debug\ExofArrayInput.exe
+E:\krishna sir\C#Practicals\ExofArrayInput\ExofArrayInput\bin\Debug\ExofArrayInput.pdb
+E:\krishna sir\C#Practicals\ExofArrayInput\ExofArrayInput\obj\x86\Debug\ExofArrayInput.exe
+E:\krishna sir\C#Practicals\ExofArrayInput\ExofArrayInput\obj\x86\Debug\ExofArrayInput.pdb
+D:\krishna sir\C#Practicals\ExofArrayInput\ExofArrayInput\obj\x86\Debug\ExofArrayInput.exe
+D:\krishna sir\C#Practicals\ExofArrayInput\ExofArrayInput\obj\x86\Debug\ExofArrayInput.pdb
+D:\krishna sir\C#Practicals\ExofArrayInput\ExofArrayInput\bin\Debug\ExofArrayInput.exe
+D:\krishna sir\C#Practicals\ExofArrayInput\ExofArrayInput\bin\Debug\ExofArrayInput.pdb
+D:\krishna sir\C#Practicals\ExofArrayInput\ExofArrayInput\obj\x86\Debug\ExofArrayInput.csprojResolveAssemblyReference.cache

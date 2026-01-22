@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+
+
+
+	<!-- ✅ Method 1: Inline <set> (Most common) -->
+
+	<bean id="emp" class="com.mainapp.Employee">
+		<property name="eid" value="101" />
+		<property name="ename" value="Raju" />
+		<property name="listofBooks">
+			<set>
+				<value>JavaByCodeHunt</value>
+				<value>PremChandKiKahaniya</value>
+				<value>Anuj Ke Shahar Mein</value>
+			</set>
+		</property>
+	</bean>
+
+
+<!-- ✅ Method 2: Standalone SET (util:set) -->
+
+		<bean id="emp2" class="com.mainapp.Employee">
+    <property name="eid" value="102"/>
+    <property name="ename" value="Raju"/>
+    <property name="listofBooks" ref="myBookSet"/>
+</bean>
+		
+		<util:set id="myBookSet">
+    <value>JavaByCodeHunt</value>
+    <value>PremChandKiKahaniya</value>
+    <value>Anuj Ke Shahar Mein</value>
+</util:set>
+		
+		
+		<!-- ✅ Method 3: Separate Bean with Constructor -->
+		
+
+<bean id="emp3" class="com.mainapp.Employee">
+    <property name="eid" value="103"/>
+    <property name="ename" value="Raju"/>
+    <property name="listofBooks" ref="bookSet"/>
+</bean>
+		<bean id="bookSet" class="java.util.HashSet">
+    <constructor-arg>
+        <set>
+            <value>JavaByCodeHunt</value>
+            <value>PremChandKiKahaniya</value>
+            <value>Rich DAD and Poor DAD</value>
+        </set>
+    </constructor-arg>
+</bean>
+
+
+<!-- ✅ Method 4: Custom Set Implementation -->
+
+<bean id="emp4" class="com.mainapp.Employee">
+    <property name="eid" value="104"/>
+    <property name="ename" value="Raju"/>
+    <property name="listofBooks" ref="linkedBookSet"/>
+</bean>
+		<util:set id="linkedBookSet" set-class="java.util.LinkedHashSet">
+    <value>JavaByCodeHunt</value>
+    <value>PremChandKiKahaniya</value>
+    <value>Anuj Ke Shahar Mein</value>
+</util:set>
+		
+		
+
+
+</beans>

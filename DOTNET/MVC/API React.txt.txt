@@ -1,0 +1,523 @@
+Code In App.jsx
+------------------------
+import React, { useState, useEffect, useCallback } from 'react';
+import { getAuth, signInWithCustomToken, signInAnonymously } from 'firebase/auth';
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
+import { Loader2, Plus, Edit2, Trash2, Save, X, RotateCcw } from 'lucide-react';
+
+// --- CONFIGURATION ---
+// IMPORTANT: Ensure this URL matches your running .NET Core API's base route
+const API_BASE_URL = 'http://localhost:5023/api/students'; 
+
+// C# PascalCase Model Structure (MUST match the API payload exactly)
+const initialStudent = {
+  StudentId: 0,
+  Stno: '',
+  Stname: '',
+  Doa: new Date().toISOString().substring(0, 10), // YYYY-MM-DD
+  Fees: 0,
+};
+
+// Global variables check for Canvas environment
+const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+
+// --- AUTH AND FIREBASE SETUP HOOK (Standard Canvas requirement) ---
+const useFirebaseAuth = () => {
+  const [authReady, setAuthReady] = useState(false);
+  const [userId, setUserId] = useState(null);
+
+  useEffect(() => {
+    let auth;
+    try {
+        const app = initializeApp(firebaseConfig);
+        auth = getAuth(app);
+        getFirestore(app); // Initialize Firestore instance
+
+        const signIn = async () => {
+            if (initialAuthToken) {
+                await signInWithCustomToken(auth, initialAuthToken);
+            } else {
+                await signInAnonymously(auth);
+            }
+            setUserId(auth.currentUser?.uid || crypto.randomUUID());
+            setAuthReady(true);
+        };
+        signIn();
+    } catch (e) {
+        // Fallback for environment without Firebase setup
+        console.error("Firebase Initialization Error, running in standalone mode:", e);
+        setUserId(crypto.randomUUID());
+        setAuthReady(true);
+    }
+  }, []);
+
+  return { authReady, userId };
+};
+
+// --- API FETCH HOOK ---
+// Implements request logic, loading state, and error handling with retries (for network stability)
+const useApi = () => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  
+  // Implements simple exponential backoff for retries
+  const MAX_RETRIES = 3;
+
+  const execute = useCallback(async (method, url, data = null) => {
+    setLoading(true);
+    setError(null);
+    let lastError = null;
+
+    for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
+        try {
+            const config = {
+                method,
+                headers: { 'Content-Type': 'application/json' },
+            };
+
+            if (data) {
+                // Ensure data is sent as JSON body
+                config.body = JSON.stringify(data);
+            }
+
+            const response = await fetch(url, config);
+            
+            if (!response.ok) {
+                // Read error message from API response if available
+                const errorDetail = await response.text();
+                throw new Error(`API call failed [${response.status} ${response.statusText}]: ${errorDetail.substring(0, 100)}...`);
+            }
+
+            // Success: Handle responses that might be empty (204 No Content for PUT/DELETE)
+            const contentType = response.headers.get("content-type");
+            if (contentType && contentType.includes("application/json") && response.status !== 204) {
+                return await response.json();
+            }
+            return null; // Success, but no content (e.g., PUT, DELETE)
+
+        } catch (e) {
+            lastError = e;
+            if (attempt < MAX_RETRIES - 1) {
+                await new Promise(resolve => setTimeout(resolve, 1000 * Math.pow(2, attempt))); // Wait 1s, 2s, 4s
+            }
+        }
+    }
+    setError(lastError.message);
+    setLoading(false);
+    return null; // Return null if all retries fail
+  }, []);
+
+  return { execute, loading, error, setError };
+};
+
+// --- COMPONENTS ---
+
+// 1. Form for Create and Edit
+const StudentForm = ({ student, onSubmit, onCancel, submitLabel, isEdit }) => {
+  // Use the student object directly, which adheres to PascalCase
+  const [formData, setFormData] = useState(student);
+
+  const handleChange = (e) => {
+    const { name, value, type } = e.target;
+    let newValue = value;
+
+    if (type === 'number') {
+        newValue = parseFloat(value) || 0;
+    }
+    
+    setFormData(prev => ({ ...prev, [name]: newValue }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit(formData);
+  };
+
+  const inputClass = "w-full p-2 border border-gray-300 rounded-lg focus:ring-sky-500 focus:border-sky-500 transition duration-150";
+
+  return (
+    <div className="p-6 bg-white shadow-xl rounded-xl max-w-lg mx-auto border border-sky-200">
+      <h2 className="text-2xl font-bold text-gray-800 mb-6">{isEdit ? 'Edit Student Record' : 'Create New Student'}</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        {isEdit && (
+            <div className="text-sm font-medium text-gray-500 bg-sky-50 p-3 rounded-lg flex justify-between items-center">
+                <span>Student ID (Read-Only):</span>
+                <span className="font-mono text-sky-800 text-lg">{formData.StudentId}</span>
+            </div>
+        )}
+        <div>
+          <label htmlFor="Stno" className="block text-sm font-medium text-gray-700">Student Number (Stno)</label>
+          <input type="text" id="Stno" name="Stno" value={formData.Stno} onChange={handleChange} required className={inputClass} />
+        </div>
+        <div>
+          <label htmlFor="Stname" className="block text-sm font-medium text-gray-700">Student Name</label>
+          <input type="text" id="Stname" name="Stname" value={formData.Stname} onChange={handleChange} required className={inputClass} />
+        </div>
+        <div>
+          <label htmlFor="Doa" className="block text-sm font-medium text-gray-700">Date of Admission (Doa)</label>
+          <input type="date" id="Doa" name="Doa" 
+             value={formData.Doa.substring(0, 10)} 
+             onChange={handleChange} required className={inputClass} 
+          />
+        </div>
+        <div>
+          <label htmlFor="Fees" className="block text-sm font-medium text-gray-700">Fees</label>
+          <input type="number" id="Fees" name="Fees" value={formData.Fees} onChange={handleChange} required className={inputClass} step="0.01" />
+        </div>
+        
+        <div className="flex justify-end space-x-3 pt-4">
+          <button type="button" onClick={onCancel} className="flex items-center px-4 py-2 bg-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-300 transition duration-150">
+            <X className="w-5 h-5 mr-1" />
+            Cancel
+          </button>
+          <button type="submit" disabled={isEdit && JSON.stringify(student) === JSON.stringify(formData)}
+            className="flex items-center px-4 py-2 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700 transition duration-150 disabled:bg-gray-400">
+            {submitLabel}
+            <Save className="w-5 h-5 ml-1" />
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+};
+
+// 2. Student List Item
+const StudentItem = ({ student, onEdit, onDelete }) => {
+    // Attempt to format Doa; handle potential null/invalid dates gracefully
+    const dateValue = new Date(student.Doa);
+    const formattedDate = dateValue instanceof Date && !isNaN(dateValue) ? dateValue.toLocaleDateString() : 'N/A';
+
+    return (
+        <tr className="border-b hover:bg-gray-50 transition duration-150">
+            <td className="px-4 py-3 text-sm font-medium text-gray-900">{student.StudentId}</td>
+            <td className="px-4 py-3 text-sm text-gray-700">{student.Stno}</td>
+            <td className="px-4 py-3 text-sm font-semibold text-gray-800">{student.Stname}</td>
+            <td className="px-4 py-3 text-sm text-gray-500">{formattedDate}</td>
+            <td className="px-4 py-3 text-sm font-mono text-green-700">
+                ${student.Fees.toFixed(2)}
+            </td>
+            <td className="px-4 py-3 text-right space-x-2">
+                <button 
+                    onClick={() => onEdit(student)}
+                    className="p-2 text-sky-600 hover:text-sky-800 transition duration-150 rounded-full hover:bg-sky-100"
+                    title="Edit"
+                >
+                    <Edit2 className="w-5 h-5" />
+                </button>
+                <button 
+                    onClick={() => onDelete(student)}
+                    className="p-2 text-red-600 hover:text-red-800 transition duration-150 rounded-full hover:bg-red-100"
+                    title="Delete"
+                >
+                    <Trash2 className="w-5 h-5" />
+                </button>
+            </td>
+        </tr>
+    );
+};
+
+// 3. Delete Confirmation Modal
+const DeleteConfirmation = ({ student, onConfirm, onCancel, loading }) => (
+    <div className="p-6 bg-white shadow-xl rounded-xl max-w-lg mx-auto border border-red-300">
+        <h2 className="text-2xl font-bold text-red-600 mb-4">Confirm Deletion</h2>
+        <p className="text-gray-700 mb-6">
+            Are you absolutely sure you want to permanently delete the student record?
+        </p>
+        <div className="bg-red-50 p-4 rounded-lg border border-red-200 mb-6">
+            <p className="font-semibold">ID: <span className="text-red-800">{student.StudentId}</span></p>
+            <p className="font-semibold">Name: <span className="text-red-800">{student.Stname}</span></p>
+            <p className="text-sm text-red-500 mt-2">This action cannot be undone.</p>
+        </div>
+
+        <div className="flex justify-end space-x-3">
+            <button 
+                onClick={onCancel} 
+                disabled={loading}
+                className="flex items-center px-4 py-2 bg-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-300 transition duration-150 disabled:opacity-50"
+            >
+                <X className="w-5 h-5 mr-1" />
+                Cancel
+            </button>
+            <button 
+                onClick={onConfirm} 
+                disabled={loading}
+                className="flex items-center px-4 py-2 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition duration-150 disabled:opacity-50"
+            >
+                {loading ? <Loader2 className="w-5 h-5 mr-1 animate-spin" /> : <Trash2 className="w-5 h-5 mr-1" />}
+                {loading ? 'Deleting...' : 'Delete Permanently'}
+            </button>
+        </div>
+    </div>
+);
+
+// 4. Student List View
+const StudentList = ({ students, onFetch, onNavigate, onEdit, onDelete, loading }) => {
+    if (loading) {
+        return (
+            <div className="flex justify-center items-center h-48">
+                <Loader2 className="w-8 h-8 text-sky-500 animate-spin" />
+                <span className="ml-3 text-lg text-gray-600">Loading Students...</span>
+            </div>
+        );
+    }
+
+    return (
+        <div className="p-6 bg-white shadow-xl rounded-xl mx-auto">
+            <div className="flex justify-between items-center mb-6">
+                <h2 className="text-2xl font-bold text-gray-800">Student Directory ({students.length})</h2>
+                <div className="space-x-2">
+                    <button
+                        onClick={onFetch}
+                        className="flex items-center px-4 py-2 bg-gray-500 text-white font-semibold rounded-lg hover:bg-gray-600 transition duration-150 shadow-md"
+                        title="Reload Data"
+                    >
+                        <RotateCcw className="w-5 h-5 mr-2" />
+                        Reload
+                    </button>
+                    <button 
+                        onClick={() => onNavigate('create')}
+                        className="flex items-center px-4 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition duration-150 shadow-md"
+                    >
+                        <Plus className="w-5 h-5 mr-2" />
+                        Add Student
+                    </button>
+                </div>
+            </div>
+
+            {students.length === 0 ? (
+                <div className="text-center p-10 bg-gray-50 rounded-lg border border-dashed border-gray-200">
+                    <p className="text-xl text-gray-500">No student records found.</p>
+                    <p className="text-sm text-gray-400 mt-2">Check if your API is running and accessible.</p>
+                </div>
+            ) : (
+                <div className="overflow-x-auto rounded-lg border border-gray-200">
+                    <table className="min-w-full divide-y divide-gray-200">
+                        <thead className="bg-gray-100">
+                            <tr>
+                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Stno</th>
+                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">DOA</th>
+                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Fees</th>
+                                <th className="px-4 py-3">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody className="bg-white divide-y divide-gray-200">
+                            {students.map(student => (
+                                <StudentItem 
+                                    key={student.StudentId} 
+                                    student={student} 
+                                    onEdit={onEdit} 
+                                    onDelete={onDelete} 
+                                />
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            )}
+        </div>
+    );
+};
+
+
+// --- MAIN APP COMPONENT ---
+const App = () => {
+    const { authReady, userId } = useFirebaseAuth();
+    const { execute, loading, error, setError } = useApi();
+    
+    const [students, setStudents] = useState([]);
+    const [view, setView] = useState('list');
+    const [selectedStudent, setSelectedStudent] = useState(null);
+
+    // READ: Fetch all students
+    const fetchStudents = useCallback(async () => {
+        const data = await execute('GET', API_BASE_URL);
+        if (data) {
+            // Ensure data structure is consistent and IDs are numbers
+            const processedData = data.map(s => ({
+                ...s,
+                StudentId: Number(s.StudentId || s.studentId) || 0, // Handle potential casing inconsistencies from API response
+            }));
+            setStudents(processedData);
+        } else if (!error && !loading) {
+             // Set a general message if fetch failed silently (e.g., API is down)
+             setError("Failed to fetch data. Check if the API is running and CORS is enabled.");
+        }
+    }, [execute, error, loading, setError]);
+
+
+    // CREATE: Handle new student submission
+    const handleCreate = async (newStudent) => {
+        // IMPORTANT: We remove the ID before POST, letting the API generate it.
+        const { StudentId, ...dataToCreate } = newStudent; 
+
+        const result = await execute('POST', API_BASE_URL, dataToCreate);
+        if (result !== null || error === null) {
+            setView('list');
+            fetchStudents();
+        }
+    };
+
+    // UPDATE: Handle student update submission
+    const handleEdit = async (updatedStudent) => {
+        const { StudentId } = updatedStudent;
+        const url = `${API_BASE_URL}/${StudentId}`;
+
+        // PUT request to update the entire resource
+        const result = await execute('PUT', url, updatedStudent); 
+        if (result !== null || error === null) {
+            setView('list');
+            fetchStudents();
+        }
+    };
+    
+    // DELETE: Handle student deletion
+    const handleDeleteConfirmed = async () => {
+        if (!selectedStudent) return;
+
+        const url = `${API_BASE_URL}/${selectedStudent.StudentId}`;
+        const result = await execute('DELETE', url);
+        
+        if (result !== null || error === null) {
+            setSelectedStudent(null);
+            setView('list');
+            fetchStudents();
+        }
+    };
+
+    // --- VIEW HANDLERS ---
+    
+    useEffect(() => {
+        if (authReady && view === 'list') {
+            fetchStudents();
+        }
+    }, [authReady, view, fetchStudents]);
+
+    const handleNavigate = (newView, student = null) => {
+        setSelectedStudent(student);
+        setView(newView);
+        setError(null); // Clear errors when switching views
+    };
+
+    const handleEditClick = (student) => {
+        // Clone and navigate to edit view
+        handleNavigate('edit', { ...student }); 
+    };
+
+    const handleDeleteClick = (student) => {
+        // Navigate to delete confirmation view
+        handleNavigate('delete', student);
+    };
+
+    // --- RENDERING LOGIC ---
+
+    let content;
+    
+    if (!authReady) {
+        content = (
+            <div className="text-center p-8 bg-white rounded-xl shadow-lg">
+                <Loader2 className="w-6 h-6 mx-auto mb-3 text-sky-500 animate-spin" />
+                <p className="text-gray-600">Initializing environment...</p>
+            </div>
+        );
+    } else if (view === 'create') {
+        content = (
+            <StudentForm 
+                student={initialStudent} 
+                onSubmit={handleCreate} 
+                onCancel={() => handleNavigate('list')} 
+                submitLabel="Create Student"
+                isEdit={false}
+            />
+        );
+    } else if (view === 'edit' && selectedStudent) {
+        content = (
+            <StudentForm 
+                student={selectedStudent} 
+                onSubmit={handleEdit} 
+                onCancel={() => handleNavigate('list')} 
+                submitLabel="Save Changes"
+                isEdit={true}
+            />
+        );
+    } else if (view === 'delete' && selectedStudent) {
+        content = (
+            <DeleteConfirmation 
+                student={selectedStudent} 
+                onConfirm={handleDeleteConfirmed} 
+                onCancel={() => handleNavigate('list')} 
+                loading={loading}
+            />
+        );
+    } else { 
+        content = (
+            <StudentList 
+                students={students} 
+                onFetch={fetchStudents}
+                onNavigate={handleNavigate}
+                onEdit={handleEditClick}
+                onDelete={handleDeleteClick}
+                loading={loading}
+            />
+        );
+    }
+
+    return (
+        <div className="min-h-screen bg-gray-100 p-4 sm:p-8 font-sans">
+            <header className="text-center mb-10">
+                <h1 className="text-4xl font-extrabold text-sky-800 tracking-tight">
+                    .NET Core API CRUD Interface
+                </h1>
+                <p className="text-lg text-gray-500 mt-1">Student Management ({appId})</p>
+                <p className="text-sm text-gray-400">API Endpoint: {API_BASE_URL}</p>
+            </header>
+
+            {/* Global Error Message Display */}
+            {error && (
+                <div className="max-w-4xl mx-auto mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg shadow-md" role="alert">
+                    <p className="font-bold">Error:</p>
+                    <p className="text-sm break-all">{error}</p>
+                </div>
+            )}
+
+            <main className="max-w-4xl mx-auto">
+                {content}
+            </main>
+        </div>
+    );
+};
+
+export default App;
+---------------------------------------------------------------------------------
+Code In Program.cs(Cors Policy)
+
+
+
+
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        builder =>
+        {
+            // IMPORTANT: Use the actual origin where your React app is running.
+            // If running in the Canvas environment, use "*" for development simplicity.
+            builder.AllowAnyOrigin() 
+                   .AllowAnyHeader()
+                   .AllowAnyMethod();
+        });
+});
+
+------------------------------------------------------------------------------
+// ... other app configuration
+
+app.UseCors(MyAllowSpecificOrigins); // Add this BEFORE app.MapControllers();
+
+app.MapControllers();
+
+// ...

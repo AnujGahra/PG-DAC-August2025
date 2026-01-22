@@ -1,0 +1,22 @@
+Entity Framework (EF) is an Object-Relational Mapper (ORM) for the .NET ecosystem developed by Microsoft. It allows .NET developers to interact with relational databases using domain-specific objects (C# classes) instead of writing raw SQL queries.
+
+
+The applications created using the EF does not work with the database directly. The application works only with the API provided by the EF for database related operations. The EF maps those operations to the database.
+
+Entity Framework is an Object/Relational Mapping (O/RM) framework. It is an enhancement to ADO.NET that gives developers an automated mechanism for accessing & storing the data in the database.
+
+
+EF Core Development Approaches
+----------------------------------------------
+EF Core supports two development approaches
+ 1) Code-First 
+2) Database-First.
+
+ EF Core mainly targets the code-first approach and provides little support for the database-first approach because the visual designer or wizard for DB model is not supported as of EF Core.
+
+In the code-first approach, EF Core API creates the database and tables using migration based on the conventions and configuration provided in your domain classes. This approach is useful in Domain Driven Design (DDD).
+
+In the database-first approach, EF Core API creates the domain and context classes based on your existing database using EF Core commands. This has limited support in EF Core as it does not support visual designer or wizard.
+
+
+Entities in the Entity Framework are mapped to the corresponding tables in the database. Entity Framework keeps track of these entities so that it can perform database CRUD (Create, Read, Update, Delete) operations automatically based on their objectâ€™s status.

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExofGenerics">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExofGenerics\ExofGenerics.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExofGenerics\ExofGenerics.suo">
+</Property><Property Name="Date" Value="17 January 2015">
+</Property><Property Name="Time" Value="13:02">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExofGenerics.sln" Description="File successfully backed up as D:\LangBasics\ExofGenerics\Backup\ExofGenerics.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExofGenerics.suo" Description="File successfully backed up as D:\LangBasics\ExofGenerics\Backup\ExofGenerics.suo">
+</Event><Event ErrorLevel="0" Project="ExofGenerics" Source="ExofGenerics\ExofGenerics.csproj" Description="Project file successfully backed up as D:\LangBasics\ExofGenerics\Backup\ExofGenerics\ExofGenerics.csproj">
+</Event><Event ErrorLevel="0" Project="ExofGenerics" Source="ExofGenerics\Program.cs" Description="File successfully backed up as D:\LangBasics\ExofGenerics\Backup\ExofGenerics\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExofGenerics" Source="ExofGenerics\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExofGenerics\Backup\ExofGenerics\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExofGenerics" Source="ExofGenerics\ExofGenerics.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExofGenerics" Source="ExofGenerics\ExofGenerics.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExofGenerics.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExofGenerics.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExofGenerics" Source="ExofGenerics\ExofGenerics.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

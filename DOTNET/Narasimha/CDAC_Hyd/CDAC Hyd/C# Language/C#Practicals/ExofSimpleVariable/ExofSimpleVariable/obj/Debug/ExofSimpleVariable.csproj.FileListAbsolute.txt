@@ -1,0 +1,7 @@
+D:\LangBasics\ExofSimpleVariable\ExofSimpleVariable\bin\Debug\ExofSimpleVariable.exe
+D:\LangBasics\ExofSimpleVariable\ExofSimpleVariable\bin\Debug\ExofSimpleVariable.pdb
+D:\LangBasics\ExofSimpleVariable\ExofSimpleVariable\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofSimpleVariable\ExofSimpleVariable\obj\Debug\ExofSimpleVariable.exe
+D:\LangBasics\ExofSimpleVariable\ExofSimpleVariable\obj\Debug\ExofSimpleVariable.pdb
+C:\LangBasics\ExofSimpleVariable\ExofSimpleVariable\obj\Debug\ExofSimpleVariable.exe
+C:\LangBasics\ExofSimpleVariable\ExofSimpleVariable\obj\Debug\ExofSimpleVariable.pdb

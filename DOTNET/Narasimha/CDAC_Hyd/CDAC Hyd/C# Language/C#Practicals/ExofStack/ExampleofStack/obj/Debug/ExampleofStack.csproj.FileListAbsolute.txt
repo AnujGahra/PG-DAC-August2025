@@ -1,0 +1,22 @@
+c:\LangBasics\ExampleofStack\ExampleofStack\bin\Debug\ExampleofStack.exe
+c:\LangBasics\ExampleofStack\ExampleofStack\bin\Debug\ExampleofStack.pdb
+c:\LangBasics\ExampleofStack\ExampleofStack\obj\Debug\ResolveAssemblyReference.cache
+c:\LangBasics\ExampleofStack\ExampleofStack\obj\Debug\ExampleofStack.exe
+c:\LangBasics\ExampleofStack\ExampleofStack\obj\Debug\ExampleofStack.pdb
+D:\LangBasics\ExampleofStack\ExampleofStack\obj\Debug\ExampleofStack.exe
+D:\LangBasics\ExampleofStack\ExampleofStack\obj\Debug\ExampleofStack.pdb
+D:\LangBasics\ExampleofStack\ExampleofStack\bin\Debug\ExampleofStack.exe
+D:\LangBasics\ExampleofStack\ExampleofStack\bin\Debug\ExampleofStack.pdb
+D:\LangBasics\ExampleofStack\ExampleofStack\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofStack\ExampleofStack\obj\Debug\ExampleofStack.exe
+C:\SouceEdge Session 1\LangBasics\ExofStack\ExampleofStack\obj\Debug\ExampleofStack.pdb
+C:\SouceEdge Session 1\LangBasics\ExofStack\ExampleofStack\bin\Debug\ExampleofStack.exe
+C:\SouceEdge Session 1\LangBasics\ExofStack\ExampleofStack\bin\Debug\ExampleofStack.pdb
+E:\krishna sir\C#Practicals\ExofStack\ExampleofStack\obj\Debug\ExampleofStack.exe
+E:\krishna sir\C#Practicals\ExofStack\ExampleofStack\obj\Debug\ExampleofStack.pdb
+D:\krishna sir\C#Practicals\ExofStack\ExampleofStack\bin\Debug\ExampleofStack.exe.config
+D:\krishna sir\C#Practicals\ExofStack\ExampleofStack\obj\Debug\ExampleofStack.exe
+D:\krishna sir\C#Practicals\ExofStack\ExampleofStack\obj\Debug\ExampleofStack.pdb
+D:\krishna sir\C#Practicals\ExofStack\ExampleofStack\bin\Debug\ExampleofStack.exe
+D:\krishna sir\C#Practicals\ExofStack\ExampleofStack\bin\Debug\ExampleofStack.pdb
+D:\krishna sir\C#Practicals\ExofStack\ExampleofStack\obj\Debug\ExampleofStack.csprojResolveAssemblyReference.cache

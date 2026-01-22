@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;trycatch.CatchBlock&apos; to &apos;Simple&apos;&#x0A;- Original project: &apos;TryCatch&apos;&#x0A;- Original element: &apos;trycatch.CatchBlock&apos;&#x0A;- Renamed element: &apos;trycatch.Simple&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;CatchBlock&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;trycatch{CatchBlock.java[CatchBlock" matchStrategy="1" name="Simple" qualified="false" references="true" similarDeclarations="false" stamp="1758619484838" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,5 @@
+C:\LangBasics\ExofFirstProg\ExofFirstProg\bin\Debug\ExofFirstProg.exe
+C:\LangBasics\ExofFirstProg\ExofFirstProg\bin\Debug\ExofFirstProg.pdb
+C:\LangBasics\ExofFirstProg\ExofFirstProg\obj\Debug\ResolveAssemblyReference.cache
+C:\LangBasics\ExofFirstProg\ExofFirstProg\obj\Debug\ExofFirstProg.exe
+C:\LangBasics\ExofFirstProg\ExofFirstProg\obj\Debug\ExofFirstProg.pdb

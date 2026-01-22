@@ -1,0 +1,118 @@
+@{
+    ViewData["Title"] = "About Me";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .about-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 800px;
+            margin: auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #0078d7;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            color: #444;
+            border-bottom: 2px solid #0078d7;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .details p {
+            line-height: 1.6;
+            margin: 8px 0;
+        }
+
+        .skills span {
+            background-color: #e3f2fd;
+            color: #0078d7;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin: 4px;
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="about-container">
+        <h1>About Me</h1>
+
+        <div class="section details">
+            <h2>Personal Information</h2>
+            <p><strong>Name:</strong> Anuj Kumar</p>
+            <p><strong>Education:</strong> B.Tech in Information Technology from Rajkiya Engineering College, Azamgarh</p>
+            <p><strong>Location:</strong> India</p>
+            <p><strong>Career Goal:</strong> To become a skilled software developer building impactful and user-friendly web and mobile applications.</p>
+        </div>
+
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>React.js</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+                <span>Tailwind CSS</span>
+                <span>React Native</span>
+                <span>C#</span>
+                <span>SQL</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Experience</h2>
+            <p>Developed multiple web and mobile applications using React.js, React Native, and Node.js.  
+               Experienced in creating responsive user interfaces, integrating APIs, and deploying apps using Netlify and Vercel.</p>
+        </div>
+
+        <div class="section">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Completed Google Data Analytics Certification.</li>
+                <li>Built and deployed multiple full-stack web projects.</li>
+                <li>Developed a real-time chat and news app using React Native.</li>
+            </ul>
+        </div>
+
+        <footer>
+            © @DateTime.Now.Year Anuj Kumar | Aspiring Software Developer
+        </footer>
+    </div>
+
+</body>
+</html>

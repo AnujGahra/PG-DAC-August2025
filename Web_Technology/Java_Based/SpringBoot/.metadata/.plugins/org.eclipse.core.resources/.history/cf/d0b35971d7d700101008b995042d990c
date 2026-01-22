@@ -1,0 +1,70 @@
+package com.learn.apis.controller;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import com.learn.apis.dto.AddStudentRequestDto;
+import com.learn.apis.dto.StudentDto;
+import com.learn.apis.service.StudentService;
+
+import lombok.RequiredArgsConstructor;
+
+@RestController
+@RequiredArgsConstructor
+@RequestMapping("/students")
+public class StudentController {
+
+    private final StudentService studentService;
+
+    // GET ALL
+    @GetMapping
+    public ResponseEntity<List<StudentDto>> getAllStudent() {
+        return ResponseEntity.ok(studentService.getAllStudents());
+    }
+
+    // GET BY ID
+    @GetMapping("/{id}")
+    public ResponseEntity<StudentDto> getStudentById(@PathVariable Long id) {
+        return ResponseEntity.ok(studentService.getStudentById(id));
+    }
+
+    // CREATE
+    @PostMapping
+    public ResponseEntity<StudentDto> createStudent(
+            @RequestBody AddStudentRequestDto dto) {
+
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(studentService.createNewStudent(dto));
+    }
+
+    // UPDATE (PUT)
+    @PutMapping("/{id}")
+    public ResponseEntity<StudentDto> updateStudent(
+            @PathVariable Long id,
+            @RequestBody AddStudentRequestDto dto) {
+
+        return ResponseEntity.ok(studentService.updateStudent(id, dto));
+    }
+
+    // PATCH
+    @PatchMapping("/{id}")
+    public ResponseEntity<StudentDto> patchStudent(
+            @PathVariable Long id,
+            @RequestBody Map<String, Object> updates) {
+
+        return ResponseEntity.ok(studentService.patchStudent(id, updates));
+    }
+
+    // DELETE
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteStudent(@PathVariable Long id) {
+
+        studentService.deleteStudent(id);
+        return ResponseEntity.ok("Student deleted successfully");
+    }
+}

@@ -1,0 +1,9 @@
+ static public void Main()
+    {
+        string name = null;
+      
+        // Name have null value takes default
+      	// value instead of null
+        string result = name ? ? "CDAC Bangalore";
+        Console.WriteLine(result);
+    }

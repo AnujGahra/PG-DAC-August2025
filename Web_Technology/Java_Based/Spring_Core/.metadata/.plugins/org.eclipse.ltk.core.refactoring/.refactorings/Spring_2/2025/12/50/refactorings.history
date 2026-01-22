@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;ac&apos; from expression &apos;new ClassPathXmlApplicationContext(&quot;bean.xml&quot;)&apos;&#x0A;- Original project: &apos;Spring_2&apos;&#x0A;- Variable name: &apos;ac&apos;&#x0A;- Destination method: &apos;com.mainapp.Launch.main(...)&apos;&#x0A;- Variable expression: &apos;new ClassPathXmlApplicationContext(&quot;bean.xml&quot;)&apos;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;ac&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;com.mainapp{Launch.java" name="ac" replace="true" replaceAllInThisFile="false" selection="283 46" stamp="1765080842675" varType="false" version="1.0"/>
+</session>

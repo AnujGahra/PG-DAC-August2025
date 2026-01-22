@@ -1,0 +1,8 @@
+C:\SouceEdge Session 1\LangBasics\ExofHirarchicalInh\ExofHirarchicalInh\bin\Debug\ExofHirarchicalInh.exe
+C:\SouceEdge Session 1\LangBasics\ExofHirarchicalInh\ExofHirarchicalInh\bin\Debug\ExofHirarchicalInh.pdb
+C:\SouceEdge Session 1\LangBasics\ExofHirarchicalInh\ExofHirarchicalInh\obj\Debug\ExofHirarchicalInh.exe
+C:\SouceEdge Session 1\LangBasics\ExofHirarchicalInh\ExofHirarchicalInh\obj\Debug\ExofHirarchicalInh.pdb
+E:\krishna sir\C#Practicals\ExofHirarchicalInh\ExofHirarchicalInh\obj\Debug\ExofHirarchicalInh.exe
+E:\krishna sir\C#Practicals\ExofHirarchicalInh\ExofHirarchicalInh\obj\Debug\ExofHirarchicalInh.pdb
+E:\krishna sir\C#Practicals\ExofHirarchicalInh\ExofHirarchicalInh\bin\Debug\ExofHirarchicalInh.exe
+E:\krishna sir\C#Practicals\ExofHirarchicalInh\ExofHirarchicalInh\bin\Debug\ExofHirarchicalInh.pdb

@@ -1,0 +1,5 @@
+package com.nextlearn.portfolio.repositories;
+
+public class ContactRepository {
+
+}

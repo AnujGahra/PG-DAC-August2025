@@ -1,0 +1,5 @@
+C:\SouceEdge Session 1\LangBasics\ExofDebug\ExofDebug\bin\Debug\ExofDebug.exe
+C:\SouceEdge Session 1\LangBasics\ExofDebug\ExofDebug\bin\Debug\ExofDebug.pdb
+C:\SouceEdge Session 1\LangBasics\ExofDebug\ExofDebug\obj\Debug\ExofDebug.csprojResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofDebug\ExofDebug\obj\Debug\ExofDebug.exe
+C:\SouceEdge Session 1\LangBasics\ExofDebug\ExofDebug\obj\Debug\ExofDebug.pdb

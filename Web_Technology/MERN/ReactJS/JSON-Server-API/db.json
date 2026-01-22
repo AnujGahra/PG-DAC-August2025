@@ -1,0 +1,36 @@
+{
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" },
+  "users": [
+    {
+    "name": "Anuj Gahra",
+    "age": 23,
+    "email": "anujgahr@gmail.com"
+  }, 
+  {
+    "name": "Rohit Sharma",
+    "age": 25,
+    "email": "rohit25@gmail.com"
+  },
+  {
+    "name": "Sneha Kumari",
+    "age": 22,
+    "email": "sneha22@gmail.com"
+  },
+  {
+    "name": "Vikas Verma",
+    "age": 28,
+    "email": "vikasv28@gmail.com"
+  },
+  {
+    "name": "Nitin Yadav",
+    "age": 24,
+    "email": "nitiny24@gmail.com"
+  }
+  ]
+}

@@ -1,0 +1,31 @@
+What is dependency injection
+Dependency injection (also known as DI) is a design pattern in which an object does not create it dependent classes, but asks for it.
+
+This is where the ASP.NET Core Dependency injection framework comes in. The Responsibility of creating the Service is now rests with the framework. The object that does this is called DI Container or Ioc Container.
+
+
+How does DI Container know which object create?
+We need to configure DI Container with the classes that you want to participate in dependency injection. This we do it in the startup class under the ConfigureServices method as shown below.
+
+ 
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddMvc();
+    services.AddTransient<IProductService, ProductService>();
+}
+
+
+What are the Different Methods ASP.NET Core Provides to Register a Service with the Dependency Injection Container?
+
+ASP.NET Core provides 3 methods for registering a service with the ASP.NET Core Dependency Injection container. The method we use to register a service will determine its lifetime.
+
+Singleton:
+A Singleton service is created only once per application lifetime. The same instance is used throughout the application. It is ideal for stateless services or maintaining a consistent state throughout the application’s lifetime. Common uses include configuration services, logging, or other services where a single instance is sufficient and desirable. This can be achieved by adding the service as a singleton through the AddSingleton method of the IServiceCollection.
+
+
+
+Transient:
+A Transient service is created each time it is requested from the service container. This means a new instance is provided to every class or method that requires it. This is ideal for lightweight, stateless services. Since a new instance is always created, you don’t need to worry about thread safety related to the internal state. This can be achieved by adding the service through the AddTransient method of the IServiceCollection.
+
+Scoped:
+A Scoped service is created once per client request (in a web application, this typically means per HTTP request). This is ideal for services that need to maintain state within a single request but should not be shared across different requests. Common examples include data access operations within a single transaction. This can be achieved by adding the service through the AddScoped method of the IServiceCollection.

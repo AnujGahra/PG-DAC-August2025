@@ -1,0 +1,43 @@
+﻿@using ModelASPCore.Models
+@{
+    ViewData["Title"] = "Home Page";
+    var students = ViewData["myStudents"] as List<StudentModel>;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>
+        Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.
+    </p>
+</div>
+
+@*
+@if (students != null && students.Any())
+{
+    <table border="1" style="margin:auto; text-align:center;">
+        <thead>
+        <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Class</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var std in students)
+        {
+            <tr>
+                <td>@std.rollo</td>
+                <td>@std.Name</td>
+                <td>@std.Gender</td>
+                <td>@std.Standard</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No student data available.</p>
+}
+*@

@@ -1,0 +1,26 @@
+package join.method;
+
+public class Database2 extends Thread {
+	
+	public String collect[] = new String[4];
+	
+	@Override
+	public void run() {
+		String data[] = {"d1", "d2", "d3", "d4"};
+		int i=0;
+		
+		for(String d: data) {
+			collect[i] = d;
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			System.out.println("Data " + i + " Collected Database from 2");
+			i++;
+		}
+	}
+
+}

@@ -1,0 +1,11 @@
+What is Layout View in ASP.NET Core MVC?
+---------------------------------------------------------
+In ASP.NET Core MVC, the Layout View is a shared template or master page that can be used across different views within your application to maintain consistent looks and feels. It is useful for defining elements that are common across multiple pages, such as headers, footers, navigation bars, and sidebars. This helps maintain a consistent look and feel across your web application and also minimizes code duplication.
+
+Layout View in ASP.NET Core MVC contains HTML markup and Razor code that will be rendered in other views that use this layout. 
+
+The Layout Views include the following sections:
+-------------------------------------------------------------
+@RenderBody(): This is a placeholder where the content of the views that use this layout will be rendered.
+
+@RenderSection(“SectionName”, required: false): This method is used to render optional sections that views might provide. If required is set to true, the section must be defined in the views.

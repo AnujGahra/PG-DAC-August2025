@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- Account Bean -->
+	<bean id="account" class="com.mainapp.Account">
+		<property name="an" value="111" />
+		<property name="bankName" value="SBI" />
+	</bean>
+
+	<!-- Car Bean -->
+	<bean id="car" class="com.mainapp.Car">
+		<property name="cn" value="101" />
+		<property name="carName" value="BMW" />
+	</bean>
+
+	<!-- Employee Bean (Setter Injection) -->
+	<bean id="emp" class="com.mainapp.Employee">
+		<property name="account" ref="account" />
+		<property name="car" ref="car" />
+		<property name="listOfBooks">
+			<list>
+				<value>Java</value>
+				<value>Spring</value>
+				<value>Hibernate</value>
+			</list>
+		</property>
+	</bean>
+
+
+
+	<!-- ====================== ✅ 2️⃣ AUTOWIRING byName 🔹 Bean id must match 
+		property name ==================== -->
+
+	<bean id="account1" class="com.mainapp.Account">
+		<property name="an" value="222" />
+		<property name="bankName" value="HDFC" />
+	</bean>
+
+	<bean id="car1" class="com.mainapp.Car">
+		<property name="cn" value="202" />
+		<property name="carName" value="Audi" />
+	</bean>
+
+	<bean id="empByName" class="com.mainapp.Employee"
+		autowire="byName">
+		<property name="listOfBooks">
+			<list>
+				<value>Spring</value>
+				<value>Microservices</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- ====================== ✅ 3️⃣ AUTOWIRING byType 🔹 Only one bean per 
+		type allowed ======================== -->
+
+	<bean class="com.mainapp.Account">
+		<property name="an" value="333" />
+		<property name="bankName" value="ICICI" />
+	</bean>
+
+	<bean class="com.mainapp.Car">
+		<property name="cn" value="303" />
+		<property name="carName" value="Tesla" />
+	</bean>
+
+	<bean id="empByType" class="com.mainapp.Employee"
+		autowire="byType">
+		<property name="listOfBooks">
+			<list>
+				<value>Docker</value>
+				<value>Kubernetes</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- ============================= ✅ 4️⃣ AUTOWIRING constructor 🔹 Spring 
+		uses constructor arguments ============================ -->
+	<bean class="com.mainapp.Account">
+		<property name="an" value="444" />
+		<property name="bankName" value="Axis" />
+	</bean>
+
+	<bean class="com.mainapp.Car">
+		<property name="cn" value="404" />
+		<property name="carName" value="Mercedes" />
+	</bean>
+
+	<bean id="empConstructor" class="com.mainapp.Employee"
+		autowire="constructor">
+		<property name="listOfBooks">
+			<list>
+				<value>JVM Internals</value>
+				<value>System Design</value>
+			</list>
+		</property>
+	</bean>
+
+
+
+</beans>

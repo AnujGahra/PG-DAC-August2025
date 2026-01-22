@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;payment&apos; from expression &apos;paymentService.pay()&apos;&#x0A;- Original project: &apos;InternalWorkingOfSpringBoot&apos;&#x0A;- Variable name: &apos;payment&apos;&#x0A;- Destination method: &apos;com.learn.working.InternalWorkingOfSpringBootApplication.run(...)&apos;&#x0A;- Variable expression: &apos;paymentService.pay()&apos;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;payment&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.learn.working{InternalWorkingOfSpringBootApplication.java" name="payment" replace="true" replaceAllInThisFile="false" selection="576 20" stamp="1765541634506" varType="false" version="1.0"/>
+</session>

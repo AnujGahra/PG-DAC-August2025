@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExofInheritance">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExofInheritance\ExofInheritance.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExofInheritance\ExofInheritance.suo">
+</Property><Property Name="Date" Value="09 January 2015">
+</Property><Property Name="Time" Value="11:56">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExofInheritance.sln" Description="File successfully backed up as D:\LangBasics\ExofInheritance\Backup\ExofInheritance.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExofInheritance.suo" Description="File successfully backed up as D:\LangBasics\ExofInheritance\Backup\ExofInheritance.suo">
+</Event><Event ErrorLevel="0" Project="ExofInheritance" Source="ExofInheritance\ExofInheritance.csproj" Description="Project file successfully backed up as D:\LangBasics\ExofInheritance\Backup\ExofInheritance\ExofInheritance.csproj">
+</Event><Event ErrorLevel="0" Project="ExofInheritance" Source="ExofInheritance\Program.cs" Description="File successfully backed up as D:\LangBasics\ExofInheritance\Backup\ExofInheritance\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExofInheritance" Source="ExofInheritance\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExofInheritance\Backup\ExofInheritance\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExofInheritance" Source="ExofInheritance\ExofInheritance.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExofInheritance" Source="ExofInheritance\ExofInheritance.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExofInheritance.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExofInheritance.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExofInheritance" Source="ExofInheritance\ExofInheritance.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

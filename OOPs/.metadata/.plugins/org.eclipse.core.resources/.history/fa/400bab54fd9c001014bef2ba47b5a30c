@@ -1,0 +1,73 @@
+package priorityQueue;
+
+import java.util.PriorityQueue;
+import java.util.Comparator;
+
+public class Launch {
+
+    public static void main(String[] args) {
+
+        /*
+         * By default PriorityQueue in Java is a **min-heap**.
+         * That means the smallest element has the **highest priority**.
+         *
+         * If we want our own priority order (for example, highest number first),
+         * we pass a Comparator to the constructor.
+         */
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());
+        // Comparator.reverseOrder() creates a max-heap (largest element = highest priority)
+
+        // ---------- ADD ELEMENTS ----------
+        // add(E) inserts element; throws exception if it fails
+        pq.add(123);
+        pq.add(8);
+        pq.add(1400);
+        pq.add(400);
+        pq.add(300);
+        pq.add(5);
+        pq.add(556);
+        pq.add(900);
+        pq.add(700);
+
+        // offer(E) also inserts element but returns false instead of exception if it fails
+        pq.offer(1000);
+
+        System.out.println("Initial queue (heap order, not sorted): " + pq);
+        // Internally a heap; order of print is not guaranteed to be sorted!
+
+        // ---------- ACCESS HIGHEST PRIORITY ----------
+        // peek() retrieves but does NOT remove the head (highest priority)
+        System.out.println("Highest priority element (peek): " + pq.peek());
+
+        // element() is similar to peek() but throws exception if queue is empty
+        System.out.println("Highest priority element (element): " + pq.element());
+
+        // ---------- REMOVE ELEMENTS ----------
+        // poll() retrieves AND removes the head; returns null if empty
+        System.out.println("Removed with poll(): " + pq.poll());
+
+        // remove() removes the head and throws exception if empty
+        System.out.println("Removed with remove(): " + pq.remove());
+
+        System.out.println("Queue after two removals: " + pq);
+
+        // ---------- CONTAINS ----------
+        System.out.println("Contains 400? " + pq.contains(400));
+
+        // ---------- SIZE ----------
+        System.out.println("Current size: " + pq.size());
+
+        // ---------- ITERATION ----------
+        // You can iterate but remember order is NOT sorted
+        System.out.print("Iterating: ");
+        for (Integer val : pq) {
+            System.out.print(val + " ");
+        }
+        System.out.println();
+
+        // ---------- CLEAR ----------
+        pq.clear();
+        System.out.println("Queue after clear(): " + pq);
+        System.out.println("Is empty? " + pq.isEmpty());
+    }
+}

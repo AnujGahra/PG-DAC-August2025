@@ -1,0 +1,5 @@
+C:\SouceEdge Session 1\LangBasics\ExofNestedIFcondn\ExofNestedIFcondn\bin\Debug\ExofNestedIFcondn.exe
+C:\SouceEdge Session 1\LangBasics\ExofNestedIFcondn\ExofNestedIFcondn\bin\Debug\ExofNestedIFcondn.pdb
+C:\SouceEdge Session 1\LangBasics\ExofNestedIFcondn\ExofNestedIFcondn\obj\Debug\ExofNestedIFcondn.csprojResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofNestedIFcondn\ExofNestedIFcondn\obj\Debug\ExofNestedIFcondn.exe
+C:\SouceEdge Session 1\LangBasics\ExofNestedIFcondn\ExofNestedIFcondn\obj\Debug\ExofNestedIFcondn.pdb

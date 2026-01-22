@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fade Effects in jQuery</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+      #box {
+        width: 200px;
+        height: 200px;
+        background: skyblue;
+        margin-top: 20px;
+        display: none; /* Hidden initially for fadeIn example */
+      }
+    </style>
+
+    <script>
+      $(document).ready(function () {
+        
+        // fadeIn()
+        $("#fadeInBtn").click(function () {
+          $("#box").fadeIn(1000); // 1000ms = 1 second
+        });
+
+        // fadeOut()
+        $("#fadeOutBtn").click(function () {
+          $("#box").fadeOut(1000);
+        });
+
+        // fadeToggle()
+        $("#fadeToggleBtn").click(function () {
+          $("#box").fadeToggle(8000);
+        });
+
+        // fadeTo()
+        $("#fadeToBtn").click(function () {
+          $("#box").fadeTo(1000, 0.3); // fade to 30% opacity
+        });
+
+      });
+    </script>
+  </head>
+  <body>
+    <h1>jQuery Fade Methods</h1>
+
+    <button id="fadeInBtn">Fade In</button>
+    <button id="fadeOutBtn">Fade Out</button>
+    <button id="fadeToggleBtn">Fade Toggle</button>
+    <button id="fadeToBtn">Fade To (30%)</button>
+
+    <div id="box"></div>
+  </body>
+</html>

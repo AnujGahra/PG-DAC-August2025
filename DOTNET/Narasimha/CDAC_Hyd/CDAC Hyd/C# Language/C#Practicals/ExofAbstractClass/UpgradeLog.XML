@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExofAbstractClass">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExofAbstractClass\ExofAbstractClass.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExofAbstractClass\ExofAbstractClass.suo">
+</Property><Property Name="Date" Value="09 January 2015">
+</Property><Property Name="Time" Value="12:32">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExofAbstractClass.sln" Description="File successfully backed up as D:\LangBasics\ExofAbstractClass\Backup\ExofAbstractClass.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExofAbstractClass.suo" Description="File successfully backed up as D:\LangBasics\ExofAbstractClass\Backup\ExofAbstractClass.suo">
+</Event><Event ErrorLevel="0" Project="ExofAbstractClass" Source="ExofAbstractClass\ExofAbstractClass.csproj" Description="Project file successfully backed up as D:\LangBasics\ExofAbstractClass\Backup\ExofAbstractClass\ExofAbstractClass.csproj">
+</Event><Event ErrorLevel="0" Project="ExofAbstractClass" Source="ExofAbstractClass\Program.cs" Description="File successfully backed up as D:\LangBasics\ExofAbstractClass\Backup\ExofAbstractClass\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExofAbstractClass" Source="ExofAbstractClass\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExofAbstractClass\Backup\ExofAbstractClass\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExofAbstractClass" Source="ExofAbstractClass\ExofAbstractClass.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExofAbstractClass" Source="ExofAbstractClass\ExofAbstractClass.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExofAbstractClass.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExofAbstractClass.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExofAbstractClass" Source="ExofAbstractClass\ExofAbstractClass.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

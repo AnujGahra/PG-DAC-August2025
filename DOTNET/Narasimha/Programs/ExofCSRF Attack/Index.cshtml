@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<center>
+    <h2>Enter Data And Press Save</h2>
+    <br />
+    <br />
+   
+    @using (Html.BeginForm("SaveRecord", "Home", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.Label("Enter Name")
+        @Html.TextBox("Nm")
+        <br />
+        @Html.TextBox("Text", "Save", new { type="Submit"})
+    }
+  </center>
+

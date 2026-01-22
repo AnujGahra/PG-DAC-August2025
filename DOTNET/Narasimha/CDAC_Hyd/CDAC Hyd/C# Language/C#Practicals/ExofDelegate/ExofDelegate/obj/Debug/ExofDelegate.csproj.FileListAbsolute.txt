@@ -1,0 +1,26 @@
+D:\LangBasics\ExofDelegate\ExofDelegate\bin\Debug\ExofDelegate.exe
+D:\LangBasics\ExofDelegate\ExofDelegate\bin\Debug\ExofDelegate.pdb
+D:\LangBasics\ExofDelegate\ExofDelegate\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofDelegate\ExofDelegate\obj\Debug\ExofDelegate.exe
+D:\LangBasics\ExofDelegate\ExofDelegate\obj\Debug\ExofDelegate.pdb
+C:\LangBasics\ExofDelegate\ExofDelegate\obj\Debug\ExofDelegate.exe
+C:\LangBasics\ExofDelegate\ExofDelegate\obj\Debug\ExofDelegate.pdb
+C:\LangBasics\ExofDelegate\ExofDelegate\bin\Debug\ExofDelegate.exe
+C:\LangBasics\ExofDelegate\ExofDelegate\bin\Debug\ExofDelegate.pdb
+C:\LangBasics\ExofDelegate\ExofDelegate\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofDelegate\ExofDelegate\obj\Debug\ExofDelegate.exe
+C:\SouceEdge Session 1\LangBasics\ExofDelegate\ExofDelegate\obj\Debug\ExofDelegate.pdb
+C:\SouceEdge Session 1\LangBasics\ExofDelegate\ExofDelegate\bin\Debug\ExofDelegate.exe
+C:\SouceEdge Session 1\LangBasics\ExofDelegate\ExofDelegate\bin\Debug\ExofDelegate.pdb
+C:\SouceEdge Session 1\LangBasics\ExofDelegate\ExofDelegate\obj\Debug\ExofDelegate.csprojResolveAssemblyReference.cache
+E:\krishna sir\C#Practicals\ExofDelegate\ExofDelegate\obj\Debug\ExofDelegate.exe
+E:\krishna sir\C#Practicals\ExofDelegate\ExofDelegate\obj\Debug\ExofDelegate.pdb
+E:\krishna sir\C#Practicals\ExofDelegate\ExofDelegate\bin\Debug\ExofDelegate.exe
+E:\krishna sir\C#Practicals\ExofDelegate\ExofDelegate\bin\Debug\ExofDelegate.pdb
+E:\krishna sir\C#Practicals\ExofDelegate\ExofDelegate\obj\Debug\ExofDelegate.csprojResolveAssemblyReference.cache
+D:\krishna sir\C#Practicals\ExofDelegate\ExofDelegate\bin\Debug\ExofDelegate.exe.config
+D:\krishna sir\C#Practicals\ExofDelegate\ExofDelegate\obj\Debug\ExofDelegate.exe
+D:\krishna sir\C#Practicals\ExofDelegate\ExofDelegate\obj\Debug\ExofDelegate.pdb
+D:\krishna sir\C#Practicals\ExofDelegate\ExofDelegate\bin\Debug\ExofDelegate.exe
+D:\krishna sir\C#Practicals\ExofDelegate\ExofDelegate\bin\Debug\ExofDelegate.pdb
+D:\krishna sir\C#Practicals\ExofDelegate\ExofDelegate\obj\Debug\ExofDelegate.csprojResolveAssemblyReference.cache

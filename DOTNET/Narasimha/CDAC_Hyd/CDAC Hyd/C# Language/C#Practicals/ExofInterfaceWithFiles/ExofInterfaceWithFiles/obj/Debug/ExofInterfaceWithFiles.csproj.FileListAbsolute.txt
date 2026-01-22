@@ -1,0 +1,10 @@
+C:\SouceEdge Session 1\LangBasics\ExofInterfaceWithFiles\ExofInterfaceWithFiles\bin\Debug\ExofInterfaceWithFiles.exe
+C:\SouceEdge Session 1\LangBasics\ExofInterfaceWithFiles\ExofInterfaceWithFiles\bin\Debug\ExofInterfaceWithFiles.pdb
+C:\SouceEdge Session 1\LangBasics\ExofInterfaceWithFiles\ExofInterfaceWithFiles\obj\Debug\ExofInterfaceWithFiles.csprojResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofInterfaceWithFiles\ExofInterfaceWithFiles\obj\Debug\ExofInterfaceWithFiles.exe
+C:\SouceEdge Session 1\LangBasics\ExofInterfaceWithFiles\ExofInterfaceWithFiles\obj\Debug\ExofInterfaceWithFiles.pdb
+E:\krishna sir\C#Practicals\ExofInterfaceWithFiles\ExofInterfaceWithFiles\obj\Debug\ExofInterfaceWithFiles.exe
+E:\krishna sir\C#Practicals\ExofInterfaceWithFiles\ExofInterfaceWithFiles\obj\Debug\ExofInterfaceWithFiles.pdb
+E:\krishna sir\C#Practicals\ExofInterfaceWithFiles\ExofInterfaceWithFiles\bin\Debug\ExofInterfaceWithFiles.exe
+E:\krishna sir\C#Practicals\ExofInterfaceWithFiles\ExofInterfaceWithFiles\bin\Debug\ExofInterfaceWithFiles.pdb
+E:\krishna sir\C#Practicals\ExofInterfaceWithFiles\ExofInterfaceWithFiles\obj\Debug\ExofInterfaceWithFiles.csprojResolveAssemblyReference.cache

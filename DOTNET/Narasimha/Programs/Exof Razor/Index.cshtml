@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+Wel Come To New <b>Razor Engine</b>
+<br />
+<br />
+This is Very <u>Powerful</u>
+<br />
+<br />
+Server's Date  and Time is <u>@DateTime.Now.ToString()</u>
+<br />
+<br />
+@{
+    int x, y, z;
+    x = 10; y = 15;
+    z = x + y;
+}
+<br />
+<br />
+@{
+    if (@x > @y)
+    {
+        <p>@x is Bigger</p>
+    }
+    else if (@y > @x)
+    {
+        <p>@y is Bigger</p>
+    }
+    else
+    {
+        <p>@x and @y Both Are Equal</p>
+    }
+}
+Result of Add is  <b><u>@z</u></b>
+<br />
+
+<hr size="2" color="red" />
+<br />
+@{int[] marks = { 55, 60, 45 };
+
+}
+<br />
+<ul type="square">
+    @foreach (var mark in marks)
+    {
+        <li>@mark</li>
+    }
+</ul>
+<br />
+<br />
+My Email Id is  na_bargi@@rediff.com
+<br />
+<br />
+Following For Loop Prints 10 Numbers To Browser
+@{
+    for (int i = 0; i <= 10; i++)
+    {
+        <ul type="circle">
+            <li>@i</li>
+        </ul>
+    }
+}
+<br />
+
+
+

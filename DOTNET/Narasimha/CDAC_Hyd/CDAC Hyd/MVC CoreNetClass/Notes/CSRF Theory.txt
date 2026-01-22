@@ -1,0 +1,5 @@
+ASP.NET Core has built-in support for Anti-Forgery tokens to help prevent CSRF attacks. By default, ASP.NET Core includes Anti-Forgery tokens in forms and validates them on the server side. The framework automatically generates and validates these tokens for  MVC applications.
+
+When ASP.NET Core generates an Anti-Forgery token, part of the token is stored in a cookie (.AspNetCore.Antiforgery by default), and the other part is included in the form or request header. The server then compares these two pieces to verify the request's authenticity.
+
+The generated cookie containing the anti-forgery token uses the SameSiteMode.Strict and is HttpOnly, which means it cannot be accessed by JavaScript code running in the browser, making it impossible for malicious code to steal the cookie value.

@@ -1,0 +1,40 @@
+package com.example.demo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import com.example.demo.Sb3Application;
+import com.example.demo.dto.EmployeeDTO;
+
+@Controller
+public class MyController {
+
+    private final Sb3Application sb3Application;
+
+
+    MyController(Sb3Application sb3Application) {
+        this.sb3Application = sb3Application;
+    }
+	
+	
+	@GetMapping(path = {"index", "home"})
+	public String welcomeHome() {
+		
+		return "index";
+	}
+	
+	
+	@GetMapping("registration")
+	public String registrationView() {
+		
+		return "registration";
+	}
+	
+	@GetMapping("save")
+	public String save(@ModelAttribute EmployeeDTO employeeDTO, Model model) {
+		System.out.println(employeeDTO);
+		model.addAttribute("msg", "Data Saved Succcessfully");
+		return "redirect:/registration";
+	}
+}

@@ -1,0 +1,10 @@
+1764999501359	Delete element
+1764999774657	Extract method 'connection'
+1764999839603	Extract local variable 'connection'
+1764999951899	Extract local variable 'employee'
+1765000859348	Extract local variable 'transaction'
+1765000923438	Extract method 'insert'
+1765000998635	Extract local variable 'employee'
+1765002035255	Extract method 'read'
+1765002190327	Extract method 'update'
+1765002223583	Extract method 'delete'

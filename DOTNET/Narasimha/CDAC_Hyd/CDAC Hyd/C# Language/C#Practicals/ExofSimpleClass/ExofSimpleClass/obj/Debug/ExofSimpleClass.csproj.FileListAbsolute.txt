@@ -1,0 +1,20 @@
+D:\LangBasics\ExofSimpleClass\ExofSimpleClass\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofSimpleClass\ExofSimpleClass\bin\Debug\ExofSimpleClass.exe
+D:\LangBasics\ExofSimpleClass\ExofSimpleClass\bin\Debug\ExofSimpleClass.pdb
+D:\LangBasics\ExofSimpleClass\ExofSimpleClass\obj\Debug\ExofSimpleClass.exe
+D:\LangBasics\ExofSimpleClass\ExofSimpleClass\obj\Debug\ExofSimpleClass.pdb
+C:\LangBasics\ExofSimpleClass\ExofSimpleClass\obj\Debug\ExofSimpleClass.exe
+C:\LangBasics\ExofSimpleClass\ExofSimpleClass\obj\Debug\ExofSimpleClass.pdb
+C:\LangBasics\ExofSimpleClass\ExofSimpleClass\bin\Debug\ExofSimpleClass.exe
+C:\LangBasics\ExofSimpleClass\ExofSimpleClass\bin\Debug\ExofSimpleClass.pdb
+C:\LangBasics\ExofSimpleClass\ExofSimpleClass\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofSimpleClass\ExofSimpleClass\obj\Debug\ExofSimpleClass.exe
+C:\SouceEdge Session 1\LangBasics\ExofSimpleClass\ExofSimpleClass\obj\Debug\ExofSimpleClass.pdb
+C:\SouceEdge Session 1\LangBasics\ExofSimpleClass\ExofSimpleClass\bin\Debug\ExofSimpleClass.exe
+C:\SouceEdge Session 1\LangBasics\ExofSimpleClass\ExofSimpleClass\bin\Debug\ExofSimpleClass.pdb
+C:\SouceEdge Session 1\LangBasics\ExofSimpleClass\ExofSimpleClass\obj\Debug\ExofSimpleClass.csprojResolveAssemblyReference.cache
+E:\krishna sir\C#Practicals\ExofSimpleClass\ExofSimpleClass\obj\Debug\ExofSimpleClass.exe
+E:\krishna sir\C#Practicals\ExofSimpleClass\ExofSimpleClass\obj\Debug\ExofSimpleClass.pdb
+E:\krishna sir\C#Practicals\ExofSimpleClass\ExofSimpleClass\bin\Debug\ExofSimpleClass.exe
+E:\krishna sir\C#Practicals\ExofSimpleClass\ExofSimpleClass\bin\Debug\ExofSimpleClass.pdb
+E:\krishna sir\C#Practicals\ExofSimpleClass\ExofSimpleClass\obj\Debug\ExofSimpleClass.csprojResolveAssemblyReference.cache

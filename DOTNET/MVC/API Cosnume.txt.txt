@@ -1,0 +1,274 @@
+Step1
+-------
+Code In MVC Model For API Consume
+-----------------------------------------------------
+ public class Student
+ {
+
+     [Key]
+     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+     public int StudentId { get; set; }
+
+     public int Stno { get; set; }
+     public string Stname { get; set; }
+
+     public DateTime Doa { get; set; }
+
+     public int Fees { get; set; }
+
+ }
+
+
+
+---------------------------------------------------------
+Step 2 Code To Read Data From API
+-------------------------------------------------
+
+public class StudentController : Controller
+{
+    private readonly HttpClient _httpClient;
+    private const string ApiBaseUrl = "http://localhost:5023/api/students";
+    public StudentController()
+    {
+        
+        _httpClient = new HttpClient();
+    }
+
+    // GET: Student/Index
+    public async Task<IActionResult> Index()
+    {
+        List<Student> students = new List<Student>();
+
+        try
+        {
+            // Make the GET request to the API
+            HttpResponseMessage response = await _httpClient.GetAsync(ApiBaseUrl);
+
+            
+            if (response.IsSuccessStatusCode)
+            {
+                
+                students = await response.Content.ReadFromJsonAsync<List<Student>>();
+            }
+            else
+            {
+                
+                ViewBag.ErrorMessage = $"API call failed with status code: {response.StatusCode}";
+            }
+        }
+        catch (HttpRequestException ex)
+        {
+           
+            ViewBag.ErrorMessage = $"An error occurred while connecting to the API: {ex.Message}";
+        }
+
+        // Pass the list of students (or an empty list) to the View
+        return View(students);
+    }
+
+Step 3  Code For Create Method To Add Record 
+-------------------------------------------------------------
+
+[HttpGet]
+public IActionResult Create()
+{
+    // Simply returns the Create.cshtml view.
+    return View();
+}
+
+[HttpPost]
+[ValidateAntiForgeryToken] // Highly recommended for security
+public async Task<IActionResult> Create(Student student)
+{
+    if (ModelState.IsValid)
+    {
+        try
+        {
+            // Send the student object as JSON in a POST request
+            HttpResponseMessage response = await _httpClient.PostAsJsonAsync(ApiBaseUrl, student);
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Redirect to the Index view upon successful creation
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                // Handle API error (e.g., 400 Bad Request, 500 Internal Server Error)
+                ModelState.AddModelError(string.Empty, "API error. Could not create the student record.");
+            }
+        }
+        catch (HttpRequestException)
+        {
+            // Handle network error (e.g., API is offline)
+            ModelState.AddModelError(string.Empty, "Network error. Could not connect to the API.");
+        }
+    }
+
+    // If ModelState is invalid or API call failed, redisplay the form
+    return View(student);
+}
+
+Note: Use Scaffold For Creating View
+-------------------------------------------------------
+Step 4  Create Method For Edit Operation
+-----------------------------------------------------
+
+      
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            Student student = null;
+
+            try
+            {
+                // Define the specific API URL for the student
+                string studentApiUrl = $"{ApiBaseUrl}/{id}";
+
+                // Make the GET request to retrieve the student data
+                HttpResponseMessage response = await _httpClient.GetAsync(studentApiUrl);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    // Deserialize the response into a single Student object
+                    student = await response.Content.ReadFromJsonAsync<Student>();
+
+                    // If student is found, pass it to the view
+                    return View(student);
+                }
+                else
+                {
+                    // Handle non-success status codes (e.g., 404 Not Found)
+                    return NotFound();
+                }
+            }
+            catch (HttpRequestException)
+            {
+                // Handle network error
+                ViewBag.ErrorMessage = "Connection error. Could not connect to the API to retrieve data.";
+                return View(student); // Return view, possibly empty, with an error message
+            }
+        }
+
+       
+
+[HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Edit(int id, Student student)
+    {
+        // Ensure the ID in the route matches the ID of the model
+        if (id != student.StudentId)
+        {
+            return BadRequest();
+        }
+
+        if (ModelState.IsValid)
+        {
+            try
+            {
+                // Define the specific API URL for the student update
+                string studentApiUrl = $"{ApiBaseUrl}/{id}";
+
+                // Send the entire updated student object as JSON in a PUT request
+                HttpResponseMessage response = await _httpClient.PutAsJsonAsync(studentApiUrl, student);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    // Success! Redirect to the Index view.
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    // API returned an error (e.g., failed validation on the API side)
+                    ModelState.AddModelError(string.Empty, $"API Error. Could not update the student. Status code: {response.StatusCode}");
+                }
+            }
+            catch (HttpRequestException)
+            {
+                // Handle network error
+                ModelState.AddModelError(string.Empty, "Network error. Could not connect to the API.");
+            }
+        }
+
+        // If ModelState is invalid or API call failed, redisplay the form
+        return View(student);
+    }
+-------------------------------------------------------------------
+Step 5 Code Method For Delete Operation
+-------------------------------------------------------
+
+[HttpGet]
+public async Task<IActionResult> Delete(int id)
+{
+    Student student = null;
+
+    try
+    {
+        string studentApiUrl = $"{ApiBaseUrl}/{id}";
+
+        // Fetch the student details to display them on the confirmation page
+        HttpResponseMessage response = await _httpClient.GetAsync(studentApiUrl);
+
+        if (response.IsSuccessStatusCode)
+        {
+            student = await response.Content.ReadFromJsonAsync<Student>();
+            if (student == null)
+            {
+                return NotFound();
+            }
+            return View(student);
+        }
+        else if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+        {
+            return NotFound();
+        }
+        else
+        {
+            ViewBag.ErrorMessage = $"API error. Status code: {response.StatusCode}";
+            return View(); // Return view with error message
+        }
+    }
+    catch (HttpRequestException)
+    {
+        ViewBag.ErrorMessage = "Connection error. Could not connect to the API.";
+        return View(); // Return view with error message
+    }
+}
+
+// POST: Student/Delete/5
+[HttpPost, ActionName("Delete")] // We use ActionName("Delete") because the method name is different
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> DeleteConfirmed(int id)
+{
+    try
+    {
+        string studentApiUrl = $"{ApiBaseUrl}/{id}";
+
+        // Send the DELETE request to the API
+        HttpResponseMessage response = await _httpClient.DeleteAsync(studentApiUrl);
+
+        if (response.IsSuccessStatusCode)
+        {
+            // Success! Redirect to the Index view.
+            return RedirectToAction(nameof(Index));
+        }
+        else if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+        {
+            // The record was not found (maybe someone else deleted it)
+            ModelState.AddModelError(string.Empty, "The student record was already deleted or does not exist.");
+        }
+        else
+        {
+            // API returned an error
+            ModelState.AddModelError(string.Empty, $"API Error. Could not delete the student. Status code: {response.StatusCode}");
+        }
+    }
+    catch (HttpRequestException)
+    {
+        // Handle network error
+        ModelState.AddModelError(string.Empty, "Network error. Could not connect to the API.");
+    }
+
+ 
+    return RedirectToAction(nameof(Index));
+}

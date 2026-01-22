@@ -1,0 +1,39 @@
+What are ASP.NET Core Middleware Components?
+---------------------------------------------------------------------
+ASP.NET Core Middleware Components are the basic building blocks of the request processing pipeline in an ASP.NET Core application. Middleware components handle specific tasks while processing incoming HTTP requests and outgoing HTTP responses. They enable us to add various functionalities to our application, such as Authentication, Routing, Logging, Exception Handling, etc.
+
+Where Do We Use Middleware Components in the ASP.NET Core Application?
+---------------------------------------------------------------------------------------------------
+Some of the examples of using Middleware components in the ASP.NET Core application are as follows.
+
+We have a Middleware component (UseAuthentication) for authenticating the user.
+We have a middleware component (UseHttpsRedirection) for redirecting HTTP Requests to HTTPS.
+Another Middleware component (UseHttpLogging) logs the HTTP Requests and Responses.
+Another Middleware component (UseDeveloperExceptionPage) will execute when an unhandled exception occurs in the development environment. 
+Similarly, we have a Middleware Component (UseExceptionHandler) that is used to catch exceptions, log them, and re-execute the request in an alternate pipeline.
+We have a Middleware component (UseStaticFiles) that handles static files such as Images, Javascript, CSS files, etc.
+We have a Middleware component (UseAuthorization) that authorizes users to access a specific resource.
+How do you configure Middleware Components in the ASP.NET Core (.NET 6) application?
+From .NET 6, we need to configure the Middleware components within the Main() method of the Program class, which is present inside the Program.cs class file. This class will run when the application starts, and application execution will start from the Main method, which is the entry point for any ASP.NET Core Web Application.
+
+
+
+How Does the Middleware Component Works in the ASP.NET Core Application?
+--------------------------------------------------------------------------------------------------------
+In the ASP.NET Core Web Application, the Middleware Component can access the incoming HTTP Request and outgoing HTTP Response. So, a Middleware Component in ASP.NET Core Web Application can
+
+Handle the incoming HTTP request by generating an HTTP response.
+Process the incoming HTTP request, modify it, and then pass it to the Next Middleware Component that is configured in the Application Request Processing Pipeline.
+Process the outgoing HTTP response, modify it, and then pass it on to either the previous middleware component or the ASP.NET Core Web Server.
+
+
+
+What is the use of the Use and Run Extension Method in ASP.NET Core Web Application?
+----------------------------------------------------------------------------------------------------------------
+
+
+
+
+In the ASP.NET Core Web Application, we can use the “Use” and “Run” Extension Methods to register the Inline Middleware Component into the Request Processing Pipeline. The “Run” extension method allows us to add the terminating middleware (the middleware that will not call the Next Middleware Components in the Request Processing Pipeline) component. On the other hand, the “Use” extension method allows us to add the middleware components, which may call the next Middleware Component in the Request Processing Pipeline.
+
+If you observe the Main method of the Program class, you will see that it gets an instance of WebApplication, and using the WebApplicatio instance (app) along with the extension methods such as Use and Run, it configures the Middleware Components. As you can see, in the Main method of the Program class, three Middleware Components are registered into the Request Processing Pipeline.

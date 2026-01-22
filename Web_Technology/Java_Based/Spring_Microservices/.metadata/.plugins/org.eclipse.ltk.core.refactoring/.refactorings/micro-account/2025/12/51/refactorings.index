@@ -1,0 +1,7 @@
+1765682825403	Copy compilation unit
+1765687388624	Extract local variable 'response'
+1765687516623	Extract local variable 'body'
+1765988821623	Extract local variable 'url'
+1765988881436	Extract local variable 'employeeId'
+1765988918980	Extract local variable 'httpStatus'
+1765991216226	Extract local variable 'httpStatus'

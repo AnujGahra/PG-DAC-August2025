@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExofPartialMethod">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExofPartialMethod\ExofPartialMethod.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExofPartialMethod\ExofPartialMethod.suo">
+</Property><Property Name="Date" Value="12 January 2015">
+</Property><Property Name="Time" Value="13:06">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExofPartialMethod.sln" Description="File successfully backed up as D:\LangBasics\ExofPartialMethod\Backup\ExofPartialMethod.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExofPartialMethod.suo" Description="File successfully backed up as D:\LangBasics\ExofPartialMethod\Backup\ExofPartialMethod.suo">
+</Event><Event ErrorLevel="0" Project="ExofPartialMethod" Source="ExofPartialMethod\ExofPartialMethod.csproj" Description="Project file successfully backed up as D:\LangBasics\ExofPartialMethod\Backup\ExofPartialMethod\ExofPartialMethod.csproj">
+</Event><Event ErrorLevel="0" Project="ExofPartialMethod" Source="ExofPartialMethod\Program.cs" Description="File successfully backed up as D:\LangBasics\ExofPartialMethod\Backup\ExofPartialMethod\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExofPartialMethod" Source="ExofPartialMethod\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExofPartialMethod\Backup\ExofPartialMethod\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExofPartialMethod" Source="ExofPartialMethod\ExofPartialMethod.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExofPartialMethod" Source="ExofPartialMethod\ExofPartialMethod.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExofPartialMethod.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExofPartialMethod.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExofPartialMethod" Source="ExofPartialMethod\ExofPartialMethod.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

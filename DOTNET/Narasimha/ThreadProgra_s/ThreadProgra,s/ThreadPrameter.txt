@@ -1,0 +1,30 @@
+Thread(ParameterizedThreadStart) Constructor is used to initialize a new instance of the Thread class. It defined a delegate which allows an object to pass to the thread when the thread starts
+
+using System;
+using System.Threading;
+
+
+public class ExofParatmerThread
+ {
+
+    // Main Method
+    public static void Main()
+    {
+        // Creating a thread which calls 
+        // a parameterized static-method
+        Thread thr = new Thread(Job);
+        thr.Start();
+    }
+
+    // Static method
+    public static void Job()
+    {
+        Console.WriteLine("My thread is"+
+                    " in progress...!!");
+
+        for (int i = 0; i <=5; i++) 
+
+            Console.WriteLine(i);
+        }
+    }
+}

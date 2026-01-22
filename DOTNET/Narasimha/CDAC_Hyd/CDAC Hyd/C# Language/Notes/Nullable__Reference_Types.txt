@@ -1,0 +1,14 @@
+public class Customer
+{
+  public int Id { get; set;}
+  public string? Name { get; set;} // null unless you set it
+  public DateOnly Birthdate { get; set;}
+  public string? Phone { get;set;} // null unless you set it
+}
+
+Customer customer = new Customer();
+
+if (customer.Name is not null)
+{
+  WriteLine($"Name: {customer.Name}");
+}

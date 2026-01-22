@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/be
+ans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-ins
+tance"
+	xmlns:context="http://www.springframework.org/s
+chema/context"
+	xmlns:mvc="http://www.springframework.org/schem
+a/mvc"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spr
+ing-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/s
+pring-context.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/sprin
+g-mvc.xsd">
+
+	<context:component-scan base-package="com.controller"></context:component-scan>
+	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<property name="prefix" value="/WEB-INF/view/"></property>
+	<property name="suffix" value=".jsp"></property>
+	</bean>
+	
+</beans>

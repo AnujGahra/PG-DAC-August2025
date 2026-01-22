@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;som.dao.Crud&apos; to &apos;CrudImpl&apos;&#x0A;- Original project: &apos;MiniProject&apos;&#x0A;- Original element: &apos;som.dao.Crud&apos;&#x0A;- Renamed element: &apos;som.dao.CrudImpl&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Crud&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;som.dao{Crud.java[Crud" matchStrategy="1" name="CrudImpl" qualified="false" references="true" similarDeclarations="false" stamp="1758669590703" textual="false" version="1.0"/>
+</session>

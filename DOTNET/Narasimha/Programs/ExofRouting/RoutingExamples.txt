@@ -1,0 +1,106 @@
+Conventional Routing (Code in Program.cs)
+
+var builder=WebApplication.CreateBuilder();
+builder.Services.AddcontrollerWithViews();
+
+var app=builder.build();
+
+//app.MapDefaultControllerRoute();
+or
+app.MapControllerroute(
+name:"default",
+pattern:"{controller=Home}/{action=Index}"
+);
+
+
+app.run();
+
+
+Note:Default app.MapGet() Should Be Commented
+
+Example with Multiple Controllers
+-------------------------------------------
+
+namespace RoutingInASPDotNetCoreMVC
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+
+            // Add services to the container.
+            builder.Services.AddControllersWithViews();
+
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline.
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseExceptionHandler("/Home/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            //https://localhost:44359/Student/All
+            app.MapControllerRoute(
+                name: "StudentAll",
+                pattern: "Student/All",
+                defaults: new { controller = "Student", action = "Index" }
+            );
+
+            //https://localhost:44359/StudentDetails/10
+            app.MapControllerRoute(
+                name: "StudentIndex",
+                pattern: "StudentDetails/{ID}",
+                defaults: new { controller = "Student", action = "Details" }
+            );
+
+            //For Rest of the Controller Actions including the Default Home Controller Index
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller}/{action}/{id:int?}",
+                defaults: new { controller = "Home", action = "Index" }
+            );
+
+            app.Run();
+        }
+    }
+}
+
+
+**************************************************
+Attribute Routing Requires Following MiddleWare
+
+app.MapControllers()
+
+Code In Home Controller
+
+
+using Microsoft.AspNetCore.Mvc;
+namespace RoutingInASPDotNetCoreMVC.Controllers
+{
+    public class HomeController : Controller
+    {
+        [Route("")]
+        [Route("Home")]
+        [Route("Home/Index")]
+        public string Index()
+        {
+            return "Index Action Method of HomeController";
+        }
+
+        [Route("Home/Details/{id}")]
+        public string Details(int id)
+        {
+            return "Details  Action Method of HomeController, ID Value = " + id;
+        }
+    }
+}

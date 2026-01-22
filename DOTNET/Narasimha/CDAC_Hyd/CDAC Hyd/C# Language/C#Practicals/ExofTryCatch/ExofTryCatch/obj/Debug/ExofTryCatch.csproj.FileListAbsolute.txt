@@ -1,0 +1,10 @@
+C:\SouceEdge Session 1\LangBasics\ExofTryCatch\ExofTryCatch\bin\Debug\ExofTryCatch.exe
+C:\SouceEdge Session 1\LangBasics\ExofTryCatch\ExofTryCatch\bin\Debug\ExofTryCatch.pdb
+C:\SouceEdge Session 1\LangBasics\ExofTryCatch\ExofTryCatch\obj\Debug\ExofTryCatch.exe
+C:\SouceEdge Session 1\LangBasics\ExofTryCatch\ExofTryCatch\obj\Debug\ExofTryCatch.pdb
+C:\SouceEdge Session 1\LangBasics\ExofTryCatch\ExofTryCatch\obj\Debug\ExofTryCatch.csprojResolveAssemblyReference.cache
+E:\krishna sir\C#Practicals\ExofTryCatch\ExofTryCatch\obj\Debug\ExofTryCatch.exe
+E:\krishna sir\C#Practicals\ExofTryCatch\ExofTryCatch\obj\Debug\ExofTryCatch.pdb
+E:\krishna sir\C#Practicals\ExofTryCatch\ExofTryCatch\obj\Debug\ExofTryCatch.csprojResolveAssemblyReference.cache
+E:\krishna sir\C#Practicals\ExofTryCatch\ExofTryCatch\bin\Debug\ExofTryCatch.exe
+E:\krishna sir\C#Practicals\ExofTryCatch\ExofTryCatch\bin\Debug\ExofTryCatch.pdb

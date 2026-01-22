@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Append & Prepend</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+
+        // -------------------------------------
+        // append() → adds content at the END
+        // -------------------------------------
+        $("#appendBtn").click(function () {
+          $("#contentBox").append("<p>New item added at the END using append()</p>");
+        });
+
+        // -------------------------------------
+        // prepend() → adds content at the BEGINNING
+        // -------------------------------------
+        $("#prependBtn").click(function () {
+          $("#contentBox").prepend("<p>New item added at the START using prepend()</p>");
+        });
+
+
+        $("#afterBtn").click(function () {
+          $("#contentBox").after("<p>New item added at the START using prepend()</p>");
+        });
+
+
+        $("#beforeBtn").click(function () {
+          $("#contentBox").before("<p>New item added at the START using prepend()</p>");
+        });
+
+      });
+    </script>
+
+    <style>
+      #contentBox {
+        border: 2px solid #444;
+        padding: 15px;
+        width: 350px;
+        margin-top: 20px;
+        background: #f4f4f4;
+      }
+      button {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>jQuery append() & prepend()</h1>
+
+    <!-- Buttons -->
+    <button id="appendBtn">append()</button>
+    <button id="prependBtn">prepend()</button>
+    <button id="afterBtn">after()</button>
+    <button id="beforeBtn">before()</button>
+
+    <div id="contentBox">
+      <p>This is the original content inside the box.</p>
+    </div>
+
+  </body>
+</html>

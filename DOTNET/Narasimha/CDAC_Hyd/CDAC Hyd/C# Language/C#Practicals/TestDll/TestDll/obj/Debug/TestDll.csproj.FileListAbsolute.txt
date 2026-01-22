@@ -1,0 +1,7 @@
+C:\LangBasics\TestDll\TestDll\bin\Debug\TestDll.exe
+C:\LangBasics\TestDll\TestDll\bin\Debug\TestDll.pdb
+C:\LangBasics\TestDll\TestDll\bin\Debug\SagarLibrarary.dll
+C:\LangBasics\TestDll\TestDll\bin\Debug\SagarLibrarary.pdb
+C:\LangBasics\TestDll\TestDll\obj\Debug\ResolveAssemblyReference.cache
+C:\LangBasics\TestDll\TestDll\obj\Debug\TestDll.exe
+C:\LangBasics\TestDll\TestDll\obj\Debug\TestDll.pdb

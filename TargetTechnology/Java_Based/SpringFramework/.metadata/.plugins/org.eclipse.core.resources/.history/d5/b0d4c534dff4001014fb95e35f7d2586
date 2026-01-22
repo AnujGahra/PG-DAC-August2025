@@ -1,0 +1,16 @@
+package com.beans;
+
+public class Employee {
+	
+	
+	
+	public Employee() {
+		System.out.println("EMPLOYEE BEAN INSTANTIATION...");
+	}
+	
+	public void test() {
+		
+		System.out.println("EMPLOYEE BEAN USING..." );
+	}
+
+}

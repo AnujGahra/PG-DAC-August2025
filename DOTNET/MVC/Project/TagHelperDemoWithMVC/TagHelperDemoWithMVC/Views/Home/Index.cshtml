@@ -1,0 +1,93 @@
+﻿@model TagHelperDemoWithMVC.Models.Employee;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@*
+<a href="/Home/Contact">Contact Page</a>
+<br/>
+@Html.ActionLink("Contact Page 2", "Contact", "Home")
+
+<br/>
+
+<a asp-controller="Home" asp-action="Contact" >Contact Page 4</a>
+
+*@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form class="d-grid" asp-action="Contact" asp-controller="Home" method="post">
+                <label asp-for="Name">Name: </label>
+                <input asp-for="Name" placeholder="Enter Name" class="form-control"/>
+                <br/>
+                
+                <label asp-for="Gender">Gender: </label>
+                <select asp-for="Gender" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()">
+                    <option value="">Select Gender</option>
+                </select>
+                <br/>
+                
+                <label asp-for="Age">Age: </label>
+                <input asp-for="Age" placeholder="Enter Age" class="form-control"/>
+                <br/>
+                
+                <label asp-for="Designation">Designation: </label>
+                <input asp-for="Designation" placeholder="Enter Designation" class="form-control"/>
+                <br/>
+                <label asp-for="Salary">Salary: </label>
+                <input asp-for="Salary" placeholder="Enter Salary" class="form-control"/>
+                <br/>
+                <label>
+                    Married:
+                </label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="Married" value="Yes">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Yes
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="Married" value="No">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        No
+                    </label>
+                </div>
+                <br/>
+                <label asp-for="Description">Description: </label>
+                <textarea asp-for="Description" class="form-control" placeholder="Enter Description" rows="5">
+
+                </textarea>
+                <br/>
+                <input type="submit" value="Submit" class="btn btn-outline-primary"/>
+
+            </form>
+        </div>
+        
+        <!-- Display submitted data -->
+        <div class="col-sm-7">
+            @if (Model != null && !string.IsNullOrEmpty(Model.Name))
+            {
+                <div class="card mt-3 p-3 shadow-sm">
+                    <h4>Submitted Details</h4>
+                    <hr/>
+                    <p><strong>Name:</strong> @Model.Name</p>
+                    <p><strong>Gender:</strong> @Model.Gender</p>
+                    <p><strong>Age:</strong> @Model.Age</p>
+                    <p><strong>Designation:</strong> @Model.Designation</p>
+                    <p><strong>Salary:</strong> @Model.Salary</p>
+                    <p><strong>Married:</strong> @Model.Married</p>
+                    <p><strong>Description:</strong> @Model.Description</p>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+
+

@@ -1,0 +1,24 @@
+package com.learn.apis.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.learn.apis.dto.StudentDto;
+
+@RestController
+public class StudentController {
+	
+	
+	
+	@GetMapping("/student")
+	public StudentDto getStudent() {
+		return new StudentDto(4L, "Anuj", "anuj@gmail.com");
+	}  
+	
+	
+	@GetMapping("/student/{id}")
+	public StudentDto getStudentById() {
+		return new StudentDto(4L, "Anuj", "anuj@gmail.com");
+	}  
+
+}

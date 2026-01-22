@@ -1,0 +1,10 @@
+D:\LangBasics\ExofCasting\ExofCasting\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofCasting\ExofCasting\bin\Debug\ExofCasting.exe
+D:\LangBasics\ExofCasting\ExofCasting\bin\Debug\ExofCasting.pdb
+D:\LangBasics\ExofCasting\ExofCasting\obj\Debug\ExofCasting.exe
+D:\LangBasics\ExofCasting\ExofCasting\obj\Debug\ExofCasting.pdb
+C:\LangBasics\ExofCasting\ExofCasting\obj\Debug\ExofCasting.exe
+C:\LangBasics\ExofCasting\ExofCasting\obj\Debug\ExofCasting.pdb
+C:\LangBasics\ExofCasting\ExofCasting\obj\Debug\ResolveAssemblyReference.cache
+C:\LangBasics\ExofCasting\ExofCasting\bin\Debug\ExofCasting.exe
+C:\LangBasics\ExofCasting\ExofCasting\bin\Debug\ExofCasting.pdb

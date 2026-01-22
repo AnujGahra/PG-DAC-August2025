@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExampleofStack">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExampleofStack\ExampleofStack.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExampleofStack\ExampleofStack.suo">
+</Property><Property Name="Date" Value="16 January 2015">
+</Property><Property Name="Time" Value="12:58">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExampleofStack.sln" Description="File successfully backed up as D:\LangBasics\ExampleofStack\Backup\ExampleofStack.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExampleofStack.suo" Description="File successfully backed up as D:\LangBasics\ExampleofStack\Backup\ExampleofStack.suo">
+</Event><Event ErrorLevel="0" Project="ExampleofStack" Source="ExampleofStack\ExampleofStack.csproj" Description="Project file successfully backed up as D:\LangBasics\ExampleofStack\Backup\ExampleofStack\ExampleofStack.csproj">
+</Event><Event ErrorLevel="0" Project="ExampleofStack" Source="ExampleofStack\Program.cs" Description="File successfully backed up as D:\LangBasics\ExampleofStack\Backup\ExampleofStack\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExampleofStack" Source="ExampleofStack\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExampleofStack\Backup\ExampleofStack\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExampleofStack" Source="ExampleofStack\ExampleofStack.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExampleofStack" Source="ExampleofStack\ExampleofStack.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExampleofStack.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExampleofStack.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExampleofStack" Source="ExampleofStack\ExampleofStack.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

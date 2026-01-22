@@ -1,0 +1,10 @@
+What is Entity Framework Core?
+----------------------------------------------
+Entity Framework Core (EF Core) is an open-source, lightweight, extensible, and cross-platform version of Microsoft’s popular Entity Framework data access technology. It is designed to work with .NET Core and .NET Framework applications and provides an Object-Relational Mapper (ORM) that enables .NET developers to work with a database using .NET objects. It eliminates most of the data-access code that developers usually need to write. 
+
+
+What is ORM?
+-------------------
+ORM stands for Object-Relational Mapping, a programming technique that allows developers to convert data between incompatible systems, specifically between Object-Oriented Programming Languages (such as C#, Java, etc.) and Relational Databases (such as SQL Server, MySQL, Oracle, etc.).
+
+ORM allows developers to work with data in terms of objects rather than tables and columns. That means ORM automatically creates classes based on database tables, and vice versa is also true. It can also generate the necessary SQL to create the database based on the classes. 

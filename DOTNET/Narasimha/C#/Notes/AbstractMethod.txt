@@ -1,0 +1,41 @@
+public abstract class Customer
+    {
+        
+        public abstract void AddingCustomer(string m);
+        public void CustomerAdded(string name)
+        {
+           AddingCustomer(name);
+            Console.WriteLine("Customer " + name + " Added To Class");
+            Console.ReadLine();
+        }
+         
+    }
+
+    public class Details:Customer
+    {
+        public override void AddingCustomer( string m)
+        {
+           
+            Console.WriteLine("Customer "+m+"  Getting Added To Class Now");
+            Console.ReadLine();
+        }
+        public void ShowDate()
+        {
+            Console.WriteLine("Today's Date is " + DateTime.Now.ToShortDateString());
+            Console.ReadLine();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string m;
+            Console.Write("Enter Your Name ");
+            m = Console.ReadLine();
+            Details obj = new Details();
+            obj.CustomerAdded(m);
+            obj.ShowDate();
+
+        }
+    }

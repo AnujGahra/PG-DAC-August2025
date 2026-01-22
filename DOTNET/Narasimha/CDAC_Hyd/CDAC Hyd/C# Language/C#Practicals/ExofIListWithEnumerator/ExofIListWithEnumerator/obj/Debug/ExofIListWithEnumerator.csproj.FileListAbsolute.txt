@@ -1,0 +1,4 @@
+C:\SouceEdge Session 1\LangBasics\ExofIListWithEnumerator\ExofIListWithEnumerator\bin\Debug\ExofIListWithEnumerator.exe
+C:\SouceEdge Session 1\LangBasics\ExofIListWithEnumerator\ExofIListWithEnumerator\bin\Debug\ExofIListWithEnumerator.pdb
+C:\SouceEdge Session 1\LangBasics\ExofIListWithEnumerator\ExofIListWithEnumerator\obj\Debug\ExofIListWithEnumerator.exe
+C:\SouceEdge Session 1\LangBasics\ExofIListWithEnumerator\ExofIListWithEnumerator\obj\Debug\ExofIListWithEnumerator.pdb

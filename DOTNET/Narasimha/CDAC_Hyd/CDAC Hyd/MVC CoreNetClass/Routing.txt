@@ -1,0 +1,28 @@
+Routing is a pattern-matching system that monitors the incoming request and figures out what to do with that request. Typically, it is a way to serve the user's request.
+
+When a user request URL from the browser then URLs are handled by the routing system. The Routing system tries to find out the matching route pattern of the required Url with already registered routes which are map to controller, actions.
+If there is a matching route entry, then it processes the request i.e. serves the resource, otherwise, it returns a 404 error.
+
+
+Routing uses a pair of middleware, registered by UseRouting and UseEndpoints:
+
+UseRouting adds route matching to the middleware pipeline. This middleware looks at the set of endpoints defined in the app, and selects the best match based on the request.
+
+UseEndpoints adds endpoint execution to the middleware pipeline. It runs the delegate associated with the selected endpoint
+
+
+Types of Routing in Asp.net Core
+---------------------------------------------
+There are two main ways to define routes in ASP.NET Core:
+
+1. Convention-Based Routing
+-------------------------------------
+It creates routes based on a series of conventions representing all the possible routes in your system. Convention-based is defined in the Program.cs file.
+
+2. Attribute Routing
+---------------------------
+It creates routes based on attributes placed on the controller or action level. Attribute routing provides us more control over the URL generation patterns which helps us in SEO.
+
+Route Constraints
+-------------------------
+Route Constraints are used to restrict the type of passed value to an action. For example, if you expect an argument id as an integer type, then you have to restrict it to an integer type by using datatype in the curly brackets as {id:int}.

@@ -1,0 +1,24 @@
+Tools to install client-side packages
+
+There are many tools that we can use with Visual Studio to install client-side packages like Bootstrap and jQuery. For example we could use tools like Bower, NPM, WebPack etc.
+
+
+However, we are not going to use any of these tools. We will instead use Library Manager (LibMan for short). Library Manager is a light-weight, client-side library acquisition tool. It downloads client-side libraries and frameworks from the file system or from a CDN (Content Delivery Network).
+
+To be able to use LibMan you should have Visual Studio 2017 version 15.8 or later
+
+
+Install Bootstrap Using LibMan
+-----------------------------------------
+Right click on the "Project Name" in Solution Explorer and Select Add > Client-Side Library. In the "Add Client-Side Library" window that opens
+Leave the default provider which is cdnjs
+In the "Library" text box, type "twitter-bootstrap". Upon selecting the matching entry, it tries to install the latest version. However, you can manually type the version you want. You also have intellisense support. We will install the lates Bootstrap version 4.
+You can either include "All the library file" or "Just the files you need"
+In the "Target Location" text box specify the folder where you want the library files to be copied. Recollect, by default static files are only served from WWWRoot folder.
+Click the "Install" Button
+
+Clean and Restore Client-Side Libraries
+---------------------------------------------------
+To clean library files, right click on libman.json file and select "Clean Client-Side Libraries" from the context menu. The clean operation deletes the library files from the destination folder. However, the entries in libman.json will not be deleted.
+
+To restore the deleted files, right click on libman.json file and select "Restore Client-Side Libraries" from the context menu. The restore operation will download and copy the library files into the specified destination folder.

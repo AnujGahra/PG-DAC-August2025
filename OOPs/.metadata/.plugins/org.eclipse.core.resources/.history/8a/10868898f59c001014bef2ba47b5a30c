@@ -1,0 +1,32 @@
+package priorityQueue;
+
+import java.util.PriorityQueue;
+
+public class Launch {
+
+	public static void main(String[] args) {
+		
+		
+		PriorityQueue<Object> pq = new  PriorityQueue<Object>();
+		
+		pq.add(123);
+		pq.add(8);
+		pq.add(1400);
+		pq.add(400);
+		pq.add(300);
+		pq.add(5);
+		pq.add(556);
+		pq.add(900);
+		pq.add(700);
+		
+		System.out.println(pq);
+		
+		pq.poll();
+		System.out.println(pq);
+		
+		pq.peek();
+		System.out.println(pq);
+
+	}
+
+}

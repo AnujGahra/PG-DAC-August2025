@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExampleofStatProp">
+</Property><Property Name="Solution File" Value="D:\krishna sir\C#Practicals\ExofStatProp\Backup\ExampleofStatProp.sln">
+</Property><Property Name="User Options File" Value="D:\krishna sir\C#Practicals\ExofStatProp\Backup\ExampleofStatProp.suo">
+</Property><Property Name="Date" Value="Monday, May 09, 2022">
+</Property><Property Name="Time" Value="15:31 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExampleofStatProp.sln" Description="File successfully backed up as D:\krishna sir\C#Practicals\ExofStatProp\Backup\Backup\ExampleofStatProp.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExampleofStatProp.suo" Description="File successfully backed up as D:\krishna sir\C#Practicals\ExofStatProp\Backup\Backup\ExampleofStatProp.suo">
+</Event><Event ErrorLevel="0" Project="ExampleofStatProp" Source="ExampleofStatProp\ExampleofStatProp.csproj" Description="Project file successfully backed up as D:\krishna sir\C#Practicals\ExofStatProp\Backup\Backup\ExampleofStatProp\ExampleofStatProp.csproj">
+</Event><Event ErrorLevel="0" Project="ExampleofStatProp" Source="ExampleofStatProp\Program.cs" Description="File successfully backed up as D:\krishna sir\C#Practicals\ExofStatProp\Backup\Backup\ExampleofStatProp\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExampleofStatProp" Source="ExampleofStatProp\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\krishna sir\C#Practicals\ExofStatProp\Backup\Backup\ExampleofStatProp\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExampleofStatProp" Source="ExampleofStatProp\ExampleofStatProp.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExampleofStatProp" Source="ExampleofStatProp\ExampleofStatProp.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExampleofStatProp.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExampleofStatProp.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExampleofStatProp" Source="ExampleofStatProp\ExampleofStatProp.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

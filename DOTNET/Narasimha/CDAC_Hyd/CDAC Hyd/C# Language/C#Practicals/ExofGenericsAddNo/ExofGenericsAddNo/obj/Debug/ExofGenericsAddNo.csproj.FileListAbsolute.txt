@@ -1,0 +1,5 @@
+C:\SouceEdge Session 1\LangBasics\ExofGenericsAddNo\ExofGenericsAddNo\bin\Debug\ExofGenericsAddNo.exe
+C:\SouceEdge Session 1\LangBasics\ExofGenericsAddNo\ExofGenericsAddNo\bin\Debug\ExofGenericsAddNo.pdb
+C:\SouceEdge Session 1\LangBasics\ExofGenericsAddNo\ExofGenericsAddNo\obj\Debug\ExofGenericsAddNo.csprojResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofGenericsAddNo\ExofGenericsAddNo\obj\Debug\ExofGenericsAddNo.exe
+C:\SouceEdge Session 1\LangBasics\ExofGenericsAddNo\ExofGenericsAddNo\obj\Debug\ExofGenericsAddNo.pdb

@@ -1,0 +1,25 @@
+package com.controller;
+
+import com.service.MegaService;
+import com.service.Service;
+import com.service.ServiceBluePrint;
+
+public class Controller {
+	
+	private ServiceBluePrint service; // -> it is loose coupling
+//	{
+//		service = new Service();
+//	} 
+	
+//	constructor
+	public Controller(ServiceBluePrint service) {
+		this.service = new MegaService();
+	}
+	
+	public void doGet() {
+		System.out.println("CONTROLLER...");
+//		Service service = new Service(); // -> It is tight coupling
+		service.test();
+	}
+
+}

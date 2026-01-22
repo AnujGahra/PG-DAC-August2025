@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>const variable which contains the Block Scope example</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const x = 20;
+        {
+            const x = 90;
+            console.log(x);
+            {
+                const x = 75;
+                console.log(x);
+            }
+            {
+                const x = 45;
+                console.log(x);
+            }
+        }
+        console.log(x);
+    </script>   
+Open Console To   See  Result 
+</body>
+</html>

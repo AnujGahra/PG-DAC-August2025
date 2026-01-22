@@ -1,0 +1,32 @@
+ASP.NET Core MVC provides is a Design patterns-based way to build dynamic websites that enables a clean separation of concerns. It gives us full control over the markup, supports test-driven development, and adheres to the latest web standards.
+
+MVC Architecture
+-------------------------
+The Model-View-Controller (MVC) architectural pattern separates an application into three components: Models, Views, and Controllers. This pattern helps to achieve separation of concerns. In this pattern, user requests are routed to a Controller. A Controller invokes the Model to perform user actions or retrieve data. The controller then passes this Model to a View and it is returned to the user.
+
+
+1)Model: Manages the data and business logic.
+
+2)View: Handles the display and user interface.
+
+3)Controller: Handles user requests, interacts with the model, and selects the view to render.
+
+Features of ASP.NET Core MVC:
+----------------------------------------------
+Cross-Platform: Runs on Windows, Linux, and macOS.
+
+High Performance: Designed for speed and optimized for cloud scenarios.
+
+Dependency Injection (DI): Built-in support for DI, enabling loose coupling.
+
+Middleware Pipeline: Customizable request pipeline using middleware components.
+
+Html Helpers and Razor View Engine: Simplify server-side code in views for dynamic HTML generation. Clean syntax for embedding C# in HTML.
+
+Model Binding & Validation: Automatic mapping of HTTP requests to action method parameters with validation support.
+
+Routing: A Flexible routing system that maps URLs to controllers and actions. Also allows the creation of SEO-friendly URLs.
+
+Filters: Support for action filters, authorization filters, exception filters, and more for cross-cutting concerns.
+
+Security: Supports authentication and authorization mechanisms  and protection against common vulnerabilities (CSRF, XSS).

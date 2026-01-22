@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExofConstDest">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExofConstDest\ExofConstDest.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExofConstDest\ExofConstDest.suo">
+</Property><Property Name="Date" Value="05 January 2015">
+</Property><Property Name="Time" Value="11:38">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExofConstDest.sln" Description="File successfully backed up as D:\LangBasics\ExofConstDest\Backup\ExofConstDest.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExofConstDest.suo" Description="File successfully backed up as D:\LangBasics\ExofConstDest\Backup\ExofConstDest.suo">
+</Event><Event ErrorLevel="0" Project="ExofConstDest" Source="ExofConstDest\ExofConstDest.csproj" Description="Project file successfully backed up as D:\LangBasics\ExofConstDest\Backup\ExofConstDest\ExofConstDest.csproj">
+</Event><Event ErrorLevel="0" Project="ExofConstDest" Source="ExofConstDest\Program.cs" Description="File successfully backed up as D:\LangBasics\ExofConstDest\Backup\ExofConstDest\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExofConstDest" Source="ExofConstDest\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExofConstDest\Backup\ExofConstDest\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExofConstDest" Source="ExofConstDest\ExofConstDest.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExofConstDest" Source="ExofConstDest\ExofConstDest.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExofConstDest.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExofConstDest.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExofConstDest" Source="ExofConstDest\ExofConstDest.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

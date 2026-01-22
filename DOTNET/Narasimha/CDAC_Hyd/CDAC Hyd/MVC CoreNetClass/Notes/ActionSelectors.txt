@@ -1,0 +1,19 @@
+Action selectors
+------------------------
+In ASP.NET Core MVC  selectors are attributes applied to action methods within a controller to influence how the routing engine selects the appropriate method to handle a particular HTTP request. They provide a mechanism to control the behavior and accessibility of action methods.
+
+There are three primary types of action selectors:
+----------------------------------------------------------------
+ActionName: This attribute allows you to specify a different name for an action method than its actual method name. When this attribute is applied, the action must be invoked using the name provided in the attribute, not the method's original name.
+
+NonAction: This attribute indicates that a public method within a controller is not an action method and should not be invoked through routing. This is useful for helper methods or methods intended for internal use within the controller.
+
+
+Action Verbs (e.g., HttpGet, HttpPost): 
+These attributes restrict an action method to handle specific HTTP request methods. If no action verb is specified, an action method defaults to handling HttpGet requests.
+
+[AcceptVerbs(HttpVerbs.Get | HttpVerbs.Post)]
+public ActionResult AboutUs()
+{
+    return View();
+}

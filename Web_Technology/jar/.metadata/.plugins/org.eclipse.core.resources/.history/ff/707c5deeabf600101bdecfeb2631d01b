@@ -1,0 +1,50 @@
+
+package com.example.order.service;
+
+import com.example.order.entity.OrderEntity;
+import com.example.order.repository.OrderRepository;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import java.util.List;
+
+@Service
+public class OrderService {
+
+    private final OrderRepository repo;
+    private final RestTemplate restTemplate;
+
+    public OrderService(OrderRepository repo, RestTemplate restTemplate) {
+        this.repo = repo;
+        this.restTemplate = restTemplate;
+    }
+
+    public OrderEntity save(OrderEntity order) {
+        return repo.save(order);
+    }
+
+    public List<OrderEntity> findAll() {
+        return repo.findAll();
+    }
+
+    public OrderEntity findById(Long id) {
+        OrderEntity order = repo.findById(id).orElse(null);
+        if (order != null) {
+            Object item = restTemplate.getForObject(
+                    "http://ITEM-SERVICE/api/items/" + id,
+                    Object.class
+            );
+            order.setItem(item);
+        }
+        return order;
+    }
+
+    public OrderEntity update(Long id, OrderEntity order) {
+        order.setId(id);
+        return repo.save(order);
+    }
+
+    public void delete(Long id) {
+        repo.deleteById(id);
+    }
+}

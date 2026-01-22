@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExampleofSortList">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExampleofSortList\ExampleofSortList.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExampleofSortList\ExampleofSortList.suo">
+</Property><Property Name="Date" Value="16 January 2015">
+</Property><Property Name="Time" Value="12:41">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExampleofSortList.sln" Description="File successfully backed up as D:\LangBasics\ExampleofSortList\Backup\ExampleofSortList.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExampleofSortList.suo" Description="File successfully backed up as D:\LangBasics\ExampleofSortList\Backup\ExampleofSortList.suo">
+</Event><Event ErrorLevel="0" Project="ExampleofSortList" Source="ExampleofSortList\ExampleofSortList.csproj" Description="Project file successfully backed up as D:\LangBasics\ExampleofSortList\Backup\ExampleofSortList\ExampleofSortList.csproj">
+</Event><Event ErrorLevel="0" Project="ExampleofSortList" Source="ExampleofSortList\Program.cs" Description="File successfully backed up as D:\LangBasics\ExampleofSortList\Backup\ExampleofSortList\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExampleofSortList" Source="ExampleofSortList\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExampleofSortList\Backup\ExampleofSortList\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExampleofSortList" Source="ExampleofSortList\ExampleofSortList.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExampleofSortList" Source="ExampleofSortList\ExampleofSortList.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExampleofSortList.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExampleofSortList.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExampleofSortList" Source="ExampleofSortList\ExampleofSortList.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

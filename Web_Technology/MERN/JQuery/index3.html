@@ -1,0 +1,28 @@
+<!-- ID selector -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Selector</title>
+        <!-- jQuery CDN link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $(".demo1").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Studyopedia</h1>
+    <h2>Never Stop Learning</h2>
+    <p>Learning website for all.</p>
+    <div id="demo" class="demo1">
+        <p>Free Tutorials</p>
+        <p>Quizzes</p>
+    </div>
+    <button>Hide element using element selector</button>
+</body>
+</html>

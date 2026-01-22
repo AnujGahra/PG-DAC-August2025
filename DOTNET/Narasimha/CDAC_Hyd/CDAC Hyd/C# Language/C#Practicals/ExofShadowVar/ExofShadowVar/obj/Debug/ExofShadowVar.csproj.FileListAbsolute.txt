@@ -1,0 +1,25 @@
+D:\LangBasics\ExofShadowVar\ExofShadowVar\bin\Debug\ExofShadowVar.exe
+D:\LangBasics\ExofShadowVar\ExofShadowVar\bin\Debug\ExofShadowVar.pdb
+D:\LangBasics\ExofShadowVar\ExofShadowVar\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofShadowVar\ExofShadowVar\obj\Debug\ExofShadowVar.exe
+D:\LangBasics\ExofShadowVar\ExofShadowVar\obj\Debug\ExofShadowVar.pdb
+C:\LangBasics\ExofShadowVar\ExofShadowVar\obj\Debug\ExofShadowVar.exe
+C:\LangBasics\ExofShadowVar\ExofShadowVar\obj\Debug\ExofShadowVar.pdb
+C:\LangBasics\ExofShadowVar\ExofShadowVar\bin\Debug\ExofShadowVar.exe
+C:\LangBasics\ExofShadowVar\ExofShadowVar\bin\Debug\ExofShadowVar.pdb
+C:\LangBasics\ExofShadowVar\ExofShadowVar\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofShadowVar\ExofShadowVar\obj\Debug\ExofShadowVar.exe
+C:\SouceEdge Session 1\LangBasics\ExofShadowVar\ExofShadowVar\obj\Debug\ExofShadowVar.pdb
+C:\SouceEdge Session 1\LangBasics\ExofShadowVar\ExofShadowVar\bin\Debug\ExofShadowVar.exe
+C:\SouceEdge Session 1\LangBasics\ExofShadowVar\ExofShadowVar\bin\Debug\ExofShadowVar.pdb
+E:\krishna sir\C#Practicals\ExofShadowVar\ExofShadowVar\obj\Debug\ExofShadowVar.exe
+E:\krishna sir\C#Practicals\ExofShadowVar\ExofShadowVar\obj\Debug\ExofShadowVar.pdb
+E:\krishna sir\C#Practicals\ExofShadowVar\ExofShadowVar\bin\Debug\ExofShadowVar.exe
+E:\krishna sir\C#Practicals\ExofShadowVar\ExofShadowVar\bin\Debug\ExofShadowVar.pdb
+E:\krishna sir\C#Practicals\ExofShadowVar\ExofShadowVar\obj\Debug\ExofShadowVar.csprojResolveAssemblyReference.cache
+D:\krishna sir\C#Practicals\ExofShadowVar\ExofShadowVar\bin\Debug\ExofShadowVar.exe.config
+D:\krishna sir\C#Practicals\ExofShadowVar\ExofShadowVar\obj\Debug\ExofShadowVar.exe
+D:\krishna sir\C#Practicals\ExofShadowVar\ExofShadowVar\obj\Debug\ExofShadowVar.pdb
+D:\krishna sir\C#Practicals\ExofShadowVar\ExofShadowVar\bin\Debug\ExofShadowVar.exe
+D:\krishna sir\C#Practicals\ExofShadowVar\ExofShadowVar\bin\Debug\ExofShadowVar.pdb
+D:\krishna sir\C#Practicals\ExofShadowVar\ExofShadowVar\obj\Debug\ExofShadowVar.csprojResolveAssemblyReference.cache

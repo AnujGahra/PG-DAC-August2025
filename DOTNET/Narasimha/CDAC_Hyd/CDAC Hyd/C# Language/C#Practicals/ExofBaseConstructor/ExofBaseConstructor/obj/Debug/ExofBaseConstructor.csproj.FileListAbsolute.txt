@@ -1,0 +1,5 @@
+C:\SouceEdge Session 1\LangBasics\ExofBaseConstructor\ExofBaseConstructor\bin\Debug\ExofBaseConstructor.exe
+C:\SouceEdge Session 1\LangBasics\ExofBaseConstructor\ExofBaseConstructor\bin\Debug\ExofBaseConstructor.pdb
+C:\SouceEdge Session 1\LangBasics\ExofBaseConstructor\ExofBaseConstructor\obj\Debug\ExofBaseConstructor.csprojResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofBaseConstructor\ExofBaseConstructor\obj\Debug\ExofBaseConstructor.exe
+C:\SouceEdge Session 1\LangBasics\ExofBaseConstructor\ExofBaseConstructor\obj\Debug\ExofBaseConstructor.pdb

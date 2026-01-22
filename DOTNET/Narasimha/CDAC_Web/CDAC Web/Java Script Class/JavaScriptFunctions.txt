@@ -1,0 +1,65 @@
+1. Ex of String Functions
+<html>
+<head>
+<title>Java Script String Functions</title>
+</head>
+<body>
+<br/><br/>
+<script type="text/javascript">
+var s="libertycomputers";
+var s1="KRISHNA";
+document.write("String Length is  "+s.length+"<br>");
+document.write("Character at 8th position is  "+s.charAt(8)+"<br>");
+document.write("Position of e in String is  :"+s.indexOf("e")+"<br>");
+document.write("Converted to uppercase  "+s.toUpperCase()+"<br>");
+document.write("Converted to lowercase     "+s1.toLowerCase()+"<br>");
+
+document.write("Converted to Bold "+s.bold()+"<br>");
+
+document.write("Converted to Italic "+s.italics()+"<br>");
+document.write("Shown in Blue Color  "+s.fontcolor("blue")+"<br>");
+document.write("Show in Big Font Size "+s.fontsize("7"));
+</script>
+</body>
+</html>
+*********************************************
+2. Ex of Math Functions
+<html>
+<head>
+<title>Java Script Math Functions</title>
+</head>
+<body>
+<br/><br/>
+<script type="text/javascript">
+document.write("Value  of PI is  "+Math.PI+"<br>");
+document.write("Value  of Square Root 2 is  "+Math.SQRT2+"<br>");
+document.write("Value  Converted To Positive "+Math.abs(-50)+"<br>");
+document.write("Rounded No is "+Math.round(10.45)+"<br>");
+document.write("Rounded Next Int is "+Math.ceil(10.01)+"<br>");
+document.write("Rounded Prev Int is "+Math.floor(10.99)+"<br>");
+document.write("Max Value in Series is  "+Math.max(10,25,15)+"<br>");
+document.write("Min Value in Series is  "+Math.min(100,50,150)+"<br>");
+document.write("Power of Ten Raise To Two is  "+Math.pow(10,2)+"<br>");
+</script>
+</body>
+</html>
+
+3. Ex of Date Functions
+
+<html>
+<head>
+<title>Java Script Date Functions</title>
+</head>
+<body>
+<br/><br/>
+<script type="text/javascript">
+var d1=new Date();
+document.write("value of d1 is "+d1+"<br>");
+document.write("Today Date is  "+d1.getDate()+"<br>");
+document.write("Full Year is  "+d1.getFullYear()+"<br>");
+document.write("Now The Hour is  "+d1.getHours()+"<br>");
+document.write("Now The Minute is  "+d1.getMinutes()+"<br>");
+document.write("Today Day is  "+d1.getDay()+"<br>");
+</script>
+</body>
+</html>

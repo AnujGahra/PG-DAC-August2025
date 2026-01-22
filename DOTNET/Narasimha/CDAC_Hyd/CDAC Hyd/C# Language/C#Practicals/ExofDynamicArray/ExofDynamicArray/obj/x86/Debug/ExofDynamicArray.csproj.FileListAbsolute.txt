@@ -1,0 +1,9 @@
+E:\krishna sir\C#Practicals\ExofDynamicArray\ExofDynamicArray\bin\Debug\ExofDynamicArray.exe
+E:\krishna sir\C#Practicals\ExofDynamicArray\ExofDynamicArray\bin\Debug\ExofDynamicArray.pdb
+E:\krishna sir\C#Practicals\ExofDynamicArray\ExofDynamicArray\obj\x86\Debug\ExofDynamicArray.exe
+E:\krishna sir\C#Practicals\ExofDynamicArray\ExofDynamicArray\obj\x86\Debug\ExofDynamicArray.pdb
+D:\krishna sir\C#Practicals\ExofDynamicArray\ExofDynamicArray\obj\x86\Debug\ExofDynamicArray.exe
+D:\krishna sir\C#Practicals\ExofDynamicArray\ExofDynamicArray\obj\x86\Debug\ExofDynamicArray.pdb
+D:\krishna sir\C#Practicals\ExofDynamicArray\ExofDynamicArray\bin\Debug\ExofDynamicArray.exe
+D:\krishna sir\C#Practicals\ExofDynamicArray\ExofDynamicArray\bin\Debug\ExofDynamicArray.pdb
+D:\krishna sir\C#Practicals\ExofDynamicArray\ExofDynamicArray\obj\x86\Debug\ExofDynamicArray.csprojResolveAssemblyReference.cache

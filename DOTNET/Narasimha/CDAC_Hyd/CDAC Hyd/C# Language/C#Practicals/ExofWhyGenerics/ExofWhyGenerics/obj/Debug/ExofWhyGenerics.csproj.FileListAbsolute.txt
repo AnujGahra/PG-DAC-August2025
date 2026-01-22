@@ -1,0 +1,5 @@
+C:\LangBasics\ExofWhyGenerics\ExofWhyGenerics\bin\Debug\ExofWhyGenerics.exe
+C:\LangBasics\ExofWhyGenerics\ExofWhyGenerics\bin\Debug\ExofWhyGenerics.pdb
+C:\LangBasics\ExofWhyGenerics\ExofWhyGenerics\obj\Debug\ResolveAssemblyReference.cache
+C:\LangBasics\ExofWhyGenerics\ExofWhyGenerics\obj\Debug\ExofWhyGenerics.exe
+C:\LangBasics\ExofWhyGenerics\ExofWhyGenerics\obj\Debug\ExofWhyGenerics.pdb

@@ -1,0 +1,59 @@
+The constructor calling order will be top to bottom.
+
+Because when we inherit a class into another call then the child class can access all the features of the base class (except private members).
+
+So if in the initialization process of child class there may be the use of parent class members.
+
+This is why the constructor of the base class is called first to initialize all the inherited members.
+
+Ex 1
+
+public class Animal
+{
+    public Animal()
+    {
+        Console.WriteLine("I am animal constructor.");
+    }
+}
+public class Dog : Animal
+{
+    public Dog()
+    {
+        Console.WriteLine("I am dog constructor.");
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Dog dog = new Dog();
+        Console.Read();
+    }
+}
+
+-----------------------------------------------------------------------
+
+In the case of a static constructor, calling order will be reversed from non-static i.e. it will call from bottom to top.
+
+public class Animal
+{
+    static Animal()
+    {
+        Console.WriteLine("I am animal constructor.");
+    }
+}
+public class Dog : Animal
+{
+    static Dog()
+    {
+        Console.WriteLine("I am dog constructor.");
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Dog dog = new Dog();
+        Console.Read();
+    }
+}

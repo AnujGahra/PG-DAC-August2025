@@ -1,0 +1,5 @@
+C:\LangBasics\ExofTestSharedAssembly\ExofTestSharedAssembly\bin\Debug\ExofTestSharedAssembly.exe
+C:\LangBasics\ExofTestSharedAssembly\ExofTestSharedAssembly\bin\Debug\ExofTestSharedAssembly.pdb
+C:\LangBasics\ExofTestSharedAssembly\ExofTestSharedAssembly\obj\Debug\ResolveAssemblyReference.cache
+C:\LangBasics\ExofTestSharedAssembly\ExofTestSharedAssembly\obj\Debug\ExofTestSharedAssembly.exe
+C:\LangBasics\ExofTestSharedAssembly\ExofTestSharedAssembly\obj\Debug\ExofTestSharedAssembly.pdb

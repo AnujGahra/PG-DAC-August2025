@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;innderclasses.Test.java&apos; to &apos;WrapperDemo.java&apos;&#x0A;- Original project: &apos;Wrapper Class&apos;&#x0A;- Original element: &apos;innderclasses.Test.java&apos;&#x0A;- Renamed element: &apos;innderclasses.WrapperDemo.java&apos;" description="Rename compilation unit &apos;Test.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;innderclasses{Test.java" name="WrapperDemo.java" references="false" stamp="1758795298231" version="1.0"/>
+</session>

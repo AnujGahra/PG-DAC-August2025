@@ -1,0 +1,8 @@
+C:\SouceEdge Session 1\LangBasics\ExofBackGroundThread\ExofBackGroundThread\bin\Debug\ExofBackGroundThread.exe
+C:\SouceEdge Session 1\LangBasics\ExofBackGroundThread\ExofBackGroundThread\bin\Debug\ExofBackGroundThread.pdb
+C:\SouceEdge Session 1\LangBasics\ExofBackGroundThread\ExofBackGroundThread\obj\Debug\ExofBackGroundThread.exe
+C:\SouceEdge Session 1\LangBasics\ExofBackGroundThread\ExofBackGroundThread\obj\Debug\ExofBackGroundThread.pdb
+E:\krishna sir\C#Practicals\ExofBackGroundThread\ExofBackGroundThread\obj\Debug\ExofBackGroundThread.exe
+E:\krishna sir\C#Practicals\ExofBackGroundThread\ExofBackGroundThread\obj\Debug\ExofBackGroundThread.pdb
+E:\krishna sir\C#Practicals\ExofBackGroundThread\ExofBackGroundThread\bin\Debug\ExofBackGroundThread.exe
+E:\krishna sir\C#Practicals\ExofBackGroundThread\ExofBackGroundThread\bin\Debug\ExofBackGroundThread.pdb

@@ -1,0 +1,34 @@
+package dequeue;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Launch {
+
+	public static void main(String[] args) {
+		
+		
+//		Insertion order: Both side of a queue
+		
+//		Index supported: No
+//		Random Access: No
+//		Non Synchronized
+//		Duplicates Allowed
+//		Null: Allowed
+		
+		Deque<Object> dq = new ArrayDeque<Object>();
+		dq.addFirst("raju");
+		dq.addFirst("kaju");
+		dq.addLast("xraju");
+		dq.addLast("xkaju");
+		dq.add("Anuj Gahra");
+		dq.add("Pari");
+		
+		System.out.println(dq);
+		
+		dq.pollFirst();
+		System.out.println(dq);
+
+	}
+
+}

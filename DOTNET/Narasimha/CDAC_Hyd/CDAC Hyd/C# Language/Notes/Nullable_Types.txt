@@ -1,0 +1,55 @@
+In C#, the nullable type allows us to assign null to the variable
+
+using System;
+class Program
+{
+    public static void Main()
+    {
+        int x = null;
+
+        Console.WriteLine(x);
+    }
+}
+This Will Give Following Error
+--------------------------------------
+Cannot convert null to 'int' because it is a non-nullable value type
+
+
+This Will Not Give Error
+----------------------------
+using System;
+class Program
+{
+    public static void Main()
+    {
+       
+        Nullable<int> x = null;
+
+        Console.WriteLine(x);
+    }
+}
+
+--------------------------------------------------------------
+
+
+using System;
+class Program
+{
+    public static void Main()
+    {
+        // assigning 'null' to integer type variable x 
+        Nullable<int> x = null;
+
+        // assigning 'null' to boolean type variable y
+        Nullable<bool> y = null;
+
+        // assigning 'null' to floating point type variable z 
+        Nullable<float> z = null;
+
+
+        // access Nullable types
+        Console.WriteLine("Value of x: " + x.GetValueOrDefault());
+        Console.WriteLine("Value of y: " + y.GetValueOrDefault());
+        Console.WriteLine("Value of z: " + z.GetValueOrDefault());
+    }
+}

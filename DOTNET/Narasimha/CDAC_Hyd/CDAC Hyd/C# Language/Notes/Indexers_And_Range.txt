@@ -1,0 +1,93 @@
+This is Using Old Indices And Ranges
+----------------------------------
+using System;
+using System.Xml.Linq;
+
+    class IndicesAndRanges
+    {
+        static void Main(string[] args)
+        {
+            //Creating a Collection to store list of Countries
+            List<string> countries = new List<string>()
+            {
+                "INDIA",
+                "USA",
+                "UK",
+                "NZ",
+                "CANADA",
+                "CHINA",
+                "NEPAL",
+                "RUSIA",
+                "SRILANKA",
+                "INDONESIA"
+            };
+
+            //Accessing Element Based on the Index Position
+            Console.WriteLine($"Element at Index Position 1 is {countries[1]}");
+            Console.WriteLine($"Element at Index Position 3 is {countries[3]}");
+
+            //Accessing Range of Elements using GetRange Method 
+            Console.WriteLine("Accessing Range of Elements using Range");
+            List<string> countryRange = countries.GetRange(1, 3);
+
+            //Printing the Elements which are accessed by the GetRange Method
+            foreach (var item in countryRange)
+            {
+                Console.Write(item + " ");
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+
+
+-------------------------------------------------------
+
+With C# 8  two new operators are introduced. 
+
+1)Old Method: var LastValue = myArray[myArray.Length-1]
+New Method: var LastValue = myArray[^1]
+
+2)
+Old Method: var arr = myArray.GetRange(1, 5); //This will return five elements from the index position 1
+New Method: var arr = myArray[2..5]; //This will return the elements from Index position 2 to Index Position 5 – 1
+
+
+Example
+-----------
+using System;
+using System.Threading.Tasks;
+namespace Csharp8Features
+{
+    class IndicesAndRangesDemo
+    {
+        static void Main(string[] args)
+        {
+            //Create an Array of Countries
+            var countries = new string[]
+            {
+                "INDIA",
+                "USA",
+                "UK",
+                "NZ",
+                "CANADA",
+                "CHINA",
+                "NEPAL",
+                "RUSIA",
+                "SRILANKA",
+                "INDONESIA"
+            };
+
+            //Create a variable of type Index. Index is a value type
+            Index i1 = 4;
+            Console.WriteLine($"{countries[i1]}"); // Output: "CANADA"
+            //You can even directly specify the Integer Index Position as follows 
+            //Console.WriteLine($"{countries[4]}"); // Output: "CANADA"
+
+            // Index 4 from end of the collection
+            Index i2 = ^4;
+            Console.WriteLine($"{countries[i2]}"); // Output: "NEPAL"
+        }
+    }
+}

@@ -1,0 +1,5 @@
+package tech.codehunt.test.exceptions.external;
+
+public class EmployeeServiceException {
+
+}

@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<Script Language="JavaScript">
+function validate()
+{
+var retval=true;
+if(document.f1.t1.value=="")
+{
+	alert("Please Enter User Name");
+	document.f1.t1.focus();	
+                   retval=false;
+}
+else if(document.f1.p1.value=="")
+{
+	alert("Please Enter Password");
+	document.f1.p1.focus();
+                   retval=false;
+}
+return retval;
+}
+</Script>
+</HEAD>
+<BODY>
+<Form name="f1" method="post" action="ExofFirst.html">
+User Name : <Input type="text" name="t1"><BR>
+Password : <Input type="password" name="p1"><BR>
+<Input type="submit" name="s1" value="Login" 
+onClick="return validate()">
+<Input type="reset" name="s2" value="Clear">
+</Form>
+</BODY>
+</HTML>
+
+

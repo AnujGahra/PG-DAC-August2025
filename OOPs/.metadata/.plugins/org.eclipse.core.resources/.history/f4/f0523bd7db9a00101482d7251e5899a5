@@ -1,0 +1,18 @@
+package raceConditions;
+
+public class Account extends Thread {
+	
+	private int bal = 500000;
+	
+	
+	public void deduct(int bal, String cardName) {
+		this.bal = this.bal-bal;
+		System.out.println("DEBIT SUCCESSFULLY!");
+	}
+	
+	
+	public void get() {
+		System.out.println(bal);
+	}
+
+}

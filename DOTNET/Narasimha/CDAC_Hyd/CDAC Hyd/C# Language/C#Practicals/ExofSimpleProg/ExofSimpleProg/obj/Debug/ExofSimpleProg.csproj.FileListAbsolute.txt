@@ -1,0 +1,12 @@
+D:\LangBasics\ExofSimpleProg\ExofSimpleProg\bin\Debug\ExofSimpleProg.exe
+D:\LangBasics\ExofSimpleProg\ExofSimpleProg\bin\Debug\ExofSimpleProg.pdb
+D:\LangBasics\ExofSimpleProg\ExofSimpleProg\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofSimpleProg\ExofSimpleProg\obj\Debug\ExofSimpleProg.exe
+D:\LangBasics\ExofSimpleProg\ExofSimpleProg\obj\Debug\ExofSimpleProg.pdb
+C:\LangBasics\ExofSimpleProg\ExofSimpleProg\obj\Debug\ExofSimpleProg.exe
+C:\LangBasics\ExofSimpleProg\ExofSimpleProg\obj\Debug\ExofSimpleProg.pdb
+C:\SouceEdge Session 1\LangBasics\ExofSimpleProg\ExofSimpleProg\obj\Debug\ExofSimpleProg.exe
+C:\SouceEdge Session 1\LangBasics\ExofSimpleProg\ExofSimpleProg\obj\Debug\ExofSimpleProg.pdb
+C:\SouceEdge Session 1\LangBasics\ExofSimpleProg\ExofSimpleProg\bin\Debug\ExofSimpleProg.exe
+C:\SouceEdge Session 1\LangBasics\ExofSimpleProg\ExofSimpleProg\bin\Debug\ExofSimpleProg.pdb
+C:\SouceEdge Session 1\LangBasics\ExofSimpleProg\ExofSimpleProg\obj\Debug\ExofSimpleProg.csprojResolveAssemblyReference.cache

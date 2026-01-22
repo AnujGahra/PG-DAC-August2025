@@ -1,0 +1,21 @@
+D:\LangBasics\ExofStaticClass\ExofStaticClass\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofStaticClass\ExofStaticClass\bin\Debug\ExofStaticClass.exe
+D:\LangBasics\ExofStaticClass\ExofStaticClass\bin\Debug\ExofStaticClass.pdb
+D:\LangBasics\ExofStaticClass\ExofStaticClass\obj\Debug\ExofStaticClass.exe
+D:\LangBasics\ExofStaticClass\ExofStaticClass\obj\Debug\ExofStaticClass.pdb
+C:\LangBasics\ExofStaticClass\ExofStaticClass\obj\Debug\ExofStaticClass.exe
+C:\LangBasics\ExofStaticClass\ExofStaticClass\obj\Debug\ExofStaticClass.pdb
+C:\LangBasics\ExofStaticClass\ExofStaticClass\obj\Debug\ResolveAssemblyReference.cache
+C:\LangBasics\ExofStaticClass\ExofStaticClass\bin\Debug\ExofStaticClass.exe
+C:\LangBasics\ExofStaticClass\ExofStaticClass\bin\Debug\ExofStaticClass.pdb
+C:\SouceEdge Session 1\LangBasics\ExofStaticClass\ExofStaticClass\obj\Debug\ExofStaticClass.exe
+C:\SouceEdge Session 1\LangBasics\ExofStaticClass\ExofStaticClass\obj\Debug\ExofStaticClass.pdb
+C:\SouceEdge Session 1\LangBasics\ExofStaticClass\ExofStaticClass\bin\Debug\ExofStaticClass.exe
+C:\SouceEdge Session 1\LangBasics\ExofStaticClass\ExofStaticClass\bin\Debug\ExofStaticClass.pdb
+E:\krishna sir\C#Practicals\ExofStaticClass\ExofStaticClass\obj\Debug\ExofStaticClass.exe
+E:\krishna sir\C#Practicals\ExofStaticClass\ExofStaticClass\obj\Debug\ExofStaticClass.pdb
+D:\krishna sir\C#Practicals\ExofStaticClass\ExofStaticClass\obj\Debug\ExofStaticClass.exe
+D:\krishna sir\C#Practicals\ExofStaticClass\ExofStaticClass\obj\Debug\ExofStaticClass.pdb
+D:\krishna sir\C#Practicals\ExofStaticClass\ExofStaticClass\bin\Debug\ExofStaticClass.exe.config
+D:\krishna sir\C#Practicals\ExofStaticClass\ExofStaticClass\bin\Debug\ExofStaticClass.exe
+D:\krishna sir\C#Practicals\ExofStaticClass\ExofStaticClass\bin\Debug\ExofStaticClass.pdb

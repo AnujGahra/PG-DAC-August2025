@@ -1,0 +1,5 @@
+package tech.codehunt.test.external.client;
+
+public class AccountClient {
+
+}

@@ -1,0 +1,64 @@
+Async and Await Keyword in C#:
+In modern C# code, in order to use asynchronous programming, we need to use async and await keywords. The idea is that if we have a method in which we want to use asynchronous programming, then we need to mark the method with the async
+
+
+1. Example of Calling Method Without Async
+----------------------------------------------------------
+using System;
+using System.Threading;
+namespace AsynchronousProgramming
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Main Method Started......");
+
+            SomeMethod();
+
+            Console.WriteLine("Main Method End");
+            Console.ReadKey();
+        }
+
+        public static void SomeMethod()
+        {
+            Console.WriteLine("Some Method Started......");
+
+            Thread.Sleep(TimeSpan.FromSeconds(20));
+            Console.WriteLine("\n");
+            Console.WriteLine("Some Method End");
+        }
+    }
+}
+
+2.Example of Calling Method With Async
+-----------------------------------------------------
+
+using System;
+using System.Threading.Tasks;
+
+namespace AsynchronousProgramming
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Main Method Started......");
+
+            SomeMethod();
+
+            Console.WriteLine("Main Method End");
+            Console.ReadKey();
+        }
+
+        public async static void SomeMethod()
+        {
+            Console.WriteLine("Some Method Started......");
+
+            //Thread.Sleep(TimeSpan.FromSeconds(10));
+            await Task.Delay(TimeSpan.FromSeconds(10));
+            Console.WriteLine("\n");
+            Console.WriteLine("Some Method End");
+        }
+    }
+}

@@ -1,0 +1,14 @@
+/Users/anujgahra/Developer/PG-DAC/DotNet07/Q1/Question4/Question4/bin/Debug/net9.0/Question4
+/Users/anujgahra/Developer/PG-DAC/DotNet07/Q1/Question4/Question4/bin/Debug/net9.0/Question4.deps.json
+/Users/anujgahra/Developer/PG-DAC/DotNet07/Q1/Question4/Question4/bin/Debug/net9.0/Question4.runtimeconfig.json
+/Users/anujgahra/Developer/PG-DAC/DotNet07/Q1/Question4/Question4/bin/Debug/net9.0/Question4.dll
+/Users/anujgahra/Developer/PG-DAC/DotNet07/Q1/Question4/Question4/bin/Debug/net9.0/Question4.pdb
+/Users/anujgahra/Developer/PG-DAC/DotNet07/Q1/Question4/Question4/obj/Debug/net9.0/Question4.GeneratedMSBuildEditorConfig.editorconfig
+/Users/anujgahra/Developer/PG-DAC/DotNet07/Q1/Question4/Question4/obj/Debug/net9.0/Question4.AssemblyInfoInputs.cache
+/Users/anujgahra/Developer/PG-DAC/DotNet07/Q1/Question4/Question4/obj/Debug/net9.0/Question4.AssemblyInfo.cs
+/Users/anujgahra/Developer/PG-DAC/DotNet07/Q1/Question4/Question4/obj/Debug/net9.0/Question4.csproj.CoreCompileInputs.cache
+/Users/anujgahra/Developer/PG-DAC/DotNet07/Q1/Question4/Question4/obj/Debug/net9.0/Question4.dll
+/Users/anujgahra/Developer/PG-DAC/DotNet07/Q1/Question4/Question4/obj/Debug/net9.0/refint/Question4.dll
+/Users/anujgahra/Developer/PG-DAC/DotNet07/Q1/Question4/Question4/obj/Debug/net9.0/Question4.pdb
+/Users/anujgahra/Developer/PG-DAC/DotNet07/Q1/Question4/Question4/obj/Debug/net9.0/Question4.genruntimeconfig.cache
+/Users/anujgahra/Developer/PG-DAC/DotNet07/Q1/Question4/Question4/obj/Debug/net9.0/ref/Question4.dll

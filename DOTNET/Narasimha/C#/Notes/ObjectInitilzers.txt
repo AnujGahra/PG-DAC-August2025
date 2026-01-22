@@ -1,0 +1,27 @@
+Object initializers are the easiest and fastest way to assign values to an object's properties and fields. An object can be initialized without explicitly calling a class's constructor.
+
+The following code snippet lists an Author class with some public properties.
+
+public class Author
+{
+    public string Name { get; set; }
+    public string Book { get; set; }
+    public string Publisher { get; set; }
+  
+}
+
+In a typical behavior, we will create the Author class object using the constructor and set its properties values in the following way.
+
+Author mahesh = new Author();
+mahesh.Name = "Mahesh Chand";
+mahesh.Book = "LINQ Programming";
+mahesh.Publisher = "APress";
+
+By using the object initializers, we can pass the public properties values when we are creating the object without explicitly invoking the Author class constructor. The following code does the trick.
+
+Author mahesh = new Author()
+{
+    Name = "Mahesh Chand",
+    Book = "LINQ Programming",
+    Publisher = "APress",
+}

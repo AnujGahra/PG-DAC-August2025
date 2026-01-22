@@ -1,0 +1,38 @@
+Add Models 
+Add a new folder named “Models” to the project and add a class named "Employee" under the folder.
+public class Employee
+    {	
+		public int Id { get; set; }
+		public string Name { get; set; }	
+		public int Age { get; set; }
+		public string Designation { get; set; }
+		public string City { get; set; }
+		public string Country { get; set; }
+		public int ContactNumber { get; set; }
+}
+
+Add Entity Framework Database Context
+Right-click the Controllers folder and select Add -> Controller -> API controller with actions, using Entity Framework.
+
+Select the model class name as Employee and Click the + button and add the EmployeeContext.
+
+
+Setup Migration
+Before migration you have to modify the database connection, this will be found in appsettings.json file as shown below,
+
+ "ConnectionStrings": {
+    "EmployeeContext": "Server=localhost\\SQLExpress;Database=EmployeeContextDb;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+
+
+to enable migrations, Click Tools -> NuGet Package Manager -> Package Manager Console,
+
+Run this command, Add-Migration EmployeeContextDb 
+
+Update-Database -verbose
+
+--------------------------------------------------------------------------
+Negoatiation
+-------------------
+config.formatters.remove(config.formatters.Xmlformatter)
+config.formatters.jsonfomatter.serializersettings.formatting=newtonsoft.json.formatting.indented;

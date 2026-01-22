@@ -1,0 +1,8 @@
+E:\krishna sir\C#Practicals\ExofForeGroundThread\ExofForeGroundThread\bin\Debug\ExofForeGroundThread.exe
+E:\krishna sir\C#Practicals\ExofForeGroundThread\ExofForeGroundThread\bin\Debug\ExofForeGroundThread.pdb
+E:\krishna sir\C#Practicals\ExofForeGroundThread\ExofForeGroundThread\obj\x86\Debug\ExofForeGroundThread.exe
+E:\krishna sir\C#Practicals\ExofForeGroundThread\ExofForeGroundThread\obj\x86\Debug\ExofForeGroundThread.pdb
+D:\krishna sir\C#Practicals\ExofForeGroundThread\ExofForeGroundThread\obj\x86\Debug\ExofForeGroundThread.exe
+D:\krishna sir\C#Practicals\ExofForeGroundThread\ExofForeGroundThread\obj\x86\Debug\ExofForeGroundThread.pdb
+D:\krishna sir\C#Practicals\ExofForeGroundThread\ExofForeGroundThread\bin\Debug\ExofForeGroundThread.exe
+D:\krishna sir\C#Practicals\ExofForeGroundThread\ExofForeGroundThread\bin\Debug\ExofForeGroundThread.pdb

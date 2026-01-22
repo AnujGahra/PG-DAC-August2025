@@ -1,0 +1,10 @@
+C:\SouceEdge Session 1\LangBasics\ExofQue\ExofQue\bin\Debug\ExofQue.exe
+C:\SouceEdge Session 1\LangBasics\ExofQue\ExofQue\bin\Debug\ExofQue.pdb
+C:\SouceEdge Session 1\LangBasics\ExofQue\ExofQue\obj\Debug\ExofQue.csprojResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofQue\ExofQue\obj\Debug\ExofQue.exe
+C:\SouceEdge Session 1\LangBasics\ExofQue\ExofQue\obj\Debug\ExofQue.pdb
+E:\krishna sir\C#Practicals\ExofQue\ExofQue\obj\Debug\ExofQue.exe
+E:\krishna sir\C#Practicals\ExofQue\ExofQue\obj\Debug\ExofQue.pdb
+E:\krishna sir\C#Practicals\ExofQue\ExofQue\bin\Debug\ExofQue.exe
+E:\krishna sir\C#Practicals\ExofQue\ExofQue\bin\Debug\ExofQue.pdb
+E:\krishna sir\C#Practicals\ExofQue\ExofQue\obj\Debug\ExofQue.csprojResolveAssemblyReference.cache

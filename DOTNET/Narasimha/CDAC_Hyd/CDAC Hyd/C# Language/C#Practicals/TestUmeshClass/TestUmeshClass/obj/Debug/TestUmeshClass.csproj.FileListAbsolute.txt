@@ -1,0 +1,7 @@
+C:\LangBasics\TestUmeshClass\TestUmeshClass\bin\Debug\TestUmeshClass.exe
+C:\LangBasics\TestUmeshClass\TestUmeshClass\bin\Debug\TestUmeshClass.pdb
+C:\LangBasics\TestUmeshClass\TestUmeshClass\bin\Debug\UmeshLibrary.dll
+C:\LangBasics\TestUmeshClass\TestUmeshClass\bin\Debug\UmeshLibrary.pdb
+C:\LangBasics\TestUmeshClass\TestUmeshClass\obj\Debug\ResolveAssemblyReference.cache
+C:\LangBasics\TestUmeshClass\TestUmeshClass\obj\Debug\TestUmeshClass.exe
+C:\LangBasics\TestUmeshClass\TestUmeshClass\obj\Debug\TestUmeshClass.pdb

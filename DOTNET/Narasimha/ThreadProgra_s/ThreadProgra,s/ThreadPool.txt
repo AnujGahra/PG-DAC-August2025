@@ -1,0 +1,62 @@
+In C#, a thread pool is a collection of pre-allocated and managed worker threads that can be used to execute tasks concurrently. The .NET runtime provides a managed thread pool through the System.Threading.ThreadPool class, which handles the creation, management, and reuse of threads for applications.
+
+
+1. Thread Program Without Thread Pool
+----------------------------------------------------
+using System;
+using System.Threading;
+
+namespace ThreadPoolApplication
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Thread thread = new Thread(MyMethod)
+                {
+                    Name = "Thread" + i
+                };
+                thread.Start();
+            }
+            Console.Read();
+        }
+
+        public static void MyMethod(object obj)
+        {
+            Thread thread = Thread.CurrentThread;
+            string message = $"Background: {thread.IsBackground}, Thread Pool: {thread.IsThreadPoolThread}, Thread ID: {thread.ManagedThreadId}";
+            Console.WriteLine(message);
+        }
+    }
+}
+-----------------------------------------------------------------------------
+
+2.Thread Program With Thread Pool
+--------------------------------------------------
+
+using System;
+using System.Threading;
+
+namespace ThreadPoolApplication
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                ThreadPool.QueueUserWorkItem(new WaitCallback(MyMethod));
+            }
+            Console.Read();
+        }
+
+        public static void MyMethod(object obj)
+        {
+            Thread thread = Thread.CurrentThread;
+            string message = $"Background: {thread.IsBackground}, Thread Pool: {thread.IsThreadPoolThread}, Thread ID: {thread.ManagedThreadId}";
+            Console.WriteLine(message);
+        }
+    }
+}

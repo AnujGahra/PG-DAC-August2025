@@ -1,0 +1,29 @@
+What are Tag Helpers in ASP.NET Core MVC?
+Tag Helpers in ASP.NET Core MVC allow us to write HTML-like code that is closely associated with C# backend code. They simplify the process of generating HTML elements in views. Tag Helpers are useful because they allow you to keep your HTML clean and readable while still providing powerful data-binding and server-side logic capabilities directly within your views.
+
+Types of Tag Helpers in ASP.NET Core MVC:
+ASP.NET Core MVC has two main types of Tag Helpers: Built-in Tag Helpers and Custom Tag Helpers. Both types of Tag Helpers contribute to simplifying the process of generating HTML elements in views, but they serve different purposes.
+
+Built-in Tag Helpers:
+These Tag Helpers are provided by default as part of the ASP.NET Core framework. They cover common scenarios and tasks, such as generating links, creating forms, showing validation messages, etc. Some examples of built-in Tag Helpers include:
+
+
+Anchor Tag Helpers (<a>)
+----------------------------------
+<a asp-controller="Home" asp-action="Index">Home</a>
+<a asp-controller="Home" asp-action="Details" asp-route-id="42">Details</a>
+
+Form Tag Helpers (<form>)
+-----------------------------------
+<form asp-controller="Account" asp-action="Login" method="post">
+
+</form>
+
+Image Tag Helper
+----------------------
+<img src=”~/images/pic.jpg” asp-append-version=”true” />
+
+Input Tag Helpers
+-----------------------
+<input asp-for="Name" />
+<input asp-for="IsAdmin" type="checkbox" />

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+
+    <!-- jQuery CDN link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+
+        // CLICK EVENT
+        $("li:contains('Click')").click(function () {
+          alert("Click event fired!");
+        });
+
+        // CONTEXT MENU (Right Click)
+        $("li:contains('ContextMenu')").contextmenu(function (e) {
+          e.preventDefault();
+          alert("Right-click (contextmenu) event fired!");
+        });
+
+        // DOUBLE CLICK
+        $("li:contains('Dblclick')").dblclick(function () {
+          alert("Double-click event fired!");
+        });
+
+        // MOUSE ENTER
+        $("li:contains('Mouseenter')").mouseenter(function () {
+          $(this).css("background", "lightgreen");
+        });
+
+        // MOUSE LEAVE
+        $("li:contains('Mouseleave')").mouseleave(function () {
+          $(this).css("background", "white");
+        });
+
+        // MOUSE DOWN
+        $("li:contains('Mousedown')").mousedown(function () {
+          $(this).css("color", "red");
+        });
+
+        // MOUSE UP
+        $("li:contains('MouseUP')").mouseup(function () {
+          $(this).css("color", "blue");
+        });
+
+        // FOCUS EVENT
+        // Creating an input dynamically for example
+        $("body").append('<br><input type="text" id="focusInput" placeholder="Click to focus" />');
+        $("li:contains('Focus')").click(function () {
+          $("#focusInput").focus();
+        });
+        $("#focusInput").focus(function () {
+          $(this).css("background", "yellow");
+        });
+
+        // BLUR EVENT
+        $("li:contains('Blurr')").click(function () {
+          $("#focusInput").blur();
+        });
+        $("#focusInput").blur(function () {
+          $(this).css("background", "white");
+        });
+
+        // ON METHOD (multiple events)
+        $("li:contains('on')").on({
+          click: function () {
+            alert("ON method: Click event triggered!");
+          },
+          mouseenter: function () {
+            $(this).css("background", "orange");
+          },
+          mouseleave: function () {
+            $(this).css("background", "white");
+          }
+        });
+
+      });
+    </script>
+  </head>
+  <body>
+    <h1>TechLeeyo</h1>
+
+    <ul>
+      <li>Click</li>
+      <li>ContextMenu</li>
+      <li>Dblclick</li>
+      <li>Mouseenter</li>
+      <li>Mouseleave</li>
+      <li>Mousedown</li>
+      <li>MouseUP</li>
+      <li>Focus</li>
+      <li>Blurr</li>
+      <li>on</li>
+    </ul>
+  </body>
+</html>

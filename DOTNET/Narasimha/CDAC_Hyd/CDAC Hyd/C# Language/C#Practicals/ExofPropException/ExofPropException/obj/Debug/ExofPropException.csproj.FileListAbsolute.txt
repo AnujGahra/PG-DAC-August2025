@@ -1,0 +1,10 @@
+D:\LangBasics\ExofPropException\ExofPropException\bin\Debug\ExofPropException.exe
+D:\LangBasics\ExofPropException\ExofPropException\bin\Debug\ExofPropException.pdb
+D:\LangBasics\ExofPropException\ExofPropException\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofPropException\ExofPropException\obj\Debug\ExofPropException.exe
+D:\LangBasics\ExofPropException\ExofPropException\obj\Debug\ExofPropException.pdb
+C:\LangBasics\ExofPropException\ExofPropException\obj\Debug\ExofPropException.exe
+C:\LangBasics\ExofPropException\ExofPropException\obj\Debug\ExofPropException.pdb
+C:\LangBasics\ExofPropException\ExofPropException\bin\Debug\ExofPropException.exe
+C:\LangBasics\ExofPropException\ExofPropException\bin\Debug\ExofPropException.pdb
+C:\LangBasics\ExofPropException\ExofPropException\obj\Debug\ResolveAssemblyReference.cache

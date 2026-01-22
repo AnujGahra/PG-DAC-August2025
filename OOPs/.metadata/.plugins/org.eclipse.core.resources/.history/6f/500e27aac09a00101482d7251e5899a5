@@ -1,0 +1,20 @@
+package oneclass.multithread;
+
+public class Launch {
+
+	
+		public static void main(String[] args) {
+			Table t1 = new Table();
+			Table t2 = new Table();
+			Table t3 = new Table();
+			
+			
+			t1.setName("Raju");
+			t2.setName("Kaju");
+			t3.setName("Maju");
+			
+			t1.start();
+			t2.start();
+			t3.start();
+		}
+}

@@ -1,0 +1,5 @@
+C:\SouceEdge Session 1\LangBasics\ExofNestedNameSpace\ExofNestedNameSpace\bin\Debug\ExofNestedNameSpace.exe
+C:\SouceEdge Session 1\LangBasics\ExofNestedNameSpace\ExofNestedNameSpace\bin\Debug\ExofNestedNameSpace.pdb
+C:\SouceEdge Session 1\LangBasics\ExofNestedNameSpace\ExofNestedNameSpace\obj\Debug\ExofNestedNameSpace.csprojResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofNestedNameSpace\ExofNestedNameSpace\obj\Debug\ExofNestedNameSpace.exe
+C:\SouceEdge Session 1\LangBasics\ExofNestedNameSpace\ExofNestedNameSpace\obj\Debug\ExofNestedNameSpace.pdb

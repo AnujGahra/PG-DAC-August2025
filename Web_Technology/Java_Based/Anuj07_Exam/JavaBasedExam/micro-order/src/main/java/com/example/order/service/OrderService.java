@@ -1,0 +1,44 @@
+package com.example.order.service;
+
+import java.util.HashMap;
+import java.util.Map;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import com.example.order.entity.Order;
+import com.example.order.repository.OrderRepository;
+
+@Service
+public class OrderService {
+
+    private final OrderRepository repo;
+    private final RestTemplate restTemplate;
+
+    public OrderService(OrderRepository repo, RestTemplate restTemplate) {
+        this.repo = repo;
+        this.restTemplate = restTemplate;
+    }
+
+    public Order save(Order order) {
+        return repo.save(order);
+    }
+
+    public Map<String, Object> getOrderWithItem(Long id) {
+
+        Order order = repo.findById(id).orElse(null);
+
+        Object item = restTemplate.getForObject(
+            "http://micro-item/api/items/" + order.getItemId(),
+            Object.class
+        );
+
+        Map<String, Object> response = new HashMap<>();
+        response.put("order", order);
+        response.put("item", item);  
+
+        return response;
+    }
+
+    public void delete(Long id) {
+        repo.deleteById(id);
+    }
+}

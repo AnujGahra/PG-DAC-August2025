@@ -1,0 +1,28 @@
+package com.mainapp;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.beans.Employee;
+
+public class Launch {
+
+	public static void main(String[] args) {
+		
+		
+//		IOC Container
+		ClassPathXmlApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
+		Employee emp = ac.getBean(Employee.class);
+		emp.test(); 
+		
+		Employee emp1 = (Employee) ac.getBean("emp");
+		emp1.test(); 
+		
+		ac.close();
+		
+				
+
+	}
+
+}
+
+

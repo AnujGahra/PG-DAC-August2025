@@ -1,0 +1,14 @@
+Custom Routing in ASP.NET Core MVC Application
+-----------------------------------------------------------------
+Custom Routing in ASP.NET Core MVC allows us to define our own routing patterns for our web application, giving us more control over how URLs are mapped to controller actions. This can be useful when creating SEO-friendly URLs, handling specific routing scenarios, or creating a more organized and structured URL hierarchy. 
+
+Custom Routing Without Default Values in ASP.NET Core MVC Application:
+ASP.NET Core MVC allows configuring routing without default values for route parameters (controller, action, and route data). This allows us to create routes that depend only on the URL values without predetermined or default values. If a route parameter is absent from the URL, it will be treated as missing.
+
+Suppose you want to define your own custom route without default values. In that case, you need to modify the MapControllerRoute middleware component within the Main method of the Program class.
+
+app.MapControllerRoute(
+                name: "CustomRoute",
+                pattern: "{controller}/{action}/{id:int?}",
+                defaults: new { controller = "Home", action = "Index" }
+            );

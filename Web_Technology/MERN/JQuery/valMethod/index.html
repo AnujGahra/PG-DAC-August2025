@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Val method</title>
+
+    <!-- jQuery CDN link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#AddBtn").click(function () {
+          var num1 = parseFloat($("#num1").val());
+          var num2 = parseFloat($("#num2").val());
+
+          if ($("#num1").val() === "" || $("#num2").val() === "") {
+            alert("Please fill both fields.");
+          } else {
+            var add = num1 + num2;
+            alert("Addition result is: " + add);
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Val() Method</h1>
+    <br />
+
+    <input type="text" id="num1" placeholder="Enter first number" />
+    <input type="text" id="num2" placeholder="Enter second number" />
+
+    <br /><br />
+
+    <input type="button" value="Add" id="AddBtn" />
+  </body>
+</html>

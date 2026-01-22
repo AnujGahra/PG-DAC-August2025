@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Country</title>
+
+    <!-- jQuery CDN link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#showBtn").click(function () {
+          var country = $("#countrySelect").val();
+
+          if (country === "") {
+            $("#result").text("Please select a country.");
+          } else {
+            $("#result").text("You selected: " + country);
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Select Country using val()</h1>
+    <br />
+
+    <select id="countrySelect">
+      <option value="">-- Select Country --</option>
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+      <option value="Canada">Canada</option>
+      <option value="Australia">Australia</option>
+      <option value="Japan">Japan</option>
+    </select>
+
+    <br /><br />
+
+    <input type="button" value="Show Country" id="showBtn" />
+
+    <h2 id="result" style="margin-top:20px; color:blue;"></h2>
+  </body>
+</html>

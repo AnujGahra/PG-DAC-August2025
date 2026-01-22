@@ -1,0 +1,5 @@
+C:\LangBasics\ExampleofSharedAssembly\ExampleofSharedAssembly\bin\Debug\ExampleofSharedAssembly.dll
+C:\LangBasics\ExampleofSharedAssembly\ExampleofSharedAssembly\bin\Debug\ExampleofSharedAssembly.pdb
+C:\LangBasics\ExampleofSharedAssembly\ExampleofSharedAssembly\obj\Debug\ResolveAssemblyReference.cache
+C:\LangBasics\ExampleofSharedAssembly\ExampleofSharedAssembly\obj\Debug\ExampleofSharedAssembly.dll
+C:\LangBasics\ExampleofSharedAssembly\ExampleofSharedAssembly\obj\Debug\ExampleofSharedAssembly.pdb

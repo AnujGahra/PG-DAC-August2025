@@ -1,0 +1,228 @@
+1) Project => Add => New Folder and then rename the folder name as Repository. Add an Interface within this Repository folder named IEmployeeRepository.cs
+
+using CRUDinCoreMVC.Models;
+
+namespace CRUDinCoreMVC.Repository
+{
+    public interface IEmployeeRepository
+    {
+        
+        Task<IEnumerable<Employee>> GetAllAsync();
+      
+        Task<Employee?> GetByIdAsync(int EmployeeID);
+
+        
+        Task InsertAsync(Employee employee);
+
+        
+        Task UpdateAsync(Employee employee);
+
+       
+        Task DeleteAsync(int employeeId);
+
+     
+        Task SaveAsync();
+    }
+}
+
+2)Adding EmployeeRepository Class
+Now, we need to add the EmployeeRepository class by implementing the IEmployeeRepository interface and providing implementations for the interface methods. To do so, add a class file within the Repository folder named EmployeeRepository.cs 
+
+
+using CRUDinCoreMVC.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace CRUDinCoreMVC.Repository
+{
+    public class EmployeeRepository : IEmployeeRepository
+    {
+      
+        public EmployeeRepository(EFCoreDbContext context)
+        {
+            _context = context;
+        }
+
+        
+        public async Task<IEnumerable<Employee>> GetAllAsync()
+        {
+            return await _context.Employees.Include(e => e.Department).ToListAsync();
+        }
+
+       
+        public async Task<Employee?> GetByIdAsync(int EmployeeID)
+        {
+            var employee = await _context.Employees
+               .Include(e => e.Department)
+               .FirstOrDefaultAsync(m => m.EmployeeId == EmployeeID);
+
+            return employee;
+        }
+
+       
+        public async Task InsertAsync(Employee employee)
+        {
+            await _context.Employees.AddAsync(employee);
+        }
+
+     
+        public async Task UpdateAsync(Employee employee)
+        {
+            _context.Employees.Update(employee);
+        }
+
+      
+        public async Task DeleteAsync(int employeeId)
+        {
+            var employee = await _context.Employees.FindAsync(employeeId);
+            if (employee != null)
+            {
+                _context.Employees.Remove(employee);
+            }
+        }
+
+       
+        public async Task SaveAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
+    }
+}
+
+3)Using Employee Repository inside Employees Controller:
+
+Next, modify the EmployeesController to Use Employee Repository instead of DbContext and DbSet Properties to perform the CRUD operations on the Employee entity as follows:
+
+public class EmployeesController : Controller
+    {
+       
+        private readonly EFCoreDbContext _context;
+        
+        private readonly IEmployeeRepository _employeeRepository;
+        public EmployeesController(IEmployeeRepository employeeRepository, EFCoreDbContext context)
+        {
+            _employeeRepository = employeeRepository;
+            _context = context;
+        }
+        
+        public async Task<IActionResult> Index()
+        {
+            var employees = await _employeeRepository.GetAllAsync();
+            return View(employees);
+        }
+        
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var employee = await _employeeRepository.GetByIdAsync(Convert.ToInt32(id));
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            return View(employee);
+        }
+        
+        public IActionResult Create()
+        {
+            ViewData["DepartmentId"] = new SelectList(_context.Departments, "DepartmentId", "Name");
+            return View();
+        }
+        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("EmployeeId,Name,Email,Position,DepartmentId")] Employee employee)
+        {
+            if (ModelState.IsValid)
+            {
+                await _employeeRepository.InsertAsync(employee);
+                //Call SaveAsync to Insert the data into the database
+                await _employeeRepository.SaveAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["DepartmentId"] = new SelectList(_context.Departments, "DepartmentId", "Name", employee.DepartmentId);
+            return View(employee);
+        }
+       
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null )
+            {
+                return NotFound();
+            }
+            var employee = await _employeeRepository.GetByIdAsync(Convert.ToInt32(id));
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            ViewData["DepartmentId"] = new SelectList(_context.Departments, "DepartmentId", "Name", employee.DepartmentId);
+            return View(employee);
+        }
+   
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("EmployeeId,Name,Email,Position,DepartmentId")] Employee employee)
+        {
+            if (id != employee.EmployeeId)
+            {
+                return NotFound();
+            }
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    await _employeeRepository.UpdateAsync(employee);
+                    await _employeeRepository.SaveAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    var emp = await _employeeRepository.GetByIdAsync(employee.EmployeeId);
+                    if (emp == null)
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["DepartmentId"] = new SelectList(_context.Departments, "DepartmentId", "Name", employee.DepartmentId);
+            return View(employee);
+        }
+        // GET: Employees/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var employee = await _employeeRepository.GetByIdAsync(Convert.ToInt32(id));
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            return View(employee);
+        }
+        // POST: Employees/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var employee = await _employeeRepository.GetByIdAsync(id);
+            if (employee != null)
+            {
+                await _employeeRepository.DeleteAsync(id);
+                await _employeeRepository.SaveAsync();
+            }
+            
+            return RedirectToAction(nameof(Index));
+        }
+    }
+
+4)Registering the EmployeeRepository:
+Next, we need to register the IEmployeeRepositiry and EmployeeRepositiry to the built-in dependency injection container. So, add the following line to your Program class:
+
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();

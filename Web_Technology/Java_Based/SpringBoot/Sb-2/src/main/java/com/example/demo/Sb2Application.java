@@ -1,0 +1,80 @@
+package com.example.demo;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.data.domain.Sort;
+
+import com.example.demo.entities.EmployeeEntity;
+import com.example.demo.repositories.EmployeeCrud;
+
+@SpringBootApplication
+public class Sb2Application {
+
+    private final EmployeeCrud employeeCrud;
+
+    Sb2Application(EmployeeCrud employeeCrud) {
+        this.employeeCrud = employeeCrud;
+    }
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext ac = SpringApplication.run(Sb2Application.class, args);
+		EmployeeCrud bean = ac.getBean(EmployeeCrud.class);
+		
+//		bean.save(new EmployeeEntity(12, "raju2", "add2", 1200));
+//		bean.save(new EmployeeEntity(13, "raju3", "add3", 1300)); // also used for update
+		
+//		crud repo
+//		List <EmployeeEntity> list1 = bean.findAll();
+//		for(EmployeeEntity emp: list1) {
+//			System.out.println(emp);
+//		}
+		
+		
+//		jpa repo
+//		List <EmployeeEntity> list2 = bean.findAll(Sort.by("esalary").descending());
+//		for(EmployeeEntity emp: list2) {
+//			System.out.println(emp);
+//		}
+		
+		
+		
+		
+//		Optional<EmployeeEntity> byId = bean.findById(12);
+//		EmployeeEntity employeeEntity = byId.get();
+//		System.out.println(employeeEntity);
+		
+//		bean.deleteAll();
+//		bean.deleteById(12);
+		
+		
+//		int saveMyData = bean.saveMyData(14, "raju4", "add4", 1400);
+//		System.out.println(saveMyData);
+		
+		
+//		List<EmployeeEntity> myData = bean.readMyData();
+//		System.out.println(myData);
+		
+		
+//		List<EmployeeEntity> myAllData = bean.readMyAllData();
+//		System.out.println(myAllData);
+		
+		
+		
+		
+//		List<EmployeeEntity> bySalary = bean.findByEsalary(1200);
+//		System.out.println(bySalary);
+		
+		
+		List<EmployeeEntity> byEsalaryLessThan = bean.findByEsalaryLessThan(5000);
+		System.out.println(byEsalaryLessThan);
+		
+		
+		
+		System.out.println("TEST...");
+	}
+
+}

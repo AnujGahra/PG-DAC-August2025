@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+
+</head>
+<body>
+    <table border="1" width:"100%" style="font-family:Arial">
+        <tr>
+            <td colspan="2" style="text-align:center;
+background-color:yellow;color:blue">
+                <h3>Liberty Computers</h3>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:100px">
+                <h3>Menu</h3>
+
+                @Html.ActionLink("Home Page", "Index", "Home")
+            </td>
+            <td style="width:1600px;height:300px">
+                @RenderBody()
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center;
+ font-size:x-small;background-color:yellow;color:blue">
+                <h3>VidyaNagar Hubli</h3>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

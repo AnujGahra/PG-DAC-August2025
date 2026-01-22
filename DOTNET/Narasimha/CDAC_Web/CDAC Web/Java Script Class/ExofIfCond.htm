@@ -1,0 +1,38 @@
+<html>
+<head>
+<script type="text/javascript">
+function show()
+{
+   var x =document.f1.t1.value;
+   console.log(x);
+   if( x>=35 &&x<=100)
+{
+       console.log("Passed");     
+        alert("U Have Passed");
+	  return true;
+   }else
+{
+        console.log("Failed");
+      alert("U Have Failed or Invalid Number Entered");
+	  return false;
+   }
+}
+</script>
+</head>
+<body>
+<center>
+<br>
+<br>
+Wel Come To My Page 
+<br>
+<form name="f1">
+Enter Marks and Press Button To See Result
+<br>
+<Input type="text" name="t1">
+<br>
+<Input type="button" name="b1" value="Result"
+ onclick="return show();"><BR>
+</form>
+</center>
+</html>
+

@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Enter Data Here</h2>
+
+<br />
+@using (Html.BeginForm("Show", "Home", FormMethod.Post))
+{
+    @Html.Label("Enter Student No")
+    @Html.TextBox("Stno")
+    <br />
+    @Html.Label("Enter First Name")
+    @Html.TextBox("Fname")
+    <br />
+    @Html.Label("Enter Last Name")
+    @Html.TextBox("Lname")
+    <br />
+    @Html.Label("Enter Marks")
+    @Html.TextBox("Marks")
+    <br />
+    @Html.TextBox("Text", "Submit", new { type = "Submit" })
+}

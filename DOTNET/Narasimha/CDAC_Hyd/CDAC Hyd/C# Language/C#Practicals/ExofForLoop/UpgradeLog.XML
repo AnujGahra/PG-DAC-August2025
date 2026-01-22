@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExofForLoop">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExofForLoop\ExofForLoop.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExofForLoop\ExofForLoop.suo">
+</Property><Property Name="Date" Value="31 December 2014">
+</Property><Property Name="Time" Value="11:59">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExofForLoop.sln" Description="File successfully backed up as D:\LangBasics\ExofForLoop\Backup\ExofForLoop.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExofForLoop.suo" Description="File successfully backed up as D:\LangBasics\ExofForLoop\Backup\ExofForLoop.suo">
+</Event><Event ErrorLevel="0" Project="ExofForLoop" Source="ExofForLoop\ExofForLoop.csproj" Description="Project file successfully backed up as D:\LangBasics\ExofForLoop\Backup\ExofForLoop\ExofForLoop.csproj">
+</Event><Event ErrorLevel="0" Project="ExofForLoop" Source="ExofForLoop\Program.cs" Description="File successfully backed up as D:\LangBasics\ExofForLoop\Backup\ExofForLoop\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExofForLoop" Source="ExofForLoop\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExofForLoop\Backup\ExofForLoop\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExofForLoop" Source="ExofForLoop\ExofForLoop.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExofForLoop" Source="ExofForLoop\ExofForLoop.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExofForLoop.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExofForLoop.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExofForLoop" Source="ExofForLoop\ExofForLoop.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

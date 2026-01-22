@@ -1,0 +1,13 @@
+NET Core and Mono are both open source, cross-platform implementations of the .NET framework, but they have some key differences:
+
+Architecture: .NET Core is designed to be a modern, modular, and cross-platform implementation of the .NET framework, while Mono is designed to be a cross-platform, open-source implementation of the .NET framework that was originally developed for Linux.
+
+Compatibility: .NET Core is designed to be highly compatible with the .NET framework, making it easier to port existing .NET applications to .NET Core. Mono, on the other hand, is less compatible with the .NET framework, which can make it more difficult to port existing .NET applications to Mono.
+
+Focus: .NET Core is primarily focused on supporting web development and cloud-based applications, while Mono is focused on supporting a wide range of applications, including desktop and mobile applications, gaming, and more.
+
+Community: .NET Core has a larger and more active community than Mono, which means that there is more support, documentation, and third-party libraries available for .NET Core.
+
+Performance: .NET Core is generally considered to be faster and more performant than Mono, especially for web and cloud-based applications.
+
+In summary, .NET Core is a modern, modular, and highly compatible implementation of the .NET framework that is primarily focused on web development and cloud-based applications, while Mono is a cross-platform implementation of the .NET framework that is more broadly focused and less compatible with the .NET framework. .NET Core has a larger and more active community and is generally faster and more performant than Mono.

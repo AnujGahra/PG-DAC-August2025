@@ -1,0 +1,5 @@
+C:\SouceEdge Session 1\LangBasics\ExofAutoImpArray\ExofAutoImpArray\bin\Debug\ExofAutoImpArray.exe
+C:\SouceEdge Session 1\LangBasics\ExofAutoImpArray\ExofAutoImpArray\bin\Debug\ExofAutoImpArray.pdb
+C:\SouceEdge Session 1\LangBasics\ExofAutoImpArray\ExofAutoImpArray\obj\Debug\ExofAutoImpArray.csprojResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofAutoImpArray\ExofAutoImpArray\obj\Debug\ExofAutoImpArray.exe
+C:\SouceEdge Session 1\LangBasics\ExofAutoImpArray\ExofAutoImpArray\obj\Debug\ExofAutoImpArray.pdb

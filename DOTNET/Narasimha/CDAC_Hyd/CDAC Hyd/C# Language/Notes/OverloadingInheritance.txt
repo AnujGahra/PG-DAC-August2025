@@ -1,0 +1,48 @@
+ When a derived class inherits from a base class, it can also overload methods defined in the base class. This means you can have methods with the same name and different signatures in both the base class and the derived class. The compiler resolves which method to call based on the arguments provided during the method call. 
+
+class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("Generic animal sound");
+    }
+
+    public void MakeSound(int numTimes)
+    {
+        for (int i = 0; i < numTimes; i++)
+        {
+            MakeSound();
+        }
+    }
+}
+
+class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("Woof!");
+    }
+
+    public void MakeSound(string sound)
+    {
+        Console.WriteLine(sound);
+    }
+}
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Animal animal = new Animal();
+        animal.MakeSound(); // Output: Generic animal sound
+        animal.MakeSound(2); // Output: Generic animal sound (twice)
+
+        Dog dog = new Dog();
+        dog.MakeSound(); // Output: Woof!
+        dog.MakeSound(3); // Output: Woof! (thrice)
+        dog.MakeSound("Bark!"); // Output: Bark!
+
+        Animal animalDog = new Dog();
+        animalDog.MakeSound(); // Output: Woof! (polymorphism)
+    }
+}

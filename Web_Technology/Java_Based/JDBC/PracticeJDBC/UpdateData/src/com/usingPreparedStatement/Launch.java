@@ -1,0 +1,46 @@
+package com.usingPreparedStatement;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class Launch {
+
+	public static void main(String[] args) {
+		
+		
+		String url = "jdbc:mysql://localhost:3306/jdbctest";
+        String username = "root";
+        String password = "Hacker@anuj001";
+
+        // Update values
+        int id = 1;
+        String name = "Rahul";
+        int age = 25;
+        String city = "Mumbai";
+
+        // Parameterized query
+        String query = "UPDATE students SET name = ?, age = ?, city = ? WHERE id = ?";
+
+        try (
+            Connection conn = DriverManager.getConnection(url, username, password);
+            PreparedStatement pstmt = conn.prepareStatement(query)
+        ) {
+
+            // Set values safely
+            pstmt.setString(1, name);
+            pstmt.setInt(2, age);
+            pstmt.setString(3, city);
+            pstmt.setInt(4, id);
+
+            int affected = pstmt.executeUpdate();
+            System.out.println(affected + " rows updated using PreparedStatement.");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+	}
+
+}

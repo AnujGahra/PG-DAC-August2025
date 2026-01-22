@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExofPropException">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExofPropException\ExofPropException.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExofPropException\ExofPropException.suo">
+</Property><Property Name="Date" Value="06 January 2015">
+</Property><Property Name="Time" Value="12:51">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExofPropException.sln" Description="File successfully backed up as D:\LangBasics\ExofPropException\Backup\ExofPropException.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExofPropException.suo" Description="File successfully backed up as D:\LangBasics\ExofPropException\Backup\ExofPropException.suo">
+</Event><Event ErrorLevel="0" Project="ExofPropException" Source="ExofPropException\ExofPropException.csproj" Description="Project file successfully backed up as D:\LangBasics\ExofPropException\Backup\ExofPropException\ExofPropException.csproj">
+</Event><Event ErrorLevel="0" Project="ExofPropException" Source="ExofPropException\Program.cs" Description="File successfully backed up as D:\LangBasics\ExofPropException\Backup\ExofPropException\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExofPropException" Source="ExofPropException\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExofPropException\Backup\ExofPropException\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExofPropException" Source="ExofPropException\ExofPropException.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExofPropException" Source="ExofPropException\ExofPropException.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExofPropException.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExofPropException.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExofPropException" Source="ExofPropException\ExofPropException.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

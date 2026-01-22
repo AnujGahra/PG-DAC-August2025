@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+
+
+
+	<!-- First method using setter -->
+	<!-- <bean id="emp" class="com.mainapp.Employee"> <property name="eid" value="1232"></property> 
+		<property name="ename" value="Raju"></property> <property name="listofBooks"> 
+		<list> <value>JavaByCodeHunt</value> <value>PremChandKIKahaniya</value> <value>ANUJ 
+		ke Shahar mein </value> </list> </property> </bean> -->
+		
+
+
+
+	<!-- for ouwn custom list like LinkedList and 2nd method using Standlone 
+		list -->
+
+<!-- 	<bean id="emp" class="com.mainapp.Employee">
+		<property name="eid" value="1232"></property>
+		<property name="ename" value="Raju"></property>
+		<property name="listofBooks" ref="myList">
+		</property>
+	</bean>
+	Stand ALone List
+	<util:list id="myList" list-class="java.util.LinkedList">
+		<value>JavaByCodeHunt</value>
+		<value>PremChandKIKahaniya</value>
+		<value>ANUJ ke Shahar mein</value>
+	</util:list>
+ -->
+
+
+	<bean id="emp" class="com.mainapp.Employee">
+		<property name="eid" value="1232"></property>
+		<property name="ename" value="Raju"></property>
+		<property name="listofBooks" ref="myList">
+
+		</property>
+	</bean>
+
+
+	<!-- Separate bean Tag -->
+	<bean id="myList" class="java.util.LinkedList">
+		<constructor-arg>
+			<list>
+				<value>JavaByCodeHunt</value>
+				<value>PremChandKIKahaniya</value>
+				<value>ANUJ
+					ke Shahar mein
+				</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+<!-- 	
+	<bean id="acc1" class="com.mainapp.Account"></bean>
+	<bean id="acc2" class="com.mainapp.Account"></bean>
+	<bean id="acc3" class="com.mainapp.Account"></bean>
+	
+		<bean id="emp" class="com.mainapp.Employee">
+		<property name="eid" value="1232"></property>
+		<property name="ename" value="Raju"></property>
+		<property name="listofAccount">
+		
+		<list>
+							<value>JavaByCodeHunt</value>
+				<value>PremChandKIKahaniya</value>
+				<value>ANUJ
+					ke Shahar mein
+				</value>
+				
+				<ref bean="acc1"/>
+				<ref bean="acc2"/>
+				<ref bean="acc3"/>
+				
+				
+		</list>
+
+		</property>
+	</bean> -->
+	
+	
+	
+	<!-- Standlone List for Account -->
+	
+<!-- 		<bean id="acc1" class="com.mainapp.Account"></bean>
+	<bean id="acc2" class="com.mainapp.Account"></bean>
+	<bean id="acc3" class="com.mainapp.Account"></bean>
+	
+		<bean id="emp" class="com.mainapp.Employee">
+		<property name="eid" value="1232"></property>
+		<property name="ename" value="Raju"></property>
+		<property name="listofBooks" ref="myList">
+		</property>
+	</bean>
+	Stand ALone List
+	<util:list id="myListAccounts" list-class="java.util.LinkedList">
+				<ref bean="acc1"/>
+				<ref bean="acc2"/>
+				<ref bean="acc3"/>
+	</util:list> -->
+	
+	
+	
+
+	
+
+
+
+</beans>

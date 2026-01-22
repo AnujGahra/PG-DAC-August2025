@@ -1,0 +1,20 @@
+﻿@using System.Globalization
+@{
+    ViewData["Title"] = "Home Page";
+    var culture = CultureInfo.CurrentCulture;
+    var isHindi = culture.Name.StartsWith("hi", StringComparison.OrdinalIgnoreCase);
+}
+
+<div class="text-center">
+    <h1 class="display-4">@(isHindi ? "स्वागत" : "Welcome")</h1>
+    <p>@(isHindi ? "सीखना" : "Learn about") <a href="https://learn.microsoft.com/aspnet/core">@(isHindi ? "अपना पहला ASP.NET Core कोर वेब ऐप बनाएं" : "building Web apps with ASP.NET Core")</a>.</p>
+</div>
+
+<div class="mt-4 text-center">
+    <form action="/Home/SetLanguage" method="post" class="form-horizontal" role="form">
+        <select name="culture" class="form-control" style="display: inline-block; width: auto;" onchange="this.form.submit();">
+            <option value="en-US" selected="@(!isHindi)">English</option>
+            <option value="hi-IN" selected="@(isHindi)">हिंदी</option>
+        </select>
+    </form>
+</div>

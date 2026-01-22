@@ -1,0 +1,5 @@
+C:\LangBasics\ExofProcFunct\ExofProcFunct\bin\Debug\ExofProcFunct.exe
+C:\LangBasics\ExofProcFunct\ExofProcFunct\bin\Debug\ExofProcFunct.pdb
+C:\LangBasics\ExofProcFunct\ExofProcFunct\obj\Debug\ResolveAssemblyReference.cache
+C:\LangBasics\ExofProcFunct\ExofProcFunct\obj\Debug\ExofProcFunct.exe
+C:\LangBasics\ExofProcFunct\ExofProcFunct\obj\Debug\ExofProcFunct.pdb

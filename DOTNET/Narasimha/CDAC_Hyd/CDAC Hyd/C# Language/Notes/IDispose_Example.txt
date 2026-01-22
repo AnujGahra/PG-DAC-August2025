@@ -1,0 +1,20 @@
+public class TextFileWriter : IDisposable
+{
+    private StreamWriter _streamWriter;
+
+    public void WriteTextToFile(string text)
+    {
+        _streamWriter = new StreamWriter("textfile.txt", true);
+        _streamWriter.WriteLine(text);
+    }
+
+    public void Dispose()
+    {
+        if (_streamWriter != null)
+        {
+            _streamWriter.Close();
+            _streamWriter.Dispose();
+            _streamWriter = null;
+        }
+    }
+}

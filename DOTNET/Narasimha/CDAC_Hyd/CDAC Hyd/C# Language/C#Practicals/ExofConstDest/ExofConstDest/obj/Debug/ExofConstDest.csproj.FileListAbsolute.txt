@@ -1,0 +1,25 @@
+D:\LangBasics\ExofConstDest\ExofConstDest\bin\Debug\ExofConstDest.exe
+D:\LangBasics\ExofConstDest\ExofConstDest\bin\Debug\ExofConstDest.pdb
+D:\LangBasics\ExofConstDest\ExofConstDest\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofConstDest\ExofConstDest\obj\Debug\ExofConstDest.exe
+D:\LangBasics\ExofConstDest\ExofConstDest\obj\Debug\ExofConstDest.pdb
+C:\LangBasics\ExofConstDest\ExofConstDest\obj\Debug\ExofConstDest.exe
+C:\LangBasics\ExofConstDest\ExofConstDest\obj\Debug\ExofConstDest.pdb
+C:\LangBasics\ExofConstDest\ExofConstDest\bin\Debug\ExofConstDest.exe
+C:\LangBasics\ExofConstDest\ExofConstDest\bin\Debug\ExofConstDest.pdb
+C:\LangBasics\ExofConstDest\ExofConstDest\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofConstDest\ExofConstDest\obj\Debug\ExofConstDest.exe
+C:\SouceEdge Session 1\LangBasics\ExofConstDest\ExofConstDest\obj\Debug\ExofConstDest.pdb
+C:\SouceEdge Session 1\LangBasics\ExofConstDest\ExofConstDest\bin\Debug\ExofConstDest.exe
+C:\SouceEdge Session 1\LangBasics\ExofConstDest\ExofConstDest\bin\Debug\ExofConstDest.pdb
+C:\SouceEdge Session 1\LangBasics\ExofConstDest\ExofConstDest\obj\Debug\ExofConstDest.csprojResolveAssemblyReference.cache
+E:\krishna sir\C#Practicals\ExofConstDest\ExofConstDest\obj\Debug\ExofConstDest.exe
+E:\krishna sir\C#Practicals\ExofConstDest\ExofConstDest\obj\Debug\ExofConstDest.pdb
+E:\krishna sir\C#Practicals\ExofConstDest\ExofConstDest\bin\Debug\ExofConstDest.exe
+E:\krishna sir\C#Practicals\ExofConstDest\ExofConstDest\bin\Debug\ExofConstDest.pdb
+E:\krishna sir\C#Practicals\ExofConstDest\ExofConstDest\obj\Debug\ExofConstDest.csprojResolveAssemblyReference.cache
+D:\krishna sir\C#Practicals\ExofConstDest\ExofConstDest\bin\Debug\ExofConstDest.exe.config
+D:\krishna sir\C#Practicals\ExofConstDest\ExofConstDest\obj\Debug\ExofConstDest.exe
+D:\krishna sir\C#Practicals\ExofConstDest\ExofConstDest\obj\Debug\ExofConstDest.pdb
+D:\krishna sir\C#Practicals\ExofConstDest\ExofConstDest\bin\Debug\ExofConstDest.exe
+D:\krishna sir\C#Practicals\ExofConstDest\ExofConstDest\bin\Debug\ExofConstDest.pdb

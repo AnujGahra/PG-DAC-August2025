@@ -1,0 +1,5 @@
+package com.nextlearn.portfolio.dto;
+
+public class ContactDto {
+
+}

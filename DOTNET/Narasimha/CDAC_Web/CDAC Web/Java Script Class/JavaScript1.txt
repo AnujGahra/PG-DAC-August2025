@@ -1,0 +1,92 @@
+1. Ex of Variables and DataType
+
+<html>
+<head>
+<title>Java Script Variables</title>
+</head>
+<body>
+These are Java Script Variables
+<br/><br/>
+<script  language="javascript">
+fname="krishna";
+fees=1000;
+var amount=100.25;
+result=true;
+document.write("My Name is "+fname+"<br>");
+document.write("Your Fees is "+fees+"<br>");
+document.write("You Pay Amount "+amount+"<br>");
+document.write("**************"+"<br>");
+document.write("Variable fname is "+typeof(fname)+"<br>");
+document.write("Variable fees is "+typeof(fees)+"<br>");
+document.write("Variable amount is "+typeof(amount)+"<br>");
+document.write("Variable Result  is "+typeof(result)+"<br>");
+</script>
+</body>
+</html>
+
+**********************************************
+2. Repeating Var
+
+<html>
+<head>
+<title>Java Script Variables</title>
+</head>
+<body>
+These are Java Script Variables
+<br/><br/>
+<script  language="javascript">
+var fname="krishna";
+document.write("FName has Value "+fname+"<br>");
+document.write("Variable fname is "+typeof(fname)+"<br>");
+document.write("*******************"+"<br>");
+var fname=100;
+document.write("FName has Value "+fname+"<br>");
+document.write("Variable fname is "+typeof(fname)+"<br>");
+document.write("*******************"+"<br>");
+var fname=true;
+document.write("FName has Value "+fname+"<br>");
+document.write("Variable fname is "+typeof(fname)+"<br>");
+document.write("*******************"+"<br>");
+</script>
+</body>
+</html>
+******************************************
+3.Ex Undefined And Null
+<html>
+<head>
+<title>Java Script Undefined And Null Variables</title>
+</head>
+<body>
+These are Java Script Variables
+<br/><br/>
+<script  language="javascript">
+var fname;
+alert(fname);
+fname="krishna";
+alert(typeof(fname))
+var lname=null;
+alert(lname);
+alert(typeof(lname))
+</script>
+</body>
+</html>
+
+****************************************
+4. Difference Between Var And Let
+<html>
+<body>
+<script type="text/javascript">
+   var name="Liberty";
+   function Hello()
+  {	
+         let nm="krish";
+         alert(nm);
+         alert(name);
+  }   
+Hello();
+
+     alert(name);
+</script>
+</body>
+</html>
+

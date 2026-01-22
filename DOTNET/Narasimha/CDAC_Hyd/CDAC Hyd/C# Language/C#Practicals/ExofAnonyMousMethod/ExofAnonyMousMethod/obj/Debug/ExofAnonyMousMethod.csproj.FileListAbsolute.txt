@@ -1,0 +1,10 @@
+C:\SouceEdge Session 1\LangBasics\ExofAnonyMousMethod\ExofAnonyMousMethod\bin\Debug\ExofAnonyMousMethod.exe
+C:\SouceEdge Session 1\LangBasics\ExofAnonyMousMethod\ExofAnonyMousMethod\bin\Debug\ExofAnonyMousMethod.pdb
+C:\SouceEdge Session 1\LangBasics\ExofAnonyMousMethod\ExofAnonyMousMethod\obj\Debug\ExofAnonyMousMethod.csprojResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofAnonyMousMethod\ExofAnonyMousMethod\obj\Debug\ExofAnonyMousMethod.exe
+C:\SouceEdge Session 1\LangBasics\ExofAnonyMousMethod\ExofAnonyMousMethod\obj\Debug\ExofAnonyMousMethod.pdb
+E:\krishna sir\C#Practicals\ExofAnonyMousMethod\ExofAnonyMousMethod\obj\Debug\ExofAnonyMousMethod.exe
+E:\krishna sir\C#Practicals\ExofAnonyMousMethod\ExofAnonyMousMethod\obj\Debug\ExofAnonyMousMethod.pdb
+E:\krishna sir\C#Practicals\ExofAnonyMousMethod\ExofAnonyMousMethod\bin\Debug\ExofAnonyMousMethod.exe
+E:\krishna sir\C#Practicals\ExofAnonyMousMethod\ExofAnonyMousMethod\bin\Debug\ExofAnonyMousMethod.pdb
+E:\krishna sir\C#Practicals\ExofAnonyMousMethod\ExofAnonyMousMethod\obj\Debug\ExofAnonyMousMethod.csprojResolveAssemblyReference.cache

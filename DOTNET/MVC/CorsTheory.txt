@@ -1,0 +1,19 @@
+Cross-Origin Resource Sharing (CORS) is a standard mechanism that allows servers to specify who can access their resources and how.We will explore what Same-Origin Policy (SOP) and CORS are, how CORS works under the hood, and how to configure it in ASP.NET Core.
+
+What is the Same-Origin Policy (SOP)?
+----------------------------------------------------
+The Same-Origin Policy (SOP) is a fundamental security mechanism enforced by all modern web browsers to protect users and their data. In other words, SOP stops a website you visit from accessing data using JavaScript or AJAX calls from another website in your browser without permission.
+
+An origin is defined by the combination of three elements in a URL:
+
+Protocol: HTTP or HTTPS
+Domain: The website’s domain name (e.g., example.com)
+Port: The port number used for the connection (e.g., 80 for HTTP, 443 for HTTPS)
+If any of these (protocol, domain, or port) are different, then they are considered different origins. For example, https://example.com:443 is a different origin from http://example.com:80 because the protocol and port differ.
+
+
+What is CORS?
+--------------------
+Cross-Origin Resource Sharing (CORS) is a protocol that relaxes the Same-Origin Policy under controlled conditions. It allows servers to specify which external origins (web applications) are permitted to access their resources using JavaScript or jQuery via Web Browsers. This is essential for modern web applications, where APIs and frontends often reside on different domains or ports.
+
+The server includes specific HTTP headers in its responses indicating which origins, HTTP methods, and request headers are allowed. These headers guide the browser to either allow or block cross-origin requests

@@ -1,0 +1,54 @@
+JavaScript const Keyword
+-----------------------------------
+ES6 provides a new way of declaring a constant by using the const keyword. The const keyword creates a read-only reference to a value.
+
+Syntax: const VARIABLE_NAME = value;
+
+JavaScript const Keyword Properties:
+1)A constant variable can be declared using the keyword const.
+2)It must have an assignment with value.
+3)Variable created by cost keyword are immutable that means we can’t change the value or reassign them with different values. 
+4)Any attempt of re-assigning a const variable will result in JavaScript Type error.
+5)Cannot be reassigned.
+6) Works In Block scope
+****************************************************
+Ex 1
+
+<html>
+<head>
+    <title>const variable cannot be reassigned example</title>
+</head>
+<body>
+    <script type="text/javascript">
+            const x = 12;
+            x = 13;
+            x += 1;
+    </script>
+</body>
+</html>
+
+Ex 2 
+
+<html>
+<head>
+    <title>const variable which contains the Block Scope example</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const x = 22;
+        {
+            const x = 90;
+            console.log(x);
+            {
+                const x = 77;
+                console.log(x);
+            }
+            {
+                const x = 45;
+                console.log(x);
+            }
+        }
+        console.log(x);
+    </script>    
+</body>
+</html>

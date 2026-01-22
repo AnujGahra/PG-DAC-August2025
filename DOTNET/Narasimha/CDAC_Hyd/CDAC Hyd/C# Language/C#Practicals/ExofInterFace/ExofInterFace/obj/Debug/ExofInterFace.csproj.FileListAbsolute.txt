@@ -1,0 +1,23 @@
+D:\LangBasics\ExofInterFace\ExofInterFace\bin\Debug\ExofInterFace.exe
+D:\LangBasics\ExofInterFace\ExofInterFace\bin\Debug\ExofInterFace.pdb
+D:\LangBasics\ExofInterFace\ExofInterFace\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofInterFace\ExofInterFace\obj\Debug\ExofInterFace.exe
+D:\LangBasics\ExofInterFace\ExofInterFace\obj\Debug\ExofInterFace.pdb
+C:\LangBasics\ExofInterFace\ExofInterFace\obj\Debug\ExofInterFace.exe
+C:\LangBasics\ExofInterFace\ExofInterFace\obj\Debug\ExofInterFace.pdb
+C:\LangBasics\ExofInterFace\ExofInterFace\obj\Debug\ResolveAssemblyReference.cache
+C:\LangBasics\ExofInterFace\ExofInterFace\bin\Debug\ExofInterFace.exe
+C:\LangBasics\ExofInterFace\ExofInterFace\bin\Debug\ExofInterFace.pdb
+C:\SouceEdge Session 1\LangBasics\ExofInterFace\ExofInterFace\obj\Debug\ExofInterFace.exe
+C:\SouceEdge Session 1\LangBasics\ExofInterFace\ExofInterFace\obj\Debug\ExofInterFace.pdb
+C:\SouceEdge Session 1\LangBasics\ExofInterFace\ExofInterFace\bin\Debug\ExofInterFace.exe
+C:\SouceEdge Session 1\LangBasics\ExofInterFace\ExofInterFace\bin\Debug\ExofInterFace.pdb
+C:\SouceEdge Session 1\LangBasics\ExofInterFace\ExofInterFace\obj\Debug\ExofInterFace.csprojResolveAssemblyReference.cache
+E:\krishna sir\C#Practicals\ExofInterFace\ExofInterFace\obj\Debug\ExofInterFace.exe
+E:\krishna sir\C#Practicals\ExofInterFace\ExofInterFace\obj\Debug\ExofInterFace.pdb
+D:\krishna sir\C#Practicals\ExofInterFace\ExofInterFace\bin\Debug\ExofInterFace.exe.config
+D:\krishna sir\C#Practicals\ExofInterFace\ExofInterFace\obj\Debug\ExofInterFace.exe
+D:\krishna sir\C#Practicals\ExofInterFace\ExofInterFace\obj\Debug\ExofInterFace.pdb
+D:\krishna sir\C#Practicals\ExofInterFace\ExofInterFace\bin\Debug\ExofInterFace.exe
+D:\krishna sir\C#Practicals\ExofInterFace\ExofInterFace\bin\Debug\ExofInterFace.pdb
+D:\krishna sir\C#Practicals\ExofInterFace\ExofInterFace\obj\Debug\ExofInterFace.csprojResolveAssemblyReference.cache

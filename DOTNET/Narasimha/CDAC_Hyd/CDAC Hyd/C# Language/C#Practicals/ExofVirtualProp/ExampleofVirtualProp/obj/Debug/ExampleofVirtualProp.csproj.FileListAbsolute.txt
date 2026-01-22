@@ -1,0 +1,22 @@
+c:\LangBasics\ExampleofVirtualProp\ExampleofVirtualProp\bin\Debug\ExampleofVirtualProp.exe
+c:\LangBasics\ExampleofVirtualProp\ExampleofVirtualProp\bin\Debug\ExampleofVirtualProp.pdb
+c:\LangBasics\ExampleofVirtualProp\ExampleofVirtualProp\obj\Debug\ResolveAssemblyReference.cache
+c:\LangBasics\ExampleofVirtualProp\ExampleofVirtualProp\obj\Debug\ExampleofVirtualProp.exe
+c:\LangBasics\ExampleofVirtualProp\ExampleofVirtualProp\obj\Debug\ExampleofVirtualProp.pdb
+D:\LangBasics\ExampleofVirtualProp\ExampleofVirtualProp\obj\Debug\ExampleofVirtualProp.exe
+D:\LangBasics\ExampleofVirtualProp\ExampleofVirtualProp\obj\Debug\ExampleofVirtualProp.pdb
+D:\LangBasics\ExampleofVirtualProp\ExampleofVirtualProp\bin\Debug\ExampleofVirtualProp.exe
+D:\LangBasics\ExampleofVirtualProp\ExampleofVirtualProp\bin\Debug\ExampleofVirtualProp.pdb
+D:\LangBasics\ExampleofVirtualProp\ExampleofVirtualProp\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofVirtualProp\ExampleofVirtualProp\obj\Debug\ExampleofVirtualProp.exe
+C:\SouceEdge Session 1\LangBasics\ExofVirtualProp\ExampleofVirtualProp\obj\Debug\ExampleofVirtualProp.pdb
+C:\SouceEdge Session 1\LangBasics\ExofVirtualProp\ExampleofVirtualProp\bin\Debug\ExampleofVirtualProp.exe
+C:\SouceEdge Session 1\LangBasics\ExofVirtualProp\ExampleofVirtualProp\bin\Debug\ExampleofVirtualProp.pdb
+E:\krishna sir\C#Practicals\ExofVirtualProp\ExampleofVirtualProp\obj\Debug\ExampleofVirtualProp.exe
+E:\krishna sir\C#Practicals\ExofVirtualProp\ExampleofVirtualProp\obj\Debug\ExampleofVirtualProp.pdb
+D:\krishna sir\C#Practicals\ExofVirtualProp\ExampleofVirtualProp\bin\Debug\ExampleofVirtualProp.exe.config
+D:\krishna sir\C#Practicals\ExofVirtualProp\ExampleofVirtualProp\obj\Debug\ExampleofVirtualProp.exe
+D:\krishna sir\C#Practicals\ExofVirtualProp\ExampleofVirtualProp\obj\Debug\ExampleofVirtualProp.pdb
+D:\krishna sir\C#Practicals\ExofVirtualProp\ExampleofVirtualProp\bin\Debug\ExampleofVirtualProp.exe
+D:\krishna sir\C#Practicals\ExofVirtualProp\ExampleofVirtualProp\bin\Debug\ExampleofVirtualProp.pdb
+D:\krishna sir\C#Practicals\ExofVirtualProp\ExampleofVirtualProp\obj\Debug\ExampleofVirtualProp.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+D:\krishna sir\C#Practicals\OurFirstProg\OurFirstProg\bin\Debug\OurFirstProg.exe
+D:\krishna sir\C#Practicals\OurFirstProg\OurFirstProg\bin\Debug\OurFirstProg.pdb
+D:\krishna sir\C#Practicals\OurFirstProg\OurFirstProg\obj\x86\Debug\OurFirstProg.exe
+D:\krishna sir\C#Practicals\OurFirstProg\OurFirstProg\obj\x86\Debug\OurFirstProg.pdb
+D:\krishna sir\C#Practicals\OurFirstProg\OurFirstProg\obj\x86\Debug\OurFirstProg.csprojResolveAssemblyReference.cache

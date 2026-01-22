@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>empty(), remove(), clone()</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      // ---------------------------------
+      // empty() → removes inner content only
+      // ---------------------------------
+      $("#emptyBtn").click(function () {
+        $("#box1").empty();  // keeps the div, removes text inside
+      });
+
+      // ---------------------------------
+      // remove() → removes element itself
+      // ---------------------------------
+      $("#removeBtn").click(function () {
+        $("#box2").remove(); // deletes the entire element
+      });
+
+      // ---------------------------------
+      // clone() → duplicates an element
+      // ---------------------------------
+      $("#cloneBtn").click(function () {
+        var cloned = $("#box3").clone();  // create copy
+        $("#cloneContainer").append(cloned); // add it to another place
+      });
+
+    });
+  </script>
+
+  <style>
+    .box {
+      border: 2px solid #444;
+      padding: 15px;
+      width: 300px;
+      margin: 10px 0;
+      background: #f4f4f4;
+    }
+    button {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>jQuery empty(), remove(), clone()</h1>
+
+  <!-- Buttons -->
+  <button id="emptyBtn">Use empty()</button>
+  <button id="removeBtn">Use remove()</button>
+  <button id="cloneBtn">Use clone()</button>
+
+  <!-- DIV for empty() -->
+  <div id="box1" class="box">
+    <p>This content will be removed by empty().</p>
+  </div>
+
+  <!-- DIV for remove() -->
+  <div id="box2" class="box">
+    <p>This whole box will be removed by remove().</p>
+  </div>
+
+  <!-- DIV for clone() -->
+  <div id="box3" class="box">
+    <p>This box will be cloned.</p>
+  </div>
+
+  <!-- Cloned elements will appear here -->
+  <h3>Cloned Output:</h3>
+  <div id="cloneContainer"></div>
+
+</body>
+</html>

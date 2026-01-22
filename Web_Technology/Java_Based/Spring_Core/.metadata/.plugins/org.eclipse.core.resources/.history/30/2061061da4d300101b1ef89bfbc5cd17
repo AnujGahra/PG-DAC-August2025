@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- ================================================= -->
+    <!-- ✅ Method 1: Inline <map> (Most common) -->
+    <!-- ================================================= -->
+
+    <bean id="emp" class="com.mainapp.Employee">
+        <property name="eid" value="101"/>
+        <property name="ename" value="Raju"/>
+        <property name="bookMap">
+            <map>
+                <entry key="B1" value="JavaByCodeHunt"/>
+                <entry key="B2" value="PremChandKiKahaniya"/>
+                <entry key="B3" value="Anuj Ke Shahar Mein"/>
+            </map>
+        </property>
+    </bean>
+
+    <!-- ================================================= -->
+    <!-- ✅ Method 2: Standalone MAP (util:map) -->
+    <!-- ================================================= -->
+
+    <util:map id="myBookMap">
+        <entry key="B1" value="JavaByCodeHunt"/>
+        <entry key="B2" value="PremChandKiKahaniya"/>
+        <entry key="B3" value="Anuj Ke Shahar Mein"/>
+    </util:map>
+
+    <bean id="emp2" class="com.mainapp.Employee">
+        <property name="eid" value="102"/>
+        <property name="ename" value="Raju"/>
+        <property name="bookMap" ref="myBookMap"/>
+    </bean>
+
+    <!-- ================================================= -->
+    <!-- ✅ Method 3: Separate Bean with Constructor -->
+    <!-- ================================================= -->
+
+    <bean id="bookMapBean" class="java.util.HashMap">
+        <constructor-arg>
+            <map>
+                <entry key="B1" value="JavaByCodeHunt"/>
+                <entry key="B2" value="PremChandKiKahaniya"/>
+                <entry key="B3" value="Rich Dad Poor Dad"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="emp3" class="com.mainapp.Employee">
+        <property name="eid" value="103"/>
+        <property name="ename" value="Raju"/>
+        <property name="bookMap" ref="bookMapBean"/>
+    </bean>
+
+    <!-- ================================================= -->
+    <!-- ✅ Method 4: Custom MAP Implementation -->
+    <!-- ================================================= -->
+
+    <util:map id="linkedBookMap"
+              map-class="java.util.LinkedHashMap">
+        <entry key="B1" value="JavaByCodeHunt"/>
+        <entry key="B2" value="PremChandKiKahaniya"/>
+        <entry key="B3" value="Anuj Ke Shahar Mein"/>
+    </util:map>
+
+    <bean id="emp4" class="com.mainapp.Employee">
+        <property name="eid" value="104"/>
+        <property name="ename" value="Raju"/>
+        <property name="bookMap" ref="linkedBookMap"/>
+    </bean>
+
+    <!-- ================================================= -->
+    <!-- ✅ Account Object Beans -->
+    <!-- ================================================= -->
+
+    <bean id="acc1" class="com.mainapp.Account">
+        <property name="an" value="111"/>
+        <property name="bankName" value="SBI"/>
+    </bean>
+
+    <bean id="acc2" class="com.mainapp.Account">
+        <property name="an" value="222"/>
+        <property name="bankName" value="HDFC"/>
+    </bean>
+
+    <bean id="acc3" class="com.mainapp.Account">
+        <property name="an" value="333"/>
+        <property name="bankName" value="ICICI"/>
+    </bean>
+
+    <!-- ================================================= -->
+    <!-- ✅ Method 1: Inline <map> of Account Objects -->
+    <!-- ================================================= -->
+
+    <bean id="empAcc1" class="com.mainapp.Employee">
+        <property name="eid" value="201"/>
+        <property name="ename" value="Raju"/>
+        <property name="accountMap">
+            <map>
+                <entry key="1" value-ref="acc1"/>
+                <entry key="2" value-ref="acc2"/>
+                <entry key="3" value-ref="acc3"/>
+            </map>
+        </property>
+    </bean>
+
+    <!-- ================================================= -->
+    <!-- ✅ Method 2: Standalone util:map for Accounts -->
+    <!-- ================================================= -->
+
+    <util:map id="accountMap">
+        <entry key="1" value-ref="acc1"/>
+        <entry key="2" value-ref="acc2"/>
+        <entry key="3" value-ref="acc3"/>
+    </util:map>
+
+    <bean id="empAcc2" class="com.mainapp.Employee">
+        <property name="eid" value="202"/>
+        <property name="ename" value="Raju"/>
+        <property name="accountMap" ref="accountMap"/>
+    </bean>
+
+    <!-- ================================================= -->
+    <!-- ✅ Method 3: Custom MAP Implementation for Accounts -->
+    <!-- ================================================= -->
+
+    <util:map id="linkedAccountMap"
+              map-class="java.util.LinkedHashMap">
+        <entry key="1" value-ref="acc1"/>
+        <entry key="2" value-ref="acc2"/>
+        <entry key="3" value-ref="acc3"/>
+    </util:map>
+
+    <bean id="empAcc3" class="com.mainapp.Employee">
+        <property name="eid" value="203"/>
+        <property name="ename" value="Raju"/>
+        <property name="accountMap" ref="linkedAccountMap"/>
+    </bean>
+
+</beans>

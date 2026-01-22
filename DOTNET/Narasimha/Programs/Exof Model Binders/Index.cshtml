@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Enter Staff Details Here</h2>
+<br />
+<br />
+<center>
+    @using (Html.BeginForm("Show", "Home", FormMethod.Post))
+    {
+        @Html.Label("Enter Employee No")
+        @Html.TextBox("Eno")
+        <br />
+        @Html.Label("Enter Employee Name")
+        @Html.TextBox("Ename")
+        <br />
+        @Html.Label("Enter Date of Join")
+        @Html.TextBox("Doj")
+        <br />
+        @Html.Label("Enter Employee Sal")
+        @Html.TextBox("Sal")
+        <br />
+        @Html.TextBox("Text", "Submit", new { type = "Submit" })
+    }
+
+
+</center>
+

@@ -1,0 +1,55 @@
+﻿@model WebFormWithMVC.Models.Student;
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>
+        Learn about 
+        <a href="https://learn.microsoft.com/aspnet/core">
+            building Web apps with ASP.NET Core
+        </a>.
+    </p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form class="d-grid gap-2" asp-action="Index" asp-controller="Home" method="post">
+                
+                <label asp-for="Name">Student Name:</label>
+                <input asp-for="Name" placeholder="Enter Student Name" class="form-control" />
+
+                <label asp-for="RollNo">Student Roll No:</label>
+                <input asp-for="RollNo" placeholder="Enter Student Roll No" class="form-control" />
+
+                <label asp-for="CourseName">Course Name:</label>
+                <input asp-for="CourseName" placeholder="Enter Course Name" class="form-control" />
+
+                <label asp-for="College">College:</label>
+                <input asp-for="College" placeholder="Enter College Name" class="form-control" />
+
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                
+            </form>
+        </div>
+        <!-- Display submitted data -->
+        <div class="col-sm-7">
+            @if (Model != null && !string.IsNullOrEmpty(Model.Name))
+            {
+                <div class="card mt-3 p-3 shadow-sm">
+                    <h4>Submitted Details</h4>
+                    <hr/>
+                    <p><strong>Name:</strong> @Model.Name</p>
+                    <p><strong>RollNo:</strong> @Model.RollNo</p>
+                    <p><strong>Course:</strong> @Model.CourseName</p>
+                    <p><strong>College:</strong> @Model.College</p>
+                    <h3>@Model.Name</h3>
+                    
+                </div>
+            }
+        </div>
+    </div>
+</div>

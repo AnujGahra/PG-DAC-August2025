@@ -1,0 +1,544 @@
+Code In Model
+---------------------
+namespace UserServiceAPI.Models
+{
+    public class User
+    {
+        public int Id { get; set; }
+        public string FullName { get; set; } = null!;
+        public string Email { get; set; } = null!;
+        public string Position { get; set; } = null!;
+    }
+}
+-----------------------------
+Code In Context Class
+-----------------------------
+
+using Microsoft.EntityFrameworkCore;
+namespace UserServiceAPI.Models
+{
+    public class UserDbContext : DbContext
+    {
+        public UserDbContext(DbContextOptions<UserDbContext> options) : base(options) { }
+       
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Seeding dummy data
+            modelBuilder.Entity<User>().HasData(
+                new User { Id = 1, FullName = "John Doe", Email = "john.doe@example.com", Position = "Developer" },
+                new User { Id = 2, FullName = "Jane Smith", Email = "jane.smith@example.com", Position = "Manager" },
+                new User { Id = 3, FullName = "Sara Taylor", Email = "sara.taylor@example.com", Position = "Manager" },
+                new User { Id = 4, FullName = "Pam Jordon", Email = "pam.jordon@example.com", Position = "Developer" }
+            );
+        }
+
+        public DbSet<User> Users { get; set; } = null!;
+    }
+}
+--------------------------------------------------------------------
+
+User API Controller
+---------------------------
+In the Controllers folder, create a new API Empty controller named UserController, and copy and paste the following code. The following controller exposes endpoints for client applications to perform CRUD Operations on the User entity.
+--------------------------------------
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using UserServiceAPI.Models;
+namespace UserServiceAPI.Controllers
+{
+    [Route("api/[controller]/[action]")]
+    [ApiController]
+    public class UserController : ControllerBase
+    {
+        private readonly UserDbContext _context;
+
+        public UserController(UserDbContext context)
+        {
+            _context = context;
+        }
+
+
+        [HttpGet]
+        public async Task<ActionResult<List<User>>> GetAllUsers()
+        {
+           var users = await _context.Users.AsNoTracking().ToListAsync();
+            return Ok(users);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<User>> GetUserById(int id)
+        {
+            var user = await _context.Users.AsNoTracking().FirstOrDefaultAsync(usr => usr.Id == id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return Ok(user);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> AddUser(User user)
+        {
+            await _context.Users.AddAsync(user);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetUserById), new { id = user.Id }, user);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult> UpdateUser(int id, User user)
+        {
+            if (id != user.Id)
+            {
+                return BadRequest();
+            }
+
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteUser(int id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user != null)
+            {
+                _context.Users.Remove(user);
+                await _context.SaveChangesAsync();
+            }
+
+            return NoContent();
+        }
+    }
+}
+-----------------------------------------------------------------
+Modify appsettings.json
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "EFCoreDBConnection": "Server=LAPTOP-6P5NK25R\\SQLSERVER2022DEV;Database=UsersDB;Trusted_Connection=True;TrustServerCertificate=True;"
+  }
+}
+
+-----------------------------------------------------------
+
+Modify the Program Class:
+Please modify the Program class as follows:
+
+
+using Microsoft.EntityFrameworkCore;
+using UserServiceAPI.Models;
+namespace UserServiceAPI
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+
+            // Add controllers and configure JSON options
+            builder.Services.AddControllers()
+               .AddJsonOptions(options =>
+               {
+                   options.JsonSerializerOptions.PropertyNamingPolicy = null;
+               });
+
+            // Add Swagger
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
+
+            // Configure EF Core DbContext
+            builder.Services.AddDbContext<UserDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("EFCoreDBConnection"));
+            });
+
+            var app = builder.Build();
+
+            // Enable Swagger in Development
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+
+            app.UseHttpsRedirection();
+
+            app.UseAuthorization();
+
+            app.MapControllers();
+
+            app.Run();
+        }
+    }
+}
+
+
+---------------------------------------------------
+Database Migration
+Next, we need to generate the Migration and update the database schema. So, open Package Manager Console and execute the Add-Migration and Update-Database commands .
+
+Test the API(Swagger)
+----------------------------------
+At this stage, you can test the API using tools like Postman, Fiddler, or Swagger to ensure that the CRUD operations work as expected. We have not yet enabled CORS configuration, so that cross-origin requests will be blocked. Please note the port number where your ASP.NET Core Web API project is running. In my case, the application is running on port 7152.
+-------------------------------------------------------
+
+Creating the ASP.NET Core MVC Application (Client Application)
+----------------------------------------------------------------------------------
+This ASP.NET Core MVC application attempts to perform CRUD operations on the User entity via AJAX requests to the Web API, which results in CORS issues since the Web API does not allow cross-origin requests. So, create a new ASP.NET Core Project using the Model-View-Controller template and give the project name UserClientApp.
+
+Create the User Model
+-----------------------------
+In the Models folder, create a new class file named User.cs (same as in API) and then copy and paste the following code.
+
+namespace UserClientApp.Models
+{
+    public class User
+    {
+        public int Id { get; set; }
+        public string FullName { get; set; } = null!;
+        public string Email { get; set; } = null!;
+        public string Position { get; set; } = null!;
+    }
+}
+
+---------------------------------------------------------
+
+Modify Home Controller
+-----------------------------------
+By default, the project is created with HomeController. So, please modify the HomeController as follows. When we make HTTP requests in the Controller (server-to-server), CORS does not apply. CORS is enforced by browsers for AJAX requests made from client-side code (JavaScript), not server-side code.
+
+
+using Microsoft.AspNetCore.Mvc;
+using UserClientApp.Models;
+using System.Text.Json;
+
+namespace UserClientApp.Controllers
+{
+    public class HomeController : Controller
+    {
+        //The Index action method will load the list of users from the API
+        //and pass it to the view on the initial load.
+        public async Task<IActionResult> Index()
+        {
+            //Create an Instance of HttpClient
+            HttpClient _httpClient = new HttpClient();
+
+            //Set the base Address
+            //Please replace the port on which your Web API Application is running
+            _httpClient.BaseAddress = new Uri("https://localhost:7152/");
+
+            //When the Page Load we want to display the List of User
+            //Specify the endpoint which returns the list of Users, i.e., api/User/GetAllUsers
+            //Here, we will not get any CORS issue, this is because of Server to Server call
+            var response = await _httpClient.GetStringAsync("api/User/GetAllUsers");
+
+            //Convert the Response which is in JSON format to List<User>
+            var users = JsonSerializer.Deserialize<List<User>>(response);
+
+            //Pass the List of Users to the View
+            return View(users);
+        }
+    }
+}
+------------------------------------------------------------------------
+Modify the Index View
+In the Views/Home folder, update the Index.cshtml view to include forms for creating, updating, and deleting users:
+
+***********************************************************
+When Executed This Will Throw Error Because CORS Is Not Enabled
+
+*********************************************************
+@model List<User>
+@{
+ViewData["Title"] = "User Management";
+}
+<h2 class="text-center my-4">👥 User Management</h2>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<!-- Success and Error Messages -->
+<div id="successMessage" class="alert alert-success alert-dismissible fade show" role="alert" style="display:none;">
+<span id="successText"></span> 😊
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div id="errorMessage" class="alert alert-danger alert-dismissible fade show" role="alert" style="display:none;">
+<span id="errorText"></span> 😟
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<button id="loadUsers" class="btn btn-primary mb-3"><i class="bi bi-arrow-repeat"></i> 🔄 Refresh User List</button>
+<button id="createUserBtn" class="btn btn-success mb-3"><i class="bi bi-person-plus"></i> ➕ Add New User</button>
+<div id="createUserForm" class="mb-4 card card-body shadow-sm" style="display: none;">
+<h4 class="card-title">🆕 Add New User</h4>
+<div class="form-group mb-3">
+<label for="createFullName">Full Name</label>
+<input type="text" id="createFullName" class="form-control" placeholder="Enter full name" />
+</div>
+<div class="form-group mb-3">
+<label for="createEmail">Email</label>
+<input type="email" id="createEmail" class="form-control" placeholder="Enter email" />
+</div>
+<div class="form-group mb-3">
+<label for="createPosition">Position</label>
+<input type="text" id="createPosition" class="form-control" placeholder="Enter position" />
+</div>
+<button id="createUser" class="btn btn-success mt-2"><i class="bi bi-save"></i> 💾 Save User</button>
+<button id="cancelCreate" class="btn btn-secondary mt-2"><i class="bi bi-x-circle"></i> ❌ Cancel</button>
+</div>
+<table class="table table-hover table-striped shadow-sm">
+<thead class="table-dark">
+<tr>
+<th>🆔 ID</th>
+<th>📛 Full Name</th>
+<th>📧 Email</th>
+<th>💼 Position</th>
+<th>🔧 Actions</th>
+</tr>
+</thead>
+<tbody id="userTableBody">
+@foreach (var user in Model)
+{
+<tr>
+<td>@user.Id</td>
+<td>@user.FullName</td>
+<td>@user.Email</td>
+<td>@user.Position</td>
+<td>
+<button class="btn btn-info editUser" data-id="@user.Id"><i class="bi bi-pencil"></i> ✏️ Edit</button>
+<button class="btn btn-danger deleteUser" data-id="@user.Id"><i class="bi bi-trash"></i> 🗑️ Delete</button>
+</td>
+</tr>
+}
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Bootstrap Modal for Editing User -->
+<div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="editUserModalLabel">✏️ Edit User Details</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<input type="hidden" id="editUserId" />
+<div class="form-group mb-3">
+<label for="editFullName">Full Name</label>
+<input type="text" id="editFullName" class="form-control" placeholder="Enter full name" />
+</div>
+<div class="form-group mb-3">
+<label for="editEmail">Email</label>
+<input type="email" id="editEmail" class="form-control" placeholder="Enter email" />
+</div>
+<div class="form-group mb-3">
+<label for="editPosition">Position</label>
+<input type="text" id="editPosition" class="form-control" placeholder="Enter position" />
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> ❌ Cancel</button>
+<button type="button" class="btn btn-primary" id="updateUserBtn"><i class="bi bi-save"></i> 💾 Update User</button>
+</div>
+</div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function () {
+// Show Create User Form
+$("#createUserBtn").click(function () {
+$("#createUserForm").show();
+});
+// Cancel Create User
+$("#cancelCreate").click(function () {
+$("#createUserForm").hide();
+});
+// Load Users
+$("#loadUsers").click(function () {
+loadUsers();
+});
+// Function to Load Users
+function loadUsers() {
+$.ajax({
+url: "https://localhost:7152/api/user/getallusers",
+type: "GET",
+success: function (data) {
+var rows = "";
+data.forEach(function (user) {
+rows += "<tr><td>" + user.Id + "</td><td>" + user.FullName + "</td><td>" + user.Email + "</td><td>" + user.Position + "</td><td><button class='btn btn-info editUser' data-id='" + user.Id + "'><i class='bi bi-pencil'></i> ✏️ Edit</button><button class='btn btn-danger deleteUser' data-id='" + user.Id + "'><i class='bi bi-trash'></i> 🗑️ Delete</button></td></tr>";
+});
+$("#userTableBody").html(rows);
+},
+error: function (xhr, status, error) {
+showErrorMessage("⚠️ Oops! An error occurred while loading the user list. Please try again.");
+}
+});
+}
+// Create User
+$("#createUser").click(function () {
+var user = {
+FullName: $("#createFullName").val(),
+Email: $("#createEmail").val(),
+Position: $("#createPosition").val()
+};
+$.ajax({
+url: "https://localhost:7152/api/user/adduser",
+type: "POST",
+contentType: "application/json",
+data: JSON.stringify(user),
+success: function () {
+showSuccessMessage("🎉 New user created successfully!");
+loadUsers(); // Reload the list of users
+$("#createUserForm").hide();
+},
+error: function (xhr, status, error) {
+showErrorMessage("⚠️ Oops! An error occurred while creating the user. Please try again.");
+}
+});
+});
+// Edit User
+$(document).on("click", ".editUser", function () {
+var userId = $(this).data("id");
+$.ajax({
+url: "https://localhost:7152/api/user/getuserbyid/" + userId,
+type: "GET",
+success: function (user) {
+$("#editUserId").val(user.Id);
+$("#editFullName").val(user.FullName);
+$("#editEmail").val(user.Email);
+$("#editPosition").val(user.Position);
+$("#editUserModal").modal("show");
+},
+error: function (xhr, status, error) {
+showErrorMessage("⚠️ Oops! An error occurred while loading the user details. Please try again.");
+}
+});
+});
+// Update User
+$("#updateUserBtn").click(function () {
+var user = {
+Id: $("#editUserId").val(),
+FullName: $("#editFullName").val(),
+Email: $("#editEmail").val(),
+Position: $("#editPosition").val()
+};
+$.ajax({
+url: "https://localhost:7152/api/user/updateuser/" + user.Id,
+type: "PUT",
+contentType: "application/json",
+data: JSON.stringify(user),
+success: function () {
+showSuccessMessage("🎉 User details updated successfully!");
+$("#editUserModal").modal("hide");
+loadUsers(); // Reload to fetch the updated list of users
+},
+error: function (xhr, status, error) {
+showErrorMessage("⚠️ Oops! An error occurred while updating the user. Please try again.");
+}
+});
+});
+// Delete User
+$(document).on("click", ".deleteUser", function () {
+var userId = $(this).data("id");
+if (confirm("❗ Are you sure you want to delete this user? This action cannot be undone.")) {
+$.ajax({
+url: "https://localhost:7152/api/user/deleteuser/" + userId,
+type: "DELETE",
+success: function () {
+showSuccessMessage("🗑️ User deleted successfully.");
+loadUsers(); // Reload to fetch the updated list of users
+},
+error: function (xhr, status, error) {
+showErrorMessage("⚠️ Oops! An error occurred while deleting the user. Please try again.");
+}
+});
+}
+});
+// Function to show success message
+function showSuccessMessage(message) {
+$("#successText").text(message);
+$("#successMessage").show();
+setTimeout(function () {
+$("#successMessage").fadeOut("slow");
+}, 8000);
+}
+// Function to show error message
+function showErrorMessage(message) {
+$("#errorText").text(message);
+$("#errorMessage").show();
+setTimeout(function () {
+$("#errorMessage").fadeOut("slow");
+}, 8000);
+}
+});
+</script>
+-----------------------------------------------------------------------
+
+Enabling CORS In API Program
+----------------------------------------------
+ please modify the Program.cs file as follows:
+-----------------------------------------------------------
+
+using Microsoft.EntityFrameworkCore;
+using UserServiceAPI.Models;
+namespace UserServiceAPI
+{
+public class Program
+{
+public static void Main(string[] args)
+{
+var builder = WebApplication.CreateBuilder(args);
+// Add controllers and configure JSON options
+builder.Services.AddControllers()
+.AddJsonOptions(options =>
+{
+options.JsonSerializerOptions.PropertyNamingPolicy = null;
+});
+// Add Swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+// Configure EF Core DbContext
+builder.Services.AddDbContext<UserDbContext>(options =>
+{
+options.UseSqlServer(builder.Configuration.GetConnectionString("EFCoreDBConnection"));
+});
+// Configure CORS policy to allow requests from the client application
+builder.Services.AddCors(options =>
+{
+options.AddPolicy("AllowAllOrigin",
+builder =>
+{
+builder.AllowAnyOrigin()  // Allow all Origins
+.AllowAnyHeader()  // Allow all headers (like Content-Type)
+.AllowAnyMethod(); // Allow all HTTP methods (GET, POST, etc.)
+});
+});
+var app = builder.Build();
+// Enable Swagger in Development
+if (app.Environment.IsDevelopment())
+{
+app.UseSwagger();
+app.UseSwaggerUI();
+}
+app.UseHttpsRedirection();
+// Enable the CORS middleware globally with the defined policy
+app.UseCors("AllowAllOrigin");
+app.UseAuthorization();
+app.MapControllers();
+app.Run();
+}
+}
+}

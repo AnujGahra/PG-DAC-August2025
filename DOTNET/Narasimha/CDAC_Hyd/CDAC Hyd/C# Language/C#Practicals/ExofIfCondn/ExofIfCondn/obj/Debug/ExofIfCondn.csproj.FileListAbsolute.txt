@@ -1,0 +1,20 @@
+D:\LangBasics\ExofIfCondn\ExofIfCondn\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofIfCondn\ExofIfCondn\bin\Debug\ExofIfCondn.exe
+D:\LangBasics\ExofIfCondn\ExofIfCondn\bin\Debug\ExofIfCondn.pdb
+D:\LangBasics\ExofIfCondn\ExofIfCondn\obj\Debug\ExofIfCondn.exe
+D:\LangBasics\ExofIfCondn\ExofIfCondn\obj\Debug\ExofIfCondn.pdb
+C:\LangBasics\ExofIfCondn\ExofIfCondn\obj\Debug\ExofIfCondn.exe
+C:\LangBasics\ExofIfCondn\ExofIfCondn\obj\Debug\ExofIfCondn.pdb
+C:\LangBasics\ExofIfCondn\ExofIfCondn\bin\Debug\ExofIfCondn.exe
+C:\LangBasics\ExofIfCondn\ExofIfCondn\bin\Debug\ExofIfCondn.pdb
+C:\LangBasics\ExofIfCondn\ExofIfCondn\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofIfCondn\ExofIfCondn\obj\Debug\ExofIfCondn.exe
+C:\SouceEdge Session 1\LangBasics\ExofIfCondn\ExofIfCondn\obj\Debug\ExofIfCondn.pdb
+E:\krishna sir\C#Practicals\ExofIfCondn\ExofIfCondn\obj\Debug\ExofIfCondn.exe
+E:\krishna sir\C#Practicals\ExofIfCondn\ExofIfCondn\obj\Debug\ExofIfCondn.pdb
+D:\krishna sir\C#Practicals\ExofIfCondn\ExofIfCondn\bin\Debug\ExofIfCondn.exe.config
+D:\krishna sir\C#Practicals\ExofIfCondn\ExofIfCondn\obj\Debug\ExofIfCondn.exe
+D:\krishna sir\C#Practicals\ExofIfCondn\ExofIfCondn\obj\Debug\ExofIfCondn.pdb
+D:\krishna sir\C#Practicals\ExofIfCondn\ExofIfCondn\bin\Debug\ExofIfCondn.exe
+D:\krishna sir\C#Practicals\ExofIfCondn\ExofIfCondn\bin\Debug\ExofIfCondn.pdb
+D:\krishna sir\C#Practicals\ExofIfCondn\ExofIfCondn\obj\Debug\ExofIfCondn.csprojResolveAssemblyReference.cache

@@ -1,0 +1,12 @@
+1765428435695	Delete elements
+1765435320534	Delete element
+1765437919488	Extract local variable 'contactEntity'
+1765439387461	Extract local variable 'header'
+1765440683323	Extract local variable 'fieldError'
+1765441782015	Extract local variable 'field'
+1765445809467	Extract local variable 'map'
+1765465447659	Copy compilation unit
+1765468822630	Rename resource 'readAllContact.jsp'
+1765509099908	Extract local variable 'serviceFile'
+1765509131770	Extract local variable 'size'
+1765515511875	Extract local variable 'path'

@@ -1,0 +1,5 @@
+D:\krishna sir\C#Practicals\ExofTryCatch11\ExofTryCatch11\bin\Debug\ExofTryCatch11.exe
+D:\krishna sir\C#Practicals\ExofTryCatch11\ExofTryCatch11\bin\Debug\ExofTryCatch11.pdb
+D:\krishna sir\C#Practicals\ExofTryCatch11\ExofTryCatch11\obj\x86\Debug\ExofTryCatch11.exe
+D:\krishna sir\C#Practicals\ExofTryCatch11\ExofTryCatch11\obj\x86\Debug\ExofTryCatch11.pdb
+D:\krishna sir\C#Practicals\ExofTryCatch11\ExofTryCatch11\obj\x86\Debug\ExofTryCatch11.csprojResolveAssemblyReference.cache

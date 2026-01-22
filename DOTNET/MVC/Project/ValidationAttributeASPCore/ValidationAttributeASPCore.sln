@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationAttributeASPCore", "ValidationAttributeASPCore\ValidationAttributeASPCore.csproj", "{BBEFAE2F-9B3A-4E3A-88A9-04E83B1719FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBEFAE2F-9B3A-4E3A-88A9-04E83B1719FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBEFAE2F-9B3A-4E3A-88A9-04E83B1719FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBEFAE2F-9B3A-4E3A-88A9-04E83B1719FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBEFAE2F-9B3A-4E3A-88A9-04E83B1719FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

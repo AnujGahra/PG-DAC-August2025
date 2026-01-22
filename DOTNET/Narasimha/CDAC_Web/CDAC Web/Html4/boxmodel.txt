@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    background-color: lightgrey;
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
+</style>
+</head>
+<body>
+
+<h2>Demonstrating the Box Model</h2>
+
+<p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, padding, margins, and the actual content.</p>
+
+<div>
+Liberty Computers Vidyanagar Hubli Liberty Computers Vidyanagar Hubli
+Liberty Computers Vidyanagar Hubli Liberty Computers Vidyanagar Hubli
+Liberty Computers Vidyanagar Hubli Liberty Computers Vidyanagar Hubli
+Liberty Computers Vidyanagar Hubli Liberty Computers Vidyanagar Hubli
+Liberty Computers Vidyanagar Hubli Liberty Computers Vidyanagar Hubli
+Liberty Computers Vidyanagar Hubli Liberty Computers Vidyanagar Hubli
+Liberty Computers Vidyanagar Hubli Liberty Computers Vidyanagar Hubli
+</div>
+
+</body>
+
+*********************************
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
+}
+</style>
+</head>
+<body>
+
+<h2>Calculate the total width:</h2>
+
+<img src="klematis4_big.jpg" width="350" height="263" alt="Klematis">
+<div>The picture above is 350px wide. The total width of this element is also 350px.</div>
+
+</body>
+</html>

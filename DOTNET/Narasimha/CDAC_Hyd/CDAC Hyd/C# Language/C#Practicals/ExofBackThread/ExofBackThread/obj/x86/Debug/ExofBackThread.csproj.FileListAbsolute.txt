@@ -1,0 +1,8 @@
+E:\krishna sir\C#Practicals\ExofBackThread\ExofBackThread\bin\Debug\ExofBackThread.exe
+E:\krishna sir\C#Practicals\ExofBackThread\ExofBackThread\bin\Debug\ExofBackThread.pdb
+E:\krishna sir\C#Practicals\ExofBackThread\ExofBackThread\obj\x86\Debug\ExofBackThread.exe
+E:\krishna sir\C#Practicals\ExofBackThread\ExofBackThread\obj\x86\Debug\ExofBackThread.pdb
+D:\krishna sir\C#Practicals\ExofBackThread\ExofBackThread\obj\x86\Debug\ExofBackThread.exe
+D:\krishna sir\C#Practicals\ExofBackThread\ExofBackThread\obj\x86\Debug\ExofBackThread.pdb
+D:\krishna sir\C#Practicals\ExofBackThread\ExofBackThread\bin\Debug\ExofBackThread.exe
+D:\krishna sir\C#Practicals\ExofBackThread\ExofBackThread\bin\Debug\ExofBackThread.pdb

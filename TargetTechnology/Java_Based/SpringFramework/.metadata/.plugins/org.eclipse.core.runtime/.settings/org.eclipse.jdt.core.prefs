@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=/Users/anujgahra/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.aarch64_21.0.8.v20250724-1412/jre/lib/jrt-fs.jar
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=/Users/anujgahra/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.aarch64_21.0.8.v20250724-1412/jre/lib/src.zip
+org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
+org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=21
+org.eclipse.jdt.core.compiler.compliance=21
+org.eclipse.jdt.core.compiler.release=enabled
+org.eclipse.jdt.core.compiler.source=21
+org.eclipse.jdt.core.userLibrary.SpringCore=<?xml version\="1.0" encoding\="UTF-8"?>\n<userlibrary systemlibrary\="false" version\="2">\n\t<archive path\="/Users/anujgahra/Developer/PG-DAC/Web_Technology/jar/spring-beans-5.3.1.jar"/>\n\t<archive path\="/Users/anujgahra/Developer/PG-DAC/Web_Technology/jar/spring-context-5.3.1.jar"/>\n\t<archive path\="/Users/anujgahra/Developer/PG-DAC/Web_Technology/jar/spring-core-5.3.1.jar"/>\n\t<archive path\="/Users/anujgahra/Developer/PG-DAC/Web_Technology/jar/spring-expression-5.3.1.jar"/>\n\t<archive path\="/Users/anujgahra/Developer/PG-DAC/Web_Technology/jar/spring-jcl-5.3.1.jar"/>\n\t<archive path\="/Users/anujgahra/Developer/PG-DAC/Web_Technology/jar/javax.annotation-api-1.3.2.jar"/>\n\t<archive path\="/Users/anujgahra/Developer/PG-DAC/Web_Technology/jar/spring-aop-5.3.1.jar"/>\n</userlibrary>\n

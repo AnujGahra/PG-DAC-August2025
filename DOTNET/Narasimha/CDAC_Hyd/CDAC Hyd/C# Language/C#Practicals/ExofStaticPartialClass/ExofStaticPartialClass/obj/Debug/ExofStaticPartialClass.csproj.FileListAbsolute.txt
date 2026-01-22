@@ -1,0 +1,5 @@
+C:\LangBasics\ExofStaticPartialClass\ExofStaticPartialClass\bin\Debug\ExofStaticPartialClass.exe
+C:\LangBasics\ExofStaticPartialClass\ExofStaticPartialClass\bin\Debug\ExofStaticPartialClass.pdb
+C:\LangBasics\ExofStaticPartialClass\ExofStaticPartialClass\obj\Debug\ResolveAssemblyReference.cache
+C:\LangBasics\ExofStaticPartialClass\ExofStaticPartialClass\obj\Debug\ExofStaticPartialClass.exe
+C:\LangBasics\ExofStaticPartialClass\ExofStaticPartialClass\obj\Debug\ExofStaticPartialClass.pdb

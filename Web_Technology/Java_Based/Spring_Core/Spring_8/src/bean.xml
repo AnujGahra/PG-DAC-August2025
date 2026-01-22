@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+	
+	
+	
+	<bean id="parentBean" abstract="true">
+	<property name="url" value="jdbc:mysql://localhost:3306"></property>
+			<property name="countryCode" value="1122"></property>
+	</bean>
+		
+		
+		
+		<bean id="emp" class="com.mainapp.Employee" parent="parentBean" >
+			<!-- <property name="url" value="jdbc:mysql://localhost:3306"></property>
+			<property name="countryCode" value="1122"></property> -->
+			<property name="eid" value="11"></property>
+		</bean>
+		<bean id="mng" class="com.mainapp.Manager" parent="parentBean">
+			<!-- <property name="url" value="jdbc:mysql://localhost:3306"></property>
+			<property name="countryCode" value="91"></property> -->
+			<property name="mid" value="10"></property>
+		</bean>
+		<bean id="std" class="com.mainapp.Student" parent="parentBean">
+			<!-- <property name="url" value="jdbc:mysql://localhost:3306"></property>
+			<property name="countryCode" value="12"></property> -->
+			<property name="roll" value="08"></property>
+		</bean>
+	
+</beans>

@@ -1,0 +1,26 @@
+C:\LangBasics\ExofNameSpace\ExofNameSpace\bin\Debug\ExofNameSpace.exe
+C:\LangBasics\ExofNameSpace\ExofNameSpace\bin\Debug\ExofNameSpace.pdb
+C:\LangBasics\ExofNameSpace\ExofNameSpace\obj\Debug\ResolveAssemblyReference.cache
+C:\LangBasics\ExofNameSpace\ExofNameSpace\obj\Debug\ExofNameSpace.exe
+C:\LangBasics\ExofNameSpace\ExofNameSpace\obj\Debug\ExofNameSpace.pdb
+D:\LangBasics\ExofNameSpace\ExofNameSpace\obj\Debug\ExofNameSpace.exe
+D:\LangBasics\ExofNameSpace\ExofNameSpace\obj\Debug\ExofNameSpace.pdb
+D:\LangBasics\ExofNameSpace\ExofNameSpace\bin\Debug\ExofNameSpace.exe
+D:\LangBasics\ExofNameSpace\ExofNameSpace\bin\Debug\ExofNameSpace.pdb
+D:\LangBasics\ExofNameSpace\ExofNameSpace\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofNameSpace\ExofNameSpace\obj\Debug\ExofNameSpace.exe
+C:\SouceEdge Session 1\LangBasics\ExofNameSpace\ExofNameSpace\obj\Debug\ExofNameSpace.pdb
+C:\SouceEdge Session 1\LangBasics\ExofNameSpace\ExofNameSpace\bin\Debug\ExofNameSpace.exe
+C:\SouceEdge Session 1\LangBasics\ExofNameSpace\ExofNameSpace\bin\Debug\ExofNameSpace.pdb
+C:\SouceEdge Session 1\LangBasics\ExofNameSpace\ExofNameSpace\obj\Debug\ExofNameSpace.csprojResolveAssemblyReference.cache
+E:\krishna sir\C#Practicals\ExofNameSpace\ExofNameSpace\obj\Debug\ExofNameSpace.exe
+E:\krishna sir\C#Practicals\ExofNameSpace\ExofNameSpace\obj\Debug\ExofNameSpace.pdb
+E:\krishna sir\C#Practicals\ExofNameSpace\ExofNameSpace\obj\Debug\ExofNameSpace.csprojResolveAssemblyReference.cache
+E:\krishna sir\C#Practicals\ExofNameSpace\ExofNameSpace\bin\Debug\ExofNameSpace.exe
+E:\krishna sir\C#Practicals\ExofNameSpace\ExofNameSpace\bin\Debug\ExofNameSpace.pdb
+D:\krishna sir\C#Practicals\ExofNameSpace\ExofNameSpace\bin\Debug\ExofNameSpace.exe.config
+D:\krishna sir\C#Practicals\ExofNameSpace\ExofNameSpace\obj\Debug\ExofNameSpace.exe
+D:\krishna sir\C#Practicals\ExofNameSpace\ExofNameSpace\obj\Debug\ExofNameSpace.pdb
+D:\krishna sir\C#Practicals\ExofNameSpace\ExofNameSpace\bin\Debug\ExofNameSpace.exe
+D:\krishna sir\C#Practicals\ExofNameSpace\ExofNameSpace\bin\Debug\ExofNameSpace.pdb
+D:\krishna sir\C#Practicals\ExofNameSpace\ExofNameSpace\obj\Debug\ExofNameSpace.csprojResolveAssemblyReference.cache

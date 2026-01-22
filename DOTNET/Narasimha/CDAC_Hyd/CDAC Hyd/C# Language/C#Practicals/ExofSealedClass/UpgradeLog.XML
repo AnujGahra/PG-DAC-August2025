@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExofSealedClass">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExofSealedClass\ExofSealedClass.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExofSealedClass\ExofSealedClass.suo">
+</Property><Property Name="Date" Value="09 January 2015">
+</Property><Property Name="Time" Value="12:42">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExofSealedClass.sln" Description="File successfully backed up as D:\LangBasics\ExofSealedClass\Backup\ExofSealedClass.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExofSealedClass.suo" Description="File successfully backed up as D:\LangBasics\ExofSealedClass\Backup\ExofSealedClass.suo">
+</Event><Event ErrorLevel="0" Project="ExofSealedClass" Source="ExofSealedClass\ExofSealedClass.csproj" Description="Project file successfully backed up as D:\LangBasics\ExofSealedClass\Backup\ExofSealedClass\ExofSealedClass.csproj">
+</Event><Event ErrorLevel="0" Project="ExofSealedClass" Source="ExofSealedClass\Program.cs" Description="File successfully backed up as D:\LangBasics\ExofSealedClass\Backup\ExofSealedClass\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExofSealedClass" Source="ExofSealedClass\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExofSealedClass\Backup\ExofSealedClass\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExofSealedClass" Source="ExofSealedClass\ExofSealedClass.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExofSealedClass" Source="ExofSealedClass\ExofSealedClass.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExofSealedClass.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExofSealedClass.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExofSealedClass" Source="ExofSealedClass\ExofSealedClass.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

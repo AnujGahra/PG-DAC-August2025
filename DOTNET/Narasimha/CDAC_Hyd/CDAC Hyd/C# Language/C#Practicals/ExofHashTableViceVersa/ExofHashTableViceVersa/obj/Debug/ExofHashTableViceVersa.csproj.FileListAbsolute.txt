@@ -1,0 +1,4 @@
+C:\SouceEdge Session 1\LangBasics\ExofHashTableViceVersa\ExofHashTableViceVersa\bin\Debug\ExofHashTableViceVersa.exe
+C:\SouceEdge Session 1\LangBasics\ExofHashTableViceVersa\ExofHashTableViceVersa\bin\Debug\ExofHashTableViceVersa.pdb
+C:\SouceEdge Session 1\LangBasics\ExofHashTableViceVersa\ExofHashTableViceVersa\obj\Debug\ExofHashTableViceVersa.exe
+C:\SouceEdge Session 1\LangBasics\ExofHashTableViceVersa\ExofHashTableViceVersa\obj\Debug\ExofHashTableViceVersa.pdb

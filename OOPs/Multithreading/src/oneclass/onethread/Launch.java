@@ -1,0 +1,19 @@
+package oneclass.onethread;
+
+public class Launch {
+
+	public static void main(String[] args) {
+		
+		Five five = new Five();
+		Seven seven = new Seven();
+		
+		five.setName("Anuj");
+		
+		five.start();
+//		Thread created and registered
+		seven.start();
+//		Thread created and registred
+		
+	}
+
+}

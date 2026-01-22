@@ -1,0 +1,23 @@
+D:\LangBasics\ExofInheritance\ExofInheritance\obj\Debug\ResolveAssemblyReference.cache
+D:\LangBasics\ExofInheritance\ExofInheritance\bin\Debug\ExofInheritance.exe
+D:\LangBasics\ExofInheritance\ExofInheritance\bin\Debug\ExofInheritance.pdb
+D:\LangBasics\ExofInheritance\ExofInheritance\obj\Debug\ExofInheritance.exe
+D:\LangBasics\ExofInheritance\ExofInheritance\obj\Debug\ExofInheritance.pdb
+C:\LangBasics\ExofInheritance\ExofInheritance\obj\Debug\ExofInheritance.exe
+C:\LangBasics\ExofInheritance\ExofInheritance\obj\Debug\ExofInheritance.pdb
+C:\LangBasics\ExofInheritance\ExofInheritance\bin\Debug\ExofInheritance.exe
+C:\LangBasics\ExofInheritance\ExofInheritance\bin\Debug\ExofInheritance.pdb
+C:\LangBasics\ExofInheritance\ExofInheritance\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofInheritance\ExofInheritance\obj\Debug\ExofInheritance.exe
+C:\SouceEdge Session 1\LangBasics\ExofInheritance\ExofInheritance\obj\Debug\ExofInheritance.pdb
+C:\SouceEdge Session 1\LangBasics\ExofInheritance\ExofInheritance\bin\Debug\ExofInheritance.exe
+C:\SouceEdge Session 1\LangBasics\ExofInheritance\ExofInheritance\bin\Debug\ExofInheritance.pdb
+C:\SouceEdge Session 1\LangBasics\ExofInheritance\ExofInheritance\obj\Debug\ExofInheritance.csprojResolveAssemblyReference.cache
+E:\krishna sir\C#Practicals\ExofInheritance\ExofInheritance\obj\Debug\ExofInheritance.exe
+E:\krishna sir\C#Practicals\ExofInheritance\ExofInheritance\obj\Debug\ExofInheritance.pdb
+D:\krishna sir\C#Practicals\ExofInheritance\ExofInheritance\bin\Debug\ExofInheritance.exe.config
+D:\krishna sir\C#Practicals\ExofInheritance\ExofInheritance\obj\Debug\ExofInheritance.exe
+D:\krishna sir\C#Practicals\ExofInheritance\ExofInheritance\obj\Debug\ExofInheritance.pdb
+D:\krishna sir\C#Practicals\ExofInheritance\ExofInheritance\bin\Debug\ExofInheritance.exe
+D:\krishna sir\C#Practicals\ExofInheritance\ExofInheritance\bin\Debug\ExofInheritance.pdb
+D:\krishna sir\C#Practicals\ExofInheritance\ExofInheritance\obj\Debug\ExofInheritance.csprojResolveAssemblyReference.cache

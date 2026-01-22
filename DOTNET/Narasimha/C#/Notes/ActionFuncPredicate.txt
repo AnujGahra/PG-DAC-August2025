@@ -1,0 +1,82 @@
+In C#, Action, Func, and Predicate are built-in delegate types used to represent methods. Action is for methods that don't return a value (void), Func is for methods that return a value, and Predicate is a specialized Func that returns a boolean, often used for filtering or conditions. 
+
+
+1. Action:
+---------------
+Represents a method that takes input parameters but does not return any value (void). 
+It's used when you need to perform an operation without needing to get a result back. 
+
+
+2. Func:
+-------------
+Represents a method that takes input parameters and returns a value. 
+It's used when you need to perform an operation and get a result back. 
+
+Predicate:
+----------------
+A specialized Func delegate that takes a single input parameter and returns a boolean value. 
+It's typically used to represent a condition or criteria for filtering or selecting elements
+--------------------------------------------------------------------
+Ex of Action
+---------------
+Here, the method AddNumbers takes 2 parameters but returns nothing. The results are assigned to an instance variable result.
+
+private static int result;
+        static void Main(string[] args)
+        {
+            Action<int, int> Addition = AddNumbers;
+            Addition(10, 20);
+            Console.WriteLine($"Addition = {result}");
+        }
+
+        private static void AddNumbers(int param1, int param2 )
+        {
+            result = param1 + param2;
+        }
+
+
+
+-----------------------------------------------------------------------------------
+
+Ex of Func
+---------------
+
+class Program
+   {
+       static void Main(string[] args)  public delegate TResult Func<in T1, in T2, out TResult>(T1 arg, T2 arg2)
+       {
+           Func<int,int,int> Addition = AddNumbers;
+           int result = Addition(10, 20);
+           Console.WriteLine($"Addition = {result}");
+       }
+
+       private static int AddNumbers(int param1, int param2 )
+       {
+           return param1 + param2;
+       }
+  }
+
+---------------------------------------------------------------------
+Ex of Predicate
+---------------------
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Predicate<string> CheckIfApple = IsApple;
+        bool result  = IsApple("I Phone X");
+        if(result)
+        Console.WriteLine("It's an IPhone");
+    }
+
+    private static bool IsApple(string modelName)
+    {
+        if (modelName == "I Phone X")
+            return true;
+        else
+            return false;
+    }
+}
+
+------------------------------------------------------------

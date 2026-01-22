@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExampleReadWriteProperty">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExampleReadWriteProperty\ExampleReadWriteProperty.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExampleReadWriteProperty\ExampleReadWriteProperty.suo">
+</Property><Property Name="Date" Value="08 April 2015">
+</Property><Property Name="Time" Value="18:58">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExampleReadWriteProperty.sln" Description="File successfully backed up as D:\LangBasics\ExampleReadWriteProperty\Backup\ExampleReadWriteProperty.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExampleReadWriteProperty.suo" Description="File successfully backed up as D:\LangBasics\ExampleReadWriteProperty\Backup\ExampleReadWriteProperty.suo">
+</Event><Event ErrorLevel="0" Project="ExampleReadWriteProperty" Source="ExampleReadWriteProperty\ExampleReadWriteProperty.csproj" Description="Project file successfully backed up as D:\LangBasics\ExampleReadWriteProperty\Backup\ExampleReadWriteProperty\ExampleReadWriteProperty.csproj">
+</Event><Event ErrorLevel="0" Project="ExampleReadWriteProperty" Source="ExampleReadWriteProperty\Program.cs" Description="File successfully backed up as D:\LangBasics\ExampleReadWriteProperty\Backup\ExampleReadWriteProperty\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExampleReadWriteProperty" Source="ExampleReadWriteProperty\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExampleReadWriteProperty\Backup\ExampleReadWriteProperty\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExampleReadWriteProperty" Source="ExampleReadWriteProperty\ExampleReadWriteProperty.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExampleReadWriteProperty" Source="ExampleReadWriteProperty\ExampleReadWriteProperty.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExampleReadWriteProperty.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExampleReadWriteProperty.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExampleReadWriteProperty" Source="ExampleReadWriteProperty\ExampleReadWriteProperty.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

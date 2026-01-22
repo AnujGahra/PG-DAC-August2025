@@ -1,0 +1,44 @@
+package com.example.item.controller;
+
+
+
+import java.util.List;
+import org.springframework.web.bind.annotation.*;
+import com.example.item.entity.Item;
+import com.example.item.service.ItemService;
+
+@RestController
+@RequestMapping("/api/items")
+public class ItemController {
+
+    private final ItemService service;
+
+    public ItemController(ItemService service) {
+        this.service = service;
+    }
+
+    @PostMapping
+    public Item addItem(@RequestBody Item item) {
+        return service.save(item);
+    }
+
+    @GetMapping
+    public List<Item> getAllItems() {
+        return service.getAll();
+    }
+
+    @GetMapping("/{id}")
+    public Item getItem(@PathVariable Long id) {
+        return service.getById(id);
+    }
+
+    @PutMapping
+    public Item update(@RequestBody Item item) {
+        return service.update(item);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        service.delete(id);
+    }
+}

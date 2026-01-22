@@ -1,0 +1,93 @@
+Code In Home Controller
+---------------------------------
+
+public class HomeController : Controller
+    {
+        public IConfiguration Configuration { get; }
+        public HomeController(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IActionResult Index()
+        {
+            List<Inventory> inventoryList = new List<Inventory>();
+
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string sql = "Select * From Inventory";
+              
+
+                SqlCommand command = new SqlCommand(sql, connection);
+                //command.CommandType = CommandType.Text();
+                using (SqlDataReader dataReader = command.ExecuteReader())
+                {
+                    while (dataReader.Read())
+                    {
+                        Inventory inventory = new Inventory();
+                        inventory.Id = Convert.ToInt32(dataReader["Id"]);
+                        inventory.Name = Convert.ToString(dataReader["Name"]);
+                        inventory.Price = Convert.ToDecimal(dataReader["Price"]);
+                        inventory.Quantity = Convert.ToInt32(dataReader["Quantity"]);
+                        inventory.AddedOn = Convert.ToDateTime(dataReader["AddedOn"]);
+
+                        inventoryList.Add(inventory);
+                    }
+                }
+
+                connection.Close();
+            }
+            return View(inventoryList);
+        }
+
+
+Code In Index View
+
+@model IEnumerable<Inventory>
+@{
+	ViewData["Title"] = "Read Inventory";
+}
+
+<h1>Inventory <a asp-action="Create" class="btn btn-sm btn-secondary">Create</a></h1>
+<table class="table table-bordered table-sm table-striped">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Quantity</th>
+			<th>Added On</th>
+			<th>Update</th>
+			<th>Delete</th>
+		</tr>
+	</thead>
+	<tbody>
+		@if (Model == null)
+		{
+			<tr><td colspan="7" class="text-center">No Record  Found</td></tr>
+		}
+		else
+		{
+			@foreach (var p in Model)
+			{
+				<tr>
+					<td>@p.Id</td>
+					<td>@p.Name</td>
+					<td>@string.Format(new System.Globalization.CultureInfo("en-US"),"{0:C2}", p.Price)</td>
+					<td>@p.Quantity</td>
+					<td>@string.Format("{0:dddd, dd MMMM yyyy}", p.AddedOn)</td>
+					<td><a asp-action="Update" asp-route-id="@p.Id">Update</a></td>
+					<td>
+						<form asp-action="Delete" method="post" asp-route-id="@p.Id">
+							<button>Delete</button>
+						</form>
+					</td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>
+

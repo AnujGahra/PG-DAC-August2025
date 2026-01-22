@@ -1,0 +1,5 @@
+package tech.codehunt.test.dto.hybrid;
+
+public class EmployeeFullDto {
+
+}

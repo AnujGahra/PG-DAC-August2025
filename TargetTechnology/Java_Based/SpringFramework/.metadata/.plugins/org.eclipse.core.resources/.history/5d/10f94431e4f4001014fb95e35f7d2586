@@ -1,0 +1,18 @@
+package com.mainapp;
+
+import java.util.UUID;
+
+import com.beans.Employee;
+
+public class ObjectFactory {
+	
+	public static Employee getObj() {
+		Employee employee = new Employee();
+		employee.setEid(UUID.randomUUID().toString());
+		
+		return employee;
+		
+	}
+	
+
+}

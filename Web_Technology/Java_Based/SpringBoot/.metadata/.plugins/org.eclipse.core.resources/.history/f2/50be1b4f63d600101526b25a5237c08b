@@ -1,0 +1,5 @@
+package com.nextlearn.portfolio.entities;
+
+public class ContactEntity {
+
+}

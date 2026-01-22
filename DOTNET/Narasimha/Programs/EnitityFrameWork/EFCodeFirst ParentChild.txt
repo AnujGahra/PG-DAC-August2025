@@ -1,0 +1,103 @@
+Install-Package Microsoft.EntityFrameworkCore.Tools
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+
+1)Code In Department Class
+
+namespace CRUDinCoreMVC.Models
+{
+    public class Department
+    {
+        public int DepartmentId { get; set; }
+        public string Name { get; set; }
+
+        public List<Employee> Employees { get; set; }
+    }
+}
+
+2)Code In Employee Class
+------------------------------------------------------------------------
+namespace CRUDinCoreMVC.Models
+{
+    public class Employee
+    {
+        public int EmployeeId { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Position { get; set; }
+        public int DepartmentId { get; set; }
+
+        public Department? Department { get; set; }
+    }
+}
+------------------------------------------------------------------------------
+3)Code In appSetting.json File
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "EFCoreDBConnection": "Server=LAPTOP-6P5NK25R\\SQLSERVER2022DEV;Database=EFCoreMVCDB;Trusted_Connection=True;TrustServerCertificate=True;"
+  }
+}
+
+
+-------------------------------------------------------------
+4)Code In EFCoreDbContext Class
+
+using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.Metrics;
+
+namespace CRUDinCoreMVC.Models
+{
+    public class EFCoreDbContext : DbContext
+    {
+        //Constructor calling the Base DbContext Class Constructor
+        public EFCoreDbContext(DbContextOptions<EFCoreDbContext> options) : base(options)
+        {
+        }
+
+        //OnConfiguring() method is used to select and configure the data source
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+        }
+
+        //Adding Domain Classes as DbSet Properties
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Department> Departments { get; set; }
+    }
+}
+
+--------------------------------------------------------------------------------
+5)Adding Services In Program.cs Class
+//Configure the ConnectionString and DbContext class
+builder.Services.AddDbContext<EFCoreDbContext>(options =>
+{
+        options.UseSqlServer(builder.Configuration.GetConnectionString("EFCoreDBConnection"));
+});
+
+---------------------------------------------------------
+6)Add Migrations
+
+Next, we need to generate the EF Core migrations and update the database schema. Open the Package Manager Console and Execute the add-migration and update-database commands as follows. You can give your migration any name. Herea I am giving it EFCoreDBMig1. The name you are giving it should not be given earlier.
+
+Add-Migration EFCoreDBMig1
+
+update-database
+
+7)Add Records To Parent Table(Department)
+
+INSERT INTO Departments VALUES ('IT');
+INSERT INTO Departments VALUES ('HR')
+INSERT INTO Departments VALUES ('Payroll');
+
+8)Create Employee Controller With Views Using Entity Framwork With Views

@@ -1,0 +1,49 @@
+public class RegistrationModel
+    {
+        public bool IsDeveloper { get; set; }
+        public string Gender { get; set; }
+        public int? CountryId { get; set; }
+        public List<SelectListItem> ListofCountries { get; set; }
+       public string Address { get; set; }
+    }
+
+------------------------------------------------------
+public IActionResult Register()
+        {
+            RegistrationModel registrationModel = new RegistrationModel()
+            {
+                ListofCountries = new List<SelectListItem>()
+                {
+                    new SelectListItem
+                    {
+                        Value = "",
+                        Text = "Select"
+                    },
+                    new SelectListItem
+                    {
+                         Value = "1",
+                        Text = "India"
+                    },
+                    new SelectListItem
+                    {
+                         Value = "2",
+                        Text = "America"
+                    }
+                }
+            };
+            
+
+            return View(registrationModel);
+        }
+
+------------------------------------------------------
+<input asp-for="IsDeveloper" type="checkbox" />
+
+<label>Gender</label>
+<br />
+<input asp-for="Gender" value="Male" type="radio" /> Male
+<input asp-for="Gender" value="Female" type="radio" /> Female
+
+<select asp-for="CountryId" class="form-control" asp-items="Model.ListofCountries"></select>
+
+<textarea class="form-control" asp-for="Address"></textarea>

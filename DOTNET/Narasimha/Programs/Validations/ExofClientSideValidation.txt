@@ -1,0 +1,14 @@
+ Use the unobtrusive client-side validation libraries provided by asp.net core.
+
+With this approach, we do not have to write a single line of code. All we have to do is include the following 3 scripts in the order specified.
+
+<script src="~/lib/jquery/jquery.js"></script>
+<script src="~/lib/jquery-validate/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+
+What does "Unobtrusive Validation" Mean
+
+Unobtrusive Validation allows us to take the already-existing server side validation attributes and use them to implement client-side validation. We do not have to write a single line of custom JavaScript code. All we need is the above 3 script files in the order specified.
+
+The unobtrusive validation is done using the jquery.validate.unobtrusive.js library. This library is built on top of jquery.validate.js library, which in turns uses jQuery. This is the reason we need to import these 3 libraries in the order specified.

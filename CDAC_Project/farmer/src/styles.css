@@ -1,0 +1,437 @@
+/* styles.css */
+
+:root {
+  --ac-bg: #e9f9ee;
+  --ac-card-bg: #ffffff;
+  --ac-green: #18a34a;
+  --ac-green-soft: #dffbe9;
+  --ac-blue-soft: #e0edff;
+  --ac-text-main: #111827;
+  --ac-text-muted: #6b7280;
+  --ac-border: #e5e7eb;
+  --ac-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  --ac-radius-card: 32px;
+  --ac-radius-inner: 22px;
+  --ac-transition: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Background */
+
+.ac-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(circle at top, #d1fae5 0, #e9f9ee 45%, #f0fdf4 100%);
+}
+
+/* Header */
+
+.ac-logo-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  background: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: #f9fafb;
+  box-shadow: 0 14px 30px rgba(4, 120, 87, 0.4);
+}
+
+.ac-logo-sprout {
+  font-size: 30px;
+}
+
+.ac-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ac-text-main);
+  text-align: center;
+}
+
+.ac-subtitle {
+  margin: 4px 0 28px;
+  font-size: 14px;
+  color: var(--ac-text-muted);
+  text-align: center;
+}
+
+/* Card */
+
+.ac-card {
+  width: 100%;
+  max-width: 520px;
+  background: var(--ac-card-bg);
+  border-radius: var(--ac-radius-card);
+  box-shadow: var(--ac-shadow);
+  padding: 28px 28px 26px;
+}
+
+.ac-card-auth {
+  padding-top: 22px;
+}
+
+.ac-card-title {
+  margin: 0 0 4px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ac-card-subtitle {
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--ac-text-muted);
+}
+
+/* Role cards */
+
+.ac-role {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: var(--ac-radius-inner);
+  border: 1.5px solid var(--ac-border);
+  background: #f9fafb;
+  padding: 18px 22px;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 12px;
+  transition:
+    background var(--ac-transition),
+    box-shadow var(--ac-transition),
+    transform var(--ac-transition),
+    border-color var(--ac-transition);
+  will-change: transform, box-shadow;
+}
+
+.ac-role-farmer {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.ac-role-admin {
+  background: #f9fafb;
+}
+
+.ac-role:hover {
+  background: #ecfdf3;
+  border-color: var(--ac-green);
+  box-shadow: 0 12px 30px rgba(22, 163, 74, 0.2);
+  transform: translateY(-1px);
+}
+
+.ac-role-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ac-role-icon-farmer {
+  background: var(--ac-green-soft);
+}
+
+.ac-role-icon-admin {
+  background: var(--ac-blue-soft);
+}
+
+.ac-icon-person,
+.ac-icon-shield {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  border: 2px solid #16a34a;
+  display: inline-block;
+  position: relative;
+}
+
+.ac-icon-person::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 999px;
+  border: 2px solid #16a34a;
+}
+
+.ac-icon-shield {
+  border-radius: 6px;
+  border-color: #2563eb;
+}
+
+.ac-role-text {
+  flex: 1;
+}
+
+.ac-role-name {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.ac-role-desc {
+  font-size: 13px;
+  color: var(--ac-text-muted);
+}
+
+.ac-role-arrow {
+  font-size: 18px;
+  color: #9ca3af;
+}
+
+/* Back + current role */
+
+.ac-back-btn {
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ac-text-muted);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.ac-back-btn span {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ac-current-role {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.ac-role-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #f9fafb;
+}
+
+.ac-role-chip-farmer {
+  background: #ecfdf3;
+}
+
+.ac-role-chip-admin {
+  background: #eef2ff;
+}
+
+.ac-role-chip-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ac-role-chip-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.ac-role-chip-title {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ac-role-chip-subtitle {
+  font-size: 11px;
+  color: var(--ac-text-muted);
+}
+
+/* Login / Register toggle */
+
+.ac-auth-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 999px;
+  background: #f3f4f6;
+  padding: 3px;
+  margin-bottom: 18px;
+}
+
+.ac-auth-tab {
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  padding: 8px 0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background var(--ac-transition), color var(--ac-transition),
+    box-shadow var(--ac-transition);
+}
+
+.ac-auth-tab-active {
+  background: #16a34a;
+  color: #f9fafb;
+  box-shadow: 0 8px 18px rgba(22, 163, 74, 0.4);
+}
+
+/* Forms */
+
+.ac-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.ac-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.ac-field-label {
+  color: var(--ac-text-main);
+  font-weight: 500;
+}
+
+.ac-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--ac-border);
+  padding: 10px 12px;
+  background: #ffffff;
+  transition: border-color var(--ac-transition), box-shadow var(--ac-transition),
+    background var(--ac-transition);
+}
+
+.ac-input-wrap:focus-within {
+  border-color: var(--ac-green);
+  box-shadow: 0 0 0 1px rgba(22, 163, 74, 0.2);
+  background: #f9fffb;
+}
+
+.ac-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  background: transparent;
+}
+
+.ac-input::placeholder {
+  color: #9ca3af;
+}
+
+.ac-input-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  border: 1.6px solid #9ca3af;
+  position: relative;
+}
+
+.ac-input-icon-mail::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  bottom: 2px;
+  border-bottom: 1.6px solid #9ca3af;
+  border-radius: 2px;
+}
+
+.ac-input-icon-lock {
+  border-radius: 4px;
+}
+
+.ac-input-icon-user::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: 1px;
+  height: 1px;
+  border-radius: 999px;
+  border: 1.6px solid #9ca3af;
+}
+
+/* Primary button */
+
+.ac-primary-btn {
+  margin-top: 6px;
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  padding: 11px 0;
+  background: #16a34a;
+  color: #f9fafb;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--ac-transition), box-shadow var(--ac-transition),
+    transform var(--ac-transition);
+  box-shadow: 0 12px 26px rgba(22, 163, 74, 0.3);
+}
+
+.ac-primary-btn:hover {
+  background: #15803d;
+  transform: translateY(-0.5px);
+}
+
+.ac-primary-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(22, 163, 74, 0.3);
+}
+
+/* Bottom text */
+
+.ac-switch-text {
+  margin: 8px 0 0;
+  font-size: 13px;
+  text-align: center;
+  color: var(--ac-text-muted);
+}
+
+.ac-link {
+  color: #16a34a;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .ac-card,
+  .ac-card-auth {
+    padding: 22px 18px 20px;
+    border-radius: 24px;
+  }
+}

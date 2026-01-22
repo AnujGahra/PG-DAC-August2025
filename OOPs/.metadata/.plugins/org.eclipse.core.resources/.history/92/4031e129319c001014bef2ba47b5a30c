@@ -1,0 +1,16 @@
+package wrapper.classes;
+
+public class Launch {
+
+	public static void main(String[] args) {
+		
+		int a = 10;
+		Integer i = new Integer(a); // Deprecated -> manual boxing
+		System.out.println(i);
+		
+		int k = i.intValue();
+		System.out.println(k);
+
+	}
+
+}

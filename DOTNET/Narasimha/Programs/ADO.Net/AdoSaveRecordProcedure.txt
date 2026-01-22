@@ -1,0 +1,73 @@
+CREATE PROCEDURE [dbo].[CreateInventory]
+    @Name       VARCHAR(50),
+    @Price        MONEY,
+    @Quantity   INT,
+    @Result VARCHAR(50) OUTPUT
+AS
+BEGIN
+    Insert Into Inventory (Name, Price, Quantity) Values (@Name, @Price, @Quantity)
+    SET @Result='Success'
+END
+-------------------------------------------------------
+
+[HttpPost]
+public IActionResult Create(Inventory inventory)
+{
+    string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+    using (SqlConnection connection = new SqlConnection(connectionString))
+    {
+        string sql = "CreateInventory";
+  
+        using (SqlCommand command = new SqlCommand(sql, connection))
+        {
+            command.CommandType = CommandType.StoredProcedure;
+  
+            // adding parameters
+            SqlParameter parameter = new SqlParameter
+            {
+                ParameterName = "@Name",
+                Value = inventory.Name,
+                SqlDbType = SqlDbType.VarChar,
+                Size = 50
+            };
+            command.Parameters.Add(parameter);
+  
+            parameter = new SqlParameter
+            {
+                ParameterName = "@Price",
+                Value = inventory.Price,
+                SqlDbType = SqlDbType.Money
+            };
+            command.Parameters.Add(parameter);
+  
+            parameter = new SqlParameter
+            {
+                ParameterName = "@Quantity",
+                Value = inventory.Quantity,
+                SqlDbType = SqlDbType.Int
+            };
+            command.Parameters.Add(parameter);
+  
+            parameter = new SqlParameter
+            {
+                ParameterName = "@Result",
+                SqlDbType = SqlDbType.VarChar,
+                Size = 50,
+                Direction = ParameterDirection.Output
+            };
+            command.Parameters.Add(parameter);
+  
+            connection.Open();
+  
+            // Execute the stored procedure
+            command.ExecuteNonQuery();
+  
+            // Output parameter value
+            string result= Convert.ToString(command.Parameters["@Result"].Value);
+            ViewBag.Result = result;
+  
+            connection.Close();
+        }
+    }
+    return View();
+}

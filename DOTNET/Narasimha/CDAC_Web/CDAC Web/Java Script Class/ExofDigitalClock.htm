@@ -1,0 +1,33 @@
+<html>
+<head>
+<script type="text/javascript">
+function myFunction()
+{
+setInterval(function()
+{myTimer()
+} , 1000);
+}
+
+function myTimer()
+{
+var d=new Date();
+var t=d.toLocaleTimeString();
+document.getElementById("demo").innerHTML=t;
+document.getElementById("bt1").style.display = "none";
+}
+</script>
+</head>
+<body>
+<br>
+<br>
+<center>
+<p id="demo" >
+Here Time Will Be Displayed
+</p>
+<br>
+<br>
+<input type="button" id="bt1" value="Show Time" onclick="myFunction()" />
+</body>
+</html>
+
+

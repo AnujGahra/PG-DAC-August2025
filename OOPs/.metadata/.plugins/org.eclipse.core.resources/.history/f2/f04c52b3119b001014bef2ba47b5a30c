@@ -1,0 +1,23 @@
+package byteStream;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class Launch {
+
+	public static void main(String[] args) throws IOException {
+		
+		
+		String s = "This is my car";
+		byte[] b = s.getBytes();
+		
+		FileOutputStream fos = new FileOutputStream("/Users/anujgahra/Developer/PG-DAC/Java_module/Resources");
+		fos.write(b);
+		
+		System.out.println("Data sent successfully");
+		
+		
+		
+}
+
+}

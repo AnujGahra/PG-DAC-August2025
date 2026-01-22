@@ -1,0 +1,31 @@
+Partial Views
+---------------------
+Partial Views are just views that can be reused across the web application. So, They can act as a pluggable reusable block that we can call from anywhere in the application, and the content of the partial view is displayed. Whenever we use Partial Views, they must be rendered as child views. They are beneficial as a reusable component or when splitting a large views into small parts. 
+
+Reusability: Partial views can be used in multiple parent views or even multiple times within the same parent view, reducing code duplication and promoting a DRY (Don't Repeat Yourself) approach.
+
+Method 1
+
+ Using Html.Partial
+-------------------------
+This is one of the simplest ways to render a partial view. It returns an HTML-encoded string and can be included directly within a Razor view. This method is executed synchronously. It is not recommended for use in modern applications because it blocks the calling thread until the view is rendered.
+
+
+Syntax:
+
+@Html.Partial(“PartialViewName”)
+@Html.Partial(“PartialViewName”, model)
+
+
+Method 2: 
+----------------
+ Using Html.PartialAsync
+
+This method is the asynchronous counterpart of Html.Partial. This method is used to asynchronously render partial views. It is the recommended way due to its non-blocking nature.
+
+Syntax:
+
+@await Html.PartialAsync(“PartialViewName”)
+@await Html.PartialAsync(“PartialViewName”, model)
+
+

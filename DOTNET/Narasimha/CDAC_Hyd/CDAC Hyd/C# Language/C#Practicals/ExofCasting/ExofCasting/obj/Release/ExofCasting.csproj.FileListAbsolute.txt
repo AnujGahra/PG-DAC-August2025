@@ -1,0 +1,21 @@
+C:\LangBasics\ExofCasting\ExofCasting\bin\Release\ExofCasting.exe
+C:\LangBasics\ExofCasting\ExofCasting\bin\Release\ExofCasting.pdb
+C:\LangBasics\ExofCasting\ExofCasting\obj\Release\ResolveAssemblyReference.cache
+C:\LangBasics\ExofCasting\ExofCasting\obj\Release\ExofCasting.exe
+C:\LangBasics\ExofCasting\ExofCasting\obj\Release\ExofCasting.pdb
+D:\LangBasics\ExofCasting\ExofCasting\obj\Release\ExofCasting.exe
+D:\LangBasics\ExofCasting\ExofCasting\obj\Release\ExofCasting.pdb
+D:\LangBasics\ExofCasting\ExofCasting\bin\Release\ExofCasting.exe
+D:\LangBasics\ExofCasting\ExofCasting\bin\Release\ExofCasting.pdb
+D:\LangBasics\ExofCasting\ExofCasting\obj\Release\ResolveAssemblyReference.cache
+C:\kk\LangBasics\ExofCasting\ExofCasting\obj\Release\ExofCasting.exe
+C:\kk\LangBasics\ExofCasting\ExofCasting\obj\Release\ExofCasting.pdb
+C:\SouceEdge Session 1\LangBasics\ExofCasting\ExofCasting\obj\Release\ExofCasting.exe
+C:\SouceEdge Session 1\LangBasics\ExofCasting\ExofCasting\obj\Release\ExofCasting.pdb
+C:\SouceEdge Session 1\LangBasics\ExofCasting\ExofCasting\bin\Release\ExofCasting.exe
+C:\SouceEdge Session 1\LangBasics\ExofCasting\ExofCasting\bin\Release\ExofCasting.pdb
+D:\krishna sir\C#Practicals\ExofCasting\ExofCasting\bin\Release\ExofCasting.exe.config
+D:\krishna sir\C#Practicals\ExofCasting\ExofCasting\obj\Release\ExofCasting.exe
+D:\krishna sir\C#Practicals\ExofCasting\ExofCasting\obj\Release\ExofCasting.pdb
+D:\krishna sir\C#Practicals\ExofCasting\ExofCasting\bin\Release\ExofCasting.exe
+D:\krishna sir\C#Practicals\ExofCasting\ExofCasting\bin\Release\ExofCasting.pdb

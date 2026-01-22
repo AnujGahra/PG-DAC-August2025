@@ -1,0 +1,5 @@
+package com.coding.yt.hostpitalManagement.entity;
+
+public class Patient {
+
+}

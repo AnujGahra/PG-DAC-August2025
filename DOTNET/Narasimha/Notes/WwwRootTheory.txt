@@ -1,0 +1,29 @@
+What is wwwroot Folder in ASP.NET Core?
+------------------------------------------------------
+By default, the wwwroot folder in the ASP.NET Core Web Application is treated as the Web Root folder, and this folder or directory should be present in the project root directory. In ASP.NET Core Web Application, the Static files can be stored in any folder under the Web Root (wwwroot) folder and can be accessed with a relative path to that root. The following are the key characteristics of wwwroot folder:
+
+Static Files: The wwwroot folder is the default static file server in ASP.NET Core. It stores assets like HTML, CSS, JavaScript, and image files. When you deploy your web application, the files in this folder are accessible to the public via a URL.
+Root for Web Content: It’s considered the root directory for web content. This means that any static content placed in this folder can be directly accessed via a URL. For example, if you have an image logo.png in the wwwroot/images folder, it can be accessed via http://<your-app-url>/images/logo.png.
+Security: The wwwroot directory provides security for your application. Files outside this directory are not accessible via a direct URL, helping to protect application code and data.
+
+
+Adding the wwwroot (webroot) folder in ASP.NET Core Application
+-------------------------------------------------------------------------------------
+When we create a new ASP.NET Core Web Application with MVC Project Template, then by default, this folder (wwwroot) is created in the root project directory. But if you create a new ASP.NET Core Application with Empty Project Template, then by default, this folder will not be created by Visual Studio.
+
+
+What is the wwwroot (webroot) folder going to contain in ASP.NET Core?
+----------------------------------------------------------------------------------------------
+Generally, there should be separate folders for the different types of static files, such as JavaScript, CSS, Images, Library Scripts, etc, inside the wwwroot folder .
+
+
+Note: To Serve the Static Files, you must include the app.UseStaticFiles() Middleware component in Program.cs class file. If this is not clear at the moment, then don’t worry. 
+
+
+How Do We Create Our Own Webroot Folder in ASP.NET Core?
+Let’s say we don’t want wwwroot as our webroot folder; instead, we want MyWebRoot as the webroot folder for our application. First, modify the wwwroot folder as MyWebRoot, and once we modify it,we need to tell the ASP.NET Core Framework to use MyWebRoot as the web root path. To do so, we need to set the WebRootPath property to MyWebRoot while creating the WebApplicationBuilder instance. So, for a better understanding, please modify the Main method of the Program class as shown below to configure the MyWebRoot folder as the webroot folder for our application.
+
+  WebApplicationBuilder builder = WebApplication.CreateBuilder(new WebApplicationOptions
+            {
+                WebRootPath = "MyWebRoot"
+            });

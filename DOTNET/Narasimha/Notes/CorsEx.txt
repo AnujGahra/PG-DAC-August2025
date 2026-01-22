@@ -1,0 +1,97 @@
+Cross-Origin Requests (CORS) in ASP.NET Core
+
+
+Browser security prevents a web page located on a domain to make requests to another web page which is located on a different domain. This restriction is called the same-origin policy. This security feature prevents malicious sites to read data from another websites.
+
+For example suppose I have a web page called “A.html” in my website. It’s URL being:
+
+https://www.alpha.com/A.html
+
+Now page A.html has an AJAX code that tries to read the HTML source code of another page “B.html” which is located on a different domain say “asp.net”
+
+http://www.asp.net/B.html
+
+
+Since “B.html” is located on a different domain, the page “A.html” will not be able to make AJAX request due to the restriction called same-origin policy.
+
+The AJAX call will return the error message:
+
+No ‘Access-Control-Allow-Origin’ header is present on the requested resource.
+
+Thankfully there is Cross Origin Resource Sharing (CORS) which is a W3C standard that allows browsers to relax the same-origin policy.
+
+So, now if the website asp.net implements CORS then my website’s page – “A.html” can make AJAX request to “B.html” and reads B’s HTML source code.
+
+Once a website enables CORS, new HTTP headers are introduced which enable cross-origin requests. These HTTP headers are automatically set for cross-origin requests. One important HTTP header is called Access-Control-Allow-Origin.
+
+When an external page or a resource, makes requests to a resource on another Server or domain, then this server responds with the value for the Access-Control-Allow-Origin header.
+
+Follow the below 2 steps to enable CORS in your ASP.NET Core app:
+
+1. Add CORS to services in program class.
+2. Include the CORS middleware in program class.
+See the below highlighted codes on the Program.cs where CORS is added for a web app.
+
+
+var builder = WebApplication.CreateBuilder(args);
+ 
+builder.Services.AddCors();
+ 
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+ 
+var app = builder.Build();
+ 
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. 
+    app.UseHsts();
+}
+ 
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+ 
+app.UseRouting();
+ 
+// Shows UseCors with CorsPolicyBuilder.
+app.UseCors(builder =>
+{
+    builder.AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader();
+});
+ 
+app.UseAuthorization();
+ 
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+ 
+app.Run();
+-----------------------------------------------------------------------
+
+services.AddCors(options =>
+{
+    options.AddPolicy("Policy1", builder =>
+    {
+        builder.WithOrigins("https://facebook.com")
+            .WithMethods("GET", "POST")
+            .WithHeaders("Content-Type");
+    });
+
+    options.AddPolicy("Policy2", builder =>
+    {
+        builder.WithOrigins("https://google.com")
+            .WithMethods("GET", "PUT", "DELETE")
+            .WithHeaders("Authorization", "Content-Type");
+    });
+});
+-----------------------------------------------------
+[Route("api/[controller]")]
+[EnableCors("CompositePolicy")]
+public class YourController : ControllerBase
+{
+    
+}

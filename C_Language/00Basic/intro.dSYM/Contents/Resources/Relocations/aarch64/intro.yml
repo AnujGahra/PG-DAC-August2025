@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/anujgahra/Developer/PG-DAC/C_Language/00Basic/intro'
+relocations:     []
+...

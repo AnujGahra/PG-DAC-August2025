@@ -1,0 +1,32 @@
+﻿@model ExofModelBinders.Models.Staff
+@{
+    ViewBag.Title = "Show";
+}
+
+<center>
+
+    <h2>Staff Details</h2>
+    <br />
+    <table border="4" bordercolor="red">
+       
+         <tr>
+            <td>Employee No</td>
+            <td>@Model.Eno</td>
+        </tr>
+
+        <tr>
+            <td>Employee Name</td>
+            <td>@Model.Ename</td>
+        </tr>
+
+        <tr>
+            <td>Date of Join</td>
+            <td>@Model.Doj</td>
+        </tr>
+
+        <tr>
+            <td>Employee Sal</td>
+            <td>@Model.Sal</td>
+        </tr>
+    </table>
+</center>

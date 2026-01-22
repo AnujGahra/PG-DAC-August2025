@@ -1,0 +1,26 @@
+What is ADO.NET?
+ADO stands for Microsoft ActiveX Data Objects. ADO.NET is Microsoft’s Data Access Technologies, which we can use to communicate with different data sources. It is a part of the .NET Framework, which establishes a connection between the .NET Application and different data sources. The Data Sources can be SQL Server, Oracle, MySQL etc. ADO.NET consists of a set of predefined classes that can be used to connect, retrieve, insert, update, and delete data 
+
+ADO.NET can be used to develop any .NET application Like Console
+Windows Web,API And Core .Net Apps
+
+Key Components of ADO.NET
+----------------------------------------
+ADO.NET consists of several key components, each serving a specific purpose in data access:
+
+1)Connection: Represents a connection to a specific data source. Examples include SqlConnection for SQL Server and OleDbConnection for OLE DB data sources.
+
+2)Command: Represents a command or a stored procedure that can be executed against a data source. Examples include SqlCommand for SQL Server and OleDbCommand for OLE DB data sources.
+
+3)DataReader: Provides a way to read a forward-only stream of data from a data source. Examples include SqlDataReader and OleDbDataReader.
+
+4)DataAdapter: Acts as a bridge between a data set and a data source for retrieving and saving data. Examples include SqlDataAdapter and OleDbDataAdapter.
+
+5)DataSet: An in-memory representation of data that can consist of multiple tables and relationships. It is a disconnected data access mechanism.
+
+ADO.NET Architecture
+----------------------------------
+
+1)Connected Model: In the connected model, the application maintains a constant connection to the database while performing operations. This model is suitable for scenarios where you need to fetch data quickly and where the data needs to be processed in real time.
+
+2)Disconnected Model: In the disconnected model, the application connects to the database, fetches the required data, and then disconnects from the database. The data is then processed in memory. This model is suitable for scenarios where data needs to be processed without constant interaction with the database.

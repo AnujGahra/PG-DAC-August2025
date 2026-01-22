@@ -1,0 +1,7 @@
+1764995967313	Delete elements
+1764996038985	Delete element
+1764997027954	Extract local variable 'configuration'
+1764997058190	Extract local variable 'sessionFactory'
+1764997092640	Extract local variable 'session'
+1764997330059	Extract local variable 'is'
+1764997351027	Extract local variable 'properties'

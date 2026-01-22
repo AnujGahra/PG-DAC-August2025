@@ -1,0 +1,93 @@
+Step 1 
+Code In Model
+----------------------
+namespace PartialViewInMVC.Models
+{
+    public class Product
+{
+    public long ProductID { get; set; }
+    public string? Name { get; set; }
+    public string ?Category { get; set; }
+    public decimal Price { get; set; }
+}
+
+}
+
+Step 2 
+Create Empty Controller Called Product Controller
+And Write Following Code 
+
+using Microsoft.AspNetCore.Mvc;
+using PartialViewInMVC.Models;
+
+namespace ExofPartialView.Controllers
+{
+    public class ProductController : Controller
+    {
+        private List<Product> products = new List<Product>();
+        public ProductController()
+        {
+            products = new List<Product>()
+            {
+                new Product { ProductID =1, Name ="Colgate", Category = "Tooth Paste", Price = 10},
+                new Product { ProductID =2, Name ="Close Up", Category = "Tooth Paste", Price = 20},
+                new Product { ProductID =3, Name ="Rin", Category = "Detergent", Price = 30},
+                new Product { ProductID =4, Name ="Surf", Category = "Detergent", Price = 40},
+                new Product { ProductID =5, Name ="Cadbury", Category = "Choclate", Price = 50},
+                new Product { ProductID =6, Name ="Kitkat", Category = "Choclate", Price = 50}
+            };
+        }
+
+        //Product/Details/1
+        public ActionResult Index()
+        {
+            var ProductDetails = products.ToList();
+            return View(ProductDetails);
+        }
+    }
+}
+
+Step 3
+Code In Partial View Products
+-------------------------------------   
+
+@model ExofPartialView.Models.Product
+<style>
+    .container {
+        float: left;
+        width: 200px;
+        background: yellow;
+        color: blue;
+        border: 2px solid #a1a1a1;
+        margin: 5px 10px;
+    }
+
+    .span {
+        width: 125px;
+        container;
+    }
+</style>
+
+
+<div class="container">
+    <p><span>Product_Id:</span><span>@Model.ProductID</span></p>
+    <p><span>Product-Name:</span><span>@Model.Name</span></p>
+    <p><span>Product-Cateogry:</span><span>@Model.Category</span></p>
+    <p><span>Product-Price:</span><span>@Model.Price</span></p>
+</div>
+
+Step 3 
+Code In Index View
+-----------------------------
+@model IEnumerable<ExofPartialView.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@foreach (var item in Model)
+{
+    //@Html.Partial("Products", item)
+    //@await Html.PartialAsync("Products",item)
+   
+}

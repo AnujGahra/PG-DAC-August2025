@@ -1,0 +1,14 @@
+C:\LangBasics\ExofPartialMethod\ExofPartialMethod\obj\Debug\ResolveAssemblyReference.cache
+C:\LangBasics\ExofPartialMethod\ExofPartialMethod\bin\Debug\ExofPartialMethod.exe
+C:\LangBasics\ExofPartialMethod\ExofPartialMethod\bin\Debug\ExofPartialMethod.pdb
+C:\LangBasics\ExofPartialMethod\ExofPartialMethod\obj\Debug\ExofPartialMethod.exe
+C:\LangBasics\ExofPartialMethod\ExofPartialMethod\obj\Debug\ExofPartialMethod.pdb
+D:\LangBasics\ExofPartialMethod\ExofPartialMethod\obj\Debug\ExofPartialMethod.exe
+D:\LangBasics\ExofPartialMethod\ExofPartialMethod\obj\Debug\ExofPartialMethod.pdb
+D:\LangBasics\ExofPartialMethod\ExofPartialMethod\bin\Debug\ExofPartialMethod.exe
+D:\LangBasics\ExofPartialMethod\ExofPartialMethod\bin\Debug\ExofPartialMethod.pdb
+D:\LangBasics\ExofPartialMethod\ExofPartialMethod\obj\Debug\ResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofPartialMethod\ExofPartialMethod\obj\Debug\ExofPartialMethod.exe
+C:\SouceEdge Session 1\LangBasics\ExofPartialMethod\ExofPartialMethod\obj\Debug\ExofPartialMethod.pdb
+E:\krishna sir\C#Practicals\ExofPartialMethod\ExofPartialMethod\obj\Debug\ExofPartialMethod.exe
+E:\krishna sir\C#Practicals\ExofPartialMethod\ExofPartialMethod\obj\Debug\ExofPartialMethod.pdb

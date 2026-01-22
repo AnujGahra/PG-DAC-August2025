@@ -1,0 +1,36 @@
+Filters in ASP.NET Core
+-------------------------------
+Filters in ASP.NET Core allow code to run before or after specific stages in the request processing pipeline.
+
+Built-in filters handle tasks such as:
+
+Authorization, preventing access to resources a user isn't authorized for.
+Response caching, short-circuiting the request pipeline to return a cached response.
+
+
+Each filter type is executed at a different stage in the filter pipeline:
+
+Authorization filters:
+-----------------------------
+Run first.
+Determine whether the user is authorized for the request.
+Short-circuit the pipeline if the request is not authorized.
+
+Resource filters:
+------------------------
+Run after authorization.
+OnResourceExecuting runs code before the rest of the filter pipeline. For example, OnResourceExecuting runs code before model binding.
+OnResourceExecuted runs code after the rest of the pipeline has completed.
+
+Action filters:
+---------------------
+Run immediately before and after an action method is called.
+Can change the arguments passed into an action.
+Can change the result returned from the action.
+
+
+Exception filters:
+------------------------
+Apply global policies to unhandled exceptions that occur before the response body has been written to.
+Run after model binding and action filters, but before the action result is executed.
+Run only if an unhandled exception occurs during action execution or action result execution.

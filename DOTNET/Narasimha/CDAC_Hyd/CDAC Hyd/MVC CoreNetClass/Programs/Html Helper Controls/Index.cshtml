@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Html Helper Controls</h2>
+@using(Html.BeginForm("Index","Home",FormMethod.Post))
+{
+    <table border="2">
+        
+        <tr>
+            <td>@Html.Label("Enter Deptno")</td>
+            <td>@Html.TextBox("dn", "", 
+            new {style="color:blue;background-color:yellow" })</td>
+        </tr>
+
+        <tr>
+            <td>@Html.Label("Enter Dept name")</td>
+            <td>@Html.TextBox("dm")</td>
+        </tr>
+
+        <tr>
+            <td>@Html.Label("Enter Password")</td>
+            <td>@Html.Password("pw")</td>
+        </tr>
+
+        <tr>
+            <td>@Html.Label("Select Your Gender")</td>
+            <td>
+                @Html.RadioButton("Gender", "M")<span>Male</span>
+            @Html.RadioButton("Gender", "F")<span>FeMale</span>
+        </td>
+    </tr>
+
+    <tr>
+        <td>@Html.Label("Enter Your Address")</td>
+        <td>@Html.TextArea("Address")</td>
+    </tr>
+
+    <tr>
+        <td>@Html.Label("I Agree Terms")</td>
+        <td>@Html.CheckBox("Accept",true)</td>
+    </tr>
+
+
+    <tr>
+        <td>@Html.Label("Upload Your Resume")</td>
+        <td>@Html.TextBox("Resume","",new{type="file"})</td>
+    </tr>
+    <tr>
+        <td>@Html.Label("Choose Your Department")</td>
+        <td>
+            @Html.ListBox("Departments",new List<SelectListItem>{
+    new SelectListItem{Text="Accts",Value="1"},
+    new SelectListItem{Text="Mktg",Value="2"}
+    },"Select Dept")
+    </td>
+</tr>
+<tr>
+    <td> @Html.TextBox("Text","Submit",new {type="Submit"})</td>
+    <td> @Html.TextBox("Text","Reset",new {type="Reset"})</td>
+</tr>
+</table>
+    @Html.ActionLink("Your Name","ShowName")
+    <br />
+}
+
+
+@Html.ActionLink("ShowDate","ShowDate")|
+
+@Html.ActionLink("ShowTime", "ShowTime","Home")|

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Form — Show Data</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; padding: 24px; }
+    form { max-width: 420px; margin-bottom: 20px; }
+    label { display:block; margin-top:12px; }
+    input { width:100%; padding:8px; box-sizing:border-box; margin-top:4px; }
+    button { margin-top:12px; padding:8px 12px; }
+    .result { margin-top:20px; padding:12px; border-radius:6px; background:#f5f5f5; }
+    .error { color: #b00020; }
+  </style>
+</head>
+<body>
+
+  <h1>Enter your details</h1>
+
+  <form id="personForm">
+    <label for="first">First name
+      <input id="first" name="firstname" type="text" required autocomplete="given-name" />
+    </label>
+
+    <label for="last">Last name
+      <input id="last" name="lastName" type="text" required autocomplete="family-name" />
+    </label>
+
+    <label for="age">Age
+      <input id="age" name="age" type="number" min="0" required />
+    </label>
+
+    <button type="submit">Show data</button>
+    <button type="button" id="clearBtn">Clear</button>
+  </form>
+
+  <div id="output" class="result" aria-live="polite">
+    <!-- Submitted data will appear here -->
+    <em>No data submitted yet.</em>
+  </div>
+
+  <script>
+    const form = document.getElementById('personForm');
+    const output = document.getElementById('output');
+    const clearBtn = document.getElementById('clearBtn');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // prevent page reload
+
+      // read values
+      const firstname = form.elements['firstname'].value.trim();
+      const lastName  = form.elements['lastName'].value.trim();
+      const ageValue  = form.elements['age'].value.trim();
+
+      // simple validation
+      const age = Number(ageValue);
+      if (!firstname || !lastName) {
+        output.innerHTML = '<div class="error">Please enter both first and last name.</div>';
+        return;
+      }
+      if (!ageValue || Number.isNaN(age) || age < 0) {
+        output.innerHTML = '<div class="error">Please enter a valid non-negative age.</div>';
+        return;
+      }
+
+      // show data
+      output.innerHTML = `
+        <h2>Submitted data</h2>
+        <p><strong>First name:</strong> ${escapeHtml(firstname)}</p>
+        <p><strong>Last name:</strong> ${escapeHtml(lastName)}</p>
+        <p><strong>Age:</strong> ${age}</p>
+      `;
+    });
+
+    clearBtn.addEventListener('click', () => {
+      form.reset();
+      output.innerHTML = '<em>No data submitted yet.</em>';
+    });
+
+    // small helper to avoid inserting raw HTML
+    function escapeHtml(str) {
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+  </script>
+
+</body>
+</html>

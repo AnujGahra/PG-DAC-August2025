@@ -1,0 +1,32 @@
+public IActionResult Index()
+        {
+            List<Inventory> inventoryList = new List<Inventory>();
+
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                DataTable dataTable = new DataTable();
+
+                string sql = "Select * From Inventory";
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+
+                dataAdapter.Fill(dataTable);
+
+                foreach (DataRow dr in dataTable.Rows)
+                {
+                    Inventory inventory = new Inventory();
+                    inventory.Id = Convert.ToInt32(dr["Id"]);
+                    inventory.Name = Convert.ToString(dr["Name"]);
+                    inventory.Price = Convert.ToDecimal(dr["Price"]);
+                    inventory.Quantity = Convert.ToInt32(dr["Quantity"]);
+                    inventory.AddedOn = Convert.ToDateTime(dr["AddedOn"]);
+
+                    inventoryList.Add(inventory);
+                }
+
+                connection.Close();
+            }
+            return View(inventoryList);
+        }

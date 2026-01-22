@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;AccountDto.java&apos; to &apos;micro-employee/src/main/java/tech.codehunt.test.dto.external&apos;&#x0A;- Original project: &apos;micro-account&apos;&#x0A;- Destination element: &apos;micro-employee/src/main/java/tech.codehunt.test.dto.external&apos;&#x0A;- Original element: &apos;tech.codehunt.test.dto.AccountDto.java&apos;" description="Copy compilation unit" destination="=micro-employee/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;tech.codehunt.test.dto.external" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;tech.codehunt.test.dto{AccountDto.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1766397319437" units="1" version="1.0"/>
+</session>

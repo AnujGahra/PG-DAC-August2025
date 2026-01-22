@@ -1,0 +1,4 @@
+C:\SouceEdge Session 1\LangBasics\ExofDelegateWithEvent\ExofDelegateWithEvent\bin\Debug\ExofDelegateWithEvent.exe
+C:\SouceEdge Session 1\LangBasics\ExofDelegateWithEvent\ExofDelegateWithEvent\bin\Debug\ExofDelegateWithEvent.pdb
+C:\SouceEdge Session 1\LangBasics\ExofDelegateWithEvent\ExofDelegateWithEvent\obj\Debug\ExofDelegateWithEvent.exe
+C:\SouceEdge Session 1\LangBasics\ExofDelegateWithEvent\ExofDelegateWithEvent\obj\Debug\ExofDelegateWithEvent.pdb

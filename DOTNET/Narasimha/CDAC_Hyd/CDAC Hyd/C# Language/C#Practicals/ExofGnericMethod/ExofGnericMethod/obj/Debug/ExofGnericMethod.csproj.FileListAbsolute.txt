@@ -1,0 +1,10 @@
+C:\SouceEdge Session 1\LangBasics\ExofGnericMethod\ExofGnericMethod\bin\Debug\ExofGnericMethod.exe
+C:\SouceEdge Session 1\LangBasics\ExofGnericMethod\ExofGnericMethod\bin\Debug\ExofGnericMethod.pdb
+C:\SouceEdge Session 1\LangBasics\ExofGnericMethod\ExofGnericMethod\obj\Debug\ExofGnericMethod.csprojResolveAssemblyReference.cache
+C:\SouceEdge Session 1\LangBasics\ExofGnericMethod\ExofGnericMethod\obj\Debug\ExofGnericMethod.exe
+C:\SouceEdge Session 1\LangBasics\ExofGnericMethod\ExofGnericMethod\obj\Debug\ExofGnericMethod.pdb
+E:\krishna sir\C#Practicals\ExofGnericMethod\ExofGnericMethod\obj\Debug\ExofGnericMethod.exe
+E:\krishna sir\C#Practicals\ExofGnericMethod\ExofGnericMethod\obj\Debug\ExofGnericMethod.pdb
+E:\krishna sir\C#Practicals\ExofGnericMethod\ExofGnericMethod\bin\Debug\ExofGnericMethod.exe
+E:\krishna sir\C#Practicals\ExofGnericMethod\ExofGnericMethod\bin\Debug\ExofGnericMethod.pdb
+E:\krishna sir\C#Practicals\ExofGnericMethod\ExofGnericMethod\obj\Debug\ExofGnericMethod.csprojResolveAssemblyReference.cache

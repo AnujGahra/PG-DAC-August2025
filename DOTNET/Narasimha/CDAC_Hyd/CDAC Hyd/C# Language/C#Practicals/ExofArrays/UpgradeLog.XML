@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExofArrays">
+</Property><Property Name="Solution File" Value="D:\LangBasics\ExofArrays\ExofArrays.sln">
+</Property><Property Name="User Options File" Value="D:\LangBasics\ExofArrays\ExofArrays.suo">
+</Property><Property Name="Date" Value="29 December 2014">
+</Property><Property Name="Time" Value="12:11">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExofArrays.sln" Description="File successfully backed up as D:\LangBasics\ExofArrays\Backup\ExofArrays.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExofArrays.suo" Description="File successfully backed up as D:\LangBasics\ExofArrays\Backup\ExofArrays.suo">
+</Event><Event ErrorLevel="0" Project="ExofArrays" Source="ExofArrays\ExofArrays.csproj" Description="Project file successfully backed up as D:\LangBasics\ExofArrays\Backup\ExofArrays\ExofArrays.csproj">
+</Event><Event ErrorLevel="0" Project="ExofArrays" Source="ExofArrays\Program.cs" Description="File successfully backed up as D:\LangBasics\ExofArrays\Backup\ExofArrays\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExofArrays" Source="ExofArrays\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\LangBasics\ExofArrays\Backup\ExofArrays\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExofArrays" Source="ExofArrays\ExofArrays.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExofArrays" Source="ExofArrays\ExofArrays.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExofArrays.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExofArrays.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExofArrays" Source="ExofArrays\ExofArrays.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
