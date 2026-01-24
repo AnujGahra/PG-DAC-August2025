@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS bookstore;
 
 -- CREATE DATABASE
-CREATE DATABASE bookstore;
+CREATE DATABASE jdbctest;
 
 -- use this database
 USE bookstore;
