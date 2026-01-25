@@ -22,6 +22,28 @@ public class Sort0And1ArrayTwoPointer {
             }
         }
     }
+
+
+
+    static void statsortZeroesAndOnesUsingTwoPointer(int[] arr) {
+        int n = arr.length;
+        int left = 0, right = n-1;
+
+        while (left < right) {
+            if (arr[left] == 0) {
+                left++;
+            } else if (arr[right] == 1) {
+                right--;
+            } else {
+                // Swap arr[left] and arr[right]
+                int temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+                left++;
+                right--;
+            }
+        }
+    }
     
 
     public static void main(String[] args) {
