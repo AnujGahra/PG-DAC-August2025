@@ -13,6 +13,17 @@ public class ContainDuplicate {
         return false;
     }
 
+    // 2. Sorting
+    public static boolean containsDuplicateSorting(int[] nums) {
+        java.util.Arrays.sort(nums);
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] == nums[i - 1]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     // Using Hasing
     public static boolean containsDuplicateUsingHasing(int[] nums) {
         java.util.HashSet<Integer> set = new java.util.HashSet<>();
