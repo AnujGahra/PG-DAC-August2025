@@ -16,7 +16,7 @@ public class Launch {
 		EntityManager em = entityManagerFactory.createEntityManager();
 		
 		
-//		inserted(em);  
+		inserted(em);  
 //		read(em);
 //		update(em);
 //		delete(em);
