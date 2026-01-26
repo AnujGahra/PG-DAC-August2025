@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ContainDuplicate {
 
     // Brute Force
@@ -35,6 +37,13 @@ public class ContainDuplicate {
         }
         return false;
     }
+
+
+    // 4. Hash Set Length
+    public boolean hasDuplicate(int[] nums) {
+        return Arrays.stream(nums).distinct().count() < nums.length;
+    }
+    
 
     public static void main(String[] args) {
         // ContainDuplicate solution = new ContainDuplicate();
