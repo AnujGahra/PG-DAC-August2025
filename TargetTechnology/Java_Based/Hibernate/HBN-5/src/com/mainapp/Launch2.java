@@ -33,9 +33,9 @@ public class Launch2 {
 	    EntityTransaction transaction = em.getTransaction();
 	    transaction.begin();
 	    
-	    String sql = "delete from Employee where eid>=:id";
+//	    String sql = "delete from Employee where eid>=:id";
 
-	    Query query = em.createQuery(sql);
+	    Query query = em.createNamedQuery("deleteJPQL");
 	    query.setParameter("eid", 900);
 
 	    query.executeUpdate();

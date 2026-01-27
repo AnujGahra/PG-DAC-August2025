@@ -3,10 +3,14 @@ package com.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedNativeQuery;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "xemployee") // optional
+@NamedQuery(name = "deleteJPQL", query = "delete from Employee where eid<=:id")
+@NamedNativeQuery(name = "deleteSQL", query = "delete from xemployee where id<=:id")
 public class Employee {
 	
 	@Id
