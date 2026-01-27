@@ -20,8 +20,8 @@ public class Launch2 {
 		EntityManager em = entityManagerFactory.createEntityManager();
 
 //		inserted(em);   // in JPQL insert operation not supported
-		read(em);
-//		update(em);
+//		read(em);
+		update(em);
 //		delete(em);
 
 		em.close();
@@ -45,12 +45,15 @@ public class Launch2 {
 		EntityTransaction transaction = em.getTransaction();
 		transaction.begin();
 
-		String sql = "UPDATE xemployee " + "SET salary = ? " + "WHERE id >= ?";
+		String jpql =
+		        "UPDATE Employee e " +
+		        "SET e.esalary = :esalary " +
+		        "WHERE e.eid >= :eid";
 
-		Query query = em.createNativeQuery(sql);
+		Query query = em.createQuery(jpql);
 
-		query.setParameter(1, 98989898);
-		query.setParameter(2, 12347);
+		query.setParameter("esalary", 98765);
+		query.setParameter("eid", 900);
 
 		query.executeUpdate();
 
@@ -59,6 +62,7 @@ public class Launch2 {
 		System.out.println("BULK DATA UPDATED");
 
 		em.close();
+
 
 	}
 
