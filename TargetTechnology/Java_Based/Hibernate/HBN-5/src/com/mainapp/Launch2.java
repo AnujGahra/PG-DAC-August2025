@@ -19,8 +19,8 @@ public class Launch2 {
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("config");
 		EntityManager em = entityManagerFactory.createEntityManager();
 
-		inserted(em);   // in JPQL insert operation not supported
-//		read(em);
+//		inserted(em);   // in JPQL insert operation not supported
+		read(em);
 //		update(em);
 //		delete(em);
 
@@ -63,33 +63,19 @@ public class Launch2 {
 	}
 
 	private static void read(EntityManager em) {
+		
+		String jpql = "SELECT e FROM Employee e"; // Aliasing is mandatory in JPQL
 
-		// ------------------------------
-		// Approach 1: Native Query without Entity Mapping
-		// ------------------------------
-		/*
-		 * String sql = "SELECT * FROM xemployee";
-		 * 
-		 * Query query = em.createNativeQuery(sql); List<Object[]> list =
-		 * query.getResultList();
-		 * 
-		 * for (Object[] row : list) { for (Object column : row) {
-		 * System.out.print(column + " "); } System.out.println(); }
-		 */
-
-		// ------------------------------
-		// Approach 2: Native Query with Entity Mapping (Recommended)
-		// ------------------------------
-		String sql = "SELECT * FROM xemployee";
-
-		Query query = em.createNativeQuery(sql, Employee.class);
+		Query query = em.createQuery(jpql, Employee.class);
 		List<Employee> list = query.getResultList();
 
 		for (Employee employee : list) {
-			System.out.println(employee);
+		    System.out.println(employee);
 		}
 
 		em.close();
+
+		
 
 	}
 
