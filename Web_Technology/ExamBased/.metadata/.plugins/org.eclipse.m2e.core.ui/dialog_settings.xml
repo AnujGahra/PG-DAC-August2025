@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/anujgahra/Downloads/cdacproject_main/backend"/>
 			<item value="/Users/anujgahra/Developer/PG-DAC/Web_Technology/ExamBased/spring-boot-microservices-eureka"/>
 		</list>
 		<list key="projectNameTemplate">

@@ -7,109 +7,123 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaDelete;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.CriteriaUpdate;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 
 import com.entity.Employee;
 
 public class Launch3 {
 
-//	JPQL(Java Persistence Query Language)
+    // Criteria API (JPQL alternative)
+    public static void main(String[] args) {
 
-	public static void main(String[] args) {
+        EntityManagerFactory emf =
+                Persistence.createEntityManagerFactory("config");
 
-		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("config");
-		EntityManager em = entityManagerFactory.createEntityManager();
+        EntityManager em = emf.createEntityManager();
 
-//		inserted(em);   // in JPQL insert operation not supported
-//		read(em);
-//		update(em);
-		delete(em);
+        // insert(em);
+        // read(em);
+        // update(em);
+        delete(em);
 
-		em.close();
-		entityManagerFactory.close();
-	}
+        em.close();
+        emf.close();
+    }
 
-	private static void delete(EntityManager em) {
+    // ---------------- BULK DELETE ----------------
+    private static void delete(EntityManager em) {
 
-	    EntityTransaction transaction = em.getTransaction();
-	    transaction.begin();
-	    
-//	    String sql = "delete from Employee where eid>=:id";
+        EntityTransaction transaction = em.getTransaction();
+        transaction.begin();
 
-	    Query query = em.createNamedQuery("deleteJPQL");
-	    query.setParameter("eid", 900);
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaDelete<Employee> cd =
+                cb.createCriteriaDelete(Employee.class);
 
-	    query.executeUpdate();
+        Root<Employee> root = cd.from(Employee.class);
 
-	    transaction.commit();
+        cd.where(cb.lessThan(root.get("eid"), 905));
 
-	    System.out.println("BULK DATA DELETED");
-	}
-  
+        Query query = em.createQuery(cd);
+        query.executeUpdate();
 
-	private static void update(EntityManager em) {
-		EntityTransaction transaction = em.getTransaction();
-		transaction.begin();
+        transaction.commit();
 
-		String jpql =
-		        "UPDATE Employee e " +
-		        "SET e.esalary = :esalary " +
-		        "WHERE e.eid >= :eid";
+        System.out.println("BULK DATA DELETED");
+    }
 
-		Query query = em.createQuery(jpql);
+    // ---------------- BULK UPDATE ----------------
+    private static void update(EntityManager em) {
 
-		query.setParameter("esalary", 98765);
-		query.setParameter("eid", 900);
+        EntityTransaction transaction = em.getTransaction();
+        transaction.begin();
 
-		query.executeUpdate();
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaUpdate<Employee> cu =
+                cb.createCriteriaUpdate(Employee.class);
 
-		transaction.commit();
+        Root<Employee> root = cu.from(Employee.class);
 
-		System.out.println("BULK DATA UPDATED");
+        cu.set("esalary", 6000);              // SET esalary = 6000
+        cu.where(cb.lessThan(root.get("eid"), 905)); // WHERE eid < 905
 
-		em.close();
+        Query query = em.createQuery(cu);
+        query.executeUpdate();
 
+        transaction.commit();
 
-	}
+        System.out.println("BULK DATA UPDATED");
+    }
 
-	private static void read(EntityManager em) {
-		
-		String jpql = "SELECT e FROM Employee e"; // Aliasing is mandatory in JPQL
+    // ---------------- READ ----------------
+    private static void read(EntityManager em) {
 
-		Query query = em.createQuery(jpql, Employee.class);
-		List<Employee> list = query.getResultList();
+        // SELECT eid, ename FROM Employee
+        // WHERE ename LIKE 'j%' AND eid > 905
 
-		for (Employee employee : list) {
-		    System.out.println(employee);
-		}
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<Employee> cq =
+                cb.createQuery(Employee.class);
 
-		em.close();
+        Root<Employee> root = cq.from(Employee.class);
 
-		
+        Predicate p1 = cb.like(root.get("ename"), "j%");
+        Predicate p2 = cb.greaterThan(root.get("eid"), 905);
 
-	}
+        cq.multiselect(root.get("eid"), root.get("ename"))
+          .where(cb.and(p1, p2));
 
-	private static void inserted(EntityManager em) {
+        List<Employee> list = em.createQuery(cq).getResultList();
 
-		EntityTransaction transaction = em.getTransaction();
-		transaction.begin();
+        System.out.println(list);
+    }
 
-		for (int i = 1; i <= 10; i++) {
+    // ---------------- BULK INSERT ----------------
+    private static void insert(EntityManager em) {
 
-		    Employee employee =
-		            new Employee(900 + i, "jpqlname", "jpqladdr", 1000);
+        EntityTransaction transaction = em.getTransaction();
+        transaction.begin();
 
-		    em.persist(employee);
+        for (int i = 1; i <= 10; i++) {
 
-		    if (i % 5 == 0) {
-		        em.flush();   // Synchronizes persistence context with database
-		        // em.clear(); // Optional: clears first-level cache
-		    }
-		}
+            Employee employee =
+                    new Employee(900 + i, "jpqlname", "jpqladdr", 1000);
 
-		transaction.commit();
-		em.close();
+            em.persist(employee);
 
-		System.out.println("BULK DATA INSERTED");
-	}
+            if (i % 5 == 0) {
+                em.flush();   // Synchronize persistence context with DB
+                // em.clear(); // Optional: clear first-level cache
+            }
+        }
 
+        transaction.commit();
+
+        System.out.println("BULK DATA INSERTED");
+    }
 }

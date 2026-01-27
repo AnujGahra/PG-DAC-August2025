@@ -1,0 +1,39 @@
+package com.farmersocial.backend.config;
+
+import com.farmersocial.backend.entity.User;
+import com.farmersocial.backend.enums.Role;
+import com.farmersocial.backend.enums.UserStatus;
+import com.farmersocial.backend.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+@Component
+
+public class AdminInitializer implements CommandLineRunner {
+
+    private final UserRepository userRepository;
+
+    @Override
+    public void run(String... args) throws Exception {
+        String adminEmail = "admin@agriconnect.com";
+
+        User admin = userRepository.findByEmail(adminEmail).orElse(null);
+
+        if (admin == null) {
+            admin = User.builder()
+                    .fullName("System Admin")
+                    .email(adminEmail)
+                    .role(Role.ADMIN)
+                    .status(UserStatus.APPROVED)
+                    .build();
+            userRepository.save(admin);
+           
+        } else {
+            admin.setRole(Role.ADMIN);
+            admin.setStatus(UserStatus.APPROVED);
+            userRepository.save(admin);
+           
+        }
+    }
+}
