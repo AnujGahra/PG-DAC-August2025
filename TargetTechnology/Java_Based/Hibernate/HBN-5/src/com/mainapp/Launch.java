@@ -32,7 +32,7 @@ public class Launch {
 		EntityTransaction transaction = em.getTransaction();
 		transaction.begin();
 		Query query = em.createNamedQuery("deleteSQL");
-		query.setParameter("id", 117);
+		query.setParameter(1, 117);
 		query.executeUpdate();
 
 		transaction.commit();
