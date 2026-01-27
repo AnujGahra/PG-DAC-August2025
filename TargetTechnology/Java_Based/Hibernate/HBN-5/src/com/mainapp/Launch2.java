@@ -21,25 +21,30 @@ public class Launch2 {
 
 //		inserted(em);   // in JPQL insert operation not supported
 //		read(em);
-		update(em);
-//		delete(em);
+//		update(em);
+		delete(em);
 
 		em.close();
 		entityManagerFactory.close();
 	}
 
 	private static void delete(EntityManager em) {
-		EntityTransaction transaction = em.getTransaction();
-		transaction.begin();
-		Query query = em.createNamedQuery("deleteSQL");
-		query.setParameter(1, 117);
-		query.executeUpdate();
 
-		transaction.commit();
-		System.out.println("BULK DATA DELETED");
-		em.close();
+	    EntityTransaction transaction = em.getTransaction();
+	    transaction.begin();
+	    
+	    String sql = "delete from Employee where eid>=:id";
 
+	    Query query = em.createQuery(sql);
+	    query.setParameter("eid", 900);
+
+	    query.executeUpdate();
+
+	    transaction.commit();
+
+	    System.out.println("BULK DATA DELETED");
 	}
+  
 
 	private static void update(EntityManager em) {
 		EntityTransaction transaction = em.getTransaction();
