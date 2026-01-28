@@ -26,22 +26,28 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //            .authorizeRequests()
 //                .antMatchers("/member", "/admin").authenticated()
 //                .anyRequest().permitAll()
-//            .and()
+//            .and() 
 //            .httpBasic();   
     }
     
     
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-    	auth
-    		.inMemoryAuthentication()
-    		.withUser("admin123")
-    		.password(bCryptPasswordEncoder().encode("admin333"))
-    		.roles("ADMIN")
-    		.and()
-    		.withUser("member123")
-    		.password(bCryptPasswordEncoder().encode("member333"))
-    		.roles("MEMBER");
+    	
+    	
+    	
+    	
+    	
+//    	In Memeory Authentication
+//    	auth
+//    		.inMemoryAuthentication()
+//    		.withUser("admin123")
+//    		.password(bCryptPasswordEncoder().encode("admin333"))
+//    		.roles("ADMIN")
+//    		.and()
+//    		.withUser("member123")
+//    		.password(bCryptPasswordEncoder().encode("member333"))
+//    		.roles("MEMBER");
     		
     }
     
