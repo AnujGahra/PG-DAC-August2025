@@ -50,3 +50,4 @@ public class Security1Application implements CommandLineRunner {
 	}
 
 }
+ 
