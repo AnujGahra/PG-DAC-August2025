@@ -25,6 +25,10 @@ public class TrappingRainWater {
     }
 
 
+    // Using two-pointer approach
+    
+
+
     // main method for testing
     public static void main(String[] args) {
         TrappingRainWater solution = new TrappingRainWater();
