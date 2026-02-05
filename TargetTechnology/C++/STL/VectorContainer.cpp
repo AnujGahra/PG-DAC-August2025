@@ -32,6 +32,11 @@ int main() {
     cout << endl;
 
     cout << "val at idx 2 " << vec[2] << " or " << vec.at(2) << endl;
+
+    // front
+    cout << "Front element: " << vec.front() << endl;
+    // back
+    cout << "Back element: " << vec.back() << endl;
     
 
 
