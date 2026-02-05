@@ -10,8 +10,13 @@ int main() {
     vec.push_back(20);
     vec.push_back(30);
     vec.push_back(40);
+    vec.push_back(50);
     cout << "Size: " << vec.size() << endl;
     cout << "Capacity: " << vec.capacity() << endl;
+
+    for(int val : vec) {
+        cout << val << " ";
+    }
 
 
     return 0;
