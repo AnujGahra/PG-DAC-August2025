@@ -8,7 +8,7 @@ T sum(T a, T b) {
 
 
 int main() {
-    cout << "Sum of 10 and 20: " << sum <int>(10, 20) << endl;
-    cout << "Sum of 5.5 and 4.5: " << sum <double>(5.5, 4.5) << endl;
+    cout << "Sum of 10 and 20: " << sum(10, 20) << endl;
+    cout << "Sum of 5.5 and 4.5: " << sum(5.5, 4.5) << endl;
     return 0;
 }
