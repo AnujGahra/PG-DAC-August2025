@@ -27,6 +27,11 @@ int main() {
     for(int val : vec) {
         cout << val << " ";
     }
+
+
+    cout << endl;
+
+    cout << "val at idx 2 " << vec[2] << " or " << vec.at(2) << endl;
     
 
 
