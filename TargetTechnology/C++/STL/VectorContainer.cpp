@@ -49,7 +49,13 @@ int main() {
         cout << val << " ";
     }
     cout << endl;       
-    
+
+    // insert
+    vec.insert(vec.begin() + 1, 25); // inserting 25 at index 1
+    cout << "After inserting 25 at index 1: ";
+    for(int val : vec) {
+        cout << val << " ";
+    }
     
 
 
