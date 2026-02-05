@@ -4,6 +4,8 @@ using namespace std;
 
 
 int main() {
+    // vector<int> vec = {1, 2, 3, 4, 5};
+    // vector<int> vec = {3, 10};
     vector<int> vec;
 
     vec.push_back(10);
@@ -37,6 +39,17 @@ int main() {
     cout << "Front element: " << vec.front() << endl;
     // back
     cout << "Back element: " << vec.back() << endl;
+
+
+    // erase, insert, clear, empty, resize, swap, etc. are also available for vector container
+
+    vec.erase(vec.begin() + 1); // erasing element at index 1
+    cout << "After erasing element at index 1: ";
+    for(int val : vec) {
+        cout << val << " ";
+    }
+    cout << endl;       
+    
     
 
 
