@@ -3,6 +3,10 @@ using namespace std;
 
 template <class T>
 
+// template <typename T>  // modern
+// template <class T>     // old style
+
+
 class Box {
     T value;
     public:
