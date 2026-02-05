@@ -56,6 +56,12 @@ int main() {
     for(int val : vec) {
         cout << val << " ";
     }
+
+
+    // clear
+    vec.clear();
+    cout << "\nAfter clearing the vector, Size: " << vec.size() << endl;
+    cout << "After clearing the vector, Capacity: " << vec.capacity() << endl;  
     
 
 
