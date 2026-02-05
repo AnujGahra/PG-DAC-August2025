@@ -21,6 +21,14 @@ int main() {
         cout << val << " ";
     }
 
+    vec.pop_back();
+    cout << "\nAfter pop_back, Size: " << vec.size() << endl;
+    cout << "After pop_back, Capacity: " << vec.capacity() << endl;
+    for(int val : vec) {
+        cout << val << " ";
+    }
+    
+
 
     return 0;
 
