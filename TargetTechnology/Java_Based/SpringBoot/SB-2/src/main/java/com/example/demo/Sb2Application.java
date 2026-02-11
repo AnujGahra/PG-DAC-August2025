@@ -8,6 +8,8 @@ public class Sb2Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Sb2Application.class, args);
+		
+		System.out.println("Application Started");
 	}
 
 }
