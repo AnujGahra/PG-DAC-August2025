@@ -36,12 +36,20 @@ public class Sb2Application {
 //		bean.deleteById(13;
 		
 		
+		
+		
+//		Native SQL method
 		int saveMyData = bean.saveMyData(14, "raju14", "add14", 1400);
 		System.out.println(saveMyData);
 		
 		
 		List<EmployeeEntity> myData = bean.readMyData();
 		System.out.println(myData);
+		
+		
+		
+		List<EmployeeEntity> myAllData = bean.readMyAllData();
+		System.out.println(myAllData);
 		
 		System.out.println("Application Started");
 	}

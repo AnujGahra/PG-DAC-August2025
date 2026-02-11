@@ -25,4 +25,9 @@ public interface EmployeeCrud extends JpaRepository<EmployeeEntity, Integer> {
 	
 	@Query(value = "select * from employee1 where esalary < 5000", nativeQuery = true)
 	public List<EmployeeEntity> readMyData();
+	
+	
+//	JPQL Query
+	@Query(value = "from EmployeeEntity")
+	public List<EmployeeEntity> readMyAllData();
 }
