@@ -19,16 +19,21 @@ public class Sb2Application {
 //		bean.save(new EmployeeEntity(11, "raju", "add1", 1100));
 		
 		bean.save(new EmployeeEntity(12, "raju12", "add12", 1200));
-		bean.save(new EmployeeEntity(13, "raju13", "add13", 1300));
+		bean.save(new EmployeeEntity(13, "raju13", "add13", 1300)); // it is also used for update 
 
 //		for read
 //		List<EmployeeEntity> list = bean.findAll();
 //		for(EmployeeEntity emp : list) 
 //			System.out.println(emp);  
 		
-		Optional<EmployeeEntity> byId = bean.findById(12);
-		EmployeeEntity employeeEntity = byId.get();
-		System.out.println(employeeEntity);
+		
+//		Read by Id
+//		Optional<EmployeeEntity> byId = bean.findById(12);
+//		EmployeeEntity employeeEntity = byId.get();
+//		System.out.println(employeeEntity);  
+		
+//		bean.deleteAll();
+//		bean.deleteById(13;
 		
 		System.out.println("Application Started");
 	}
