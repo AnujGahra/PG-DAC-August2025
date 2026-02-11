@@ -6,12 +6,19 @@ import java.util.Optional;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.data.domain.Sort;
 
 import com.example.demo.entities.EmployeeEntity;
 import com.example.demo.repositories.EmployeeCrud;
 
 @SpringBootApplication
 public class Sb2Application {
+
+    private final EmployeeCrud employeeCrud;
+
+    Sb2Application(EmployeeCrud employeeCrud) {
+        this.employeeCrud = employeeCrud;
+    }
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext ac = SpringApplication.run(Sb2Application.class, args);
@@ -22,9 +29,13 @@ public class Sb2Application {
 		bean.save(new EmployeeEntity(13, "raju13", "add13", 1300)); // it is also used for update 
 
 //		for read
-//		List<EmployeeEntity> list = bean.findAll();
-//		for(EmployeeEntity emp : list) 
-//			System.out.println(emp);  
+		List<EmployeeEntity> list = bean.findAll();
+		for(EmployeeEntity emp : list) 
+			System.out.println(emp);  
+		
+		List<EmployeeEntity> list2 = bean.findAll(Sort.by("esalary"));
+		for(EmployeeEntity emp: list2)
+			System.out.println(emp);
 		
 		
 //		Read by Id 
@@ -50,6 +61,11 @@ public class Sb2Application {
 		
 		List<EmployeeEntity> myAllData = bean.readMyAllData();
 		System.out.println(myAllData);
+		
+		
+		
+		List<EmployeeEntity> bySalary = bean.findByEsalary(1200);
+		System.err.println(bySalary);
 		
 		System.out.println("Application Started");
 	}

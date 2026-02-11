@@ -30,4 +30,11 @@ public interface EmployeeCrud extends JpaRepository<EmployeeEntity, Integer> {
 //	JPQL Query
 	@Query(value = "from EmployeeEntity")
 	public List<EmployeeEntity> readMyAllData();
+	
+	
+	
+//	Derived Query
+	public List<EmployeeEntity> findByEsalary(int esalary);
 }
+
+
