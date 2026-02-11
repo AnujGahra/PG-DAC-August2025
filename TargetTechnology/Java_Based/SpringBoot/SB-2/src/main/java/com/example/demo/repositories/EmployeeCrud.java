@@ -35,6 +35,9 @@ public interface EmployeeCrud extends JpaRepository<EmployeeEntity, Integer> {
 	
 //	Derived Query
 	public List<EmployeeEntity> findByEsalary(int esalary);
+	
+	
+	public List<EmployeeEntity> findByEsalaryLessThan(int esalary);
 }
 
 

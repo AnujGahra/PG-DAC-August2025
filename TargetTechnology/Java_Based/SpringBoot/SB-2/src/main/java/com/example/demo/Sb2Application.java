@@ -67,6 +67,10 @@ public class Sb2Application {
 		List<EmployeeEntity> bySalary = bean.findByEsalary(1200);
 		System.err.println(bySalary);
 		
+		
+		List<EmployeeEntity> byEsalaryLessThan = bean.findByEsalaryLessThan(1400);
+		System.out.println(byEsalaryLessThan);
+		
 		System.out.println("Application Started");
 	}
 
