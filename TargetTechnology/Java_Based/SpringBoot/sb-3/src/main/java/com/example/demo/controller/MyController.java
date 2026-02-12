@@ -12,5 +12,12 @@ public class MyController {
 		
 		return "index";
 	}
+	
+	
+	@GetMapping("registration")
+	public String registrationView() {
+		
+		return "registration";
+	}
 
 }

@@ -10,5 +10,7 @@
 
 <h1>This is MY Home Page</h1>
 
+<a href="registration">REGISTRATION</a>
+
 </body>
 </html>
