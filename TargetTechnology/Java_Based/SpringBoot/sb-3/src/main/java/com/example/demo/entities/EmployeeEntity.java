@@ -1,5 +1,25 @@
 package com.example.demo.entities;
 
-public class EmployeeEntity {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+@Entity
+@Table(name="employeeX")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class EmployeeEntity {
+	
+	
+	@Id
+	private int id;
+	private String name;
+	private String address;
+	private int salary;
 }
