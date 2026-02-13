@@ -1,6 +1,7 @@
 package com.example.demo.repo;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -20,5 +21,20 @@ public interface MyCrudRepository extends CrudRepository<Employee, Integer> {
 	public List<Employee> readMyData();
 	
 	
-
+//	HQL Query
+	@Query(value = "from Employee where name like 'm%' ")
+	public List<Employee> readMyDataHQL();
+	
+	
+//	@Override
+//	Optional<Employee> findById(Integer id);
+	
+	List<Employee> findByName(String name);
+	
+	List<Employee> findByNameStartingWith(String prefix);
+	
+	
+	
+	
+	
 }
