@@ -59,11 +59,21 @@ public class SpringBoot2Application {
 //		System.out.println(byNameStartWith);
 		
 		
-		Employee employee = new Employee(15, "Mohan");
+//		Employee employee = new Employee(15, "Mohan");
 		
 //		Data Insertion 
-		bean.save(employee);
-		System.out.println("DATA SAVED SUCCESSFULLY...");
+//		bean.save(employee);
+//		System.out.println("DATA SAVED SUCCESSFULLY...");
+		
+		
+//		Update Data
+		Optional<Employee> byId = bean.findById(15);
+		if(byId.isPresent()) {
+			Employee employee = byId.get();
+			employee.setName("QUERTY");
+			bean.save(employee);
+			System.out.println("UPDATED....");
+		}
 		
 	}
 
