@@ -6,6 +6,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 import com.example.demo.entity.Employee;
 import com.example.demo.reposittory.Crud;
+import com.example.demo.reposittory.CrudDataJPA;
 
 @SpringBootApplication
 public class SpringBoot1Application {
@@ -15,9 +16,13 @@ public class SpringBoot1Application {
 		
 		System.out.println("HELLO");
 		
-		Employee employee = new Employee(10, "Anuj");
+		Employee employee = new Employee(11, "Mahi");
 		
-		Crud bean = ac.getBean(Crud.class);
+//		Crud bean = ac.getBean(Crud.class);
+//		bean.save(employee); 
+		
+		
+		CrudDataJPA bean = ac.getBean(CrudDataJPA.class);
 		bean.save(employee);
 	}
 
