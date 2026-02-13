@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	
+	
+	<h1>Welcome Page</h1>
+	<a href="insert">INSERT</a>
 </body>
 </html>
