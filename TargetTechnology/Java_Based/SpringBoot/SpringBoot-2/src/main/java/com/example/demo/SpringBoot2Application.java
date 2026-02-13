@@ -78,7 +78,7 @@ public class SpringBoot2Application {
 //			employee.setName("QUERTY");
 //			bean.save(employee);
 //			System.out.println("UPDATED....");
-//		}
+//		
 		
 		
 //		Bulk Data Insertion
@@ -112,11 +112,26 @@ public class SpringBoot2Application {
 //		System.out.println(content);
 		
 		
+//		Non-select Query
+		
+//		int insert = bean2.insert(95, "Chetak");
+//		System.out.println(insert);
 		
 		
-		int insert = bean2.insert(95, "Chetak");
-		System.out.println(insert);
+//		Delete
+//		bean2.delete(94);
+//		System.out.println("Delete Successfully...");
 		
+		
+		// Update
+		int result = bean2.update(92, "Raju Bhai");
+
+		if (result > 0) {
+		    System.out.println("Employee updated successfully");
+		} else {
+		    System.out.println("Employee not found");
+		}
+
 		
 	}
 

@@ -15,6 +15,18 @@ public interface MyJpaRepository extends JpaRepository<Employee, Integer> {
 	@Modifying
 	@Transactional
 	@Query(value = "insert into employee(id, name) values(:id, :name)", nativeQuery = true)
-	public int insert(@Param("id") int id, @Param("name") String name);
+	public int insert(@Param("id") int id, @Param("name") String name); 
+	
+	
+	
+	@Modifying
+	@Transactional
+	@Query(value = "delete from employee where id=:id", nativeQuery = true)
+	public int delete(@Param("id") int id); 
+	
+	@Modifying
+	@Transactional
+	@Query(value = "update employee set name=:name where id=:id", nativeQuery = true)
+	public int update(@Param("id") int id, @Param("name") String name);
 
 }
