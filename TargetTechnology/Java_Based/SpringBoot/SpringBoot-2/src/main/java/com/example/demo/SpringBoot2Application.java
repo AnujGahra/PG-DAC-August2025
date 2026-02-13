@@ -1,14 +1,17 @@
 package com.example.demo;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.data.domain.Sort;
 
 import com.example.demo.entity.Employee;
 import com.example.demo.repo.MyCrudRepository;
+import com.example.demo.repo.MyJpaRepository;
 
 @SpringBootApplication
 public class SpringBoot2Application {
@@ -67,13 +70,36 @@ public class SpringBoot2Application {
 		
 		
 //		Update Data
-		Optional<Employee> byId = bean.findById(15);
-		if(byId.isPresent()) {
-			Employee employee = byId.get();
-			employee.setName("QUERTY");
-			bean.save(employee);
-			System.out.println("UPDATED....");
-		}
+//		Optional<Employee> byId = bean.findById(15);
+//		if(byId.isPresent()) {
+//			Employee employee = byId.get();
+//			employee.setName("QUERTY");
+//			bean.save(employee);
+//			System.out.println("UPDATED....");
+//		}
+		
+		
+//		Bulk Data Insertion
+//		Employee emp1 = new Employee(90, "NANNNN0");
+//		Employee emp2 = new Employee(91, "NANNNN1");
+//		Employee emp3 = new Employee(92, "NANNNN2");
+//		
+//		List<Employee> list = Arrays.asList(emp1, emp2, emp3);
+//		bean.saveAll(list);
+//		System.out.println("BULK INSERTION...");
+		
+		
+		
+//		delete operation
+//		bean.deleteById(90);
+//		System.out.println("DELETE SUCCESSFULLY...");
+		
+		
+		MyJpaRepository bean2 = ac.getBean(MyJpaRepository.class);
+		List<Employee> all = bean2.findAll(Sort.by("id").descending());
+		all.forEach(n->System.out.println(n));
+		
+		
 		
 	}
 
