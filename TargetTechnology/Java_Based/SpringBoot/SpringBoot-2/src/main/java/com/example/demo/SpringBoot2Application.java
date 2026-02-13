@@ -46,18 +46,24 @@ public class SpringBoot2Application {
 //		bean.readMyDataHQL().forEach(n->System.out.println(n));
 		
 //		find Data by ID
-		Optional<Employee> byId = bean.findById(12);
-		Employee employee = byId.get();
-		System.out.println(employee);
+//		Optional<Employee> byId = bean.findById(12);
+//		Employee employee = byId.get();
+//		System.out.println(employee);
+//		
+//		
+//		List<Employee> byName = bean.findByName("Anuj");
+//		System.out.println(byName);
+//		
+//		
+//		List<Employee> byNameStartWith = bean.findByNameStartingWith("Anuj");
+//		System.out.println(byNameStartWith);
 		
 		
-		List<Employee> byName = bean.findByName("Anuj");
-		System.out.println(byName);
+		Employee employee = new Employee(15, "Mohan");
 		
-		
-		List<Employee> byNameStartWith = bean.findByNameStartingWith("Anuj");
-		System.out.println(byNameStartWith);
-		
+//		Data Insertion 
+		bean.save(employee);
+		System.out.println("DATA SAVED SUCCESSFULLY...");
 		
 	}
 
