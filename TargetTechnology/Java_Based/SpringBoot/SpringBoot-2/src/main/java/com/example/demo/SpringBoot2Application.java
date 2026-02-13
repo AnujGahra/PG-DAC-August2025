@@ -104,13 +104,18 @@ public class SpringBoot2Application {
 //			System.out.println(e);
 //		} 
 		
-		Page<Employee> page = bean2.findAll(PageRequest.of(0, 2));
-		System.out.println("Total No. Of Elements: " + page.getTotalElements());
-		System.out.println("Total No. Of Pages: " + page.getTotalPages());
+//		Page<Employee> page = bean2.findAll(PageRequest.of(0, 2));
+//		System.out.println("Total No. Of Elements: " + page.getTotalElements());
+//		System.out.println("Total No. Of Pages: " + page.getTotalPages());
+//		
+//		List<Employee> content = page.getContent();
+//		System.out.println(content);
 		
-		List<Employee> content = page.getContent();
-		System.out.println(content);
 		
+		
+		
+		int insert = bean2.insert(95, "Chetak");
+		System.out.println(insert);
 		
 		
 	}
