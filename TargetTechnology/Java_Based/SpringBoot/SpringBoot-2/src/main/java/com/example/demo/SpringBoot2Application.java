@@ -96,8 +96,11 @@ public class SpringBoot2Application {
 		
 		
 		MyJpaRepository bean2 = ac.getBean(MyJpaRepository.class);
-		List<Employee> all = bean2.findAll(Sort.by("id").descending());
-		all.forEach(n->System.out.println(n));
+		List<Employee> all = bean2.findAll(Sort.by("id").ascending());
+//		all.forEach(n->System.out.println(n));
+		for(Employee e : all) {
+			System.out.println(e);
+		}
 		
 		
 		
