@@ -7,6 +7,8 @@ import java.util.Optional;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 
 import com.example.demo.entity.Employee;
@@ -96,11 +98,18 @@ public class SpringBoot2Application {
 		
 		
 		MyJpaRepository bean2 = ac.getBean(MyJpaRepository.class);
-		List<Employee> all = bean2.findAll(Sort.by("id").ascending());
+//		List<Employee> all = bean2.findAll(Sort.by("id").ascending());
 //		all.forEach(n->System.out.println(n));
-		for(Employee e : all) {
-			System.out.println(e);
-		}
+//		for(Employee e : all) {
+//			System.out.println(e);
+//		} 
+		
+		Page<Employee> page = bean2.findAll(PageRequest.of(0, 2));
+		System.out.println("Total No. Of Elements: " + page.getTotalElements());
+		System.out.println("Total No. Of Pages: " + page.getTotalPages());
+		
+		List<Employee> content = page.getContent();
+		System.out.println(content);
 		
 		
 		
