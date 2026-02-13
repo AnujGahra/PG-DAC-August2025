@@ -1,5 +1,15 @@
 package com.example.demo.repo;
 
-public interface MyCrudRepository {
+import org.springframework.data.repository.CrudRepository;
+
+import com.example.demo.entity.Employee;
+
+public interface MyCrudRepository extends CrudRepository<Employee, Integer> {
+	
+	
+//	@Override
+//	Iterable<Employee> findAll();
+	
+	
 
 }
