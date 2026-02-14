@@ -9,6 +9,8 @@
 <body>
 	<h1>Welcome To Home Page</h1>
 	
-	<a href="insert">INSERT DATA</a>
+	<a href="insert">INSERT DATA</a> <br> <br>
+	
+<a href="read">READ</a>
 </body>
 </html>

@@ -1,5 +1,7 @@
 package com.example.demo.service;
 
+import java.util.List;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,6 +26,11 @@ public class MyService {
 		entity.setUcode(employeeDTO.getId()+1000);
 		crud.save(entity);
 		return "SUCCESSFULLY SAVED...";
+	}
+	
+	
+	public List<Employee> read() {
+		return crud.findAll();
 	}
 
 }
