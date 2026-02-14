@@ -54,7 +54,9 @@ public class MyController {
 	public ResponseEntity<List<String>> read() {
 		
 		return new ResponseEntity<>(myService.read(), HttpStatus.OK);
-
+//		return ResponseEntity.ok(myService.read());
+		
+//		4:10:10
 	}
 
 }
