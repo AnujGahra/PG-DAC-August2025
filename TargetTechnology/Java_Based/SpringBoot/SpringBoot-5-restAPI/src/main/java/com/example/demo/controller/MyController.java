@@ -32,9 +32,11 @@ public class MyController {
 	}
 
 	@PostMapping("insert")
-	public void insert(@RequestBody EmployeeDTO employeeDTO) {
+	public String insert(@RequestBody EmployeeDTO employeeDTO) {
 		
 		System.out.println(employeeDTO);
+		
+		return "SUCCESS...";
 
 	}
 
