@@ -3,6 +3,8 @@ package com.example.demo.service;
 import java.io.IOException;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,6 +24,7 @@ public class MyService {
 	@Autowired
 	private ModelMapper modelMapper;
 	
+	@Transactional
 	public String insertData(EmployeeDTO employeeDTO, MultipartFile multipartFile) {
 		
 		Employee entity = modelMapper.map(employeeDTO, Employee.class);
@@ -32,8 +35,9 @@ public class MyService {
 		try {
 			byte[] bytes = multipartFile.getBytes();
 			String path = "/Users/anujgahra/Developer/PG-DAC/TargetTechnology/Java_Based/SpringBoot/SpringBoot-4/src/main/webapp/myfiles";
+			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		

@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.dto.EmployeeDTO;
@@ -48,7 +49,10 @@ public class MyController {
 	
 	
 	@PostMapping("insert")
-	public String insertData(@Valid @ModelAttribute EmployeeDTO employeeDTO, BindingResult bindingResult, Model model) {
+	public String insertData(@Valid @ModelAttribute EmployeeDTO employeeDTO, BindingResult bindingResult, Model model, @RequestParam("myfile") MultipartFile multipartFile) {
+		
+		
+		 
 		
 		List<String> errorList = new ArrayList<>();
 		
@@ -62,6 +66,8 @@ public class MyController {
 			}
 			model.addAttribute("errorList", errorList);
 		} else {
+			String originalFilename = multipartFile.getOriginalFilename();
+			employeeDTO.setMyfile(originalFilename);
 //			SERVICE DTO 7:16: 18
 			String result = myService.insertData(employeeDTO);
 			model.addAttribute("errorList", result);
