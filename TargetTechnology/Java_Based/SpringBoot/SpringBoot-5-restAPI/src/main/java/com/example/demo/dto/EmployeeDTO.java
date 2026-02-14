@@ -8,7 +8,11 @@ public class EmployeeDTO {
 	private int id;
 	private String name;
 	private String address;
-	private int salary; 
+	private int salary;
+	
+	public EmployeeDTO() {
+		
+	}
 	
 	
 	public int getId() {

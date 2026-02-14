@@ -1,8 +1,11 @@
 package com.example.demo.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,15 +31,29 @@ public class MyController {
 	@GetMapping("readtest")
 	public String test() {
 
-		return myService.read();
+		return myService.testRead();
 	}
 
 	@PostMapping("insert")
-	public String insert(@RequestBody EmployeeDTO employeeDTO) {
+	public ResponseEntity<String> insert(@RequestBody EmployeeDTO employeeDTO) {
 		
-		System.out.println(employeeDTO);
+		String result = myService.insert(employeeDTO);
 		
-		return "SUCCESS...";
+		if(result.equals("SUCCESS")) {
+			
+			return new ResponseEntity<>(result, HttpStatus.CREATED);
+			
+		} else {
+			return new ResponseEntity<>(result, HttpStatus.CONFLICT);
+		}
+
+	}
+	
+	
+	@GetMapping("read")
+	public ResponseEntity<List<String>> read() {
+		
+		return new ResponseEntity<>(myService.read(), HttpStatus.OK);
 
 	}
 
