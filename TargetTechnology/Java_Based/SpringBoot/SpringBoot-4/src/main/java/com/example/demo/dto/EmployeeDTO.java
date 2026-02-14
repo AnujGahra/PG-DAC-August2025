@@ -48,5 +48,7 @@ public class EmployeeDTO {
     @NotNull(message = "Date Cannot Be Null")
     @DateTimeFormat(pattern = "yyyy-mm-dd")
     private LocalDate date;
+    
+    private String myfile;
 
 }

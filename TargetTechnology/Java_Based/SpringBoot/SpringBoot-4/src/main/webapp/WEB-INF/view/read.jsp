@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+${deleteData}
 
 <c:forEach var="employee" items="${readData }">
 	<li>${employee.id}</li>
@@ -17,7 +18,7 @@
 				<li>${employee.salary}</li>
 					<li>${employee.date}</li>
 						<li>${employee.ucode}</li>
-						<a href="delete?id=${employee.id}">delete</a>
+			<a href="delete?id=${employee.id}">delete</a>
  
 </c:forEach>
 

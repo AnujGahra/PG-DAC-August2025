@@ -29,8 +29,17 @@ public class MyService {
 	}
 	
 	
+//	Read
 	public List<Employee> read() {
 		return crud.findAll();
+	}
+	
+	
+//	Delete
+	public String delete(int id) {
+		
+		crud.deleteById(id);
+		return "DELETED...";
 	}
 
 }

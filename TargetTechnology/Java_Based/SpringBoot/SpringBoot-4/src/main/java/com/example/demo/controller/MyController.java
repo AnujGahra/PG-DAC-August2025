@@ -10,10 +10,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.dto.EmployeeDTO;
 import com.example.demo.service.MyService;
@@ -37,6 +40,11 @@ public class MyController {
 	public String insertView() {
 		return "insert";
 	} 
+	
+	@InitBinder
+	public void intiBinding(WebDataBinder webDataBinder) {
+		webDataBinder.setDisallowedFields("myfile");
+	}
 	
 	
 	@PostMapping("insert")
@@ -75,11 +83,15 @@ public class MyController {
 	
 	
 //	Delete
-	@GetMapping("delete")public String deleteData(@RequestParam int id) {
+	@GetMapping("delete")
+	public String deleteData(@RequestParam int id, RedirectAttributes redirectAttributes) {
 		
-		System.out.println(id);
-		return "read";
+		 redirectAttributes.addFlashAttribute("deleteData", myService.delete(id));
+		return "redirect:read";
 	}
+	
+	
+//	fileUpload
 	
 	
 	

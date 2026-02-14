@@ -17,7 +17,7 @@
 	</c:forEach>
 	
 	
-<form action="/insert" method="post">
+<form action="/insert" method="post" enctype="multipart/form-data">
 
     <label>Employee ID:</label><br>
     <input type="number" name="id" required><br><br>
@@ -33,6 +33,9 @@
     
     <label>Date:</label><br>
     <input type="date" id="date" name="date"> <br> <br>
+    
+    <label for="file">File:</label><br>
+    <input type="file" id="file" name="myfile"> <br> <br>
 
     <button type="submit">Submit</button>
 
