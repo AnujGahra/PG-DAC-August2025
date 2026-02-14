@@ -18,5 +18,7 @@ public class Employee {
 	private int salary;
 	private LocalDate date;
 	private int ucode; // Application Generated
+	
+	private String myfile;
 
 }
