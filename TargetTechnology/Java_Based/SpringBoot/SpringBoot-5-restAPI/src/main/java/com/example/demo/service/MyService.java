@@ -33,6 +33,11 @@ public class MyService {
 	}
 	
 	
+//	Delete
+	public void delete(int id) {
+		
+	}
+	
 	
 	
 
