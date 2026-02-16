@@ -1,1 +1,3 @@
-Hello from finally block example
+Hello World
+This is written using FileWriter
+FileWriter works with characters
