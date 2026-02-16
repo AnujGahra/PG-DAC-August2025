@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
@@ -15,7 +16,13 @@ public class copyPasteFile {
             FileOutputStream fos = new FileOutputStream("file/img1.jpg");
 
             fos.write(b);
-            System.out.println("File Copied Successfully");
+
+            fis.close();
+            fos.close();
+            
+            File file = new File("img.jpg");
+            file.delete();
+            System.out.println("File moved Successfully");
 
             
         } catch (Exception e) {
