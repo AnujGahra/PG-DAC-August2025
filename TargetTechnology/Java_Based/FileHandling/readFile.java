@@ -13,6 +13,7 @@ public class readFile {
                 if(i == -1) {
                     break;
                 }
+                
                 System.out.print((char)i);
             }
         } catch (Exception e) {
