@@ -1,1 +1,1 @@
-Hello, this is a sample text to write into the file.
+Hello from finally block example
