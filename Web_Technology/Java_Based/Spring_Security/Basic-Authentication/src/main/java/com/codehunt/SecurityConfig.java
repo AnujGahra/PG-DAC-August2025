@@ -4,25 +4,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 import com.codehunt.service.MyService;
 
-
 //@SuppressWarnings("deprecation")
 @Configuration
 //@EnableWebSecurity
-public class SecurityConfig{
-	
+public class SecurityConfig {
+
 	@Autowired
 	private MyService myService;
-	
+
 //	@Override
 //	protected void configure(HttpSecurity http) throws Exception {
 //		
@@ -64,42 +68,69 @@ public class SecurityConfig{
 //		
 //		
 //	}
-	
-	
+
 //	by SecurityFilterChain
-	
+
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-		http
-		.authorizeHttpRequests()
-		.antMatchers("/member").hasRole("MEMBER")
-		.antMatchers("/admin").hasRole("ADMIN")
-		.anyRequest().permitAll()
-		.and()
-		.httpBasic()
-		.and()
-		.exceptionHandling()
-		.accessDeniedPage("/error/403");
-		
+		http.authorizeHttpRequests().antMatchers("/member").hasRole("MEMBER").antMatchers("/admin").hasRole("ADMIN")
+				.anyRequest().permitAll().and().httpBasic().and().exceptionHandling().accessDeniedPage("/error/403");
+
 		return http.build();
 	}
-	
-	
+
 	@Bean
-	public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
+	public UserDetailsService userDetailsService() {
 		
-//		In-Memory
+		InMemoryUserDetailsManager inMemory = new InMemoryUserDetailsManager();
+		inMemory.createUser(
+					User
+					.withUsername("member")
+					.password(bCryptPasswordEncoder().encode("member123"))
+					.roles("MEMBER")
+					.build()
+				); // Member
+		inMemory.createUser(
+				User
+				.withUsername("admin")
+				.password(bCryptPasswordEncoder().encode("admin123"))
+				.roles("ADMIN")
+				.build()
+				); //Admin
 		
 		
-//		Database (DEFAULT)
-		
-		return authConfig.getAuthenticationManager();
-		
+		return inMemory;
+				
+				
 	}
 	
-	
+
 	@Bean
-	public BCryptPasswordEncoder bCryptPasswordEncoder () {
+	public AuthenticationProvider authenticationProvider() {
+
+		DaoAuthenticationProvider daoAuthProvider = new DaoAuthenticationProvider();
+		daoAuthProvider.setUserDetailsService(userDetailsService());
+		daoAuthProvider.setPasswordEncoder(bCryptPasswordEncoder());
+		
+		return daoAuthProvider;
+
+//		from in memory
+
+	}
+
+	@Bean
+	public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
+
+//		In-Memory
+
+//		Database (DEFAULT)
+
+		return authConfig.getAuthenticationManager();
+
+	}
+
+	@Bean
+	public BCryptPasswordEncoder bCryptPasswordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
 
