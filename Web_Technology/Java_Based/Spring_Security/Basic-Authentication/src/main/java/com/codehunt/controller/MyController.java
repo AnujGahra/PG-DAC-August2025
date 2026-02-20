@@ -25,9 +25,9 @@ public class MyController {
 	}  
 	
 	
-	@GetMapping("/error")
+	@GetMapping("/error/403")
 	public String errorPage() {
-		return "error";
+		return "xerror";
 	}  
 	
 	

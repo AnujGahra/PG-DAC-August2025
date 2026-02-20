@@ -1,5 +1,6 @@
 package com.codehunt;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -8,11 +9,16 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import com.codehunt.service.MyService;
+
 
 @SuppressWarnings("deprecation")
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+	
+	@Autowired
+	private MyService myService;
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
@@ -35,15 +41,25 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth
-			.inMemoryAuthentication()
-			.withUser("admin123")
-			.password(bCryptPasswordEncoder().encode("admin333"))
-			.roles("ADMIN")
-			.and()
-			.withUser("member123")
-			.password(bCryptPasswordEncoder().encode("member333"))
-			.roles("MEMBER");
+		
+//		In-DataBase Authentication from Database
+		auth.userDetailsService(myService).passwordEncoder(bCryptPasswordEncoder());
+		
+		
+		
+//		In-Memory Authentication 
+//		auth
+//			.inMemoryAuthentication()
+//			.withUser("admin123")
+//			.password(bCryptPasswordEncoder().encode("admin333"))
+//			.roles("ADMIN")
+//			.and()
+//			.withUser("member123")
+//			.password(bCryptPasswordEncoder().encode("member333"))
+//			.roles("MEMBER");
+		
+		
+		
 	}
 	
 	@Bean
