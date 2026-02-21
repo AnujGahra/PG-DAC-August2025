@@ -16,7 +16,9 @@ public class SecurityConfig {
 		http
 			.csrf().disable()
 			.authorizeHttpRequests()
-			.antMatchers("/admin/**").authenticated()
+//			.antMatchers("/admin/**").authenticated()
+			.antMatchers("/admin").hasRole("ADMIN")
+			.antMatchers("/member").hasRole("MEMBER")
 			.anyRequest().permitAll()
 			.and()
 			.formLogin()
