@@ -10,5 +10,7 @@
 
 <h1>WELCOME TO ADMIN PAGE</h1>
 
+<a href="doLogout">LOGOUT</a>
+
 </body>
 </html>

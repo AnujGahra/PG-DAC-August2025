@@ -15,6 +15,17 @@ public class MyController {
 	@GetMapping("/admin")
 	public String adminHome() {
 		return "admin";
+	}  
+	
+	@GetMapping("/admin/xyz")
+	public String adminXYZ() {
+		return "adminXyz";
+	} 
+	
+	
+	@GetMapping("/login")
+	public String loginPage() {
+		return "login";
 	}
 
 }

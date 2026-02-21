@@ -14,11 +14,20 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http
+			.csrf().disable()
 			.authorizeHttpRequests()
-			.antMatchers("/admin").authenticated()
+			.antMatchers("/admin/**").authenticated()
 			.anyRequest().permitAll()
 			.and()
-			.formLogin();
+			.formLogin()
+			.loginPage("/login")
+			.loginProcessingUrl("/doLogin")
+			.defaultSuccessUrl("/admin/xyz")
+			
+			.and()
+			.logout()
+			.logoutUrl("/doLogout");
+			
 
 		return http.build();
 	}

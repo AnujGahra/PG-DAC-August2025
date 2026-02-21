@@ -8,7 +8,9 @@
 </head>
 <body>
 
-<h1>WELCOME TO MEMBER PAGE</h1>
+<h1>WELCOME TO ADMINXYZ PAGE</h1>
+
+<a href="doLogout">LOGOUT</a>
 
 </body>
 </html>
