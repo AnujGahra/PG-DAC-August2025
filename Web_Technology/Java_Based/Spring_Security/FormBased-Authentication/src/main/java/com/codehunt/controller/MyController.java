@@ -17,9 +17,9 @@ public class MyController {
 		return "admin";
 	}  
 	
-	@GetMapping("/admin/xyz")
-	public String adminXYZ() {
-		return "adminXyz";
+	@GetMapping("/member")
+	public String memberHome() {
+		return "member";
 	} 
 	
 	
