@@ -11,6 +11,8 @@
 	<form method="post" action="/doLogin">
 		<input type="text" name="username" placeholder="Enter username" >
 		<input type="password" name="password" placeholder="Enter password" >
+		<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }"  >
+		
 		<button>login</button>
 		
 	

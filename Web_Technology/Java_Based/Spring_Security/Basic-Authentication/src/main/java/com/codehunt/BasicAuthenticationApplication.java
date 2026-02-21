@@ -20,7 +20,7 @@ public class BasicAuthenticationApplication implements CommandLineRunner {
 	private UserRepo userRepo;
 	
 	@Autowired
-	private BCryptPasswordEncoder bCryptPasswordEncoder;
+	private BCryptPasswordEncoder bCryptPasswordEncoder; 
 
 	public static void main(String[] args) {
 		SpringApplication.run(BasicAuthenticationApplication.class, args);
