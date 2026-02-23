@@ -3,10 +3,13 @@ package com.test.codehunt.contoller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.codehunt.JwtToken;
 import com.test.codehunt.payload.JwtAuthRequest;
 
 @RestController("/api")
@@ -16,6 +19,9 @@ public class MyController {
 	@Autowired
 	private AuthenticationManager authenticationManager;
 	
+	@Autowired
+	private JwtToken jwtToken;
+	
 	
 	@GetMapping("/login")
 	public void login(@RequestBody JwtAuthRequest jwtAuthRequest) {
@@ -23,18 +29,22 @@ public class MyController {
 		String username = jwtAuthRequest.getUsername();
 		String password = jwtAuthRequest.getPassword();
 		
-		authenticate(username, password);
+		UserDetails userDetails = authenticate(username, password);
+		
+		
+//		GENERATE TOKEN ON THE BASIC OF UserDetails OBJECT
+		jwtToken.generateMyToken(userDetails);
 		
 	}  
 	
 	
 	
-	private void authenticate(String username, String password) {
+	private UserDetails authenticate(String username, String password) {
 		
 		UsernamePasswordAuthenticationToken userpass = new UsernamePasswordAuthenticationToken(username, password);
-		authenticationManager.authenticate(userpass);
-		
-		
+		Authentication authenticate = authenticationManager.authenticate(userpass);
+		 UserDetails userDetails = (UserDetails) authenticate.getPrincipal();
+		 return userDetails;
 		
 	}
 
