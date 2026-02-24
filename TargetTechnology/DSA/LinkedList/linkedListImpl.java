@@ -10,6 +10,16 @@ public class linkedListImpl {
         }
     }
 
+    // Using Recursion
+    public static void displayListRecursion(Node head) {
+        if (head == null) {
+            return;
+        }
+        System.out.print(head.data + " ");
+        displayListRecursion(head.next); // move to the next node
+    }
+
+
     public static class Node {
         int data; // value of the node
         Node next; // address of the next node
@@ -18,6 +28,18 @@ public class linkedListImpl {
             this.data = data;
 
         }
+    }
+
+
+    // LinkedList Length
+    public static int length(Node head) {
+        int count = 0;
+        Node temp = head; // temp is pointing to head of the linked list
+        while (temp != null) {
+            count++;
+            temp = temp.next; // move temp to the next node
+        }
+        return count;
     }
 
     public static void main(String[] args) {
@@ -60,7 +82,11 @@ public class linkedListImpl {
 
         System.out.println();
 
-        displayList(a);
+        // displayList(a);
+
+        System.out.println(length(a)); // 5
+
+         
 
     } 
 
