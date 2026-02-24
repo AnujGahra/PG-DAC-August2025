@@ -45,7 +45,20 @@ public class implementation {
         // insert at a specific position in the linked list
         void insertAtPosition(int val, int pos) {
             Node temp = new Node(val); 
-            
+
+        }
+
+
+        // LinkedList size
+        int size() {
+            int count = 0;
+            Node temp = head;
+
+            while (temp != null) {
+                count++;
+                temp = temp.next;
+            }
+            return count;
         }
 
         void display() {
@@ -69,5 +82,6 @@ public class implementation {
         list.insertAtEnd(50);
 
         list.display();
+        System.out.println("Size of the linked list: " + list.size());
     }
 }
