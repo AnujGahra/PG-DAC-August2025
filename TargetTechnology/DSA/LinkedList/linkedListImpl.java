@@ -1,13 +1,31 @@
 public class linkedListImpl {
 
     public static class Node {
-        int data;
+        int data; // value of the node
+        Node next; // address of the next node
+
+        Node(int data) {
+            this.data = data;
+            
+        }
     }
 
     public static void main(String[] args) {
 
-        Node x = new Node();
-        System.out.println(x);
+        Node a = new Node(5);
+        System.out.println(a.next);
+        Node b = new Node(3);
+        Node c = new Node(9);
+        Node d = new Node(8);
+        
+        Node e = new Node(16);
+
+        a.next = b; // a is connected to b -> 5 -> 3 9 8 16
+        b.next = c; // b is connected to c  -> 5 -> 3 -> 9 8 16
+        c.next = d; // c is connected to d -> 5 -> 3 -> 9 -> 8 16
+        d.next = e; // d is connected to e -> 5 -> 3 -> 9 -> 8 -> 16
+
+
         
     }
 }
