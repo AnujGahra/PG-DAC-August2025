@@ -1,5 +1,15 @@
 public class linkedListImpl {
 
+
+    // Print the linked list
+    public static void displayList(Node head) {
+        Node temp = head; // temp is pointing to head of the linked list
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next; // move temp to the next node
+        }
+    }
+
     public static class Node {
         int data; // value of the node
         Node next; // address of the next node
@@ -48,5 +58,14 @@ public class linkedListImpl {
             temp = temp.next;
         }
 
-    }
+        System.out.println();
+
+        displayList(a);
+
+    } 
+
+
+
+
+
 }
