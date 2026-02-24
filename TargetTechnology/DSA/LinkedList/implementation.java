@@ -81,6 +81,9 @@ public class implementation {
         list.insertAtEnd(40);
         list.insertAtEnd(50);
 
+        list.insertAtBeginning(6);
+        list.insertAtBeginning(3);
+
         list.display();
         System.out.println("Size of the linked list: " + list.size());
     }
