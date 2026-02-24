@@ -29,10 +29,11 @@ public class implementation {
         }
 
         void display() {
-            Node curr = head;
-            while (curr != null) {
-                System.out.print(curr.data + " -> ");
-                curr = curr.next;
+            Node temp = head;
+
+            while (temp != null) {
+                System.out.print(temp.data + " -> ");
+                temp = temp.next;
             }
             System.out.println("null");
         }
