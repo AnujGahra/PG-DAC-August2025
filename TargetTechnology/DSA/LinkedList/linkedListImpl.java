@@ -31,6 +31,13 @@ public class linkedListImpl {
         System.out.println(a.next.next.data); // 9
         System.out.println(a.next.next.next.data); // 8
         System.out.println(a.next.next.next.next.data); // 16
+
+        // Print Linked List using loop
+        Node temp = a; // temp is pointing to head of the linked list
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next; // move temp to the next node
+        }
         
     }
 }
