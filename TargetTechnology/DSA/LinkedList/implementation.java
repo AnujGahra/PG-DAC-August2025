@@ -28,6 +28,19 @@ public class implementation {
             }
         }
 
+
+        // Insert at the beginning of the linked list
+        void insertAtBeginning(int val) {
+            Node temp = new Node(val);
+            if (head == null) {
+                head = temp;
+                tail = temp;
+            } else {
+                temp.next = head;
+                head = temp;
+            }
+        }
+
         void display() {
             Node temp = head;
 
@@ -45,6 +58,8 @@ public class implementation {
         list.insertAtEnd(10);
         list.insertAtEnd(20);
         list.insertAtEnd(30);
+        list.insertAtEnd(40);
+        list.insertAtEnd(50);
 
         list.display();
     }
