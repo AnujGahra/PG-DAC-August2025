@@ -41,6 +41,13 @@ public class implementation {
             }
         }
 
+
+        // insert at a specific position in the linked list
+        void insertAtPosition(int val, int pos) {
+            Node temp = new Node(val); 
+            
+        }
+
         void display() {
             Node temp = head;
 
