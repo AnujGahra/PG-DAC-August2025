@@ -25,7 +25,12 @@ public class linkedListImpl {
         c.next = d; // c is connected to d -> 5 -> 3 -> 9 -> 8 16
         d.next = e; // d is connected to e -> 5 -> 3 -> 9 -> 8 -> 16
 
-
+        // Print Linked List
+        System.out.println(a.data); // 5
+        System.out.println(a.next.data); // 3
+        System.out.println(a.next.next.data); // 9
+        System.out.println(a.next.next.next.data); // 8
+        System.out.println(a.next.next.next.next.data); // 16
         
     }
 }
