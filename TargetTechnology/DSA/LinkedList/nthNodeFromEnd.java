@@ -43,11 +43,16 @@ public class nthNodeFromEnd {
     }
 
     // Remooving Nth Node form the end of LinkedList
-    public static void deleteNthFromEnd(Node head, int n) {
+    public static Node deleteNthFromEnd(Node head, int n) {
         Node slow = head;
         Node fast = head;
         for (int i = 1; i <= n; i++) {
             fast = fast.next;
+        }
+
+        if(fast == null) {
+            head = head.next;
+            return head;
         }
 
         while (fast.next != null) {
@@ -55,6 +60,8 @@ public class nthNodeFromEnd {
             fast = fast.next;
         }
         slow.next = slow.next.next;
+
+        return head;
     }
 
     // Display the linked list
@@ -66,6 +73,11 @@ public class nthNodeFromEnd {
         }
         System.out.println("null");
     }
+
+
+
+
+
 
     public static void main(String[] args) {
 
@@ -87,6 +99,10 @@ public class nthNodeFromEnd {
         Node temp2 = nthNode2(a, 3);
         System.out.println(temp2.data);
 
+        display(a);
+
+
+        deleteNthFromEnd(a, 3);
         display(a);
 
     }
