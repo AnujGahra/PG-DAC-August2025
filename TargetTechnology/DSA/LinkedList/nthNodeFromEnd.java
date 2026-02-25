@@ -57,6 +57,16 @@ public class nthNodeFromEnd {
         slow.next = slow.next.next;
     }
 
+    // Display the linked list
+    public static void display(Node head) {
+        Node temp = head;
+        while(temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
+
     public static void main(String[] args) {
 
         Node a = new Node(10);
@@ -77,12 +87,7 @@ public class nthNodeFromEnd {
         Node temp2 = nthNode2(a, 3);
         System.out.println(temp2.data);
 
-        temp = a;
-        while (temp != null) {
-            System.out.print(temp.data + " -> ");
-            temp = temp.next;
-        }
-        System.out.println("null");
+        display(a);
 
     }
 }
