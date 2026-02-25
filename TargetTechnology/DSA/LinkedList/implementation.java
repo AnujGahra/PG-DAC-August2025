@@ -87,7 +87,7 @@ public class implementation {
             System.out.println("null");
         }
 
-        // geElement Method
+        // getElement Method
         int getElement(int pos) {
             Node temp = head;
             for (int i = 1; i <= pos; i++) {
@@ -95,6 +95,22 @@ public class implementation {
             }
 
             return temp.data;
+        }
+
+        // Delete at index method
+        void deleteAtIndex(int idx) {
+            Node temp = head;
+
+            if (idx == 0) {
+                head = head.next;
+                return;
+            }
+            for (int i = 1; i < idx; i++) {
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+            tail = temp;
+
         }
     }
 
