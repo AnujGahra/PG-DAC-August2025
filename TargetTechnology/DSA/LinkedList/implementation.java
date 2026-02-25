@@ -28,7 +28,6 @@ public class implementation {
             }
         }
 
-
         // Insert at the beginning of the linked list
         void insertAtBeginning(int val) {
             Node temp = new Node(val);
@@ -41,13 +40,29 @@ public class implementation {
             }
         }
 
-
         // insert at a specific position in the linked list
         void insertAtPosition(int val, int pos) {
-            Node temp = new Node(val); 
+            Node t = new Node(val);
+            Node temp = head;
 
+            if (pos == size() + 1) {
+                insertAtEnd(val);
+                return;
+            } else if (pos == 0) {
+                insertAtBeginning(val);
+                return;
+            } else if (pos < 0 || pos > size()) {
+                System.out.println("Invalid position");
+                return;
+            }
+
+            for (int i = 0; i < pos - 1; i++) {
+                temp = temp.next;
+            }
+
+            t.next = temp.next;
+            temp.next = t;
         }
-
 
         // LinkedList size
         int size() {
@@ -62,6 +77,7 @@ public class implementation {
         }
 
         void display() {
+
             Node temp = head;
 
             while (temp != null) {
@@ -69,6 +85,16 @@ public class implementation {
                 temp = temp.next;
             }
             System.out.println("null");
+        }
+
+        // geElement Method
+        int getElement(int pos) {
+            Node temp = head;
+            for (int i = 1; i <= pos; i++) {
+                temp = temp.next;
+            }
+
+            return temp.data;
         }
     }
 
@@ -84,7 +110,11 @@ public class implementation {
         list.insertAtBeginning(6);
         list.insertAtBeginning(3);
 
+        list.insertAtPosition(15, 4);
+
         list.display();
         System.out.println("Size of the linked list: " + list.size());
+
+        System.out.println("Element at position 3: " + list.getElement(3));
     }
 }
