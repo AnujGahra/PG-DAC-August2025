@@ -69,7 +69,7 @@ public class linkedListImpl {
         while (temp != null) {
             System.out.print(temp.data + " ");
             temp = temp.next; // move temp to the next node
-        }
+        } 
 
         System.out.println();
 
