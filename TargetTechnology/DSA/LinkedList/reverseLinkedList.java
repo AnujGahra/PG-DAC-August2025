@@ -31,6 +31,16 @@ public class reverseLinkedList {
     }
 
 
+    // 
+    public static Node reverse(Node head) {
+        if(head.next == null) {
+            return head;
+        }
+        Node newHead = reverse(head.next);
+        head.next.next = head;
+        head.next = null;
+        return newHead;
+    }
     public static void main(String[] args) {
         
 
@@ -49,6 +59,9 @@ public class reverseLinkedList {
 
         display(a);
         System.out.println();
-        displayRec(a);
+        // displayRec(a);
+
+        Node newHead = reverse(a);
+        display(newHead);
     }
 }
