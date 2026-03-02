@@ -20,12 +20,22 @@ public class CopyStack {
 
 
         // revserse Order
-        Stack<Integer> rt = new Stack<>();
+        Stack<Integer> gt = new Stack<>();
 
         while(stack.size() > 0) {
             int x = stack.peek();
-            rt.push(x);
+            gt.push(x);
             stack.pop();
+            // rt.push(stack.pop());
+        }
+        System.out.println(gt);
+
+        Stack<Integer> rt = new Stack<>();
+        while(gt.size() > 0) {
+            // int x = stack.peek();
+            // rt.push(x);
+            // gt.pop();
+            rt.push(gt.pop());
         }
         System.out.println(rt);
 
