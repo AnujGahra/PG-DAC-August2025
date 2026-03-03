@@ -13,12 +13,17 @@ int main()
     // p.second = 21;
 
     //  add name, age, weight in pair
-    pair<string, pair<int, int>> p;
-    p.first = "Satyarth";
-    p.second.first = 21;
-    p.second.second = 70;
+    // pair<string, pair<int, int>> p;
+    // p.first = "Satyarth";
+    // p.second.first = 21;
+    // p.second.second = 70;
 
-    p = make_pair("Satyarth", make_pair(21, 70));
+    // p = make_pair("Satyarth", make_pair(21, 70));
+
+    pair<pair<string, int>, int> p;
+    p.first.first = "Satyarth";
+    p.first.second = 21;
+    p.second = 70;
 
     // cout << p.first << " " << p.second << endl;
 
