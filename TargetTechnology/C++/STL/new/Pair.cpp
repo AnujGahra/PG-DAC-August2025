@@ -1,8 +1,9 @@
-#include<iostream>
-#include<pair>
+#include <iostream>
+#include <pair>
 using namespace std;
 
-int main() {
+int main()
+{
     pair<string, int> p;
     // Two method insert
     // 1st
@@ -17,8 +18,9 @@ int main() {
     p.second.first = 21;
     p.second.second = 70;
 
+    p = make_pair("Satyarth", make_pair(21, 70));
+
     // cout << p.first << " " << p.second << endl;
 
     cout << p.first << " " << p.second.first << " " << p.second.second << endl;
 }
-
