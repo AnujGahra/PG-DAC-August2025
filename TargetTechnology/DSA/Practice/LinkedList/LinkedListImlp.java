@@ -96,6 +96,32 @@ public class LinkedListImlp {
             return count;
         }
 
+        // get element at the given position of the linked list
+        int getElement(int pos) {
+            if(head == null) {
+                return -1;
+            }
+            Node temp = head;
+            for(int i = 1; i< pos-1; i++) {
+                temp = temp.next;
+            }
+            return temp.data;
+        }
+
+        // Search for an element in the linked list
+        boolean search(int key) {
+            Node temp = head;
+            if(head == null) {
+                return false;
+            }
+            while(temp != null) {
+                if(temp.data == key) {
+                    return true;
+                }
+                temp = temp.next;
+            }
+            return false;
+        }
 
         // Delete at the start of the linked list
         void deleteAtStart() {
@@ -148,12 +174,26 @@ public class LinkedListImlp {
 
         list.insertionAtPosition(25, 5);
 
+        list.Display();
+
         list.deleteAtStart();
         list.deleteAtEnd();
 
         list.deleteAtPosition(3);
+        if(list.search(25)) {
+            System.out.println("Element found in the linked list");
+        } else {
+            System.out.println("Element not found in the linked list");
+        }
+
+        int result = list.getElement(2);
+
+
+        System.out.println("Element found: " + result);
 
         list.Display();
+
+        
     }
 
 }
