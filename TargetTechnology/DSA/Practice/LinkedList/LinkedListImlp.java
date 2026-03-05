@@ -62,15 +62,14 @@ public class LinkedListImlp {
             Node temp = head;
 
             if (position == 0) {
-                newNode.next = head;
-                head = newNode;
+                // newNode.next = head;
+                // head = newNode;
+                insertAtStart(data);
                 return;
             } else if (position == size()) {
                 insertionAtEnd(data);
-            } else if (position == 0) {
-                insertAtStart(data);
-                return;
-            } else if (position < 0 || position > size()) {
+            } 
+             else if (position < 0 || position > size()) {
                 System.out.println("Invalid position");
                 return;
             }
@@ -81,6 +80,9 @@ public class LinkedListImlp {
             newNode.next = temp.next;
             temp.next = newNode;
         }
+
+
+
 
         // LinkedList size
         int size() {
@@ -94,6 +96,15 @@ public class LinkedListImlp {
             return count;
         }
 
+
+        // Delete at the start of the linked list
+        void deleteAtStart() {
+            if(head == null) {
+                return;
+            }
+
+            head = head.next;
+        }
     }
 
     public static void main(String[] args) {
@@ -106,6 +117,9 @@ public class LinkedListImlp {
         list.insertAtStart(40);
 
         list.insertionAtPosition(25, 5);
+
+        list.deleteAtStart();
+        list.deleteAtStart();
 
         list.Display();
     }
