@@ -105,6 +105,20 @@ public class LinkedListImlp {
 
             head = head.next;
         }
+
+
+        // delete at the end of the linked list
+        void deleteAtEnd() {
+            if(head == null && head.next == null) {
+                head = null;
+                return;
+            }
+            Node temp = head;
+            while(temp.next.next != null) {
+                temp = temp.next;
+            }
+            temp.next = null;
+        }
     }
 
     public static void main(String[] args) {
@@ -119,7 +133,7 @@ public class LinkedListImlp {
         list.insertionAtPosition(25, 5);
 
         list.deleteAtStart();
-        list.deleteAtStart();
+        list.deleteAtEnd();
 
         list.Display();
     }
