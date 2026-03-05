@@ -119,6 +119,22 @@ public class LinkedListImlp {
             }
             temp.next = null;
         }
+
+        // delete at the given position of the linked list
+        void deleteAtPosition(int position) {
+            if(position == 0) {
+                head = head.next;
+                // deleteAtStart();
+                return;
+            }
+            Node temp = head;
+
+            for(int i = 1; i < position - 1; i++) {
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+            tail = temp;
+        }
     }
 
     public static void main(String[] args) {
@@ -134,6 +150,8 @@ public class LinkedListImlp {
 
         list.deleteAtStart();
         list.deleteAtEnd();
+
+        list.deleteAtPosition(3);
 
         list.Display();
     }
