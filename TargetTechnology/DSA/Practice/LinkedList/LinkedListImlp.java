@@ -296,6 +296,27 @@ public class LinkedListImlp {
             return true;
         }
 
+
+
+
+        // Find Nth Node from End of the linked list
+        int findNthFromEnd(int n) {
+
+            Node fast = head;
+            Node slow = head;
+
+            for(int i = 0; i<n; i++) {
+                fast = fast.next;
+            }
+
+            while(fast != null) {
+                slow = slow.next;
+                fast = fast.next;
+            }
+
+            return slow.data;
+        }
+
     }
 
 
