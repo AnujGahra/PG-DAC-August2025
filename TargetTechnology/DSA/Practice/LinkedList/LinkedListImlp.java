@@ -216,7 +216,86 @@ public class LinkedListImlp {
 
 
 
-        // 
+        // Remove duplicates from the linked list
+        void removeDuplicates() {
+            Node curr = head;
+            while(curr != null && curr.next != null) {
+                if(curr.data == curr.next.data) {
+                    curr.next = curr.next.next;
+                } else {
+                    curr = curr.next;
+                }
+            }
+        }
+
+
+
+        // Merge two linked lists
+        Node Merge(Node head1, Node head2) {
+            Node dummy = new Node(0);
+            Node temp = dummy;
+
+            while(head1 != null && head2 != null) {
+                if(head1.data < head2.data) {
+                    temp.next = head1;
+                    head1 = head1.next;
+                } else {
+                    temp.next = head2;
+                    head2 = head2.next;
+                }
+                temp = temp.next;
+            }
+
+            if(head1 != null) {
+                temp.next = head1;
+            }
+            if(head2 != null) {
+                temp.next = head2;
+            }
+            return dummy.next;
+        }
+
+
+        // Check if the linked list is a palindrome
+        boolean isPalindrome() {
+            if(head == null || head.next == null) {
+                return true;
+            }
+
+            Node slow = head;
+            Node fast = head;
+
+            while(fast != null && fast.next != null) {
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+
+            Node prev = null;
+            Node curr = slow;
+            Node next = null;
+
+            while(curr != null) {
+                next = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = next;
+            }
+
+            Node first = head;
+            Node second = prev;
+
+            while(second != null) {
+                if(first.data != second.data) {
+                    return false;
+                }
+
+                first = fast.next;
+                second = second.next;
+            }
+
+            return true;
+        }
+
     }
 
 
@@ -267,6 +346,19 @@ public class LinkedListImlp {
             System.out.println("Loop detected in the linked list");
         } else {
             System.out.println("No loop detected in the linked list");  
+        }
+
+        // call for removing duplicates from the linked list
+        list.removeDuplicates();
+        list.Display();
+
+
+        // call for palindrome check in the linked list
+        boolean isPalindrome = list.isPalindrome();
+        if(isPalindrome) {
+            System.out.println("The linked list is a palindrome");
+        } else {
+            System.out.println("The linked list is not a palindrome");
         }
 
         
