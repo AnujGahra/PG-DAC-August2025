@@ -161,6 +161,24 @@ public class LinkedListImlp {
             temp.next = temp.next.next;
             tail = temp;
         }
+
+
+
+
+        // reverse the linked list
+        void reverse() {
+            Node prev = null;
+            Node curr = head;
+            Node next = null;
+
+            while(curr != null) {
+                next = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = next; 
+            }
+            head = prev;
+        }
     }
 
     public static void main(String[] args) {
@@ -191,6 +209,9 @@ public class LinkedListImlp {
 
         System.out.println("Element found: " + result);
 
+        list.Display();
+
+        list.reverse();
         list.Display();
 
         
