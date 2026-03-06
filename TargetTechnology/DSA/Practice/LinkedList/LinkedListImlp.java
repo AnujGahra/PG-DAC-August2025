@@ -194,6 +194,29 @@ public class LinkedListImlp {
             }
             return slow.data;
         }
+
+
+
+        //  Detect Loop (Floyd Cycle Detection Algorithm)
+        boolean detectLoop() {
+            Node slow = head;
+            Node fast = head;
+
+            while(fast != null && fast.next != null) {
+                slow = slow.next;
+                fast = fast.next.next;
+
+                if(slow == fast) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+
+
+        // 
     }
 
 
@@ -237,7 +260,20 @@ public class LinkedListImlp {
         int middleElement = list.findMiddle();
         System.out.println("Middle element of the linked list: " + middleElement);
 
+
+        // call for detecting loop in the linked list
+        boolean hasLoop = list.detectLoop();
+        if(hasLoop) {
+            System.out.println("Loop detected in the linked list");
+        } else {
+            System.out.println("No loop detected in the linked list");  
+        }
+
         
     }
+
+
+
+
 
 }
