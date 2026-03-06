@@ -179,7 +179,25 @@ public class LinkedListImlp {
             }
             head = prev;
         }
+
+
+
+
+        // Find the middle element of the linked list
+        int findMiddle() {
+            Node slow = head;
+            Node fast = head;
+
+            while(fast != null && fast.next != null) {
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+            return slow.data;
+        }
     }
+
+
+
 
     public static void main(String[] args) {
 
@@ -213,6 +231,11 @@ public class LinkedListImlp {
 
         list.reverse();
         list.Display();
+
+
+        // call for finding the middle element of the linked list
+        int middleElement = list.findMiddle();
+        System.out.println("Middle element of the linked list: " + middleElement);
 
         
     }
