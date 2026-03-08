@@ -76,5 +76,5 @@ public class StackLinkedList {
         System.out.println("Top element after pop: " + stack.peek());
 
     }
-
+    
 }
