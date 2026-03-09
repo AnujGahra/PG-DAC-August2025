@@ -41,6 +41,20 @@ public class CircularQueueArray {
         }
 
 
+        public int peek() throws Exception {
+            if(size == 0) {
+                throw new Exception("Queue is Empty");
+            }
+            else return arr[front];
+        }
+
+
+        public boolean isEmpty() {
+            if(size == 0) return true;
+            else return false;
+        }
+
+
         
 
     }
