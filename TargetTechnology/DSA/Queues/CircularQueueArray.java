@@ -75,6 +75,7 @@ public class CircularQueueArray {
     }
 
     public static void main(String[] args) {
-
+        Cqa q = new Cqa();
+        q.display();
     }
 }
