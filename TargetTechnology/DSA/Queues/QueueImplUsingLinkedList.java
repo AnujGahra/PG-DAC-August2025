@@ -82,7 +82,7 @@ public class QueueImplUsingLinkedList {
         qll.add(3);
         qll.add(4);
         qll.add(5);
-        qll.display();
+        qll.display();     
 
         qll.remove();
         qll.display();
