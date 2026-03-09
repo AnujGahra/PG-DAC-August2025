@@ -18,6 +18,10 @@ public class CircularQueueArray {
                 front = rear = 0;
                 arr[0] = val;
             }
+            else if(rear < arr.length - 1) {
+                arr[++rear] = val;
+            }
+            else if()
         }
 
     }
