@@ -1,7 +1,6 @@
 public class QueueImplUsingLinkedList {
 
-
-    public static class Node{
+    public static class Node {
         int val;
         Node next;
 
@@ -10,7 +9,7 @@ public class QueueImplUsingLinkedList {
         }
     }
 
-    public static  class queueLL{
+    public static class queueLL {
         Node head = null;
         Node tail = null;
         int size = 0;
@@ -19,7 +18,7 @@ public class QueueImplUsingLinkedList {
         public void add(int x) {
             Node temp = new Node(x);
 
-            if(size == 0) {
+            if (size == 0) {
                 head = tail = temp;
             } else {
                 tail.next = temp;
@@ -33,26 +32,24 @@ public class QueueImplUsingLinkedList {
         // remove element method
 
         public int remove() {
-            if(size == 0) {
+            if (size == 0) {
                 System.out.println("Queue is Empty");
                 return -1;
             }
             int x = head.val;
             head = head.next;
-            return x; 
+            return x;
         }
 
         // peek element
         public int peek() {
-            if(size == 0) {
+            if (size == 0) {
                 System.out.println("Queue is Empty");
                 return -1;
             }
             return head.val;
         }
 
-
-        
     }
 
     public static void main(String[] args) {
