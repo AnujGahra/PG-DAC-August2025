@@ -21,7 +21,10 @@ public class CircularQueueArray {
             else if(rear < arr.length - 1) {
                 arr[++rear] = val;
             }
-            else if()
+            else if(rear == arr.length - 1) {
+                rear = 0;
+                arr[0] = val;
+            }
         }
 
     }
