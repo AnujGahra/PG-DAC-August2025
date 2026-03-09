@@ -31,6 +31,28 @@ public class QueueImplUsingLinkedList {
         }
 
         // remove element method
+
+        public int remove() {
+            if(size == 0) {
+                System.out.println("Queue is Empty");
+                return -1;
+            }
+            int x = head.val;
+            head = head.next;
+            return x; 
+        }
+
+        // peek element
+        public int peek() {
+            if(size == 0) {
+                System.out.println("Queue is Empty");
+                return -1;
+            }
+            return head.val;
+        }
+
+
+        
     }
 
     public static void main(String[] args) {
