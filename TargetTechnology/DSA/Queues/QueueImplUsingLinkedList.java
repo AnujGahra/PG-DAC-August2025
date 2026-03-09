@@ -50,27 +50,27 @@ public class QueueImplUsingLinkedList {
             return head.val;
         }
 
-
         // display
         public void display() {
 
-            if(size == 0) {
+            if (size == 0) {
                 System.out.println("Queue is empty");
                 return;
             }
             Node temp = head;
-            while(temp != null) {
+            while (temp != null) {
                 System.out.print(temp.val + " ");
                 temp = temp.next;
             }
             System.out.println();
         }
 
-
         // isEmpty
         public boolean isEmpty() {
-            if(size == 0) return true;
-            else return false;
+            if (size == 0)
+                return true;
+            else
+                return false;
         }
 
     }
@@ -87,5 +87,6 @@ public class QueueImplUsingLinkedList {
         qll.remove();
         qll.display();
 
+        System.out.println(qll.size);
     }
 }
