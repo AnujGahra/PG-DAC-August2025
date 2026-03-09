@@ -14,10 +14,13 @@ public class QueueImplUsingAray {
                 return;
             }
 
-            if (front == -1)
+            if (front == -1){
                 front = rear = 0;
+                arr[0] = val;
+            }    
             else
                 arr[++rear] = val;
+            size++;
         }
 
         // method for remove
@@ -63,6 +66,16 @@ public class QueueImplUsingAray {
     }
 
     public static void main(String[] args) {
+        queueArray q = new queueArray();
+        q.add(1);
+        q.add(2);
+        q.add(3);
+        q.add(4);
+        q.display();
 
+        q.remove();
+        q.display();
+        q.isEmpty();
+        System.out.println(q.size);
     }
 }
