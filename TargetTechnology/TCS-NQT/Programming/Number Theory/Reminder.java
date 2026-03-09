@@ -6,7 +6,7 @@ public class Reminder {
 
     // second method
     public static int getReminder(int n, int x) {
-        int num = n/4;
+        int num = n/x;
 
         for(int i = 1; i<=num; i++) {
             n = n - x;
