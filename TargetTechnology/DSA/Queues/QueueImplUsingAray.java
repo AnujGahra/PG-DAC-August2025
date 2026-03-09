@@ -48,6 +48,18 @@ public class QueueImplUsingAray {
             else
                 return false;
         }
+
+        // display queue
+        public void display() {
+            if (size == 0) {
+                System.out.println("Queue is empty");
+            } else {
+                for (int i = front; i <= rear; i++) {
+                    System.out.print(arr[i] + " ");
+                }
+            }
+            System.out.println();
+        }
     }
 
     public static void main(String[] args) {
