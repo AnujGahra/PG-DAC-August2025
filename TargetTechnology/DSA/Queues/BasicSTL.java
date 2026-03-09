@@ -30,6 +30,8 @@ public class BasicSTL {
         System.out.println(q.peek());
 
         System.out.println(q.size());
+
+        System.out.println(q.isEmpty());
         
     }
 }
