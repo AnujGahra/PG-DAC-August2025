@@ -27,6 +27,13 @@ public class CircularQueueArray {
             }
         }
 
+
+        public int remove() throws Exception {
+            if(size == 0) {
+                throw new Exception("Queue is Empty");
+            }
+        }
+
     }
 
     public static void main(String[] args) {
