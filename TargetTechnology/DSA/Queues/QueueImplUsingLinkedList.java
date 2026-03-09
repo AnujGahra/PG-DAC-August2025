@@ -50,9 +50,42 @@ public class QueueImplUsingLinkedList {
             return head.val;
         }
 
+
+        // display
+        public void display() {
+
+            if(size == 0) {
+                System.out.println("Queue is empty");
+                return;
+            }
+            Node temp = head;
+            while(temp != null) {
+                System.out.print(temp.val + " ");
+                temp = temp.next;
+            }
+            System.out.println();
+        }
+
+
+        // isEmpty
+        public boolean isEmpty() {
+            if(size == 0) return true;
+            else return false;
+        }
+
     }
 
     public static void main(String[] args) {
+        queueLL qll = new queueLL();
+        qll.add(1);
+        qll.add(2);
+        qll.add(3);
+        qll.add(4);
+        qll.add(5);
+        qll.display();
+
+        qll.remove();
+        qll.display();
 
     }
 }
