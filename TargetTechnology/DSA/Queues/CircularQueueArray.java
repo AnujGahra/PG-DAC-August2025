@@ -94,7 +94,7 @@ public class CircularQueueArray {
         q.remove();
         q.display();
 
-        q.isEmpty();
+        System.out.println(q.isEmpty());
         System.out.println(q.size);
 
     }
