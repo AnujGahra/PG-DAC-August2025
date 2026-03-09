@@ -21,6 +21,7 @@ public class CircularQueueArray {
                 rear = 0;
                 arr[0] = val;
             }
+            size++;
         }
 
         public int remove() throws Exception {
@@ -33,8 +34,12 @@ public class CircularQueueArray {
                 else
                     front++;
 
+                size --;
+
                 return val;
             }
+
+        
         }
 
         public int peek() throws Exception {
@@ -58,14 +63,14 @@ public class CircularQueueArray {
                 return;
             } else if (front <= rear) {
                 for (int i = front; i < rear; i++) {
-                    System.out.println(arr[i] + " ");
+                    System.out.print(arr[i] + " ");
                 }
             } else {
                 for (int i = front; i < arr.length; i++) {
-                    System.out.println(arr[i] + " ");
+                    System.out.print(arr[i] + " ");
                 }
                 for (int i = 0; i < arr.length; i++) {
-                    System.out.println(arr[i] + " ");
+                    System.out.print(arr[i] + " ");
                 }
             }
             System.out.println();
@@ -74,8 +79,23 @@ public class CircularQueueArray {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Cqa q = new Cqa();
         q.display();
+
+        q.add(1);
+        q.add(2);
+        q.add(3);
+        q.add(4);
+        q.add(5);
+        q.add(6);
+        q.display();
+
+        q.remove();
+        q.display();
+
+        q.isEmpty();
+        System.out.println(q.size);
+
     }
 }
