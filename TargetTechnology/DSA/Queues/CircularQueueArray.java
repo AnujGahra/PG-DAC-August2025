@@ -31,8 +31,17 @@ public class CircularQueueArray {
         public int remove() throws Exception {
             if(size == 0) {
                 throw new Exception("Queue is Empty");
+            } else {
+                int val = arr[front];
+                if(front == arr.length - 1) front = 0;
+                else front ++;
+
+                return val;
             }
         }
+
+
+        
 
     }
 
