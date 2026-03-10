@@ -20,7 +20,9 @@ public class Hashing {
         System.out.println(mp.get("Monu"));
 
 
-        // 
+
+        // Removing a pair from the Hashmap
+        System.out.println(mp.remove("Arman"));
 
     }
 
