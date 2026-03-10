@@ -14,6 +14,14 @@ public class Hashing {
         mp.put("Mahi", 52);
         mp.put("Anuj", 07);
 
+
+        // Getting value of a key from the hashmap
+        System.out.println(mp.get("Anuj"));
+        System.out.println(mp.get("Monu"));
+
+
+        // 
+
     }
 
 
