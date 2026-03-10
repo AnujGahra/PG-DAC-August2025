@@ -24,6 +24,17 @@ public class Hashing {
         // Removing a pair from the Hashmap
         System.out.println(mp.remove("Arman"));
 
+
+        // Checking if a key is in the HashMap
+        System.out.println(mp.containsKey("Anuj"));
+
+        // Adding a new Entry only of the new key doesn't exist already
+
+        mp.putIfAbsent("Yashika", 30);
+
+        // Get all keys in the HashMap
+        System.out.println(mp.keySet());
+
     }
 
 
