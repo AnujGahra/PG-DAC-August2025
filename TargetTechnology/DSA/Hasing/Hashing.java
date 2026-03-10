@@ -35,6 +35,25 @@ public class Hashing {
         // Get all keys in the HashMap
         System.out.println(mp.keySet());
 
+        // Get all values in the HashMap
+        System.out.println(mp.values());
+
+        // Get all entries in the HashMap
+        System.out.println(mp.entrySet());
+
+
+        // Traversing all entries of Hashmap - multiple method
+        for(String key : mp.keySet()){
+            System.out.print(key + " = " + mp.get(key) + " ");
+        }
+
+        System.out.println();
+
+        for(Map.Entry<String,  Integer> e : mp.entrySet()){
+            System.out.println(e.getKey() + " = " + e.getValue());
+        }
+
+
     }
 
 
