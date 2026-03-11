@@ -61,6 +61,14 @@ public class SizeOfBinaryTree {
         return Math.min(root.val, Math.min(minValue(root.left), minValue(root.right)));
     }
 
+
+    // find the product of tree
+    public static int product(Node root) {
+        if(root == null) return 1;
+
+        return root.val * product(root.left) * product(root.right);
+    }
+
     public static void main(String[] args) {
         Node root = new Node(1);
         Node a = new Node(2);
@@ -88,6 +96,9 @@ public class SizeOfBinaryTree {
 
 
         System.out.println("Min Value of Tree: " + minValue(root));
+
+
+        System.out.println("Product of Tree: " + product(root));
 
     }
 }
