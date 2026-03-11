@@ -35,10 +35,9 @@ public class SizeOfBinaryTree {
 
     // Height of tree
     public static int height(Node root) {
-        if (root == null)
-            return 1;
-
-        return 1 + height(root.left) + height(root.right);
+        if (root == null) return 0;
+        if(root.left == null && root.right == null) return 0;
+        return 1 + Math.max(height(root.left), height(root.right));
     }
 
     // Find node with max value
@@ -65,7 +64,9 @@ public class SizeOfBinaryTree {
         a.left = c;
         a.right = d;
         Node e = new Node(6);
-        b.left = e;
+        b.right = e;
+        Node f = new Node(7);
+        e.left = f;
 
         preorder(root);
         System.out.println();
