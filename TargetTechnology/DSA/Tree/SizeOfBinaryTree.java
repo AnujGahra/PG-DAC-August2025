@@ -69,6 +69,45 @@ public class SizeOfBinaryTree {
         return root.val * product(root.left) * product(root.right);
     }
 
+
+    // Traversal Order
+    // preOrder
+    public static void preOrder(Node root) {
+        if(root == null) return;
+        System.out.print(root.val + " ");
+        preOrder(root.left);
+        preOrder(root.right);
+    }
+
+
+    // InOrder Traversal
+    public static void inOrder(Node root) {
+        if(root == null) return;
+
+        inOrder(root.left);
+        System.out.print(root.val + " ");
+        inOrder(root.right);
+        
+    }
+
+
+    // Post Order Traversal
+    public static void postOrder(Node root) {
+        if(root == null) return;
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.print(root.val + " ");
+    }
+
+
+    // print nth lever tree
+    public static void nthLevel(Node root, int n) {
+        if(root == null) return;
+        if(n == 1) System.out.print(root.val + " ");
+        nthLevel(root.left, n - 1);
+        nthLevel(root.right, n - 1);
+    }
+
     public static void main(String[] args) {
         Node root = new Node(1);
         Node a = new Node(2);
@@ -99,6 +138,32 @@ public class SizeOfBinaryTree {
 
 
         System.out.println("Product of Tree: " + product(root));
+
+        // preOrder called
+        preOrder(root);
+
+        System.out.println();
+
+        // inOrder Call
+        inOrder(root);
+
+        System.out.println();
+
+        postOrder(root);
+        System.out.println(
+
+        );
+
+        System.out.println("Nth Level Tree Element: ");
+        nthLevel(root, 3);
+
+        System.out.println();
+        // using for loop find level 
+        int level = height(root) + 1;
+        for(int i = 0; i<= level; i++) {
+            nthLevel(root, i);
+            System.out.println();
+        }
 
     }
 }
