@@ -134,7 +134,17 @@ public class SizeOfBinaryTree {
 
 
     // Check is it Balanced tree or not
-    
+    public static boolean isBalanced(Node root) {
+        if(root == null) return true;
+        int lh = height(root.left);
+        if(root.left != null) lh++;
+        int rh = height(root.left);
+        if(root.right != null) rh++;
+        int d = lh - rh;
+        if(d<0) d = -d;
+        if(d>1) return false;
+        return (isBalanced(root.left) && isBalanced(root.right));
+    }
 
 
     // Diameter of Binary Tree
@@ -155,6 +165,19 @@ public class SizeOfBinaryTree {
 
         return max;
     }
+
+
+
+    // Same Tree
+    public static boolean isSameTree(Node p, Node q) {
+        if(p == null && q == null) return true;
+        if(p == null || q == null) return false;
+        if(p.val != q.val) return false;
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+    }
+
+
+    
 
     public static void main(String[] args) {
         Node root = new Node(1);
@@ -217,6 +240,9 @@ public class SizeOfBinaryTree {
 
         System.out.println();
         System.out.print("Diameter of Tree: " + diameter(root));
+
+        System.out.println();
+        System.out.println(isBalanced(root));
         
 
     }
