@@ -43,6 +43,20 @@ public class SizeOfBinaryTree {
 
         return 1 + height(root.left) + height(root.right);
     }
+
+
+    // Find node with max value
+    public static int maxValue(Node root) {
+        if(root == null) return 0;
+
+        int a = root.val;
+        int b = maxValue(root.left);
+        int c = maxValue(root.right);
+
+
+        return Math.max(a, Math.max(b,c));
+        
+    }
     
 
     public static void main(String[] args) {
@@ -68,6 +82,9 @@ public class SizeOfBinaryTree {
 
 
         System.out.println("Hieght of tree: " + height(root));
+
+
+        System.out.println("Max.. Value of Tree: " + maxValue(root));
 
     }
 }
