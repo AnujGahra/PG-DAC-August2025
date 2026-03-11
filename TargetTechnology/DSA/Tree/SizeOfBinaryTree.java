@@ -116,7 +116,7 @@ public class SizeOfBinaryTree {
         nthLevel(root.right, n - 1);
     }
 
-    // Breadth First Search(BFS)
+    // Breadth First Search(BFS) level
     public static void bfs(Node root) {
         Queue<Node> q = new LinkedList<>();
         if (root != null)
@@ -130,6 +130,30 @@ public class SizeOfBinaryTree {
             System.out.print(temp.val + " ");
             q.remove();
         }
+    }
+
+
+    // Check is it Balanced tree or not
+    
+
+
+    // Diameter of Binary Tree
+    public static int diameter(Node root) {
+        // if(root == null) return 0;
+
+        // return 2 + height(root.left) + height(root.right);
+
+        if(root == null || (root.left == null && root.right == null)) return 0;
+
+        int leftAns = diameter(root.left);
+        int rightAns = diameter(root.right);
+        int mid = height(root.left) + height(root.left);
+        if(root.left != null) mid++;
+        if(root.right != null) mid++;
+        
+        int max = Math.max(leftAns, Math.max(rightAns, mid));
+
+        return max;
     }
 
     public static void main(String[] args) {
@@ -190,6 +214,10 @@ public class SizeOfBinaryTree {
         System.out.println();
         System.out.print("After BFS Traversal: ");
         bfs(root);
+
+        System.out.println();
+        System.out.print("Diameter of Tree: " + diameter(root));
+        
 
     }
 }
