@@ -1,5 +1,7 @@
 public class SizeOfBinaryTree {
 
+    
+
 
     public static class Node{
         int val;
@@ -11,11 +13,35 @@ public class SizeOfBinaryTree {
         }
     }
 
+
+    // preorder Traversal
     public static void preorder(Node root) {
         if(root == null) return;
-        System.out.println(root.val);
+        System.out.print(root.val + " ");
         preorder(root.left);
         preorder(root.right);
+    }
+
+
+
+    // Size of tree
+    public static int size(Node root) {
+        if(root == null) return 0;
+        return 1 + size(root.left) + size(root.right);
+    }
+
+
+    // Sum of tree
+    public static int sum(Node root) {
+        if(root == null) return 0;
+        return root.val + sum(root.left) + sum(root.right);
+    }
+
+    // Height of tree
+    public static int height(Node root) {
+        if(root == null) return 1;
+
+        return 1 + height(root.left) + height(root.right);
     }
     
 
@@ -34,7 +60,14 @@ public class SizeOfBinaryTree {
 
 
         preorder(root);
+        System.out.println();
+        System.out.println("Size of Binary Tree: " + size(root));
 
+
+        System.out.println("Sum of tree: " + sum(root));
+
+
+        System.out.println("Hieght of tree: " + height(root));
 
     }
 }
