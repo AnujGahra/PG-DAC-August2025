@@ -53,6 +53,14 @@ public class SizeOfBinaryTree {
 
     }
 
+
+    // find the min value of tree
+    public static int minValue(Node root) {
+        if(root == null) return Integer.MAX_VALUE;
+
+        return Math.min(root.val, Math.min(minValue(root.left), minValue(root.right)));
+    }
+
     public static void main(String[] args) {
         Node root = new Node(1);
         Node a = new Node(2);
@@ -77,6 +85,9 @@ public class SizeOfBinaryTree {
         System.out.println("Hieght of tree: " + height(root));
 
         System.out.println("Max.. Value of Tree: " + maxValue(root));
+
+
+        System.out.println("Min Value of Tree: " + minValue(root));
 
     }
 }
