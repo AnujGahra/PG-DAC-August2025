@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class SizeOfBinaryTree {
@@ -132,20 +134,23 @@ public class SizeOfBinaryTree {
         }
     }
 
-
     // Check is it Balanced tree or not
     public static boolean isBalanced(Node root) {
-        if(root == null) return true;
+        if (root == null)
+            return true;
         int lh = height(root.left);
-        if(root.left != null) lh++;
+        if (root.left != null)
+            lh++;
         int rh = height(root.left);
-        if(root.right != null) rh++;
+        if (root.right != null)
+            rh++;
         int d = lh - rh;
-        if(d<0) d = -d;
-        if(d>1) return false;
+        if (d < 0)
+            d = -d;
+        if (d > 1)
+            return false;
         return (isBalanced(root.left) && isBalanced(root.right));
     }
-
 
     // Diameter of Binary Tree
     public static int diameter(Node root) {
@@ -153,31 +158,81 @@ public class SizeOfBinaryTree {
 
         // return 2 + height(root.left) + height(root.right);
 
-        if(root == null || (root.left == null && root.right == null)) return 0;
+        if (root == null || (root.left == null && root.right == null))
+            return 0;
 
         int leftAns = diameter(root.left);
         int rightAns = diameter(root.right);
         int mid = height(root.left) + height(root.left);
-        if(root.left != null) mid++;
-        if(root.right != null) mid++;
-        
+        if (root.left != null)
+            mid++;
+        if (root.right != null)
+            mid++;
+
         int max = Math.max(leftAns, Math.max(rightAns, mid));
 
         return max;
     }
 
-
-
     // Same Tree
     public static boolean isSameTree(Node p, Node q) {
-        if(p == null && q == null) return true;
-        if(p == null || q == null) return false;
-        if(p.val != q.val) return false;
+        if (p == null && q == null)
+            return true;
+        if (p == null || q == null)
+            return false;
+        if (p.val != q.val)
+            return false;
         return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
 
+    // Binary Tree Paths
+    public void helper(Node root, List<String> ans, String s) {
+        if (root == null)
+            return;
+        if (root.left == null && root.right == null) {
+            s += root.val;
+            ans.add(s);
+            return;
+        }
 
-    
+        helper(root.left, ans, s + root.val + "->");
+        helper(root.right, ans, s + root.val + "->");
+    }
+
+    public List<String> binaryTreePaths(Node root) {
+        List<String> ans = new ArrayList<>();
+        helper(root, ans, "");
+        return ans;
+    }
+
+    // Lowest Common Ancestor of a Binary Tree
+    public boolean contains(Node root, Node node) {
+        if (root == null)
+            return false;
+        if (root == node)
+            return true;
+        return contains(root.left, node) || contains(root.right, node);
+    }
+
+    public Node lowestCommonAncestor(Node root, Node p, Node q) {
+        if (p == root || q == root)
+            return root;
+        if (p == q)
+            return p;
+
+        boolean leftp = contains(root.left, p);
+        boolean rightq = contains(root.left, q);
+
+        if ((leftp && rightq) || (!leftp && !rightq))
+            return root;
+        if (leftp && !rightq)
+            return lowestCommonAncestor(root.left, p, q);
+        if (!leftp && rightq)
+            return lowestCommonAncestor(root.right, p, q);
+
+        return root;
+
+    }
 
     public static void main(String[] args) {
         Node root = new Node(1);
@@ -243,7 +298,6 @@ public class SizeOfBinaryTree {
 
         System.out.println();
         System.out.println(isBalanced(root));
-        
 
     }
 }
