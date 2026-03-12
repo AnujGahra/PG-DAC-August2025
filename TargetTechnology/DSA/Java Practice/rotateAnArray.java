@@ -29,8 +29,29 @@ public class rotateAnArray {
         int[] arr = {1,2,3,4,5};
         int d = 2;
 
-        int[] result = rotate(arr, d);
+        // int[] result = rotate(arr, d);
 
-        System.out.println(Arrays.toString(result));
+        // System.out.println(Arrays.toString(result));
+
+        int n = arr.length;
+        d %= n;
+
+        int[] temp = new int[n];
+
+        for(int i = 0; i < n-d; i++) {
+            temp[i] = arr[d+i];
+        }
+
+        for(int i = 0; i < d; i++) {
+            temp[n-d+i] = arr[i];
+        }
+
+        for(int i = 0; i < n; i++) {
+            arr[i] = temp[i];
+        }
+
+        for(int i = 0; i<temp.length; i++) {
+            System.out.print(temp[i] + " ");
+        }
     }
 }
