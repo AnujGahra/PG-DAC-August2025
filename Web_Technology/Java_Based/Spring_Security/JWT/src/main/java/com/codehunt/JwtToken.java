@@ -32,7 +32,7 @@ public class JwtToken {
 		
 		
 		Map<String, Object> claims = new HashMap<>();
-		claims.put("roles", roles)
+		claims.put("roles", roles);
 		
 		Jwts.builder()
 		.setClaims(claims)
