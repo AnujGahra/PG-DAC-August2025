@@ -33,6 +33,34 @@ public class LargestInArray {
     }
 
 
+    // reverse of an array
+    public static void reverse(int[] arr) {
+        int i = 0;
+        int j = arr.length - 1;
+
+        while(i < j) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+
+            i++;
+            j--;
+        }
+    }
+
+
+    // reverse an array using method 2
+    public static int[] reverseArray(int[] arr) {
+        int n = arr.length;
+        int[] res = new int[n];
+
+        for(int i = 0; i<n; i++) {
+            res[i] = arr[n-1-i];
+        }
+        return res;
+    }
+
+
     
 
 
@@ -44,6 +72,18 @@ public class LargestInArray {
         largestMethod2(arr);
         System.out.println();
         meanOfArray(arr);
+        System.out.println();
+        // reverse(arr);
+        // System.out.println(Arrays.toString(arr));
+
+        // int[] n1 = reverseArray(arr);
+        // for(int i = 0; i<n1.length; i++) {
+        //     System.out.print(n1[i] + " ");
+        // }
+
+        for(int i = arr.length - 1; i>=0; i--) {
+            System.out.print(arr[i] + " ");
+        }
 
 
     }
