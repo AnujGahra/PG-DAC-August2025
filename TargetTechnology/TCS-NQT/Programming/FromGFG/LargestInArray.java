@@ -23,6 +23,16 @@ public class LargestInArray {
     }
 
 
+    // mean of the array
+    public static void meanOfArray(int[] arr) {
+        float sum = 0;
+        for(int i = 0; i<arr.length; i++) {
+            sum += arr[i];
+        }
+        System.out.println("mean of array is: " + sum/arr.length);
+    }
+
+
     
 
 
@@ -32,6 +42,8 @@ public class LargestInArray {
         largestMethod1(arr);
         System.out.println();
         largestMethod2(arr);
+        System.out.println();
+        meanOfArray(arr);
 
 
     }
