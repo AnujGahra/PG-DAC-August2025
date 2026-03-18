@@ -11,7 +11,16 @@ public class LargestInArray {
     }
 
 
-    // 
+    // 2nd method
+    public static void largestMethod2(int[] arr) {
+        int n = arr.length;
+        int largest = Integer.MIN_VALUE;
+
+        for(int i = 0; i<n; i++) {
+            if(arr[i] > largest) largest = arr[i];
+        }
+        System.out.println("Largest number of array is: " + largest);
+    }
 
 
     
@@ -21,6 +30,8 @@ public class LargestInArray {
         int[] arr = {1, 8, 7, 56, 90};
 
         largestMethod1(arr);
+        System.out.println();
+        largestMethod2(arr);
 
 
     }
