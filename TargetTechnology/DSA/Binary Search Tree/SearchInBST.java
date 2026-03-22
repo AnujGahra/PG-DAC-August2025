@@ -46,6 +46,19 @@ public class SearchInBST {
         return root;
     }
 
+
+    // Traversal
+    // preOrder
+    public static void preOrder(Node root) {
+        if(root == null) return;
+        System.out.print(root.val + " ");
+        preOrder(root.left);
+        preOrder(root.right);
+    }
+
+
+    // deletion: The Node has 0 Child
+
     public static void main(String[] args) {
 
         // Creating BST manually
@@ -66,5 +79,7 @@ public class SearchInBST {
         } else {
             System.out.println("Value not found");
         }
+
+        preOrder(root);
     }
 }
