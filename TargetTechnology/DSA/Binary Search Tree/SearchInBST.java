@@ -13,15 +13,37 @@ public class SearchInBST {
 
     // Search function
     public static Node search(Node root, int val) {
-        if (root == null) return null;
+        if (root == null)
+            return null;
 
-        if (root.val == val) return root;
+        if (root.val == val)
+            return root;
 
         if (val < root.val) {
             return search(root.left, val);
         } else {
             return search(root.right, val);
         }
+    }
+
+    // Insert into BST
+    public static Node insertIntoBST(Node root, int val) {
+
+        if (root == null)
+            return new Node(val);
+        if (root.val > val) {
+            if (root.left == null)
+                root.left = new Node(val);
+            else
+                insertIntoBST(root.left, val);
+        } else {
+            if (root.right == null)
+                root.right = new Node(val);
+            else
+                insertIntoBST(root.left, val);
+        }
+
+        return root;
     }
 
     public static void main(String[] args) {
