@@ -1,26 +1,38 @@
+import java.util.Queue;
+
 public class NumberOfProvines {
 
-    public static int findCircleNum(int[][] isConnected) {
+    public static int findCircleNum(int[][] adj) {
+        int n = adj.length;
         int count = 0;
-        for (int i = 0; i < isConnected.length; i++) {
-            if (isConnected[i][i] == 1) {
+        boolean[] vis = new boolean[n];
+        for(int i = 0; i<n; i++) {
+            if(!vis[i]) {
                 count++;
-                dfs(isConnected, i);
+                bfs(i, vis, adj);
             }
         }
+
         return count;
     }
 
-    private static void dfs(int[][] isConnected, int i) {
-        for (int j = 0; j < isConnected.length; j++) {
-            if (isConnected[i][j] == 1) {
-                isConnected[i][j] = 0;
-                isConnected[j][i] = 0;
-                dfs(isConnected, j);
+    private static void bfs(int i, boolean[] vis, int[][] adj) {
+        vis[i] = true;
+        Queue<Integer> q = new java.util.LinkedList<>();
+        q.add(i);
+        while (q.size() > 0) {
+            int front = q.remove();
+            for(int j = 0; j<n; j++) {
+                if(adj[front][j] == 1 && !vis[j]) {
+                    q.add(j);
+                    vis[j] = true;
+                }
             }
         }
     }
-    
+
+
+
 
 
     public static void main(String[] args) {
