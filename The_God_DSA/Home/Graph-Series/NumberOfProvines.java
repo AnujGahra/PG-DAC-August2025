@@ -17,6 +17,7 @@ public class NumberOfProvines {
     }
 
     private static void bfs(int i, boolean[] vis, int[][] adj) {
+        int n = adj.length;
         vis[i] = true;
         Queue<Integer> q = new java.util.LinkedList<>();
         q.add(i);
