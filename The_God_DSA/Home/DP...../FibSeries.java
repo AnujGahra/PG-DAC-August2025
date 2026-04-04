@@ -14,7 +14,7 @@ public class FibSeries {
     }
 
 
-    public static int fibTab(int n) {
+    public static int fibTab(int n) { // Bottm up approach
         if(n <= 1) return n;
          int[] dp = new int[n+1];
             dp[0] = 0; 
