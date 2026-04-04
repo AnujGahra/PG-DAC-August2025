@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import OpenAI from "openai";
+
 dotenv.config();
 
 const client = new OpenAI({
@@ -13,6 +14,8 @@ const response = await client.responses.create({
     input: "Explain the importance of fast language models",
     
 });
+
+
 
 console.log(response.output_text);
 

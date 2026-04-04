@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "dotenv": "^17.4.0",
+    "grok-sdk": "^0.0.1-security",
     "openai": "^6.33.0"
   }
 }
