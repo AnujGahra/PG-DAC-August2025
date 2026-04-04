@@ -1,1 +1,18 @@
-console.log("Welcome to GenAI");
+import dotenv from "dotenv";
+import OpenAI from "openai";
+dotenv.config();
+
+const client = new OpenAI({
+    apiKey: process.env.GROQ_API_KEY,
+    baseURL: "https://api.groq.com/openai/v1",
+});
+
+
+const response = await client.responses.create({
+    model: "llama-3.3-70b-versatile",
+    input: "Explain the importance of fast language models",
+    
+});
+
+console.log(response.output_text);
+
