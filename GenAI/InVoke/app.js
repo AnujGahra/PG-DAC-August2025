@@ -3,12 +3,13 @@ import OpenAI from "openai";
 
 dotenv.config();
 
-const client = new OpenAI({
-    apiKey: process.env.GROQ_API_KEY,
-    baseURL: "https://api.groq.com/openai/v1",
-});
+async function run() {
+    const client = new OpenAI({
+        apiKey: process.env.GROQ_API_KEY,
+        baseURL: "https://api.groq.com/openai/v1",
+    });
 
-const response = await client.responses.create({
+    const response = await client.responses.create({
         temperature: 1, // Controls the randomness of the output. Higher values (e.g., 0.8) make the output more random, while lower values (e.g., 0.2) make it more focused and deterministic.
         // top_p: 1, // Controls the diversity of the output. Higher values (e.g., 0.9) allow for more diverse outputs, while lower values (e.g., 0.5) make the output more focused on the most likely options.
         // stop:'ga', // A string or array of strings that, when encountered in the output, w ill cause the model to stop generating further text.
@@ -16,24 +17,48 @@ const response = await client.responses.create({
         // frequency_penalty: 0, // Controls the likelihood of the model repeating the same line verbatim. Higher values (e.g., 0.5) make it less likely to repeat, while lower values (e.g., 0) allow for more repetition.
         // presence_penalty: 0, // Controls the likelihood of the model talking about new topics. Higher values (e.g., 0.5) make it more likely to talk about new topics, while lower values (e.g., 0) encourage sticking to existing topics.
 
-        response_format: {
-            type: "json_object", // Specifies that the output should be a JSON object.
-
-        },
+        // response_format: {
+        //     type: "json_object", // Specifies that the output should be a JSON object.
+        // },
 
         model: "llama-3.3-70b-versatile",
         input: [
             {
                 role: "system",
-                content: `You are Jarvis Gahra, a smart assistant that helps answer questions and solve problems. You are helpful, creative, clever, and very friendly. Your task is to analyse given review  and return the sentiment of the review in one word. The sentiment can be either positive, negative or neutral. in valid jason structure.
-                Example:{ "sentiment": "positive" }
-                `
+                // content: `You are Jarvis Gahra, a smart assistant that helps answer questions and solve problems. You are helpful, creative, clever, and very friendly. Your task is to analyse given review  and return the sentiment of the review in one word. The sentiment can be either positive, negative or neutral. in valid jason structure.
+                // Example:{ "sentiment": "positive" }
+                content: `You are an interviewer grader assistent. Your task is to generate candidate evaluation score. Output must be following JSON format:
+                {
+                "confidence": number (1-10 scale),
+                "accuracy": number (1-10 scale),
+                "pass": boolean(true or false)
+                }
+                    The response must:
+                    1. Include ALL fields shown above
+                    2. Use only the excat field names shown
+                    3. Follow the excat data types specified for each field
+                    4. Contain ONLY the JSON object and nothing else.
+                `,
             },
             {
                 role: "user",
-                content: `Review: "I recently purchased this product and I am extremely satisfied with its performance. It exceeded my expectations and I would highly recommend it to others."`
+                // content: `Review: "I recently purchased this product and I am extremely satisfied with its performance. It exceeded my expectations and I would highly recommend it to others."`
+                content: ` Q: What does === do in JavaScript?
+                A: It checks strict equality-both value and type must match.
+                Q: How do you create a promise that resolve after 1 second in JavaScript?
+                A: const p = new Promise(r => setTimeout(r, 1000));
+
+                Q: What is hoisting?
+                A: JavaScript moves declarations (but not initializations) to the top of their scope before code runs.
+
+                Q: Why use let instead of var?
+                A: let is block-scoped, avoiding the function-scope quirks and re-declaration issues of var.
+                `
             }
         ]
     });
 
-console.log(response.output_text);
+    console.log(response.output_text);
+}
+
+run();
