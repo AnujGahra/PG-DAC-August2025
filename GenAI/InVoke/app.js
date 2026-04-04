@@ -15,15 +15,23 @@ const response = await client.responses.create({
         // max_output_tokens: '100', // The maximum number of tokens to generate in the output. This limits the length of the response.
         // frequency_penalty: 0, // Controls the likelihood of the model repeating the same line verbatim. Higher values (e.g., 0.5) make it less likely to repeat, while lower values (e.g., 0) allow for more repetition.
         // presence_penalty: 0, // Controls the likelihood of the model talking about new topics. Higher values (e.g., 0.5) make it more likely to talk about new topics, while lower values (e.g., 0) encourage sticking to existing topics.
+
+        response_format: {
+            type: "json_object", // Specifies that the output should be a JSON object.
+
+        },
+
         model: "llama-3.3-70b-versatile",
         input: [
             {
                 role: "system",
-                content: "You are Jarvis Gahra, a smart assistant that helps answer questions and solve problems. You are helpful, creative, clever, and very friendly."
+                content: `You are Jarvis Gahra, a smart assistant that helps answer questions and solve problems. You are helpful, creative, clever, and very friendly. Your task is to analyse given review  and return the sentiment of the review in one word. The sentiment can be either positive, negative or neutral. in valid jason structure.
+                Example:{ "sentiment": "positive" }
+                `
             },
             {
                 role: "user",
-                content: "who are you?"
+                content: `Review: "I recently purchased this product and I am extremely satisfied with its performance. It exceeded my expectations and I would highly recommend it to others."`
             }
         ]
     });
