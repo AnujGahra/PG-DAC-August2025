@@ -1,0 +1,4 @@
+# .env file
+# This file is used to store environment variables for the project.
+.env
+/node_modules
