@@ -13,6 +13,8 @@ const response = await client.responses.create({
         // top_p: 1, // Controls the diversity of the output. Higher values (e.g., 0.9) allow for more diverse outputs, while lower values (e.g., 0.5) make the output more focused on the most likely options.
         // stop:'ga', // A string or array of strings that, when encountered in the output, w ill cause the model to stop generating further text.
         // max_output_tokens: '100', // The maximum number of tokens to generate in the output. This limits the length of the response.
+        // frequency_penalty: 0, // Controls the likelihood of the model repeating the same line verbatim. Higher values (e.g., 0.5) make it less likely to repeat, while lower values (e.g., 0) allow for more repetition.
+        // presence_penalty: 0, // Controls the likelihood of the model talking about new topics. Higher values (e.g., 0.5) make it more likely to talk about new topics, while lower values (e.g., 0) encourage sticking to existing topics.
         model: "llama-3.3-70b-versatile",
         input: [
             {
