@@ -1,6 +1,11 @@
 import dotenv from "dotenv";
 import OpenAI from "openai";
+import {tavily} from "@tavily/core";
 dotenv.config();
+
+
+const tvly = tavily({ apiKey: process.env.TAVILY_API_KEY });
+
 
 async function run() {
     const client = new OpenAI({
@@ -78,8 +83,16 @@ run();
 async function webSearch({ query }) {
     // Here we will do tavily api call
     console.log("Calling web search");
+
+    const response = await tvly.search(query );
+    console.log('Tavily response: ', response);
+
+
+    const finalResult = response.results.map((result) => result.content).join('\n\n');
+    console.log('finalResult:', finalResult);
+    
     
 
 
-    return 'Iphonr was launched on 20 september 2024';
+    return finalResult;
 }
