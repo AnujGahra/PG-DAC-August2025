@@ -2,12 +2,17 @@ const input = document.querySelector("#message-Input");
 const chatContainer = document.querySelector("#chat-container");
 const askbtn = document.querySelector("#ask");
 
-console.log(input);
+
 
 
 
 input.addEventListener("keyup", handleEnter);
 askbtn.addEventListener("click", handleAsk);
+
+const loading = document.createElement("div");
+loading.className = "my-6 bg-neutral-800 p-3 rounded-xl max-w-fit animate-pulse"; 
+loading.textContent = "Thinking...";
+
 
 async function handleAsk(e) {
     const text = input?.value.trim();
@@ -30,6 +35,9 @@ async function generate(text) {
     input.value = "";
 
 
+    chatContainer?.appendChild(loading);
+
+
     // call server
     const assistantMessage = await callServer(text);
 
@@ -37,6 +45,7 @@ async function generate(text) {
     const assistantMsgElem = document.createElement("div");
     assistantMsgElem.className = `max-w-fit mb-2`;
     assistantMsgElem.textContent = assistantMessage;
+    loading.remove();
     chatContainer?.appendChild(assistantMsgElem);
 }
 
