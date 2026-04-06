@@ -1,98 +1,113 @@
 import dotenv from "dotenv";
 import OpenAI from "openai";
-import {tavily} from "@tavily/core";
+import { tavily } from "@tavily/core";
 dotenv.config();
-
 
 const tvly = tavily({ apiKey: process.env.TAVILY_API_KEY });
 
-
 async function run() {
-    const client = new OpenAI({
-        apiKey: process.env.GROQ_API_KEY,
-        baseURL: "https://api.groq.com/openai/v1",
-    });
+  const client = new OpenAI({
+    apiKey: process.env.GROQ_API_KEY,
+    baseURL: "https://api.groq.com/openai/v1",
+  });
 
-    const response = await client.responses.create({
-        model: "openai/gpt-oss-20b",
-        temperature: 0,
-        input: [
-            {
-                role: "system",
-                content: `You are a smart personal assistant who answer the asked questions.
-                You have access to following tools:
-                1. searchWeb{query}: {query: string} - Search the latest information and realtime data on the internet
-                `,
+  // ✅ FIX 1: Use the correct message history array (supports multi-turn)
+  const messages = [
+    {
+      role: "system",
+      content: `You are a smart personal assistant who answers questions.
+You have access to the following tools:
+1. webSearch({query: string}) - Search the latest information and realtime data on the internet`,
+    },
+    {
+      role: "user",
+      content: "Who is Narendra Modi and what is the latest news about him?",
+    },
+  ];
+
+  // ✅ FIX 2: Use client.chat.completions.create() — not client.responses.create()
+  // ✅ FIX 3: Use `messages` field — not `input`
+  // ✅ FIX 4: Use a valid Groq model name
+  const response = await client.chat.completions.create({
+    model: "llama-3.3-70b-versatile",
+    temperature: 0,
+    messages,
+    tools: [
+      {
+        type: "function",
+        function: {
+          name: "webSearch", // ✅ FIX 5: Unified name (was "searchWeb" in prompt, "webSearch" in definition)
+          description:
+            "Search the latest information and realtime data on the internet",
+          parameters: {
+            type: "object",
+            properties: {
+              query: {
+                type: "string",
+                description: "The search query to perform search on.",
+              },
             },
-            {
-                role: "user",
-                content: "When was the iPhone 16 launched?",
-            }
-        ],
-        tools: [
-            {
-                "type": "function",
-                "function": {
-                    "name": "webSearch",
-                    "description": "Search the latest information and realtime data on the internet",
-                    "parameters": {
-                        // JSON Schema object
-                        "type": "object",
-                        "properties": {
-                            "query": {
-                                "type": "string",
-                                "description": "The search query to perform search on."
-                            },
-                        },
-                        "required": ["query"]
-                    }
-                }
-            }
-        ],
-        tool_choice: 'auto',
-    });
+            required: ["query"],
+          },
+        },
+      },
+    ],
+    tool_choice: "auto",
+  });
 
-    const toolCalls = response.tool_calls || [];
-    if(!toolCalls) {
-        console.log(`Assistant: ${response.output_text}`);
-        return;
+  // ✅ FIX 6: Correctly extract message from Chat Completions response
+  const assistantMessage = response.choices[0].message;
+  const toolCalls = assistantMessage.tool_calls || [];
+
+  // ✅ FIX 7: Correctly check for empty array (empty array is truthy, so !toolCalls was always false)
+  if (toolCalls.length === 0) {
+    console.log(`Assistant: ${assistantMessage.content}`);
+    return;
+  }
+
+  // Append assistant's tool-call message to history
+  messages.push(assistantMessage);
+
+  // ✅ FIX 8: Send tool results back to the model to get a final answer (agentic loop)
+  for (const tool of toolCalls) {
+    console.log("Tool call:", tool);
+    const functionName = tool.function.name;
+    const args = JSON.parse(tool.function.arguments);
+
+    if (functionName === "webSearch") {
+      const toolResult = await webSearch(args);
+      console.log("Tool result:", toolResult);
+
+      // Append each tool result into message history so the model can use it
+      messages.push({
+        role: "tool",
+        tool_call_id: tool.id,
+        content: toolResult,
+      });
     }
+  }
 
-    for(const tool of toolCalls) {
-        console.log('tool: ', tool);
-        const functionName = tool.function.name;
-        const args = tool.function.arguments;
+  // ✅ FIX 9: Make a second API call so the model can compose a final answer using the tool results
+  const finalResponse = await client.chat.completions.create({
+    model: "llama-3.3-70b-versatile",
+    temperature: 0,
+    messages,
+  });
 
-
-        if(functionName === 'webSearch') {
-            const toolResult = await webSearch(JSON.parse(args));
-            console.log('ToolResult: ', toolResult);
-        }
-        
-    }
-
-
-    console.log(response.output_text);
+  console.log(`\nAssistant: ${finalResponse.choices[0].message.content}`);
 }
 
 run();
 
-
-// websearch function
+// ─── Web Search Tool ──────────────────────────────────────────────────────────
 
 async function webSearch({ query }) {
-    // Here we will do tavily api call
-    console.log("Calling web search");
+  console.log(`\nCalling webSearch with query: "${query}"`);
+  const response = await tvly.search(query);
 
-    const response = await tvly.search(query );
-    console.log('Tavily response: ', response);
+  const finalResult = response.results
+    .map((result) => result.content)
+    .join("\n\n");
 
-
-    const finalResult = response.results.map((result) => result.content).join('\n\n');
-    console.log('finalResult:', finalResult);
-    
-    
-
-
-    return finalResult;
+  return finalResult;
 }
