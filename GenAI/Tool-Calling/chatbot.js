@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import OpenAI from "openai";
+import NodeCache from "node-cache";
 import { tavily } from "@tavily/core";
 dotenv.config();
 
@@ -10,8 +11,36 @@ const client = new OpenAI({
     baseURL: "https://api.groq.com/openai/v1",
 });
 
-// ✅ FIXED: Use the current recommended model (llama3-groq-70b tool-use was shut down Jan 6, 2025)
+const cache = new NodeCache({ stdTTL: 3600 * 24 });
+
 const MODEL = "llama-3.3-70b-versatile";
+
+// ✅ FIX 7: Moved system prompt outside generate() as a clean constant.
+//    Removed stray 💡 emoji that was breaking the string.
+//    Date is injected fresh each call via a getter function below.
+function getSystemPrompt() {
+    return `You are a smart personal assistant with memory of past conversations.
+You remember details the user has shared (their name, preferences, location, etc.)
+and refer back to them naturally when relevant.
+
+If you know the answer to a question, answer it directly in plain English.
+If the answer requires real-time, local, or up-to-date information, or if you 
+don't know the answer, use the webSearch tool.
+
+Do not mention the tool to the user unless necessary.
+
+Examples:
+Q: What is the capital of France?
+A: The capital of France is Paris.
+
+Q: What's the weather in Mumbai right now?
+A: (use webSearch tool to find current weather)
+
+Q: Tell me the latest IT news.
+A: (use webSearch tool)
+
+Current date and time: ${new Date().toUTCString()}`;
+}
 
 const tools = [
     {
@@ -34,40 +63,19 @@ const tools = [
     },
 ];
 
-export async function generate(userMessage) {
+export async function generate(userMessage, threadId) {
+    // ✅ FIX 8: Load conversation history from cache using threadId.
+    //    Falls back to empty array if no history yet (first message).
+    const history = cache.get(threadId) || [];
+
+    console.log(`[Thread: ${threadId}] History length: ${history.length} messages`);
+
+    // ✅ FIX 9: Build full messages = fresh system prompt + past history + new user message.
+    //    System prompt is NOT stored in cache so date/time stays accurate on every call.
     const messages = [
-        {
-            role: "system",
-            content: `
-            You are a smart personal assistant.
-        If you know the answer to a question, answer it directly in plain English.
-        If the answer requires real-time, local, or up-to-date information, or if you don't know the answer, use the available tool.
-        You have access to the following tool:
-        webSearch(query: string): Use this to search the internet for current or unknown information.
-        Decide when to use your own knowledge and when to use the tool.
-        Do not mention the tool unless needed.
-💡
-
-        Example:
-        Q: What is the capital of France?
-        A: The capital of France is Paris.
-
-        Q: What's the weather in Mumbai right now?
-        A: (use the search tool to find the latest weather)
-
-        Q: Who is the Prime Minister of India?
-        A: The current Prime Minister of India is Narendra Modi.
-
-        Q: Tell me the latest IT news.
-        A: (use the search tool to get the latest news)
-
-        current date and time: ${new Date().toUTCString()}
-            `,
-        },
-        {
-            role: "user",
-            content: userMessage,
-        },
+        { role: "system", content: getSystemPrompt() },
+        ...history,
+        { role: "user", content: userMessage },
     ];
 
     const response = await client.chat.completions.create({
@@ -82,11 +90,21 @@ export async function generate(userMessage) {
     const assistantMessage = response.choices[0].message;
     const toolCalls = assistantMessage.tool_calls || [];
 
+    // ── Direct answer path (no tool needed) ─────────────────────────────────
     if (toolCalls.length === 0) {
         console.log(`Assistant: ${assistantMessage.content}`);
+
+        // ✅ FIX 10: Save user + assistant turn into cache so next call has memory
+        cache.set(threadId, [
+            ...history,
+            { role: "user", content: userMessage },
+            { role: "assistant", content: assistantMessage.content },
+        ]);
+
         return assistantMessage.content;
     }
 
+    // ── Tool call path ───────────────────────────────────────────────────────
     messages.push(assistantMessage);
 
     for (const tool of toolCalls) {
@@ -121,7 +139,26 @@ export async function generate(userMessage) {
 
     const finalAnswer = finalResponse.choices[0].message.content;
     console.log(`\nAssistant: ${finalAnswer}`);
+
+    // ✅ FIX 11: Save user + final answer into cache after tool call path too.
+    //    Only store user/assistant roles — tool results are runtime data.
+    cache.set(threadId, [
+        ...history,
+        { role: "user", content: userMessage },
+        { role: "assistant", content: finalAnswer },
+    ]);
+
     return finalAnswer;
+}
+
+// ✅ FIX 12: Export memory helpers so server.js can expose them as routes
+export function clearMemory(threadId) {
+    cache.del(threadId);
+    console.log(`[Thread: ${threadId}] Memory cleared.`);
+}
+
+export function getMemory(threadId) {
+    return cache.get(threadId) || [];
 }
 
 // ─── Web Search Tool ──────────────────────────────────────────────────────────
