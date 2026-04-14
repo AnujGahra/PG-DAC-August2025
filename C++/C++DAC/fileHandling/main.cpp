@@ -23,6 +23,8 @@ int main() {
     in >> st2;
     in.close();
 
+    // print
+
     cout << "Content read from file: " << st2 << endl;
 
     return 0;
