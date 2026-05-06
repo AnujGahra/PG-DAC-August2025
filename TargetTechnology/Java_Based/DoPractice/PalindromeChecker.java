@@ -16,7 +16,17 @@ public class PalindromeChecker {
     }
 
 
-    
+    public static void isPalindromeStringChecker(String str) {
+        boolean isPlaindrome = true;
+
+        for(int i = 0; i < str.length() / 2; i++) {
+            if(str.charAt(i) != str.charAt(str.length() - i - 1)) {
+                isPlaindrome = false;
+                break;
+            }
+        }
+        System.out.println("Is palindrome: " + isPlaindrome);
+    }
     
 
     public static void main(String[] args) {
