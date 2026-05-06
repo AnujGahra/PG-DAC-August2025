@@ -32,5 +32,8 @@ public class PalindromeChecker {
     public static void main(String[] args) {
         String str = "madam";
         System.out.println("Is palindrome: " + isPalindrome(str));
+
+        System.out.println("Is palindrome using StringBuilder: " + isPalindromeUsingStringBuilder(str));
+        isPalindromeStringChecker(str);
     }
 }
